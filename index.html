@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0E1A2A" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#F4F0E8" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="dark light" />
+
+  <title>Almenara — The new standard in LED efficiency</title>
+  <meta name="description" content="Patented LED technology delivering over 275 lumens per watt and more than 50% energy reduction. Engineered in Madrid." />
+  <meta name="author" content="Almenara" />
+  <meta name="keywords" content="LED, lighting technology, patented, energy efficiency, OEM, architectural lighting, Madrid" />
+
+  <link rel="canonical" href="https://www.almenara.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Almenara" />
+  <meta property="og:title" content="Almenara — The new standard in LED efficiency" />
+  <meta property="og:description" content="Patented LED technology. Over 275 lumens per watt. Universal compatibility." />
+  <meta property="og:url" content="https://www.almenara.com/" />
+  <meta property="og:image" content="https://www.almenara.com/assets/img/og-image.jpg" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <meta property="og:locale:alternate" content="de_DE" />
+  <meta property="og:locale:alternate" content="it_IT" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Almenara — The new standard in LED efficiency" />
+  <meta name="twitter:description" content="Patented LED technology. Over 275 lumens per watt. Universal compatibility." />
+  <meta name="twitter:image" content="https://www.almenara.com/assets/img/og-image.jpg" />
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://www.almenara.com/?lang=en" />
+  <link rel="alternate" hreflang="es" href="https://www.almenara.com/?lang=es" />
+  <link rel="alternate" hreflang="fr" href="https://www.almenara.com/?lang=fr" />
+  <link rel="alternate" hreflang="de" href="https://www.almenara.com/?lang=de" />
+  <link rel="alternate" hreflang="it" href="https://www.almenara.com/?lang=it" />
+  <link rel="alternate" hreflang="ru" href="https://www.almenara.com/?lang=ru" />
+  <link rel="alternate" hreflang="x-default" href="https://www.almenara.com/" />
+
+  <!-- Manifest & Icons -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/icons/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Almenara",
+    "url": "https://www.almenara.com",
+    "logo": "https://www.almenara.com/assets/img/logo.svg",
+    "description": "Patented LED technology delivering over 275 lumens per watt and more than 50% energy reduction.",
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Madrid",
+        "addressCountry": "ES"
+      }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Madrid",
+      "addressCountry": "ES"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Theme bootstrap (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      const stored = localStorage.getItem('almenara.theme');
+      const system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      const theme = stored || system;
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Language switcher -->
+  <nav class="lang-switcher" aria-label="Language">
+    <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    <button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+    <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+    <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+    <button type="button" class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+    <button type="button" class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+  </nav>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="Almenara — Home">
+      <span class="brand-mark">Almenara</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/technology.html"   data-i18n="nav.technology">Technology</a>
+      <a href="/services.html"     data-i18n="nav.services">Services</a>
+      <a href="/applications.html" data-i18n="nav.applications">Applications</a>
+      <a href="/contact.html"      data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <button type="button" class="theme-toggle" aria-label="Toggle theme" data-theme-toggle>
+      <svg class="icon-sun"  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      </svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+      </svg>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Lighting technology · Madrid</p>
+      <h1 data-i18n="hero.title">The new standard in LED efficiency.</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Patented technology. Over 275 lumens per watt. Universal compatibility.</p>
+      <div class="hero-actions">
+        <a href="/contact.html"    class="btn btn-primary" data-i18n="hero.cta_primary">Become a partner</a>
+        <a href="/technology.html" class="btn btn-outline" data-i18n="hero.cta_secondary">Explore the technology</a>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics" aria-label="Key figures">
+      <div class="metric">
+        <span class="metric-value">275<span class="metric-unit">+</span></span>
+        <span class="metric-label" data-i18n="metrics.efficiency">Lumens per watt</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">−50<span class="metric-unit">%</span></span>
+        <span class="metric-label" data-i18n="metrics.energy">Energy consumption</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value" data-i18n="metrics.universal_value">Universal</span>
+        <span class="metric-label" data-i18n="metrics.universal_label">LED compatibility</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value" data-i18n="metrics.patent_value">Worldwide</span>
+        <span class="metric-label" data-i18n="metrics.patent_label">Patented technology</span>
+      </div>
+    </section>
+
+    <!-- Offer -->
+    <section class="offer">
+      <p class="section-number">01</p>
+      <h2 data-i18n="offer.title">A platform technology for the lighting industry.</h2>
+      <p class="lede" data-i18n="offer.body">Almenara develops a patented LED platform that supplies original equipment manufacturers, architectural lighting partners, and infrastructure operators. The technology integrates into new luminaires and retrofits existing fixtures — delivering more than 275 lumens per watt and over 50 % energy reduction against the current industry standard.</p>
+      <a href="/technology.html" class="link-more" data-i18n="offer.cta">Read the technical brief →</a>
+    </section>
+
+    <!-- Why Almenara -->
+    <section class="why">
+      <p class="section-number">02</p>
+      <h2 data-i18n="why.title">Why Almenara.</h2>
+
+      <div class="why-grid">
+        <article>
+          <h3 data-i18n="why.efficiency.title">Industry-leading efficiency</h3>
+          <p data-i18n="why.efficiency.body">More than 275 lm/W. Twice the efficacy of the typical state-of-the-art LED module in commercial deployment.</p>
+        </article>
+        <article>
+          <h3 data-i18n="why.patent.title">Defensible patent position</h3>
+          <p data-i18n="why.patent.body">A worldwide patent portfolio protecting the underlying optical and thermal architecture.</p>
+        </article>
+        <article>
+          <h3 data-i18n="why.universal.title">Universal compatibility</h3>
+          <p data-i18n="why.universal.body">Retrofit-ready. Compatible with any LED luminaire on the market. No specification rework required.</p>
+        </article>
+        <article>
+          <h3 data-i18n="why.european.title">Engineered in Madrid</h3>
+          <p data-i18n="why.european.body">European design, European certification, European supply chain. Built for institutional procurement.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="applications">
+      <p class="section-number">03</p>
+      <h2 data-i18n="applications.title">Where it is installed.</h2>
+      <p class="lede" data-i18n="applications.body">From hospitality and architectural projects to industrial and public infrastructure. The technology adapts to any spectrum, any form factor, any scale.</p>
+
+      <div class="applications-grid">
+        <figure>
+          <div class="img-placeholder" aria-hidden="true"></div>
+          <figcaption data-i18n="applications.hospitality">Hospitality</figcaption>
+        </figure>
+        <figure>
+          <div class="img-placeholder" aria-hidden="true"></div>
+          <figcaption data-i18n="applications.industrial">Industrial</figcaption>
+        </figure>
+        <figure>
+          <div class="img-placeholder" aria-hidden="true"></div>
+          <figcaption data-i18n="applications.architectural">Architectural</figcaption>
+        </figure>
+        <figure>
+          <div class="img-placeholder" aria-hidden="true"></div>
+          <figcaption data-i18n="applications.public">Public infrastructure</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="awards">
+      <p class="section-number">04</p>
+      <h2 data-i18n="awards.title">Recognised by.</h2>
+
+      <ul class="awards-list">
+        <li>Consolidated Edison Company</li>
+        <li>National Grid</li>
+        <li>Northeast Utilities</li>
+        <li>Connecticut Power &amp; Light</li>
+        <li>United Illuminating</li>
+        <li>Ameresco</li>
+        <li>Pacific Gas &amp; Electric (PG&amp;E)</li>
+        <li>New York State Energy Research and Development Authority</li>
+        <li>Reading Municipal Light Department</li>
