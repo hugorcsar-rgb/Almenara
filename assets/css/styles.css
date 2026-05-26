@@ -903,3 +903,86 @@ main > section:first-child {
   font-size: var(--fs-sm);
   color: var(--ink-soft);
 }
+/* ============================================================
+   25. Legal pages
+   ============================================================ */
+.legal-content {
+  max-width: 720px;
+  margin-top: var(--space-4);
+}
+.legal-content h2 {
+  font-size: var(--fs-xl);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+.legal-content h3 {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-1);
+  color: var(--ink);
+}
+.legal-content p,
+.legal-content li {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: var(--space-2);
+}
+.legal-content ul,
+.legal-content ol {
+  margin-left: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.legal-content ul li { list-style: disc; }
+.legal-content ol li { list-style: decimal; }
+.legal-content a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule-strong);
+}
+.legal-content a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.legal-meta {
+  font-size: var(--fs-xs);
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: var(--space-6);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--rule);
+}
+.legal-placeholder {
+  display: inline-block;
+  padding: 2px 8px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  font-family: 'SF Mono', Monaco, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+  letter-spacing: 0;
+  border-radius: 2px;
+}
+.legal-warning {
+  margin: var(--space-4) 0;
+  padding: var(--space-3);
+  border-left: 2px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+.legal-warning p {
+  font-size: var(--fs-sm);
+  color: var(--ink);
+  margin: 0;
+}
+.legal-warning strong {
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: var(--fs-xs);
+  color: var(--accent);
+  margin-bottom: var(--space-1);
+}
