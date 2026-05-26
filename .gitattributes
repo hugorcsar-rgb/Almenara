@@ -1,0 +1,41 @@
+# Auto-detect text files and normalise line endings to LF on commit.
+* text=auto eol=lf
+
+# Explicit text files
+*.html      text eol=lf
+*.css       text eol=lf
+*.js        text eol=lf
+*.json      text eol=lf
+*.md        text eol=lf
+*.svg       text eol=lf
+*.txt       text eol=lf
+*.xml       text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+.editorconfig    text eol=lf
+.gitattributes   text eol=lf
+.gitignore       text eol=lf
+
+# Explicit binary files (no line-ending conversion, no diff)
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.webp      binary
+*.avif      binary
+*.ico       binary
+*.pdf       binary
+*.woff      binary
+*.woff2     binary
+*.ttf       binary
+*.otf       binary
+*.eot       binary
+
+# Exclude documentation and meta files from GitHub's language statistics
+*.md           linguist-documentation
+ARCHITECTURE.md linguist-documentation
+DEPLOYMENT.md   linguist-documentation
+CONTRIBUTING.md linguist-documentation
+SECURITY.md     linguist-documentation
+CHANGELOG.md    linguist-documentation
+README.md       linguist-documentation
