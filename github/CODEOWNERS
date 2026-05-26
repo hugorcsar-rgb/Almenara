@@ -1,0 +1,30 @@
+# ============================================================
+# Code owners for Almenara
+# ============================================================
+# Each line is a file pattern followed by the GitHub usernames
+# of the owners. Owners are automatically requested for review
+# when a pull request modifies matching files.
+#
+# Order matters: the last matching pattern takes precedence.
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# ============================================================
+
+# Default owner for everything
+*               @hugorcsar-rgb
+
+# Documentation
+*.md            @hugorcsar-rgb
+/ARCHITECTURE.md @hugorcsar-rgb
+/DEPLOYMENT.md   @hugorcsar-rgb
+/CONTRIBUTING.md @hugorcsar-rgb
+/SECURITY.md     @hugorcsar-rgb
+/CHANGELOG.md    @hugorcsar-rgb
+
+# Translations
+/assets/data/*.json @hugorcsar-rgb
+
+# Design system
+/assets/css/styles.css @hugorcsar-rgb
+
+# Automation
+/.github/       @hugorcsar-rgb
