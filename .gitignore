@@ -1,0 +1,92 @@
+# ============================================================
+# Operating system artefacts
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================================
+# Editor and IDE settings
+# ============================================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.netrwhist
+
+# ============================================================
+# Node.js (in case anyone runs npx serve locally)
+# ============================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ============================================================
+# Python (in case anyone runs python -m http.server locally)
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# ============================================================
+# Environment and secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ============================================================
+# Logs and temporary
+# ============================================================
+*.log
+logs/
+*.tmp
+*.bak
+*.cache
+
+# ============================================================
+# Build output (none expected, but guarded)
+# ============================================================
+dist/
+build/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.output/
+out/
+
+# ============================================================
+# Test and coverage
+# ============================================================
+coverage/
+.nyc_output/
+*.lcov
+
+# ============================================================
+# Misc
+# ============================================================
+.history/
+.bak/
