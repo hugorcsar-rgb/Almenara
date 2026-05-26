@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-label="Almenara logo">
+  <rect width="256" height="256" rx="32" fill="#0E1A2A"/>
+  <circle cx="128" cy="50" r="11" fill="#F5E8C8"/>
+  <path d="M128 84 L72 196 M128 84 L184 196 M96 168 L160 168"
+        stroke="#F4F0E8"
+        stroke-width="11"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
