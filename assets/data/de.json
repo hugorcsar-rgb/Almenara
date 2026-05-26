@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "technology": "Technologie",
+    "services": "Leistungen",
+    "applications": "Anwendungen",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "eyebrow": "Beleuchtungstechnologie · Madrid",
+    "title": "Der neue Standard für LED-Effizienz.",
+    "subtitle": "Patentierte Technologie. Über 275 Lumen pro Watt. Universelle Kompatibilität.",
+    "cta_primary": "Partner werden",
+    "cta_secondary": "Die Technologie entdecken"
+  },
+  "metrics": {
+    "efficiency": "Lumen pro Watt",
+    "energy": "Energieverbrauch",
+    "universal_value": "Universell",
+    "universal_label": "LED-Kompatibilität",
+    "patent_value": "Weltweit",
+    "patent_label": "Patentierte Technologie"
+  },
+  "offer": {
+    "title": "Eine Plattformtechnologie für die Beleuchtungsindustrie.",
+    "body": "Almenara entwickelt eine patentierte LED-Plattform für Erstausrüster, Partner der Architekturbeleuchtung und Infrastrukturbetreiber. Die Technologie lässt sich in neue Leuchten integrieren und modernisiert bestehende Installationen — mit über 275 Lumen pro Watt und mehr als 50 % Energieeinsparung gegenüber dem aktuellen Industriestandard.",
+    "cta": "Technisches Datenblatt lesen →"
+  },
+  "why": {
+    "title": "Warum Almenara.",
+    "efficiency": {
+      "title": "Branchenführende Effizienz",
+      "body": "Über 275 lm/W. Doppelt so effizient wie das aktuelle, marktreife LED-Spitzenmodul."
+    },
+    "patent": {
+      "title": "Verteidigbare Patentposition",
+      "body": "Weltweites Patentportfolio, das die zugrunde liegende optische und thermische Architektur schützt."
+    },
+    "universal": {
+      "title": "Universelle Kompatibilität",
+      "body": "Nachrüstbar. Kompatibel mit jeder marktüblichen LED-Leuchte. Keine Anpassung der Spezifikation erforderlich."
+    },
+    "european": {
+      "title": "Entwickelt in Madrid",
+      "body": "Europäisches Design, europäische Zertifizierung, europäische Lieferkette. Für institutionelle Beschaffung konzipiert."
+    }
+  },
+  "applications": {
+    "title": "Wo sie eingesetzt wird.",
+    "body": "Von Hotellerie und Architekturprojekten bis hin zu Industrie und öffentlicher Infrastruktur. Die Technologie passt sich jedem Spektrum, jeder Bauform, jedem Maßstab an.",
+    "hospitality": "Hotellerie",
+    "industrial": "Industrie",
+    "architectural": "Architektonisch",
+    "public": "Öffentliche Infrastruktur"
+  },
+  "awards": {
+    "title": "Ausgezeichnet von.",
+    "eu": "EU-Zulassungszertifikat",
+    "portugal": "Portugals nationale Anerkennung für Energieeinsparung",
+    "ibm": "Nationaler Energiespreis — IBM-Bürorenovierung, Mexiko-Stadt"
+  },
+  "cta": {
+    "title": "Werden Sie Partner.",
+    "body": "Für OEMs, Lichtplaner, Integratoren und Infrastrukturbetreiber, die die nächste LED-Generation evaluieren.",
+    "button": "Kontakt aufnehmen"
+  },
+  "footer": {
+    "tagline": "Patentierte LED-Technologie.",
+    "legal": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies"
+  }
+}
