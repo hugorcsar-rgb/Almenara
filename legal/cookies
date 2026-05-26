@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0E1A2A" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#F4F0E8" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="robots" content="index, follow" />
+
+  <title>Cookie policy — Almenara</title>
+  <meta name="description" content="Cookie and local-storage policy for almenara.com, in compliance with Article 22.2 of the Spanish LSSI-CE and the EU ePrivacy Directive." />
+
+  <link rel="canonical" href="https://www.almenara.com/legal/cookies.html" />
+
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="/assets/img/icons/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <script>
+    (function() {
+      const stored = localStorage.getItem('almenara.theme');
+      const system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', stored || system);
+    })();
+  </script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="lang-switcher" aria-label="Language">
+    <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    <button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+    <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+    <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+    <button type="button" class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
+    <button type="button" class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+  </nav>
+
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="Almenara — Home"><span class="brand-mark">Almenara</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/technology.html"   data-i18n="nav.technology">Technology</a>
+      <a href="/services.html"     data-i18n="nav.services">Services</a>
+      <a href="/applications.html" data-i18n="nav.applications">Applications</a>
+      <a href="/contact.html"      data-i18n="nav.contact">Contact</a>
+    </nav>
+    <button type="button" class="theme-toggle" aria-label="Toggle theme" data-theme-toggle>
+      <svg class="icon-sun"  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      </svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+      </svg>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <p class="eyebrow">Legal · Cookies</p>
+      <h1>Cookie policy.</h1>
+      <p class="hero-subtitle">This website does not use tracking cookies. It does use minimal local storage to remember your preferences.</p>
+    </section>
+
+    <section>
+      <article class="legal-content">
+
+        <h2>1. What are cookies?</h2>
+        <p>Cookies are small text files that a website stores in the user's browser when visiting the site. They are commonly used to make websites work more efficiently, to remember preferences, and to collect statistics. The term "cookies" is generally extended to include similar technologies such as <code>localStorage</code> and <code>sessionStorage</code>, which are governed by the same legal regime under Article 22.2 of the Spanish LSSI-CE.</p>
+
+        <h2>2. Does Almenara use cookies?</h2>
+        <p>This website does <strong>not</strong> use any cookies for advertising, profiling, audience measurement, or third-party tracking. It uses two pieces of strictly necessary local storage, exempt from the consent requirement under Article 22.2 LSSI-CE because they are essential for the service explicitly requested by the user.</p>
+
+        <h2>3. Local storage used</h2>
+
+        <h3>almenara.theme</h3>
+        <ul>
+          <li><strong>Type:</strong> Technical, first-party, persistent.</li>
+          <li><strong>Storage mechanism:</strong> <code>localStorage</code>.</li>
+          <li><strong>Purpose:</strong> Remember the user's chosen visual theme (dark or light) across sessions.</li>
+          <li><strong>Retention:</strong> Until manually cleared by the user from the browser settings.</li>
+        </ul>
+
+        <h3>almenara.lang</h3>
+        <ul>
+          <li><strong>Type:</strong> Technical, first-party, persistent.</li>
+          <li><strong>Storage mechanism:</strong> <code>localStorage</code>.</li>
+          <li><strong>Purpose:</strong> Remember the user's chosen interface language (English, Spanish, French, German, Italian, Russian) across sessions.</li>
+          <li><strong>Retention:</strong> Until manually cleared by the user from the browser settings.</li>
+        </ul>
+
+        <h2>4. Third-party services</h2>
+        <p>This website loads typefaces from Google Fonts (<a href="https://fonts.google.com" rel="noopener" target="_blank">fonts.google.com</a>) for visual presentation. According to Google, no cookies are set by the Google Fonts service when fonts are requested. The user's IP address is briefly processed by Google for the technical purpose of serving the font files. In a planned future update, Almenara will self-host these typefaces to eliminate this dependency entirely.</p>
+        <p>No analytics services (such as Google Analytics, Plausible, Matomo, etc.) are deployed on this website at present.</p>
+
+        <h2>5. How to manage local storage</h2>
+        <p>The user can delete the local storage entries used by this website at any time via the browser's developer tools or privacy settings. Each major browser provides instructions:</p>
+        <ul>
+          <li><a href="https://support.google.com/chrome/answer/95647" rel="noopener" target="_blank">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" rel="noopener" target="_blank">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" rel="noopener" target="_blank">Apple Safari</a></li>
+          <li><a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" rel="noopener" target="_blank">Microsoft Edge</a></li>
+        </ul>
+        <p>Deleting these entries will reset the user's theme and language preferences on this website to their defaults.</p>
+
+        <h2>6. Modifications</h2>
+        <p>This policy may be updated to reflect changes in the technical implementation of the website or in applicable legislation. The current version is always the one published on this page.</p>
+
+        <p class="legal-meta">Last updated: 26 May 2026</p>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-mark">Almenara</span>
+      <p class="footer-tagline" data-i18n="footer.tagline">Patented LED technology.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/technology.html"   data-i18n="nav.technology">Technology</a>
+      <a href="/services.html"     data-i18n="nav.services">Services</a>
+      <a href="/applications.html" data-i18n="nav.applications">Applications</a>
+      <a href="/contact.html"      data-i18n="nav.contact">Contact</a>
+    </nav>
+    <nav class="footer-legal" aria-label="Legal">
+      <a href="/legal/notice.html"   data-i18n="footer.legal">Legal notice</a>
+      <a href="/legal/privacy.html"  data-i18n="footer.privacy">Privacy</a>
+      <a href="/legal/cookies.html"  data-i18n="footer.cookies">Cookies</a>
+    </nav>
+    <p class="footer-copy">
+      <span>© 2026 Almenara</span>
+      <span class="footer-location">Madrid</span>
+    </p>
+  </footer>
+
+  <script src="/assets/js/i18n.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
