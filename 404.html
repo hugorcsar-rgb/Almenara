@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>404 — Page not found · Almenara</title>
+  <style>
+    :root {
+      --bg: #0E1A2A;
+      --ink: #F4F0E8;
+      --ink-soft: #8A8F99;
+      --rule: rgba(244, 240, 232, 0.14);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #F4F0E8;
+        --ink: #0E1A2A;
+        --ink-soft: #6B7280;
+        --rule: rgba(14, 26, 40, 0.14);
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    main {
+      max-width: 480px;
+      text-align: center;
+    }
+    .error-code {
+      font-size: clamp(4.5rem, 14vw, 8rem);
+      font-weight: 200;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--rule);
+      margin: 2rem auto;
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+    }
+    .message {
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      transition: background 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  color 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    a.btn:hover, a.btn:focus-visible {
+      background: var(--ink);
+      color: var(--bg);
+      outline: none;
+    }
+    a.btn:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 4px;
+    }
+    .brand {
+      position: fixed;
+      top: 2rem;
+      left: 2rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="brand">Almenara</a>
+  <main>
+    <p class="error-code">404</p>
+    <div class="divider" aria-hidden="true"></div>
+    <h1>Page not found</h1>
+    <p class="message">The page you requested does not exist or has been moved.<br />Please verify the URL or return home.</p>
+    <a href="/" class="btn">Return home</a>
+  </main>
+</body>
+</html>
