@@ -722,3 +722,184 @@ main > section:first-child {
   body { background: white; color: black; }
   main > section { page-break-inside: avoid; }
 }
+/* ============================================================
+   24. Page-specific components
+   ============================================================ */
+
+/* ---- Specifications table ---- */
+.specs-table {
+  margin-top: var(--space-5);
+  max-width: 800px;
+  border-top: 1px solid var(--rule-strong);
+}
+.specs-table > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.specs-table dt {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.specs-table dd {
+  font-size: var(--fs-sm);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Service list (numbered, vertical) ---- */
+.service-list {
+  margin-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+}
+.service-item {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+.service-num {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  color: var(--accent);
+  padding-top: 6px;
+}
+.service-item h3 {
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-1);
+}
+.service-item p {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* ---- Application cards (sectoral grid) ---- */
+.application-list {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.application-item {
+  background: var(--bg);
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  transition: background var(--dur) var(--ease);
+}
+.application-item:hover { background: var(--bg-elevated); }
+.application-item h3 {
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.application-item p {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
+
+/* ---- Contact form ---- */
+.contact-grid {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: var(--space-6);
+}
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; gap: var(--space-4); }
+}
+
+.contact-info dt {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+.contact-info dd {
+  font-size: var(--fs-base);
+  color: var(--ink);
+  margin-bottom: var(--space-3);
+}
+.contact-info dd a { border-bottom: 1px solid var(--rule-strong); }
+.contact-info dd a:hover { color: var(--accent); border-color: var(--accent); }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+.form-field label {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-1);
+}
+.form-field input,
+.form-field textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule-strong);
+  padding: var(--space-1) 0;
+  font: inherit;
+  color: var(--ink);
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.form-field textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: 1.6;
+}
+.form-notice {
+  font-size: var(--fs-xs);
+  color: var(--ink-muted);
+  letter-spacing: 0.05em;
+  margin-top: var(--space-2);
+}
+.form-actions {
+  margin-top: var(--space-2);
+}
+
+/* ---- Patent block ---- */
+.patent-block {
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--rule-strong);
+  border-radius: 1px;
+  max-width: 720px;
+}
+.patent-block h3 {
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  margin-bottom: var(--space-2);
+}
+.patent-block p {
+  font-size: var(--fs-sm);
+  color: var(--ink-soft);
+}
