@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  ANTES DE PUBLICAR — tres cosas que debes cambiar
+  ============================================================================
+  1. MARCA. Busca y reemplaza  Almenara  por el nombre nuevo de la compañía.
+     Aparece en: <title>, meta og:*, datos estructurados, cabecera, pie
+     y en el diccionario de idiomas (clave "foot.tagline").
+
+  2. DOMINIO. Busca y reemplaza  https://almenara.hamergolfconsulting.com
+     por el dominio definitivo. Aparece en: <link rel="canonical">,
+     og:url, og:image, twitter:image, las etiquetas hreflang y el bloque
+     de datos estructurados. NO dejes ahí un dominio que no controles:
+     el canónico le dice a los buscadores cuál es la página buena.
+
+  3. CONDICIONES DE MEDIDA. Busca el comentario [RELLENAR: FOTOMETRÍA]
+     más abajo y sustituye la nota por las condiciones reales de ensayo
+     (temperatura de color, IRC, si la medida es de módulo o de luminaria
+     con equipo incluido, y laboratorio que firma el LM-79).
+  ============================================================================
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0B1520" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDEFF0" media="(prefers-color-scheme: light)" />
+
+<title>Almenara — 275 lumens per watt, on any luminaire</title>
+<meta name="description" content="A patented LED platform delivering over 275 lumens per watt and more than 50% energy reduction. Retrofit-ready, engineered and certified in Europe." />
+<meta name="author" content="Almenara" />
+
+<link rel="canonical" href="https://almenara.hamergolfconsulting.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Almenara" />
+<meta property="og:title" content="Almenara — 275 lumens per watt, on any luminaire" />
+<meta property="og:description" content="A patented LED platform. Over 275 lumens per watt. Retrofit-ready on any luminaire." />
+<meta property="og:url" content="https://almenara.hamergolfconsulting.com/" />
+<meta property="og:image" content="https://almenara.hamergolfconsulting.com/assets/img/og-image.jpg" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="pt_PT" />
+<meta property="og:locale:alternate" content="ru_RU" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Almenara — 275 lumens per watt, on any luminaire" />
+<meta name="twitter:description" content="A patented LED platform. Over 275 lumens per watt. Retrofit-ready on any luminaire." />
+<meta name="twitter:image" content="https://almenara.hamergolfconsulting.com/assets/img/og-image.jpg" />
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="en" href="https://almenara.hamergolfconsulting.com/?lang=en" />
+<link rel="alternate" hreflang="es" href="https://almenara.hamergolfconsulting.com/?lang=es" />
+<link rel="alternate" hreflang="fr" href="https://almenara.hamergolfconsulting.com/?lang=fr" />
+<link rel="alternate" hreflang="de" href="https://almenara.hamergolfconsulting.com/?lang=de" />
+<link rel="alternate" hreflang="it" href="https://almenara.hamergolfconsulting.com/?lang=it" />
+<link rel="alternate" hreflang="pt" href="https://almenara.hamergolfconsulting.com/?lang=pt" />
+<link rel="alternate" hreflang="ru" href="https://almenara.hamergolfconsulting.com/?lang=ru" />
+<link rel="alternate" hreflang="x-default" href="https://almenara.hamergolfconsulting.com/" />
+
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jost-var.woff2" crossorigin />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Almenara",
+  "url": "https://almenara.hamergolfconsulting.com",
+  "logo": "https://almenara.hamergolfconsulting.com/assets/img/logo.svg",
+  "description": "Patented LED platform technology delivering over 275 lumens per watt.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" },
+  "sameAs": []
+}
+</script>
+
+<script src="assets/js/app.js"></script>
+
+<style>
+/* ==========================================================================
+   TIPOGRAFÍA — Jost, geométrica, servida desde tu propio dominio
+   Sube el archivo a  assets/fonts/jost-var.woff2
+   Es una geométrica de la escuela de la Futura, con la misma anatomía que
+   sostiene los rótulos de la moda italiana: círculo perfecto en la O, asta
+   fina, mayúsculas anchas. En trazo ligero y con el espaciado muy abierto da
+   exactamente ese aire. Licencia SIL Open Font, uso comercial permitido.
+   Un solo archivo variable de 100 a 900: no hay que cargar seis pesos.
+   Servida desde tu servidor, así que sigue sin haber ni una conexión externa
+   y no se transmite la IP del visitante a ningún tercero (RGPD).
+   La monoespaciada queda reservada para las cifras, que es donde sirve.
+   ========================================================================== */
+@font-face {
+  font-family: "Jost";
+  src: url("assets/fonts/jost-var.woff2") format("woff2-variations"),
+       url("assets/fonts/jost-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --f-display: "Jost", Futura, "Futura PT", "Avenir Next", Avenir, "Century Gothic",
+               "URW Gothic", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --f-data: ui-monospace, SFMono-Regular, "SF Mono", "Cascadia Mono", "Roboto Mono",
+            Menlo, Consolas, monospace;
+
+  --ink:        #0B1520;
+  --ink-raised: #101E2C;
+  --line:       rgba(214, 231, 247, 0.14);
+  --line-soft:  rgba(214, 231, 247, 0.07);
+  --text:       #E4EDF5;
+  --text-dim:   #8FA3B6;
+  --warm:       #FFC46B;
+  --warm-hi:    #FFF1D6;
+  --cool:       #9FD8FF;
+
+  --shell: min(1220px, 100% - 3rem);
+  --step:  clamp(4.5rem, 9vw, 8.5rem);
+  --ease:  cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+[data-theme="light"] {
+  --ink:        #EDEFF0;
+  --ink-raised: #E3E7E9;
+  --line:       rgba(11, 21, 32, 0.18);
+  --line-soft:  rgba(11, 21, 32, 0.09);
+  --text:       #0B1520;
+  --text-dim:   #55697C;
+  --warm:       #B87400;
+  --warm-hi:    #8A5600;
+  --cool:       #10618F;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Halo ambiental: una única fuente de luz cálida arriba a la izquierda.
+   Es la compañía: una luminaria encendida en la oscuridad. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20% -20% auto -20%;
+  height: 90vh;
+  background: radial-gradient(60% 55% at 22% 0%, rgba(255, 196, 107, 0.13), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+[data-theme="light"] body::before { opacity: 0.5; }
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--warm);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.shell { width: var(--shell); margin-inline: auto; }
+
+/* --- Voz del dato ------------------------------------------------------- */
+.mono {
+  font-family: var(--f-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+/* La monoespaciada queda sólo para las cifras: ahí sí distingue el dato. */
+.metric-value, .tick-value { font-family: var(--f-data); }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--warm);
+  color: #0B1520;
+  padding: 0.75rem 1.25rem;
+  z-index: 100;
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+/* ==========================================================================
+   CABECERA
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--line-soft);
+  background: color-mix(in srgb, var(--ink) 86%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  font-family: var(--f-display);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  letter-spacing: 0.44em;
+  text-indent: 0.44em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.brand::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--warm);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--warm) 22%, transparent),
+              0 0 14px 2px color-mix(in srgb, var(--warm) 55%, transparent);
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.75rem;
+  margin-left: auto;
+}
+.site-nav a {
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-dim);
+  padding-block: 0.35rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.site-nav a:hover { color: var(--text); border-bottom-color: var(--warm); }
+
+.header-tools { display: flex; align-items: center; gap: 0.5rem; margin-left: 1rem; }
+
+.lang-switcher { display: flex; gap: 1px; }
+.lang-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text-dim);
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  padding: 0.35rem 0.4rem;
+  cursor: pointer;
+  transition: color 0.2s var(--ease);
+}
+.lang-btn:hover { color: var(--text); }
+.lang-btn[aria-pressed="true"] { color: var(--warm); }
+
+.theme-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--text-dim);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--warm); }
+[data-theme="dark"] .icon-sun { display: none; }
+[data-theme="light"] .icon-moon { display: none; }
+
+/* ==========================================================================
+   SECCIONES
+   Sin numeración 01/02/03: el contenido no es una secuencia. En su lugar,
+   una etiqueta que dice de qué trata cada bloque, como en una ficha técnica.
+   ========================================================================== */
+main { position: relative; z-index: 1; }
+
+.band { padding-block: var(--step); border-top: 1px solid var(--line-soft); }
+.band:first-child { border-top: 0; }
+
+.band-label {
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin: 0 0 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.band-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-soft);
+}
+
+h1, h2, h3 { font-weight: 300; letter-spacing: -0.008em; line-height: 1.08; margin: 0; }
+
+h1 { font-size: clamp(2.6rem, 7.2vw, 5.6rem); font-weight: 200; }
+h2 { font-size: clamp(1.9rem, 4vw, 3.1rem); line-height: 1.12; font-weight: 250; }
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  line-height: 1.38;
+}
+
+.lede {
+  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--text-dim);
+  max-width: 62ch;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   HÉROE
+   ========================================================================== */
+.hero { padding-block: clamp(3.5rem, 8vw, 6.5rem) 0; }
+.hero .eyebrow { margin: 0 0 1.6rem; color: var(--text-dim); }
+.hero h1 { max-width: 15ch; }
+.hero h1 em {
+  font-style: normal;
+  color: var(--warm);
+  text-shadow: 0 0 42px color-mix(in srgb, var(--warm) 42%, transparent);
+}
+.hero-sub {
+  margin: 1.9rem 0 0;
+  max-width: 52ch;
+  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem);
+  font-weight: 300;
+  color: var(--text-dim);
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 2.6rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.75rem;
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 0.22s var(--ease), color 0.22s var(--ease),
+              border-color 0.22s var(--ease), transform 0.22s var(--ease);
+}
+.btn-primary {
+  background: var(--warm);
+  color: #0B1520;
+  box-shadow: 0 0 34px color-mix(in srgb, var(--warm) 30%, transparent);
+}
+.btn-primary:hover { transform: translateY(-2px); }
+[data-theme="light"] .btn-primary { color: #FFFFFF; }
+[data-theme="light"] .skip-link { color: #FFFFFF; }
+.btn-outline { border-color: var(--line); color: var(--text); }
+.btn-outline:hover { border-color: var(--warm); color: var(--warm); }
+
+/* ==========================================================================
+   FIRMA DE LA PÁGINA — LA ESCALA DE EFICACIA LUMINOSA
+   El argumento entero de la compañía es una posición en un eje. Así que el
+   eje es el elemento principal, no un número suelto con un degradado detrás.
+   El brillo de la barra codifica la propia magnitud: más luz por vatio.
+   ========================================================================== */
+.scale {
+  margin-top: clamp(4rem, 8vw, 6.5rem);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border: 1px solid var(--line-soft);
+  background: color-mix(in srgb, var(--ink-raised) 70%, transparent);
+}
+.scale-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+  color: var(--text-dim);
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.axis { position: relative; height: 10px; }
+
+.axis-track {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    #26313E 0%,
+    #3D4B5C 22%,
+    #6F8296 46%,
+    #B9A886 64%,
+    var(--warm) 84%,
+    var(--warm-hi) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: draw-axis 1.5s var(--ease) 0.25s forwards;
+}
+[data-theme="light"] .axis-track {
+  background: linear-gradient(90deg, #C3CBD1 0%, #9FAEBB 30%, #A79878 62%, var(--warm) 86%, #7A4C00 100%);
+}
+@keyframes draw-axis { to { transform: scaleX(1); } }
+
+/* Banda del LED comercial actual: 130–200 lm/W es un rango, no un punto. */
+.axis-band {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: calc(130 / 300 * 100%);
+  width: calc(70 / 300 * 100%);
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  background: repeating-linear-gradient(115deg,
+    var(--line-soft) 0 2px, transparent 2px 7px);
+  opacity: 0;
+  animation: fade-in 0.7s var(--ease) 1.15s forwards;
+}
+@keyframes fade-in { to { opacity: 1; } }
+
+.tick {
+  position: absolute;
+  top: 0;
+  left: var(--x);
+  opacity: 0;
+  animation: fade-in 0.55s var(--ease) forwards;
+}
+.tick-stem {
+  position: absolute;
+  left: 0;
+  top: -14px;
+  width: 1px;
+  height: 38px;
+  background: var(--line);
+}
+.tick-copy {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 11ch;
+  text-align: center;
+  color: var(--text-dim);
+  line-height: 1.45;
+}
+.tick[data-row="2"] .tick-copy { top: 74px; }
+.tick[data-row="2"] .tick-stem { height: 80px; }
+.tick-value { display: block; color: var(--text); }
+
+/* La marca propia: el único punto que emite luz. */
+.tick-self .tick-stem { background: var(--warm); width: 2px; }
+.tick-self .tick-copy { color: var(--warm); max-width: 16ch; }
+.tick-self .tick-value {
+  color: var(--warm);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+.tick-self::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--warm-hi);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--warm) 20%, transparent),
+              0 0 26px 6px color-mix(in srgb, var(--warm) 65%, transparent);
+}
+
+.scale-note {
+  margin: 7.5rem 0 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+  max-width: 74ch;
+}
+
+/* ==========================================================================
+   CIFRAS
+   ========================================================================== */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.metric {
+  padding: 2.4rem 1.75rem 2.4rem 0;
+  border-right: 1px solid var(--line-soft);
+}
+.metric:last-child { border-right: 0; }
+.metric-value {
+  display: block;
+  font-family: var(--f-data);
+  font-size: clamp(1.75rem, 3.4vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.85rem;
+}
+.metric-unit { color: var(--warm); }
+.metric-label { color: var(--text-dim); display: block; }
+
+/* ==========================================================================
+   REJILLAS DE CONTENIDO
+   ========================================================================== */
+.split { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 4rem); }
+@media (min-width: 900px) { .split { grid-template-columns: 1.05fr 1fr; } }
+
+.link-more {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--warm);
+  border-bottom: 1px solid color-mix(in srgb, var(--warm) 35%, transparent);
+  padding-bottom: 0.3rem;
+  transition: border-color 0.2s var(--ease);
+}
+.link-more:hover { border-bottom-color: var(--warm); }
+
+.adv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+}
+.adv-grid > article {
+  background: var(--ink);
+  padding: clamp(1.6rem, 3vw, 2.3rem);
+}
+.adv-grid h3 { margin-bottom: 0.85rem; }
+.adv-grid p { margin: 0; color: var(--text-dim); font-size: 0.9375rem; }
+.adv-index {
+  display: block;
+  font-family: var(--f-data);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  color: var(--warm);
+  margin-bottom: 1.6rem;
+}
+
+/* --- Aplicaciones -------------------------------------------------------
+   Los marcadores vacíos se sustituyen por un patrón de haz dibujado con CSS,
+   distinto por tipología. Cuando tengas fotografías reales, mete un <img>
+   dentro de .frame y borra la clase beam-*: el hueco ya no se nota.
+   ------------------------------------------------------------------------ */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1.5rem;
+}
+.app-grid figure { margin: 0; }
+.frame {
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--line-soft);
+  position: relative;
+  overflow: hidden;
+  background: var(--ink-raised);
+}
+.frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.beam-a::after {
+  background:
+    conic-gradient(from 200deg at 50% -12%, transparent 0deg,
+      color-mix(in srgb, var(--warm) 34%, transparent) 14deg, transparent 30deg),
+    radial-gradient(38% 22% at 50% 92%, color-mix(in srgb, var(--warm) 26%, transparent), transparent 70%);
+}
+.beam-b::after {
+  background:
+    repeating-linear-gradient(90deg, transparent 0 27%,
+      color-mix(in srgb, var(--cool) 18%, transparent) 27% 29%, transparent 29% 56%),
+    linear-gradient(180deg, color-mix(in srgb, var(--cool) 12%, transparent), transparent 60%);
+}
+.beam-c::after {
+  background:
+    radial-gradient(circle at 26% 22%, color-mix(in srgb, var(--warm) 30%, transparent), transparent 42%),
+    radial-gradient(circle at 72% 62%, color-mix(in srgb, var(--cool) 22%, transparent), transparent 46%),
+    radial-gradient(circle at 44% 88%, color-mix(in srgb, var(--warm) 20%, transparent), transparent 40%);
+}
+.beam-d::after {
+  background:
+    repeating-conic-gradient(from 90deg at 50% 118%,
+      color-mix(in srgb, var(--warm) 22%, transparent) 0deg 3deg, transparent 3deg 11deg);
+}
+.app-grid figcaption {
+  margin-top: 1rem;
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* --- Certificaciones ---------------------------------------------------- */
+.cert-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-soft); }
+.cert-list li {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-weight: 300;
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+}
+.cert-list li::before {
+  content: attr(data-ref);
+  font-family: var(--f-data);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  color: var(--warm);
+}
+.cert-note { margin: 1.75rem 0 0; font-size: 0.8125rem; color: var(--text-dim); max-width: 66ch; }
+
+/* --- Llamada final ------------------------------------------------------ */
+.closing { text-align: left; }
+.closing h2 { max-width: 16ch; }
+.closing .lede { margin-top: 1.5rem; }
+
+/* ==========================================================================
+   PIE
+   ========================================================================== */
+.site-footer {
+  border-top: 1px solid var(--line-soft);
+  padding-block: 3.5rem 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-tagline { color: var(--text-dim); margin: 0.9rem 0 0; max-width: 34ch; font-size: 0.9375rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.footer-links a {
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-dim);
+}
+.footer-links a:hover { color: var(--text); }
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-soft);
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   APARICIONES AL DESPLAZAR
+   ========================================================================== */
+.reveal { opacity: 0; transform: translateY(20px); }
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .axis-track { transform: scaleX(1); }
+  .axis-band, .tick { opacity: 1; }
+}
+
+/* ==========================================================================
+   PANTALLAS ESTRECHAS
+   ========================================================================== */
+@media (max-width: 860px) {
+  :root { --shell: min(1220px, 100% - 2.25rem); }
+  .site-nav { display: none; }
+  .header-tools { margin-left: auto; }
+  .metric { border-right: 0; border-bottom: 1px solid var(--line-soft); padding-right: 0; }
+  .metric:last-child { border-bottom: 0; }
+  .tick-copy { font-size: 0.625rem; letter-spacing: 0.1em; max-width: 8ch; }
+  .tick-self .tick-copy { max-width: 10ch; }
+  .scale-note { margin-top: 8.5rem; }
+}
+@media (max-width: 520px) {
+  .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+}
+</style>
+<noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
+</head>
+
+<body>
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="shell" style="display:flex;align-items:center;gap:1.5rem;width:var(--shell)">
+    <a href="./" class="brand" data-i18n-attr="aria-label:a11y.home">Almenara</a>
+
+    <nav class="site-nav" data-i18n-attr="aria-label:a11y.primary">
+      <a href="technology.html"   data-i18n="nav.tech">Technology</a>
+      <a href="services.html"     data-i18n="nav.services">Services</a>
+      <a href="applications.html" data-i18n="nav.apps">Applications</a>
+      <a href="contact.html"      data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-tools">
+      <nav class="lang-switcher" data-i18n-attr="aria-label:a11y.lang">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true"  lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false" lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false" lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false" lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false" lang="ru">RU</button>
+      </nav>
+
+      <button type="button" class="theme-toggle" data-theme-toggle data-i18n-attr="aria-label:a11y.theme">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HÉROE + ESCALA ===================== -->
+  <section class="band hero">
+    <div class="shell">
+      <p class="eyebrow mono" data-i18n="hero.eyebrow">LED platform technology · Madrid</p>
+      <h1><span data-i18n="hero.title_a">275 lumens per watt,</span> <em data-i18n="hero.title_b">on any luminaire.</em></h1>
+      <p class="hero-sub" data-i18n="hero.sub">A patented LED platform for manufacturers, lighting designers and infrastructure operators. It fits new luminaires and replaces the source in existing ones.</p>
+
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary" data-i18n="hero.cta1">Request the technical brief</a>
+        <a href="#applications" class="btn btn-outline" data-i18n="hero.cta2">See where it is installed</a>
+      </div>
+
+      <!-- FIRMA: la escala de eficacia luminosa -->
+      <figure class="scale">
+        <figcaption class="scale-head">
+          <span class="mono" data-i18n="scale.label">Luminous efficacy · lumens per watt</span>
+          <span class="mono" data-i18n="scale.axis">Scale 0 – 300 lm/W</span>
+        </figcaption>
+
+        <div class="axis">
+          <div class="axis-track"></div>
+          <div class="axis-band" aria-hidden="true"></div>
+
+          <div class="tick"      style="--x: 5.7%;  animation-delay: 1.25s">
+            <span class="tick-stem"></span>
+            <span class="tick-copy mono"><span class="tick-value">15–20</span><span data-i18n="scale.inc">Incandescent</span></span>
+          </div>
+          <div class="tick"      style="--x: 20%;   animation-delay: 1.35s" data-row="2">
+            <span class="tick-stem"></span>
+            <span class="tick-copy mono"><span class="tick-value">60</span><span data-i18n="scale.fluo">Fluorescent</span></span>
+          </div>
+          <div class="tick"      style="--x: 30%;   animation-delay: 1.45s">
+            <span class="tick-stem"></span>
+            <span class="tick-copy mono"><span class="tick-value">90</span><span data-i18n="scale.mh">Metal halide</span></span>
+          </div>
+          <div class="tick"      style="--x: 55%;   animation-delay: 1.55s" data-row="2">
+            <span class="tick-stem"></span>
+            <span class="tick-copy mono"><span class="tick-value">130–200</span><span data-i18n="scale.led">Commercial LED</span></span>
+          </div>
+          <div class="tick tick-self" style="--x: 91.6%; animation-delay: 1.8s">
+            <span class="tick-stem"></span>
+            <span class="tick-copy mono"><span class="tick-value">275+</span><span data-i18n="scale.self">Almenara</span></span>
+          </div>
+        </div>
+
+        <!-- [RELLENAR: FOTOMETRÍA] Sustituye esta nota por las condiciones
+             reales de ensayo: temperatura de color, IRC, si la medida es de
+             módulo o de luminaria con equipo incluido, y el laboratorio que
+             firma el informe LM-79. La cifra sin condiciones no convence a un
+             proyectista; con condiciones, se vuelve una ventaja verificable. -->
+        <p class="scale-note" data-i18n="scale.note">Comparison values are typical market ranges for each technology, not laboratory maxima. Our measurement conditions — colour temperature, colour rendering index, and whether the figure is taken at the module or at the complete luminaire with driver — are stated in full in the technical brief, together with the independent LM-79 report.</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== CIFRAS ===================== -->
+  <section class="band reveal" data-i18n-attr="aria-label:metrics.aria" style="padding-block:0">
+    <div class="shell">
+      <div class="metrics">
+        <div class="metric">
+          <span class="metric-value">275<span class="metric-unit">+</span></span>
+          <span class="metric-label mono" data-i18n="metrics.efficacy">Lumens per watt</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">−50<span class="metric-unit">%</span></span>
+          <span class="metric-label mono" data-i18n="metrics.energy">Energy consumption</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" data-i18n="metrics.compat_v">Universal</span>
+          <span class="metric-label mono" data-i18n="metrics.compat_l">Luminaire compatibility</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value" data-i18n="metrics.patent_v">Worldwide</span>
+          <span class="metric-label mono" data-i18n="metrics.patent_l">Patent portfolio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PLATAFORMA ===================== -->
+  <section class="band reveal">
+    <div class="shell">
+      <p class="band-label" data-i18n="plat.label">The platform</p>
+      <div class="split">
+        <h2 data-i18n="plat.title">One light engine, every fixture you already sell.</h2>
+        <div>
+          <p class="lede" data-i18n="plat.body">We do not make luminaires. We make the light engine that goes inside them — and licence it to the manufacturers, lighting studios and infrastructure operators who do. It integrates into new products and replaces the source in installed ones, without redrawing the specification.</p>
+          <a href="technology.html" class="link-more" data-i18n="plat.cta">Read the technical brief →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VENTAJAS ===================== -->
+  <section class="band reveal">
+    <div class="shell">
+      <p class="band-label" data-i18n="adv.label">Why it is worth the switch</p>
+      <div class="adv-grid">
+        <article>
+          <span class="adv-index">01 / 04</span>
+          <h3 data-i18n="adv.1t">Efficacy above the commercial ceiling</h3>
+          <p data-i18n="adv.1b">More than 275 lm/W, against the 130 to 200 lm/W that current commercial luminaires deliver. The same light for roughly half the connected load.</p>
+        </article>
+        <article>
+          <span class="adv-index">02 / 04</span>
+          <h3 data-i18n="adv.2t">A patent you can build a product line on</h3>
+          <p data-i18n="adv.2b">A worldwide portfolio protecting the optical and thermal architecture, so a licensee is not exposed on the technology it builds into its catalogue.</p>
+        </article>
+        <article>
+          <span class="adv-index">03 / 04</span>
+          <h3 data-i18n="adv.3t">No respecification</h3>
+          <p data-i18n="adv.3b">It fits the luminaires already on the market. Existing photometric distribution, existing housings, existing installation. The project does not have to be drawn again.</p>
+        </article>
+        <article>
+          <span class="adv-index">04 / 04</span>
+          <h3 data-i18n="adv.4t">European from design to certificate</h3>
+          <p data-i18n="adv.4b">Designed in Madrid, certified in Europe, supplied from Europe. Documentation ready for public procurement files.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APLICACIONES ===================== -->
+  <section class="band reveal" id="applications">
+    <div class="shell">
+      <p class="band-label" data-i18n="app.label">Where it is installed</p>
+      <div class="split">
+        <h2 data-i18n="app.title">Any spectrum, any format, any scale.</h2>
+        <p class="lede" data-i18n="app.body">From hospitality and architectural lighting to industry and public infrastructure. Where the installed load is high and the hours of use are long, the saving is largest.</p>
+      </div>
+
+      <div class="app-grid" style="margin-top:clamp(2.5rem,5vw,4rem)">
+        <!-- Cuando tengas fotografías: <img src="…" alt="…"> dentro de .frame -->
+        <figure><div class="frame beam-a"></div><figcaption data-i18n="app.1">Hospitality</figcaption></figure>
+        <figure><div class="frame beam-b"></div><figcaption data-i18n="app.2">Industry</figcaption></figure>
+        <figure><div class="frame beam-c"></div><figcaption data-i18n="app.3">Architecture</figcaption></figure>
+        <figure><div class="frame beam-d"></div><figcaption data-i18n="app.4">Public infrastructure</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICACIONES ===================== -->
+  <section class="band reveal">
+    <div class="shell">
+      <p class="band-label" data-i18n="cert.label">Certification and awards</p>
+      <div class="split">
+        <h2 data-i18n="cert.title">Verified by third parties.</h2>
+        <div>
+          <ul class="cert-list">
+            <li data-ref="EU"  data-i18n="cert.1">European Union approval certificate</li>
+            <li data-ref="PT"  data-i18n="cert.2">Portuguese national recognition for energy saving</li>
+            <li data-ref="MX"  data-i18n="cert.3">National Energy Saving Prize — IBM offices retrofit, Mexico City</li>
+          </ul>
+          <p class="cert-note" data-i18n="cert.note">Copies of every certificate and the awarding body for each are included in the technical brief.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CIERRE ===================== -->
+  <section class="band closing reveal">
+    <div class="shell">
+      <p class="band-label" data-i18n="cta.label">Next step</p>
+      <h2 data-i18n="cta.title">Send us the fixture. We will send back the numbers.</h2>
+      <p class="lede" data-i18n="cta.body">Tell us the luminaire you make or operate and the hours it runs. We return the efficacy comparison, the projected saving and the test conditions behind it, so your own engineers can check the claim.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary" data-i18n="cta.btn">Start the conversation</a>
+        <a href="technology.html" class="btn btn-outline" data-i18n="cta.alt">Download the technical brief</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div>
+        <a href="./" class="brand">Almenara</a>
+        <p class="footer-tagline" data-i18n="foot.tagline">Patented LED platform technology. Madrid.</p>
+      </div>
+      <nav class="footer-links" data-i18n-attr="aria-label:a11y.footer">
+        <a href="technology.html"   data-i18n="nav.tech">Technology</a>
+        <a href="services.html"     data-i18n="nav.services">Services</a>
+        <a href="applications.html" data-i18n="nav.apps">Applications</a>
+        <a href="contact.html"      data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="legal/notice.html"  data-i18n="foot.legal1">Legal notice</a>
+        <a href="legal/privacy.html" data-i18n="foot.legal2">Privacy</a>
+        <a href="legal/cookies.html" data-i18n="foot.legal3">Cookies</a>
+      </div>
+      <p class="mono" style="margin:0" data-i18n="foot.rights">© 2026 Almenara · Madrid</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
