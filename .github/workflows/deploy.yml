@@ -1,0 +1,64 @@
+name: Deploy
+
+# Publica el sitio en Hostinger cada vez que se empuja a main.
+# A partir de aquí, el gestor de archivos de Hostinger no se vuelve a abrir:
+# el repositorio es la única fuente de verdad y el servidor es un reflejo suyo.
+#
+# Requiere tres secretos en Settings → Secrets and variables → Actions:
+#   FTP_SERVER    p.ej. ftp.hamergolfconsulting.com
+#   FTP_USERNAME  el usuario de la cuenta FTP de Hostinger
+#   FTP_PASSWORD  su contraseña
+# Y una variable en la misma pantalla, pestaña Variables:
+#   FTP_DIR       la carpeta de destino, p.ej. /public_html/  (con las barras)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # permite lanzarlo a mano desde la pestaña Actions
+
+concurrency:
+  group: deploy-production  # nunca dos despliegues a la vez
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publicar en Hostinger
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobar que el HTML no está roto
+        run: |
+          for f in *.html legal/*.html; do
+            [ -e "$f" ] || continue
+            grep -q "</html>" "$f" || { echo "::error file=$f::El archivo está incompleto: falta </html>"; exit 1; }
+          done
+          echo "Todos los HTML se cierran correctamente."
+
+      - name: Comprobar que existen los archivos que el index necesita
+        run: |
+          test -f assets/js/app.js          || { echo "::error::Falta assets/js/app.js"; exit 1; }
+          test -f assets/fonts/jost-var.woff2 || { echo "::error::Falta assets/fonts/jost-var.woff2"; exit 1; }
+          grep -q 'src="assets/js/app.js"' index.html || { echo "::error::index.html no enlaza app.js"; exit 1; }
+          echo "Dependencias del index verificadas."
+
+      - name: Subir por FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ vars.FTP_DIR }}
+          protocol: ftps
+          # Lo que NO se sube: nada de esto tiene que estar en un servidor web.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/*.md
+            **/.editorconfig
+            **/.gitattributes
+            **/.gitignore
