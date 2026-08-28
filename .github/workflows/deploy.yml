@@ -40,10 +40,13 @@ jobs:
 
       - name: Comprobar que existen los archivos que el index necesita
         run: |
-          test -f assets/js/app.js          || { echo "::error::Falta assets/js/app.js"; exit 1; }
-          test -f assets/fonts/jost-var.woff2 || { echo "::error::Falta assets/fonts/jost-var.woff2"; exit 1; }
-          grep -q 'src="assets/js/app.js"' index.html || { echo "::error::index.html no enlaza app.js"; exit 1; }
-          echo "Dependencias del index verificadas."
+          test -f assets/js/app.js   || { echo "::error::Falta assets/js/app.js"; exit 1; }
+          test -f assets/css/site.css || { echo "::error::Falta assets/css/site.css"; exit 1; }
+          for f in index.html technology.html services.html applications.html contact.html; do
+            grep -q 'assets/js/app.js' "$f"    || { echo "::error file=$f::no enlaza app.js"; exit 1; }
+            grep -q 'assets/css/site.css' "$f" || { echo "::error file=$f::no enlaza site.css"; exit 1; }
+          done
+          echo "Las cinco páginas enlazan sus dependencias."
 
       - name: Subir por FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
