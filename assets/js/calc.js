@@ -62,6 +62,7 @@
   /* --- Diccionario ------------------------------------------------------- */
   const D = {
     en: {
+      "calc.pdf.hint": "This opens the print dialogue. Choose “Save as PDF” as the destination and the document is saved to your computer.",
       "report.mexcl": "The estimate covers electricity only; avoided maintenance is not included.",
       "report.mincl": "The maintenance saving counts the difference in interventions, with our own replacements already deducted.",
       "calc.r.perpoint": "Annual cost per light point",
@@ -75,7 +76,7 @@
       "calc.r.total": "Total annual saving",
       "calc.r.effreal": "Effective efficacy in service",
       "report.assump": "The current installation is evaluated with market reference values, not with a measurement on site.",
-      "calc.pdf.btn": "Download the report",
+      "calc.pdf.btn": "Save as PDF",
       "report.title": "Savings estimate",
       "report.sub": "Estimate based on the figures supplied by the client",
       "report.inputs": "Figures supplied",
@@ -134,6 +135,7 @@
     },
 
     es: {
+      "calc.pdf.hint": "Se abre el diálogo de impresión. Elige «Guardar como PDF» como destino y el documento se guarda en tu ordenador.",
       "report.mexcl": "La estimación contempla solo electricidad; no incluye el mantenimiento evitado.",
       "report.mincl": "El ahorro de mantenimiento cuenta la diferencia de intervenciones, ya descontadas nuestras propias reposiciones.",
       "calc.r.perpoint": "Coste anual por punto de luz",
@@ -147,7 +149,7 @@
       "calc.r.total": "Ahorro anual total",
       "calc.r.effreal": "Eficacia efectiva en servicio",
       "report.assump": "La instalación actual se evalúa con valores de referencia de mercado, no con una medición en campo.",
-      "calc.pdf.btn": "Descargar el informe",
+      "calc.pdf.btn": "Guardar como PDF",
       "report.title": "Estimación de ahorro",
       "report.sub": "Estimación a partir de las cifras aportadas por el cliente",
       "report.inputs": "Cifras aportadas",
@@ -206,6 +208,7 @@
     },
 
     pt: {
+      "calc.pdf.hint": "Abre-se a caixa de impressão. Escolha «Guardar como PDF» como destino e o documento fica guardado no seu computador.",
       "report.mexcl": "A estimativa considera apenas electricidade; não inclui a manutenção evitada.",
       "report.mincl": "A poupança de manutenção conta a diferença de intervenções, já descontadas as nossas próprias substituições.",
       "calc.r.perpoint": "Custo anual por ponto de luz",
@@ -219,7 +222,7 @@
       "calc.r.total": "Poupança anual total",
       "calc.r.effreal": "Eficácia efectiva em serviço",
       "report.assump": "A instalação actual é avaliada com valores de referência de mercado, não com uma medição no local.",
-      "calc.pdf.btn": "Descarregar o relatório",
+      "calc.pdf.btn": "Guardar como PDF",
       "report.title": "Estimativa de poupança",
       "report.sub": "Estimativa a partir dos valores fornecidos pelo cliente",
       "report.inputs": "Valores fornecidos",
@@ -278,6 +281,7 @@
     },
 
     fr: {
+      "calc.pdf.hint": "La boîte d'impression s'ouvre. Choisissez « Enregistrer en PDF » comme destination et le document est enregistré sur votre ordinateur.",
       "report.mexcl": "L'estimation ne porte que sur l'électricité ; la maintenance évitée n'est pas incluse.",
       "report.mincl": "L'économie de maintenance compte la différence d'interventions, nos propres remplacements étant déjà déduits.",
       "calc.r.perpoint": "Coût annuel par point lumineux",
@@ -291,7 +295,7 @@
       "calc.r.total": "Économie annuelle totale",
       "calc.r.effreal": "Efficacité effective en service",
       "report.assump": "L'installation actuelle est évaluée avec des valeurs de référence du marché, non avec une mesure sur site.",
-      "calc.pdf.btn": "Télécharger le rapport",
+      "calc.pdf.btn": "Enregistrer en PDF",
       "report.title": "Estimation d'économies",
       "report.sub": "Estimation à partir des valeurs fournies par le client",
       "report.inputs": "Valeurs fournies",
@@ -350,6 +354,7 @@
     },
 
     de: {
+      "calc.pdf.hint": "Es öffnet sich der Druckdialog. Wählen Sie „Als PDF sichern“ als Ziel, dann wird das Dokument auf Ihrem Rechner gespeichert.",
       "report.mexcl": "Die Schätzung betrifft nur Strom; vermiedene Wartung ist nicht enthalten.",
       "report.mincl": "Die Wartungsersparnis zählt die Differenz der Eingriffe, unsere eigenen Austausche sind bereits abgezogen.",
       "calc.r.perpoint": "Jahreskosten je Lichtpunkt",
@@ -363,7 +368,7 @@
       "calc.r.total": "Gesamte Jahresersparnis",
       "calc.r.effreal": "Tatsächliche Ausbeute im Betrieb",
       "report.assump": "Die heutige Anlage wird mit Marktreferenzwerten bewertet, nicht mit einer Messung vor Ort.",
-      "calc.pdf.btn": "Bericht herunterladen",
+      "calc.pdf.btn": "Als PDF sichern",
       "report.title": "Einsparschätzung",
       "report.sub": "Schätzung auf Grundlage der vom Kunden genannten Werte",
       "report.inputs": "Genannte Werte",
@@ -422,6 +427,7 @@
     },
 
     it: {
+      "calc.pdf.hint": "Si apre la finestra di stampa. Scegli «Salva come PDF» come destinazione e il documento viene salvato sul tuo computer.",
       "report.mexcl": "La stima riguarda la sola elettricità; non include la manutenzione evitata.",
       "report.mincl": "Il risparmio di manutenzione conta la differenza di interventi, già scontate le nostre sostituzioni.",
       "calc.r.perpoint": "Costo annuo per punto luce",
@@ -435,7 +441,7 @@
       "calc.r.total": "Risparmio annuo totale",
       "calc.r.effreal": "Efficienza effettiva in servizio",
       "report.assump": "L'impianto attuale è valutato con valori di riferimento di mercato, non con una misura in campo.",
-      "calc.pdf.btn": "Scarica il rapporto",
+      "calc.pdf.btn": "Salva come PDF",
       "report.title": "Stima di risparmio",
       "report.sub": "Stima a partire dai valori forniti dal cliente",
       "report.inputs": "Valori forniti",
@@ -494,6 +500,7 @@
     },
 
     ru: {
+      "calc.pdf.hint": "Откроется окно печати. Выберите «Сохранить в PDF» в качестве места назначения — документ сохранится на вашем компьютере.",
       "report.mexcl": "Оценка учитывает только электроэнергию; сэкономленное обслуживание не включено.",
       "report.mincl": "Экономия на обслуживании считает разницу в числе выездов, наши собственные замены уже вычтены.",
       "calc.r.perpoint": "Годовая стоимость световой точки",
@@ -507,7 +514,7 @@
       "calc.r.total": "Общая годовая экономия",
       "calc.r.effreal": "Фактическая отдача в работе",
       "report.assump": "Нынешняя установка оценивается по рыночным справочным значениям, а не по замеру на объекте.",
-      "calc.pdf.btn": "Скачать отчёт",
+      "calc.pdf.btn": "Сохранить в PDF",
       "report.title": "Оценка экономии",
       "report.sub": "Оценка по данным, предоставленным клиентом",
       "report.inputs": "Исходные данные",
@@ -834,11 +841,21 @@
     sel.addEventListener('change', function () { leerEficacia(); calcular(); });
     busca.addEventListener('input', pintarLista);
     ['manw', 'manlm'].forEach(function (id) {
-      document.getElementById(id).addEventListener('input', function () { leerEficacia(); calcular(); });
+      document.getElementById(id).addEventListener('input', function () {
+        leerEficacia();
+        calcularPronto();
+      });
     });
+    // Escribir "1000" disparaba cuatro recálculos completos. Se espera a que
+    // el visitante levante los dedos del teclado.
+    let temporizador = null;
+    function calcularPronto() {
+      clearTimeout(temporizador);
+      temporizador = setTimeout(calcular, 140);
+    }
     ['points', 'watts', 'hours', 'price', 'efnew', 'co2', 'cost',
      'dep', 'loss', 'life', 'mcost'].forEach(function (id) {
-      document.getElementById(id).addEventListener('input', calcular);
+      document.getElementById(id).addEventListener('input', calcularPronto);
     });
     document.getElementById('watts').addEventListener('input', function () { vatiosTocados = true; });
 
@@ -852,6 +869,18 @@
     });
 
     /* --- El cálculo ------------------------------------------------------- */
+    // El documento imprimible cuesta unos dos mil caracteres de HTML. Antes se
+    // rehacía con cada tecla; ahora solo se guarda la receta y se compone en el
+    // momento de imprimir. La página deja de trabajar mientras escribes.
+    let ultimoInforme = null;
+
+    function prepararInforme() {
+      const previo = document.querySelector('.print-doc');
+      if (previo) previo.remove();
+      if (ultimoInforme) out.appendChild(ultimoInforme());
+    }
+    window.addEventListener('beforeprint', prepararInforme);
+
     function calcular() {
       const l = window.SITE.lang();
       const loc = LOCALES[l] || 'en-GB';
@@ -889,6 +918,7 @@
         p.className = 'calc-warn';
         p.textContent = txt('calc.warn');
         out.appendChild(p);
+        ultimoInforme = null;
         traducir(out);
         return;
       }
@@ -1008,9 +1038,10 @@
         }).join('');
       }
 
-      const doc = document.createElement('article');
-      doc.className = 'print-doc';
-      doc.innerHTML =
+      ultimoInforme = function () {
+        const doc = document.createElement('article');
+        doc.className = 'print-doc';
+        doc.innerHTML =
         '<header class="pd-head">' +
           '<p class="pd-brand">Almenara</p>' +
           '<p class="pd-meta">' + txt('report.date') + ': ' + fecha + '</p>' +
@@ -1077,7 +1108,8 @@
           'almenara.hamergolfconsulting.com</p>' +
           '<p class="pd-disc">' + txt('report.disc') + '</p>' +
         '</footer>';
-      out.appendChild(doc);
+        return doc;
+      };
 
       const cta = document.createElement('div');
       cta.className = 'calc-cta';
@@ -1096,13 +1128,21 @@
       pdf.className = 'btn btn-outline';
       pdf.setAttribute('data-i18n', 'calc.pdf.btn');
       pdf.textContent = txt('calc.pdf.btn');
-      pdf.addEventListener('click', function () { window.print(); });
+      pdf.addEventListener('click', function () {
+        prepararInforme();
+        window.print();
+      });
 
       const acc = document.createElement('div');
       acc.className = 'hero-actions';
       acc.appendChild(pdf);
       acc.appendChild(a);
       cta.appendChild(acc);
+      const pista = document.createElement('p');
+      pista.className = 'calc-hint';
+      pista.setAttribute('data-i18n', 'calc.pdf.hint');
+      pista.textContent = txt('calc.pdf.hint');
+      cta.appendChild(pista);
       out.appendChild(cta);
 
       traducir(out);
