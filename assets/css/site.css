@@ -1164,3 +1164,187 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   .beam::before { transition: none; }
   ::view-transition-old(root), ::view-transition-new(root) { animation: none !important; }
 }
+
+/* ==========================================================================
+   CALCULADORA
+   Tres pasos apilados, resultado abajo. Los números en monoespaciada; las
+   cifras que cambian, en ámbar. Nada de tarjetas ni sombras: es una
+   herramienta de cálculo, y debe parecer una hoja de trabajo, no un anuncio.
+   ========================================================================== */
+.calc { display: grid; gap: clamp(2.5rem, 5vw, 3.75rem); }
+.calc-step { display: grid; gap: 1.25rem; }
+.calc .band-label { margin-bottom: 0.5rem; position: static; background: none; }
+
+/* --- Pestañas -------------------------------------------------------------- */
+.calc-tabs { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 1px solid var(--line-soft); }
+.calc-tab {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 0.8rem 1.1rem 0.8rem 0;
+  margin-right: 1.75rem;
+  color: var(--text-dim);
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.calc-tab:hover { color: var(--text); }
+.calc-tab.is-on { color: var(--warm); border-bottom-color: var(--warm); }
+
+.calc-panel { display: none; }
+.calc-panel.is-on { display: block; }
+
+/* --- Controles -------------------------------------------------------------- */
+.calc-select,
+.calc-search {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-family: var(--f-display);
+  font-size: 1.0625rem;
+  font-weight: 300;
+  padding: 0.7rem 0;
+  transition: border-color 0.2s var(--ease);
+}
+.calc-select { appearance: none; cursor: pointer; }
+.calc-select option { background: var(--ink-raised); color: var(--text); }
+.calc-select:focus, .calc-search:focus { outline: none; border-bottom-color: var(--warm); }
+
+.calc-list {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+  max-height: 17rem;
+  overflow-y: auto;
+}
+.calc-list li { background: var(--ink); }
+.calc-list button {
+  width: 100%;
+  text-align: left;
+  appearance: none;
+  background: none;
+  border: 0;
+  color: var(--text-dim);
+  font-family: var(--f-display);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.calc-list button:hover { color: var(--text); background: var(--ink-raised); }
+.calc-list button.is-on { color: var(--warm); background: var(--ink-raised); }
+.calc-empty { padding: 1.1rem; color: var(--text-dim); font-size: 0.9375rem; }
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  gap: 0 2.25rem;
+}
+.calc-grid .field input { font-family: var(--f-data); font-size: 0.9375rem; }
+
+.calc-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
+.calc-chip {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--line-soft);
+  color: var(--text-dim);
+  font-family: var(--f-data);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.calc-chip:hover { color: var(--text); border-color: var(--line); }
+.calc-chip.is-on { color: var(--warm); border-color: var(--warm); }
+
+.calc-eff {
+  margin: 0.25rem 0 0;
+  font-family: var(--f-data);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+.calc-eff strong { color: var(--warm); font-weight: 400; }
+
+.calc-adv { border-top: 1px solid var(--line-soft); padding-top: 1.5rem; }
+.calc-adv summary {
+  cursor: pointer;
+  color: var(--text-dim);
+  list-style: none;
+  padding-bottom: 1.25rem;
+}
+.calc-adv summary::-webkit-details-marker { display: none; }
+.calc-adv summary::before { content: "+ "; color: var(--warm); }
+.calc-adv[open] summary::before { content: "− "; }
+.calc-adv summary:hover { color: var(--text); }
+.calc-help { margin: 0.5rem 0 0; font-size: 0.8125rem; color: var(--text-dim); max-width: 62ch; line-height: 1.6; }
+
+/* --- Resultado -------------------------------------------------------------- */
+.calc-out { border-top: 1px solid var(--line); padding-top: clamp(2rem, 4vw, 3rem); }
+.calc-hero-out { margin-bottom: 2.5rem; }
+.calc-hero-out > p.mono { color: var(--text-dim); margin: 0 0 0.75rem; }
+.calc-big {
+  margin: 0;
+  font-family: var(--f-data);
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--warm);
+  text-shadow: 0 0 48px color-mix(in srgb, var(--warm) 38%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+.calc-bar {
+  margin: 1.75rem 0 0.75rem;
+  height: 4px;
+  background: var(--line-soft);
+  overflow: hidden;
+}
+.calc-bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--warm) 55%, transparent), var(--warm-hi));
+  box-shadow: 0 0 16px color-mix(in srgb, var(--warm) 60%, transparent);
+  transition: width 0.6s var(--ease);
+}
+.calc-cut { margin: 0; color: var(--text-dim); }
+.calc-cut::first-letter { color: var(--warm); }
+
+.calc-arrow { color: var(--text-dim); padding: 0 0.35rem; }
+.calc-out .specs dd { white-space: nowrap; }
+
+.calc-warn {
+  margin: 0;
+  padding: 1.25rem 1.4rem;
+  border-left: 2px solid var(--warm);
+  background: color-mix(in srgb, var(--ink-raised) 70%, transparent);
+  color: var(--text-dim);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.calc-cta { margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 2rem; border-top: 1px solid var(--line-soft); }
+.calc-cta h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.calc-cta .lede { margin-top: 1rem; }
+
+@media (max-width: 620px) {
+  .calc-tab { margin-right: 1.1rem; font-size: 0.6875rem; letter-spacing: 0.14em; }
+  .calc-out .specs > div { grid-template-columns: 1fr; gap: 0.4rem; }
+  .calc-out .specs dd { text-align: left; white-space: normal; }
+}
