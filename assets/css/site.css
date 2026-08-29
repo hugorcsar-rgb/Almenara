@@ -24,32 +24,26 @@
   --f-data: ui-monospace, SFMono-Regular, "SF Mono", "Cascadia Mono", "Roboto Mono",
             Menlo, Consolas, monospace;
 
-  --ink:        #0B1520;
-  --ink-raised: #101E2C;
-  --line:       rgba(214, 231, 247, 0.14);
-  --line-soft:  rgba(214, 231, 247, 0.07);
-  --text:       #E4EDF5;
-  --text-dim:   #8FA3B6;
-  --warm:       #FFC46B;
-  --warm-hi:    #FFF1D6;
-  --cool:       #9FD8FF;
+  /* Paleta única: papel blanco y tinta azul noche.
+     El ámbar queda reservado para representar la luz —la escala, el mando de
+     temperatura de color, la barra de ahorro—, nunca para decorar. Esa
+     disciplina es lo que hace que un acento signifique algo. */
+  --ink:        #FCFCFB;   /* el papel */
+  --ink-raised: #F2F3F1;   /* superficie levantada */
+  --line:       rgba(15, 29, 48, 0.17);
+  --line-soft:  rgba(15, 29, 48, 0.09);
+  --text:       #0F1D30;   /* azul noche */
+  --text-dim:   #5B6C80;
+  --warm:       #8F5200;   /* ámbar oscuro: el único que contrasta sobre papel */
+  --warm-hi:    #6B3D00;
+  --warm-lit:   #E9A23C;   /* ámbar vivo, solo para rellenos y trazos */
+  --cool:       #1A5E8C;
 
   --shell: min(1220px, 100% - 3rem);
   --step:  clamp(4.5rem, 9vw, 8.5rem);
   --ease:  cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-[data-theme="light"] {
-  --ink:        #EDEFF0;
-  --ink-raised: #E3E7E9;
-  --line:       rgba(11, 21, 32, 0.18);
-  --line-soft:  rgba(11, 21, 32, 0.09);
-  --text:       #0B1520;
-  --text-dim:   #55697C;
-  --warm:       #B87400;
-  --warm-hi:    #8A5600;
-  --cool:       #10618F;
-}
 
 * { box-sizing: border-box; }
 
@@ -69,16 +63,6 @@ body {
 
 /* Halo ambiental: una única fuente de luz cálida arriba a la izquierda.
    Es la compañía: una luminaria encendida en la oscuridad. */
-body::before {
-  content: "";
-  position: fixed;
-  inset: -20% -20% auto -20%;
-  height: 90vh;
-  background: radial-gradient(60% 55% at 22% 0%, rgba(255, 196, 107, 0.13), transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-[data-theme="light"] body::before { opacity: 0.5; }
 
 a { color: inherit; }
 
@@ -105,8 +89,8 @@ a { color: inherit; }
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--warm);
-  color: #0B1520;
+  background: var(--text);
+  color: var(--ink);
   padding: 0.75rem 1.25rem;
   z-index: 100;
   font-family: var(--f-display);
@@ -129,7 +113,7 @@ a { color: inherit; }
   padding: 1.05rem 0;
   border-bottom: 1px solid var(--line-soft);
   background: color-mix(in srgb, var(--ink) 86%, transparent);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(9px);
 }
 
 .brand {
@@ -150,9 +134,8 @@ a { color: inherit; }
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--warm);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--warm) 22%, transparent),
-              0 0 14px 2px color-mix(in srgb, var(--warm) 55%, transparent);
+  background: var(--warm-lit);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--warm-lit) 24%, transparent);
 }
 
 .site-nav {
@@ -207,8 +190,9 @@ a { color: inherit; }
   transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 .theme-toggle:hover { color: var(--text); border-color: var(--warm); }
-[data-theme="dark"] .icon-sun { display: none; }
-[data-theme="light"] .icon-moon { display: none; }
+/* Ya no hay dos temas. El conmutador se oculta aquí y además se retira del
+   documento desde app.js, para que no lo alcance ni el tabulador. */
+.theme-toggle { display: none !important; }
 
 /* ==========================================================================
    SECCIONES
@@ -267,7 +251,6 @@ h3 {
 .hero h1 em {
   font-style: normal;
   color: var(--warm);
-  text-shadow: 0 0 42px color-mix(in srgb, var(--warm) 42%, transparent);
 }
 .hero-sub {
   margin: 1.9rem 0 0;
@@ -294,13 +277,13 @@ h3 {
               border-color 0.22s var(--ease), transform 0.22s var(--ease);
 }
 .btn-primary {
-  background: var(--warm);
-  color: #0B1520;
-  box-shadow: 0 0 34px color-mix(in srgb, var(--warm) 30%, transparent);
+  background: var(--text);
+  color: var(--ink);
+  box-shadow: none;
 }
+.btn-primary:hover { background: #1B3352; }
 .btn-primary:hover { transform: translateY(-2px); }
-[data-theme="light"] .btn-primary { color: #FFFFFF; }
-[data-theme="light"] .skip-link { color: #FFFFFF; }
+
 .btn-outline { border-color: var(--line); color: var(--text); }
 .btn-outline:hover { border-color: var(--warm); color: var(--warm); }
 
@@ -332,19 +315,17 @@ h3 {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg,
-    #26313E 0%,
-    #3D4B5C 22%,
-    #6F8296 46%,
-    #B9A886 64%,
-    var(--warm) 84%,
-    var(--warm-hi) 100%);
+    #D9DDE1 0%,
+    #C2C9CF 22%,
+    #A9B3BC 46%,
+    color-mix(in srgb, var(--cct) 45%, #B0A88F) 64%,
+    var(--warm-lit) 86%,
+    color-mix(in srgb, var(--cct) 70%, #7A4400) 100%);
   transform: scaleX(0);
   transform-origin: left;
   animation: draw-axis 1.5s var(--ease) 0.25s forwards;
 }
-[data-theme="light"] .axis-track {
-  background: linear-gradient(90deg, #C3CBD1 0%, #9FAEBB 30%, #A79878 62%, var(--warm) 86%, #7A4C00 100%);
-}
+
 @keyframes draw-axis { to { transform: scaleX(1); } }
 
 /* Banda del LED comercial actual: 130–200 lm/W es un rango, no un punto. */
@@ -410,9 +391,8 @@ h3 {
   height: 13px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  background: var(--warm-hi);
-  box-shadow: 0 0 0 5px color-mix(in srgb, var(--warm) 20%, transparent),
-              0 0 26px 6px color-mix(in srgb, var(--warm) 65%, transparent);
+  background: var(--warm-lit);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--warm-lit) 26%, transparent);
 }
 
 .scale-note {
@@ -828,12 +808,10 @@ h3 {
   transform: scaleX(var(--progress, 0));
   transform-origin: 0 50%;
   background: linear-gradient(90deg,
-    color-mix(in srgb, var(--warm) 55%, transparent) 0%,
-    var(--warm) 55%,
-    var(--warm-hi) 100%);
-  box-shadow: 0 0 14px color-mix(in srgb, var(--warm) 65%, transparent);
+    color-mix(in srgb, var(--warm-lit) 60%, transparent) 0%,
+    var(--warm-lit) 55%,
+    color-mix(in srgb, var(--cct) 70%, #7A4400) 100%);
   pointer-events: none;
-  will-change: transform;
 }
 
 /* --- 2. Halo que desciende ------------------------------------------------ */
@@ -845,13 +823,13 @@ body::before { display: none; }
   height: 115vh;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(48% 42% at 26% 32%,
-    color-mix(in srgb, var(--warm) 16%, transparent),
-    transparent 68%);
+  background: radial-gradient(46% 40% at 26% 30%,
+    color-mix(in srgb, var(--cct) 22%, transparent),
+    transparent 66%);
   transform: translate3d(0, calc(var(--aura, 0) * 42vh), 0);
   will-change: transform;
 }
-[data-theme="light"] .aura { opacity: 0.45; }
+
 
 /* --- 3. Entrada escalonada ------------------------------------------------ */
 .reveal { opacity: 0; transform: translateY(26px); }
@@ -951,14 +929,18 @@ body::before { display: none; }
 /* --- 1. Temperatura de color --------------------------------------------- */
 :root { --cct: #FFC46B; }
 
-[data-theme="dark"] {
-  --warm: var(--cct);
-  --warm-hi: color-mix(in srgb, var(--cct) 42%, #FFFFFF);
+/* El ámbar de texto se oscurece a partir del color elegido para que siga
+   siendo legible sobre papel; el vivo se queda tal cual para los rellenos. */
+:root {
+  /* El acento de texto es fijo: si dependiera de la temperatura elegida, a
+     6500 K se volvía un pardo sucio y perdía contraste. Solo el ámbar de
+     relleno sigue al mando, que es donde representa luz de verdad. */
+  --warm-lit: var(--cct);
 }
-[data-theme="light"] {
-  --warm: color-mix(in srgb, var(--cct) 42%, #5E3200);
-  --warm-hi: color-mix(in srgb, var(--cct) 20%, #422300);
-}
+
+/* El papel se tiñe con la temperatura elegida. Sobre blanco esto se lee como
+   lo que es: la misma hoja iluminada con otra luz. En oscuro no se apreciaba. */
+body { background: color-mix(in srgb, var(--cct) 6%, #FCFCFB); }
 
 .cct {
   display: flex;
@@ -985,17 +967,15 @@ body::before { display: none; }
   width: 17px; height: 17px;
   border-radius: 50%;
   background: var(--cct);
-  border: 2px solid color-mix(in srgb, var(--ink) 80%, transparent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--cct) 22%, transparent),
-              0 0 20px 4px color-mix(in srgb, var(--cct) 70%, transparent);
+  border: 2px solid var(--text);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--cct) 28%, transparent);
   cursor: ew-resize;
 }
 .cct input[type="range"]::-moz-range-thumb {
   width: 15px; height: 15px;
   border-radius: 50%;
   background: var(--cct);
-  border: 2px solid color-mix(in srgb, var(--ink) 80%, transparent);
-  box-shadow: 0 0 18px 4px color-mix(in srgb, var(--cct) 65%, transparent);
+  border: 2px solid var(--text);
   cursor: ew-resize;
 }
 .cct-value {
@@ -1017,8 +997,8 @@ body::before { display: none; }
   pointer-events: none;
   opacity: 0;
   background: radial-gradient(circle,
-    color-mix(in srgb, var(--cct) 13%, transparent) 0%,
-    color-mix(in srgb, var(--cct) 5%, transparent) 34%,
+    color-mix(in srgb, var(--cct) 16%, transparent) 0%,
+    color-mix(in srgb, var(--cct) 6%, transparent) 34%,
     transparent 66%);
   transform: translate3d(-100vw, 0, 0);
   transition: opacity 0.5s var(--ease);
@@ -1026,7 +1006,7 @@ body::before { display: none; }
 }
 .pointer-light.is-on { opacity: 1; }
 @media (hover: none), (pointer: coarse) { .pointer-light { display: none; } }
-[data-theme="light"] .pointer-light { opacity: 0; display: none; }
+
 
 /* El haz que barre una tarjeta al pasar por encima. */
 .adv-grid > article,
@@ -1093,36 +1073,28 @@ body::before { display: none; }
   -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 12%, transparent 68%);
   opacity: 0.9;
 }
-[data-theme="light"] .beam { opacity: 0.4; }
+
 
 /* El punto de la escala respira. */
 .tick-self::after { animation: latido 4.5s var(--ease) 2.4s infinite; }
+/* Escala y opacidad las mueve la tarjeta gráfica sin repintar. Animar la
+   sombra, que es lo que hacía antes, obliga a redibujar en cada fotograma. */
 @keyframes latido {
-  0%, 100% { box-shadow: 0 0 0 5px color-mix(in srgb, var(--warm) 20%, transparent),
-                         0 0 26px 6px color-mix(in srgb, var(--warm) 65%, transparent); }
-  50%      { box-shadow: 0 0 0 7px color-mix(in srgb, var(--warm) 14%, transparent),
-                         0 0 40px 10px color-mix(in srgb, var(--warm) 80%, transparent); }
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 1; }
+  50%      { transform: translate(-50%, -50%) scale(1.14); opacity: 0.78; }
 }
 
 /* --- 4. Grano ------------------------------------------------------------- */
 .grain {
   position: fixed;
-  inset: -50%;
+  inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.038;
-  mix-blend-mode: overlay;
+  opacity: 0.055;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: grano 1.1s steps(4) infinite;
 }
-@keyframes grano {
-  0%   { transform: translate3d(0, 0, 0); }
-  25%  { transform: translate3d(-3%, 2%, 0); }
-  50%  { transform: translate3d(2%, -3%, 0); }
-  75%  { transform: translate3d(-2%, -2%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
-}
-[data-theme="light"] .grain { opacity: 0.05; mix-blend-mode: multiply; }
+
 
 /* --- 5. Transiciones entre páginas ---------------------------------------- */
 @view-transition { navigation: auto; }
@@ -1159,7 +1131,7 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
 .aura { z-index: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  .grain, .tick-self::after { animation: none !important; }
+  .tick-self::after { animation: none !important; }
   .pointer-light { display: none !important; }
   .beam::before { transition: none; }
   ::view-transition-old(root), ::view-transition-new(root) { animation: none !important; }
@@ -1306,7 +1278,6 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--warm);
-  text-shadow: 0 0 48px color-mix(in srgb, var(--warm) 38%, transparent);
   font-variant-numeric: tabular-nums;
 }
 .calc-bar {
@@ -1318,8 +1289,7 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
 .calc-bar span {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--warm) 55%, transparent), var(--warm-hi));
-  box-shadow: 0 0 16px color-mix(in srgb, var(--warm) 60%, transparent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--warm-lit) 65%, transparent), var(--warm-lit));
   transition: width 0.6s var(--ease);
 }
 .calc-cut { margin: 0; color: var(--text-dim); }
@@ -1341,6 +1311,13 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
 
 .calc-cta { margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 2rem; border-top: 1px solid var(--line-soft); }
 .calc-cta h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+.calc-hint {
+  margin: 1rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  max-width: 52ch;
+  line-height: 1.6;
+}
 .calc-cta .lede { margin-top: 1rem; }
 
 @media (max-width: 620px) {
