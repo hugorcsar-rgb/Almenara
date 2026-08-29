@@ -1348,3 +1348,166 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   .calc-out .specs > div { grid-template-columns: 1fr; gap: 0.4rem; }
   .calc-out .specs dd { text-align: left; white-space: normal; }
 }
+
+/* ==========================================================================
+   INFORME IMPRIMIBLE
+   No se ve en pantalla. Al imprimir desaparece la web entera y queda una
+   hoja en negro sobre blanco: membrete, cifras de partida, resultado,
+   método y pie con los datos de contacto. El navegador ofrece «Guardar
+   como PDF» y sale un documento vectorial, con texto seleccionable, sin
+   descargar ninguna librería. Sirve igual en el móvil.
+   ========================================================================== */
+.print-doc { display: none; }
+
+@media print {
+  /* Nada de la web en papel. */
+  .site-header, .site-footer, .grain, .aura, .pointer-light, .scroll-progress,
+  .skip-link, .page-head, .calc-step, .calc-adv, .calc-cta, .calc-out > *:not(.print-doc),
+  .beam { display: none !important; }
+
+  html, body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 10.5pt;
+    line-height: 1.5;
+  }
+  main, .band, .shell { padding: 0 !important; margin: 0 !important; width: auto !important; border: 0 !important; }
+
+  @page { margin: 17mm 16mm; }
+
+  .print-doc {
+    display: block !important;
+    font-family: var(--f-display);
+    color: #000;
+  }
+
+  /* Membrete */
+  .pd-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1.5pt solid #000;
+    padding-bottom: 6pt;
+    margin-bottom: 16pt;
+  }
+  .pd-brand {
+    margin: 0;
+    font-family: var(--f-display);
+    font-size: 12pt;
+    font-weight: 300;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+  }
+  .pd-meta { margin: 0; font-size: 8.5pt; color: #444; }
+
+  .pd-title {
+    margin: 0 0 3pt;
+    font-size: 18pt;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+  .pd-sub { margin: 0 0 16pt; font-size: 9.5pt; color: #555; }
+
+  /* La cifra que justifica el documento */
+  .pd-big-label {
+    margin: 0 0 2pt;
+    font-family: var(--f-display);
+    font-size: 8pt;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #555;
+  }
+  .pd-big {
+    margin: 0 0 18pt;
+    font-family: var(--f-data);
+    font-size: 27pt;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .pd-h2 {
+    margin: 0 0 6pt;
+    font-family: var(--f-display);
+    font-size: 7.5pt;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 0.5pt solid #BBB;
+    padding-bottom: 3pt;
+  }
+
+  .pd-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 16pt;
+  }
+  .pd-table th,
+  .pd-table td {
+    text-align: left;
+    padding: 3.6pt 0;
+    border-bottom: 0.5pt solid #DDD;
+    vertical-align: baseline;
+  }
+  .pd-table th { font-weight: 400; color: #333; width: 58%; }
+  .pd-table td { font-family: var(--f-data); font-size: 9.5pt; text-align: right; }
+
+  /* Cifras de partida en dos columnas: ocupan la mitad y se leen igual. */
+  .pd-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 22pt;
+    margin: 0 0 16pt;
+  }
+  .pd-facts > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10pt;
+    padding: 3.6pt 0;
+    border-bottom: 0.5pt solid #DDD;
+  }
+  .pd-facts dt { margin: 0; color: #333; }
+  .pd-facts dd { margin: 0; font-family: var(--f-data); font-size: 9pt; white-space: nowrap; }
+
+  /* Comparación de potencia: el argumento entero, en dos barras. */
+  .pd-bars { margin: 4pt 0 18pt; }
+  .pd-bar {
+    display: grid;
+    grid-template-columns: 78pt 1fr 58pt;
+    align-items: center;
+    gap: 10pt;
+    margin-bottom: 7pt;
+  }
+  .pd-bar-l { font-size: 8.5pt; color: #333; }
+  .pd-bar-t { display: block; height: 9pt; border: 0.5pt solid #999; }
+  .pd-bar-t i {
+    display: block;
+    height: 100%;
+    background: #DDD;
+  }
+  .pd-bar.is-new .pd-bar-t i { background: #000; }
+  .pd-bar-v {
+    font-family: var(--f-data);
+    font-size: 9pt;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .pd-note { margin: 0 0 14pt; font-size: 9pt; color: #333; max-width: 46em; }
+
+  .pd-foot {
+    border-top: 0.5pt solid #000;
+    padding-top: 7pt;
+    font-size: 8pt;
+    color: #333;
+  }
+  .pd-foot p { margin: 0 0 6pt; }
+  .pd-disc { color: #666; font-size: 7.5pt; }
+
+  /* Que no se parta una tabla entre dos hojas. */
+  .pd-table, .pd-foot { break-inside: avoid; }
+  .pd-h2 { break-after: avoid; }
+}
