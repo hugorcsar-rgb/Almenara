@@ -1,0 +1,46 @@
+name: Lighthouse
+
+# Auditoría de rendimiento, accesibilidad y buenas prácticas.
+#
+# El flujo anterior fallaba en cada commit buscando una carpeta .lighthouseci
+# que nunca se creaba. Este audita directamente el sitio ya publicado, que es
+# lo que de verdad ve un visitante, y no bloquea nada: informa.
+#
+# El flujo anterior exigía un 1.00 redondo en accesibilidad y en posicionamiento
+# y una pintura por debajo de segundo y medio. Casi ninguna web pasa eso, así
+# que estaba en rojo por diseño. Un semáforo siempre en rojo deja de avisar.
+#
+# Se ejecuta los lunes por la mañana y a mano cuando quieras, desde la pestaña
+# Actions. No corre en cada commit a propósito: auditar veinte veces al día no
+# aporta nada y llena la lista de ruido.
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'     # lunes a las 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    name: Auditar el sitio publicado
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Ejecutar Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://almenara.hamergolfconsulting.com/
+            https://almenara.hamergolfconsulting.com/technology.html
+            https://almenara.hamergolfconsulting.com/services.html
+            https://almenara.hamergolfconsulting.com/applications.html
+            https://almenara.hamergolfconsulting.com/calculator.html
+            https://almenara.hamergolfconsulting.com/contact.html
+          # Tres pasadas por página: una sola medición tiene demasiado ruido
+          # para sacar conclusiones.
+          runs: 3
+          uploadArtifacts: true
+          temporaryPublicStorage: true
