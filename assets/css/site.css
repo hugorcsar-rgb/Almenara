@@ -1488,3 +1488,27 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   .pd-table, .pd-foot { break-inside: avoid; }
   .pd-h2 { break-after: avoid; }
 }
+
+/* --- El paso previo a guardar el PDF -------------------------------------- */
+.pdf-step {
+  margin: 1.75rem 0 0;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--warm-lit);
+  background: var(--ink-raised);
+  max-width: 46rem;
+}
+.pdf-step-t { margin: 0 0 0.6rem; color: var(--text-dim); }
+.pdf-step-b { margin: 0 0 1.25rem; font-size: 0.9375rem; line-height: 1.6; max-width: 52ch; }
+.pdf-step-b strong { font-weight: 500; color: var(--warm); }
+.pdf-step-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.pdf-step-never {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.pdf-step-never input { accent-color: var(--text); width: 15px; height: 15px; cursor: pointer; }
+@media print { .pdf-step { display: none !important; } }
