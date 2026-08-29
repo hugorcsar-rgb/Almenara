@@ -32,6 +32,14 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumens per watt, on any luminaire",
       "meta.desc": "A patented LED platform delivering over 275 lumens per watt and more than 50% energy reduction. Retrofit-ready, engineered and certified in Europe.",
       "meta.locale": "en_GB",
+    "calc.meta.title": "Savings calculator — Almenara",
+    "calc.meta.desc": "Work out what you would save by replacing your current lighting. Enter your own figures, no registration.",
+    "calc.eyebrow": "Savings calculator",
+    "calc.title": "Run your own numbers.",
+    "calc.sub": "Comparison is made at equal light output, not at equal power: to deliver the same lumens you need a power proportional to the ratio of efficacies. Nothing is registered and no email is required.",
+    "cont.whatsapp": "WhatsApp",
+    "nav.calc": "Calculator",
+    "cct.label": "Colour temperature",
       "a11y.skip": "Skip to content", "a11y.home": "Almenara — home", "a11y.primary": "Main",
       "a11y.lang": "Choose language", "a11y.theme": "Switch between light and dark", "a11y.footer": "Footer",
       "nav.tech": "Technology", "nav.services": "Services", "nav.apps": "Applications", "nav.contact": "Contact",
@@ -81,6 +89,14 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lúmenes por vatio, en cualquier luminaria",
       "meta.desc": "Plataforma LED patentada que supera los 275 lúmenes por vatio y reduce el consumo más de un 50 %. Apta para instalaciones existentes, diseñada y certificada en Europa.",
       "meta.locale": "es_ES",
+    "calc.meta.title": "Calculadora de ahorro — Almenara",
+    "calc.meta.desc": "Calcula lo que ahorrarías sustituyendo tu iluminación actual. Con tus propias cifras y sin registro.",
+    "calc.eyebrow": "Calculadora de ahorro",
+    "calc.title": "Echa tus propias cuentas.",
+    "calc.sub": "La comparación se hace a iluminación equivalente, no a igual potencia: para dar los mismos lúmenes hace falta una potencia proporcional al cociente de eficacias. No se registra nada ni se pide correo.",
+    "cont.whatsapp": "WhatsApp",
+    "nav.calc": "Calculadora",
+    "cct.label": "Temperatura de color",
       "a11y.skip": "Saltar al contenido", "a11y.home": "Almenara — inicio", "a11y.primary": "Principal",
       "a11y.lang": "Elegir idioma", "a11y.theme": "Alternar entre tema claro y oscuro", "a11y.footer": "Pie de página",
       "nav.tech": "Tecnología", "nav.services": "Servicios", "nav.apps": "Aplicaciones", "nav.contact": "Contacto",
@@ -130,6 +146,14 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lúmenes por watt, em qualquer luminária",
       "meta.desc": "Plataforma LED patenteada que ultrapassa os 275 lúmenes por watt e reduz o consumo em mais de 50 %. Compatível com instalações existentes, concebida e certificada na Europa.",
       "meta.locale": "pt_PT",
+    "calc.meta.title": "Calculadora de poupança — Almenara",
+    "calc.meta.desc": "Calcule o que pouparia substituindo a sua iluminação actual. Com os seus próprios números e sem registo.",
+    "calc.eyebrow": "Calculadora de poupança",
+    "calc.title": "Faça as suas próprias contas.",
+    "calc.sub": "A comparação é feita a iluminação equivalente, não a igual potência: para dar os mesmos lúmenes é precisa uma potência proporcional ao quociente das eficácias. Nada é registado nem se pede correio.",
+    "cont.whatsapp": "WhatsApp",
+    "nav.calc": "Calculadora",
+    "cct.label": "Temperatura de cor",
       "a11y.skip": "Saltar para o conteúdo", "a11y.home": "Almenara — página inicial", "a11y.primary": "Principal",
       "a11y.lang": "Escolher idioma", "a11y.theme": "Alternar entre tema claro e escuro", "a11y.footer": "Rodapé",
       "nav.tech": "Tecnologia", "nav.services": "Serviços", "nav.apps": "Aplicações", "nav.contact": "Contacto",
@@ -178,6 +202,14 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumens par watt, sur tout luminaire",
       "meta.desc": "Plateforme LED brevetée dépassant 275 lumens par watt et réduisant la consommation de plus de 50 %. Compatible avec les installations existantes, conçue et certifiée en Europe.",
       "meta.locale": "fr_FR",
+    "calc.meta.title": "Calculateur d'économies — Almenara",
+    "calc.meta.desc": "Calculez ce que vous économiseriez en remplaçant votre éclairage actuel. Avec vos propres chiffres et sans inscription.",
+    "calc.eyebrow": "Calculateur d'économies",
+    "calc.title": "Faites vos propres comptes.",
+    "calc.sub": "La comparaison se fait à éclairement équivalent, non à puissance égale : pour délivrer les mêmes lumens il faut une puissance proportionnelle au rapport des efficacités. Rien n'est enregistré et aucun courriel n'est demandé.",
+    "cont.whatsapp": "WhatsApp",
+    "nav.calc": "Calculateur",
+    "cct.label": "Température de couleur",
       "a11y.skip": "Aller au contenu", "a11y.home": "Almenara — accueil", "a11y.primary": "Principal",
       "a11y.lang": "Choisir la langue", "a11y.theme": "Basculer entre thème clair et sombre", "a11y.footer": "Pied de page",
       "nav.tech": "Technologie", "nav.services": "Services", "nav.apps": "Applications", "nav.contact": "Contact",
@@ -227,6 +259,14 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 Lumen pro Watt, in jeder Leuchte",
       "meta.desc": "Patentierte LED-Plattform mit über 275 Lumen pro Watt und mehr als 50 % weniger Verbrauch. Nachrüstbar, in Europa entwickelt und zertifiziert.",
       "meta.locale": "de_DE",
+    "calc.meta.title": "Einsparrechner — Almenara",
+    "calc.meta.desc": "Rechnen Sie aus, was der Austausch Ihrer Beleuchtung sparen würde. Mit Ihren eigenen Zahlen und ohne Registrierung.",
+    "calc.eyebrow": "Einsparrechner",
+    "calc.title": "Rechnen Sie selbst nach.",
+    "calc.sub": "Verglichen wird bei gleicher Lichtmenge, nicht bei gleicher Leistung: für dieselben Lumen braucht es eine Leistung im Verhältnis der Lichtausbeuten. Nichts wird gespeichert, keine E-Mail verlangt.",
+    "cont.whatsapp": "WhatsApp",
+    "nav.calc": "Rechner",
+    "cct.label": "Farbtemperatur",
       "a11y.skip": "Zum Inhalt springen", "a11y.home": "Almenara — Startseite", "a11y.primary": "Haupt",
       "a11y.lang": "Sprache wählen", "a11y.theme": "Zwischen hellem und dunklem Thema wechseln", "a11y.footer": "Fußbereich",
       "nav.tech": "Technologie", "nav.services": "Leistungen", "nav.apps": "Anwendungen", "nav.contact": "Kontakt",
@@ -276,6 +316,14 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumen per watt, su qualsiasi apparecchio",
       "meta.desc": "Piattaforma LED brevettata che supera i 275 lumen per watt e riduce i consumi di oltre il 50 %. Adatta agli impianti esistenti, progettata e certificata in Europa.",
       "meta.locale": "it_IT",
+    "calc.meta.title": "Calcolatore di risparmio — Almenara",
+    "calc.meta.desc": "Calcola quanto risparmieresti sostituendo la tua illuminazione attuale. Con i tuoi numeri e senza registrazione.",
+    "calc.eyebrow": "Calcolatore di risparmio",
+    "calc.title": "Fai i tuoi conti.",
+    "calc.sub": "Il confronto è a illuminamento equivalente, non a pari potenza: per dare gli stessi lumen serve una potenza proporzionale al rapporto delle efficienze. Non si registra nulla e non si chiede la posta elettronica.",
+    "cont.whatsapp": "WhatsApp",
+    "nav.calc": "Calcolatore",
+    "cct.label": "Temperatura di colore",
       "a11y.skip": "Vai al contenuto", "a11y.home": "Almenara — pagina iniziale", "a11y.primary": "Principale",
       "a11y.lang": "Scegli la lingua", "a11y.theme": "Alterna tema chiaro e scuro", "a11y.footer": "Piè di pagina",
       "nav.tech": "Tecnologia", "nav.services": "Servizi", "nav.apps": "Applicazioni", "nav.contact": "Contatti",
@@ -325,6 +373,14 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 люмен на ватт в любом светильнике",
       "meta.desc": "Запатентованная светодиодная платформа: свыше 275 люмен на ватт и снижение потребления более чем на 50 %. Подходит для действующих установок, разработана и сертифицирована в Европе.",
       "meta.locale": "ru_RU",
+    "calc.meta.title": "Калькулятор экономии — Almenara",
+    "calc.meta.desc": "Рассчитайте, сколько сэкономите при замене нынешнего освещения. По своим цифрам и без регистрации.",
+    "calc.eyebrow": "Калькулятор экономии",
+    "calc.title": "Посчитайте сами.",
+    "calc.sub": "Сравнение ведётся при равной освещённости, а не при равной мощности: чтобы дать те же люмены, нужна мощность, пропорциональная отношению световых отдач. Ничего не сохраняется и почта не запрашивается.",
+    "cont.whatsapp": "WhatsApp",
+    "nav.calc": "Калькулятор",
+    "cct.label": "Цветовая температура",
       "a11y.skip": "Перейти к содержанию", "a11y.home": "Almenara — главная", "a11y.primary": "Основное",
       "a11y.lang": "Выбрать язык", "a11y.theme": "Переключить светлую и тёмную тему", "a11y.footer": "Нижний колонтитул",
       "nav.tech": "Технология", "nav.services": "Услуги", "nav.apps": "Применение", "nav.contact": "Контакты",
@@ -1104,7 +1160,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const titulo = t(lang, p + '.title');
     const desc = t(lang, p + '.desc');
 
-    document.title = titulo;
+    if (titulo) document.title = titulo;
     setMeta('meta[name="description"]', desc);
     setMeta('meta[property="og:title"]', titulo);
     setMeta('meta[property="og:description"]', desc);
@@ -1124,7 +1180,29 @@ document.addEventListener('DOMContentLoaded', function () {
       url.searchParams.set('lang', lang);
       history.replaceState(null, '', url);
     }
+
+    // Quien se haya apuntado recibe aviso del cambio de idioma: lo usa la
+    // calculadora para volver a formatear las cifras con la coma o el punto
+    // decimal que corresponda a cada lengua.
+    (window.SITE && window.SITE._oyentes || []).forEach(function (f) {
+      try { f(lang); } catch (e) {}
+    });
   }
+
+  /* --- Interfaz mínima para las piezas que se cargan aparte ---------------- */
+  window.SITE = {
+    _oyentes: [],
+    // Añade un diccionario propio al de la web
+    addDict: function (extra) {
+      Object.keys(extra).forEach(function (l) {
+        if (I18N[l]) Object.assign(I18N[l], extra[l]);
+        else I18N[l] = extra[l];
+      });
+    },
+    lang: function () { return document.documentElement.getAttribute('lang') || 'en'; },
+    apply: function () { applyLang(window.SITE.lang(), false); },
+    onLang: function (f) { window.SITE._oyentes.push(f); }
+  };
 
   function initialLang() {
     const p = new URLSearchParams(location.search).get('lang');
@@ -1140,6 +1218,25 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.lang-btn').forEach(function (btn) {
     btn.addEventListener('click', function () { applyLang(btn.dataset.lang, true); });
   });
+
+  (function () {
+    const nav = document.querySelector('.site-nav');
+    if (nav && !nav.querySelector('a[href="calculator.html"]')) {
+      const a = document.createElement('a');
+      a.href = 'calculator.html';
+      a.setAttribute('data-i18n', 'nav.calc');
+      a.textContent = 'Calculator';
+      nav.insertBefore(a, nav.lastElementChild);
+    }
+    const pie = document.querySelector('.footer-top .footer-links');
+    if (pie && !pie.querySelector('a[href="calculator.html"]')) {
+      const a = document.createElement('a');
+      a.href = 'calculator.html';
+      a.setAttribute('data-i18n', 'nav.calc');
+      a.textContent = 'Calculator';
+      pie.insertBefore(a, pie.lastElementChild);
+    }
+  })();
 
   applyLang(initialLang(), false);
 
@@ -1275,5 +1372,147 @@ document.addEventListener('DOMContentLoaded', function () {
         destino.focus({ preventScroll: true });
       });
     });
+  })();
+
+  /* ========================================================================
+     LUZ INTERACTIVA
+     La página se comporta como una luminaria: tiene temperatura de color
+     ajustable, el cursor la ilumina y el haz reacciona al desplazamiento.
+     Nada de esto toca el HTML: se inserta desde aquí, así que las cinco
+     páginas lo heredan sin modificarlas.
+     ======================================================================== */
+  (function () {
+    const mqR = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+    const quieto = !!(mqR && mqR.matches);
+    const raiz = document.documentElement;
+
+    /* --- Capas decorativas ---------------------------------------------- */
+    function capa(clase, dentro) {
+      const el = document.createElement('div');
+      el.className = clase;
+      el.setAttribute('aria-hidden', 'true');
+      (dentro || document.body).insertBefore(el, (dentro || document.body).firstChild);
+      return el;
+    }
+    const grano = capa('grain');
+    const luz = capa('pointer-light');
+    const hero = document.querySelector('.hero, .page-head');
+    if (hero) capa('beam', hero);
+
+    /* --- Temperatura de color -------------------------------------------
+       Aproximación del color de un cuerpo negro entre 2700 K y 6500 K.
+       Cinco puntos de anclaje e interpolación lineal entre ellos: suficiente
+       para que la transición se lea como un atenuador real. ---------------- */
+    const ANCLAS = [
+      [2700, [255, 154,  60]],
+      [3500, [255, 187, 110]],
+      [4500, [255, 218, 170]],
+      [5500, [246, 240, 235]],
+      [6500, [206, 224, 255]]
+    ];
+
+    function colorDe(k) {
+      for (let i = 0; i < ANCLAS.length - 1; i++) {
+        const [k1, c1] = ANCLAS[i], [k2, c2] = ANCLAS[i + 1];
+        if (k <= k2) {
+          const t = (k - k1) / (k2 - k1);
+          const c = c1.map(function (v, j) { return Math.round(v + (c2[j] - v) * t); });
+          return 'rgb(' + c.join(' ') + ')';
+        }
+      }
+      return 'rgb(' + ANCLAS[ANCLAS.length - 1][1].join(' ') + ')';
+    }
+
+    function aplicarCCT(k) {
+      raiz.style.setProperty('--cct', colorDe(k));
+      const salida = document.querySelector('.cct-value');
+      if (salida) salida.textContent = k + ' K';
+      try { localStorage.setItem('site.cct', String(k)); } catch (e) {}
+    }
+
+    // El mando vive en la escala de eficacia de la portada; si no está esa
+    // sección, no se inserta nada y la web funciona igual.
+    const escala = document.querySelector('.scale');
+    if (escala) {
+      const guardado = (function () {
+        try { return parseInt(localStorage.getItem('site.cct'), 10); } catch (e) { return NaN; }
+      })();
+      const inicial = (guardado >= 2700 && guardado <= 6500) ? guardado : 3000;
+
+      const caja = document.createElement('div');
+      caja.className = 'cct';
+      caja.innerHTML =
+        '<span class="cct-label mono" data-i18n="cct.label">Colour temperature</span>' +
+        '<input type="range" min="2700" max="6500" step="100" value="' + inicial + '" />' +
+        '<span class="cct-value">' + inicial + ' K</span>';
+      escala.appendChild(caja);
+
+      const mando = caja.querySelector('input');
+      mando.setAttribute('aria-label', 'Colour temperature');
+      mando.addEventListener('input', function () { aplicarCCT(parseInt(mando.value, 10)); });
+      aplicarCCT(inicial);
+
+      // El mando se inserta después de traducir la página, así que hay que
+      // volver a pasar el traductor por él o su etiqueta se quedaría en inglés.
+      if (typeof applyLang === 'function') {
+        applyLang(document.documentElement.getAttribute('lang') || 'en', false);
+      }
+    }
+
+    if (quieto) return;
+
+    /* --- El cursor ilumina ------------------------------------------------
+       Se mueve con transform y con un pequeño retardo: la luz de una lámpara
+       no salta, se arrastra. Un solo fotograma por cuadro. ------------------ */
+    let px = window.innerWidth / 2, py = window.innerHeight / 2;
+    let lx = px, ly = py, activo = false, corriendo = false;
+
+    function marco() {
+      lx += (px - lx) * 0.14;
+      ly += (py - ly) * 0.14;
+      luz.style.transform = 'translate3d(' + lx.toFixed(1) + 'px,' + ly.toFixed(1) + 'px,0)';
+      if (Math.abs(px - lx) > 0.5 || Math.abs(py - ly) > 0.5) {
+        requestAnimationFrame(marco);
+      } else {
+        corriendo = false;
+      }
+    }
+
+    window.addEventListener('pointermove', function (e) {
+      if (e.pointerType === 'touch') return;
+      px = e.clientX; py = e.clientY;
+      if (!activo) { activo = true; luz.classList.add('is-on'); }
+      if (!corriendo) { corriendo = true; requestAnimationFrame(marco); }
+    }, { passive: true });
+
+    document.addEventListener('pointerleave', function () {
+      activo = false;
+      luz.classList.remove('is-on');
+    });
+
+    /* --- El haz barre las tarjetas --------------------------------------- */
+    document.querySelectorAll('.adv-grid > article, .sectors > article, .service')
+      .forEach(function (t) {
+        t.addEventListener('pointermove', function (e) {
+          const r = t.getBoundingClientRect();
+          t.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+          t.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+        }, { passive: true });
+      });
+
+    /* --- El haz se estrecha al bajar -------------------------------------- */
+    const haz = document.querySelector('.beam');
+    if (haz) {
+      let esperando = false;
+      window.addEventListener('scroll', function () {
+        if (esperando) return;
+        esperando = true;
+        requestAnimationFrame(function () {
+          const p = Math.min(1, (window.scrollY || 0) / (window.innerHeight || 800));
+          haz.style.setProperty('--beam', (1 - p * 0.4).toFixed(3));
+          esperando = false;
+        });
+      }, { passive: true });
+    }
   })();
 });
