@@ -372,12 +372,698 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   /* ==========================================================================
+     Diccionario de las páginas interiores.
+     Se fusiona con el de la portada en app.js. Mismas reglas: si una clave
+     falta en un idioma, cae al inglés en lugar de dejar el hueco vacío.
+     ========================================================================== */
+  const I18N_PAGES = {
+
+    en: {
+      "tech.meta.title": "Technology — Almenara",
+      "tech.meta.desc": "The patented optical and thermal architecture behind the Almenara LED platform.",
+      "tech.eyebrow": "Technology",
+      "tech.title": "Light without the heat penalty.",
+      "tech.sub": "A conventional LED loses more than half its electrical input as heat at the emitting surface, which caps both output and lifetime. Our architecture moves that load away from the diode so it can run near its thermodynamic optimum.",
+      "tech.principle.label": "The principle",
+      "tech.principle.title": "More light, less heat, same fixture.",
+      "tech.principle.body": "The gain comes from the optical and thermal path, not from exotic materials or a new luminaire. That is what makes it retrofittable: the host fixture, its housing and its photometric distribution stay as they are.",
+      "tech.specs.label": "Specifications",
+      "tech.specs.title": "Standard platform values.",
+      "tech.specs.body": "Custom configurations on request. Figures marked in amber are the ones a specifier will want the test report for; ask us and we send it.",
+      "tech.spec.efficacy": "Luminous efficacy",
+      "tech.spec.energy": "Energy reduction against standard",
+      "tech.spec.compat": "Compatibility",
+      "tech.spec.compat_v": "Universal · retrofit-ready",
+      "tech.spec.temp": "Operating temperature",
+      "tech.spec.cct": "Colour temperature",
+      "tech.spec.cct_v": "2700 K – 6500 K, configurable",
+      "tech.spec.cri": "Colour rendering index",
+      "tech.spec.life": "Lifetime",
+      "tech.spec.beam": "Beam angle",
+      "tech.spec.beam_v": "Configurable",
+      "tech.spec.cert": "Certification",
+      "tech.specs.note": "Efficacy and colour rendering are linked: the highest efficacy figure and the highest rendering figure are not obtained in the same configuration. The technical brief states which value belongs to which, along with the measurement conditions and the independent laboratory report.",
+      "tech.patent.label": "Patent",
+      "tech.patent.title": "Protected worldwide.",
+      "tech.patent.body": "The portfolio covers the optical and thermal architecture through method, device and manufacturing claims. Granted in the European Union, the United States and Mexico, with further jurisdictions pending.",
+      "tech.cta.label": "Next step",
+      "tech.cta.title": "Put it in your own catalogue.",
+      "tech.cta.body": "For manufacturers and lighting studios evaluating the platform for a product line.",
+      "tech.cta.btn": "Request the technical brief",
+
+      "serv.meta.title": "Services — Almenara",
+      "serv.meta.desc": "Four ways to work with Almenara: module supply, retrofit engineering, custom development and technical advisory.",
+      "serv.eyebrow": "Services",
+      "serv.title": "Four ways to work with us.",
+      "serv.sub": "From supplying a component to engineering the whole luminaire. The technology adapts to how you buy, not the other way around.",
+      "serv.list.label": "What we do",
+      "serv.1t": "Module supply",
+      "serv.1b": "For manufacturers integrating the platform into their own luminaires. Standard form factors and bespoke geometries, delivered as drop-in modules with the full datasheet and certification file.",
+      "serv.2t": "Retrofit engineering",
+      "serv.2b": "Upgrading installations already in service without replacing the fixture. Designed for commercial, industrial and public estates where the fleet runs into the thousands of points.",
+      "serv.3t": "Custom development",
+      "serv.3b": "The whole luminaire engineered around the platform, from specification to prototype to certified production unit. Minimum order quantity applies.",
+      "serv.4t": "Technical advisory",
+      "serv.4b": "For architects, lighting designers and infrastructure operators sizing a large upgrade. Photometric studies, lifecycle costing and retrofit feasibility, with no obligation to buy anything afterwards.",
+      "serv.cta.label": "Next step",
+      "serv.cta.title": "Scope your project in an hour.",
+      "serv.cta.body": "Every engagement starts with a technical call. No commitment and no sales pitch: engineers answering engineers.",
+      "serv.cta.btn": "Request a call",
+
+      "apps.meta.title": "Applications — Almenara",
+      "apps.meta.desc": "Where the Almenara platform is installed: hospitality, architecture, industry, retail, public infrastructure and premium residential.",
+      "apps.eyebrow": "Applications",
+      "apps.title": "Where it is installed.",
+      "apps.sub": "Any spectrum, any format, any scale. The saving is largest where the installed load is high and the hours are long.",
+      "apps.list.label": "Six sectors",
+      "apps.1t": "Hospitality",
+      "apps.1b": "Hotels, restaurants, spas. Warm spectra and faithful rendering in spaces where light is part of what the guest is paying for.",
+      "apps.2t": "Architecture",
+      "apps.2b": "Museums, cultural institutions, listed buildings. Light that respects the material, with control over the ultraviolet and infrared that damages it.",
+      "apps.3t": "Industry",
+      "apps.3b": "Factories, logistics centres, processing plants. High-bay fittings running continuously, where every watt saved multiplies by thousands of hours.",
+      "apps.4t": "Retail",
+      "apps.4b": "Flagship stores, showrooms, galleries. Rendering that holds across the whole range and stays consistent between production batches and over time.",
+      "apps.5t": "Public infrastructure",
+      "apps.5b": "Roads, tunnels, civic buildings. Long-life modules sized for minimum maintenance over a twenty-five-year horizon and for European procurement files.",
+      "apps.6t": "Premium residential",
+      "apps.6b": "Private houses, yachts, estates. Custom geometries integrated into the architecture, specified by designers who treat light as a material.",
+      "apps.cta.label": "Next step",
+      "apps.cta.title": "Your sector is not on the list.",
+      "apps.cta.body": "The platform has gone into contexts none of these six describe. If lighting is critical to your operation, tell us about it.",
+      "apps.cta.btn": "Open a conversation",
+
+      "cont.meta.title": "Contact — Almenara",
+      "cont.meta.desc": "Contact Almenara for partnership enquiries, technical questions and project proposals. Madrid.",
+      "cont.eyebrow": "Contact",
+      "cont.title": "Tell us what you are lighting.",
+      "cont.sub": "For partnership enquiries, technical questions and project proposals. We answer within one working day.",
+      "cont.form.label": "Write to us",
+      "cont.office": "Office",
+      "cont.office_v": "Madrid, Spain",
+      "cont.email": "Email",
+      "cont.hours": "Hours",
+      "cont.hours_v": "Monday to Friday · 09:00 – 18:00 CET",
+      "cont.f.name": "Name",
+      "cont.f.company": "Company",
+      "cont.f.role": "Role",
+      "cont.f.email": "Email",
+      "cont.f.message": "Message",
+      "cont.f.message_ph": "The luminaire you make or operate, and roughly how many hours a year it runs.",
+      "cont.f.submit": "Send message",
+      "cont.f.note": "This opens your email client with the message ready to send. A direct form is coming once the contact infrastructure is in place."
+    },
+
+    es: {
+      "tech.meta.title": "Tecnología — Almenara",
+      "tech.meta.desc": "La arquitectura óptica y térmica patentada que sostiene la plataforma LED de Almenara.",
+      "tech.eyebrow": "Tecnología",
+      "tech.title": "Luz sin la penalización del calor.",
+      "tech.sub": "Un LED convencional disipa en forma de calor más de la mitad de la energía que recibe, y lo hace en la propia superficie emisora, lo que limita a la vez el flujo y la vida útil. Nuestra arquitectura aleja esa carga térmica del diodo para que trabaje cerca de su óptimo termodinámico.",
+      "tech.principle.label": "El principio",
+      "tech.principle.title": "Más luz, menos calor, la misma luminaria.",
+      "tech.principle.body": "La ganancia proviene del camino óptico y térmico, no de materiales exóticos ni de una luminaria nueva. Eso es justamente lo que permite sustituir la fuente en instalaciones existentes: la carcasa y la distribución fotométrica se quedan como estaban.",
+      "tech.specs.label": "Especificaciones",
+      "tech.specs.title": "Valores de la plataforma estándar.",
+      "tech.specs.body": "Configuraciones a medida bajo petición. Las cifras marcadas en ámbar son aquellas cuyo informe de ensayo pedirá un proyectista; solicítalo y te lo enviamos.",
+      "tech.spec.efficacy": "Eficacia luminosa",
+      "tech.spec.energy": "Reducción de consumo frente al estándar",
+      "tech.spec.compat": "Compatibilidad",
+      "tech.spec.compat_v": "Universal · apta para reforma",
+      "tech.spec.temp": "Temperatura de trabajo",
+      "tech.spec.cct": "Temperatura de color",
+      "tech.spec.cct_v": "2700 K – 6500 K, configurable",
+      "tech.spec.cri": "Índice de reproducción cromática",
+      "tech.spec.life": "Vida útil",
+      "tech.spec.beam": "Ángulo de apertura",
+      "tech.spec.beam_v": "Configurable",
+      "tech.spec.cert": "Certificación",
+      "tech.specs.note": "Eficacia y reproducción cromática están ligadas: la cifra máxima de eficacia y la máxima de reproducción no se obtienen en la misma configuración. La ficha técnica precisa qué valor corresponde a cuál, junto con las condiciones de medida y el informe del laboratorio independiente.",
+      "tech.patent.label": "Patente",
+      "tech.patent.title": "Protegida en todo el mundo.",
+      "tech.patent.body": "La cartera cubre la arquitectura óptica y térmica mediante reivindicaciones de método, de dispositivo y de fabricación. Concedida en la Unión Europea, los Estados Unidos y México, con otras jurisdicciones en tramitación.",
+      "tech.cta.label": "Siguiente paso",
+      "tech.cta.title": "Llévala a tu propio catálogo.",
+      "tech.cta.body": "Para fabricantes y estudios de iluminación que estudian incorporar la plataforma a una gama.",
+      "tech.cta.btn": "Solicitar la ficha técnica",
+
+      "serv.meta.title": "Servicios — Almenara",
+      "serv.meta.desc": "Cuatro formas de trabajar con Almenara: suministro de módulos, reforma de instalaciones, desarrollo a medida y asesoría técnica.",
+      "serv.eyebrow": "Servicios",
+      "serv.title": "Cuatro formas de trabajar con nosotros.",
+      "serv.sub": "Desde suministrar un componente hasta desarrollar la luminaria entera. La tecnología se adapta a cómo compras tú, y no al revés.",
+      "serv.list.label": "Qué hacemos",
+      "serv.1t": "Suministro de módulos",
+      "serv.1b": "Para fabricantes que integran la plataforma en sus propias luminarias. Formatos estándar y geometrías a medida, entregados como módulos listos para montar, con ficha técnica y expediente de certificación completos.",
+      "serv.2t": "Reforma de instalaciones",
+      "serv.2b": "Mejora de instalaciones ya en servicio sin sustituir la luminaria. Pensada para patrimonios comerciales, industriales y públicos donde el parque se cuenta por miles de puntos de luz.",
+      "serv.3t": "Desarrollo a medida",
+      "serv.3b": "La luminaria completa desarrollada en torno a la plataforma: de la especificación al prototipo y de ahí a la unidad de producción certificada. Sujeto a pedido mínimo.",
+      "serv.4t": "Asesoría técnica",
+      "serv.4b": "Para arquitectos, proyectistas de iluminación y operadores de infraestructuras que dimensionan una renovación grande. Estudios fotométricos, coste de ciclo de vida y viabilidad de la reforma, sin obligación de comprar nada después.",
+      "serv.cta.label": "Siguiente paso",
+      "serv.cta.title": "Dimensiona tu proyecto en una hora.",
+      "serv.cta.body": "Toda colaboración empieza por una llamada técnica. Sin compromiso y sin discurso comercial: ingenieros respondiendo a ingenieros.",
+      "serv.cta.btn": "Solicitar una llamada",
+
+      "apps.meta.title": "Aplicaciones — Almenara",
+      "apps.meta.desc": "Dónde está instalada la plataforma Almenara: hostelería, arquitectura, industria, comercio, infraestructura pública y residencial de alta gama.",
+      "apps.eyebrow": "Aplicaciones",
+      "apps.title": "Dónde está instalada.",
+      "apps.sub": "Cualquier espectro, cualquier formato, cualquier escala. El ahorro es mayor allí donde la potencia instalada es alta y las horas de uso, muchas.",
+      "apps.list.label": "Seis sectores",
+      "apps.1t": "Hostelería",
+      "apps.1b": "Hoteles, restaurantes, balnearios. Espectros cálidos y reproducción fiel en espacios donde la luz forma parte de lo que el huésped está pagando.",
+      "apps.2t": "Arquitectura",
+      "apps.2b": "Museos, instituciones culturales, edificios protegidos. Luz que respeta el material, con control del ultravioleta y del infrarrojo que lo degradan.",
+      "apps.3t": "Industria",
+      "apps.3b": "Fábricas, centros logísticos, plantas de proceso. Campanas de gran altura en funcionamiento continuo, donde cada vatio ahorrado se multiplica por miles de horas.",
+      "apps.4t": "Comercio",
+      "apps.4b": "Tiendas insignia, salas de exposición, galerías. Reproducción cromática que se sostiene en toda la gama y se mantiene constante entre lotes de fabricación y a lo largo del tiempo.",
+      "apps.5t": "Infraestructura pública",
+      "apps.5b": "Carreteras, túneles, edificios civiles. Módulos de larga vida dimensionados para un mantenimiento mínimo en un horizonte de veinticinco años y para expedientes de contratación europeos.",
+      "apps.6t": "Residencial de alta gama",
+      "apps.6b": "Viviendas privadas, embarcaciones, fincas. Geometrías a medida integradas en la arquitectura, prescritas por diseñadores que tratan la luz como un material más.",
+      "apps.cta.label": "Siguiente paso",
+      "apps.cta.title": "Tu sector no está en la lista.",
+      "apps.cta.body": "La plataforma ha llegado a contextos que ninguno de estos seis describe. Si la iluminación es crítica para tu explotación, cuéntanoslo.",
+      "apps.cta.btn": "Abrir una conversación",
+
+      "cont.meta.title": "Contacto — Almenara",
+      "cont.meta.desc": "Contacta con Almenara para acuerdos de colaboración, consultas técnicas y propuestas de proyecto. Madrid.",
+      "cont.eyebrow": "Contacto",
+      "cont.title": "Cuéntanos qué estás iluminando.",
+      "cont.sub": "Para acuerdos de colaboración, consultas técnicas y propuestas de proyecto. Respondemos en un día laborable.",
+      "cont.form.label": "Escríbenos",
+      "cont.office": "Oficina",
+      "cont.office_v": "Madrid, España",
+      "cont.email": "Correo electrónico",
+      "cont.hours": "Horario",
+      "cont.hours_v": "De lunes a viernes · 09:00 – 18:00 CET",
+      "cont.f.name": "Nombre",
+      "cont.f.company": "Empresa",
+      "cont.f.role": "Cargo",
+      "cont.f.email": "Correo electrónico",
+      "cont.f.message": "Mensaje",
+      "cont.f.message_ph": "La luminaria que fabricas u operas, y cuántas horas al año funciona aproximadamente.",
+      "cont.f.submit": "Enviar mensaje",
+      "cont.f.note": "Esto abre tu gestor de correo con el mensaje preparado. Habrá un formulario directo en cuanto esté configurada la infraestructura de contacto."
+    },
+
+    pt: {
+      "tech.meta.title": "Tecnologia — Almenara",
+      "tech.meta.desc": "A arquitectura óptica e térmica patenteada que sustenta a plataforma LED da Almenara.",
+      "tech.eyebrow": "Tecnologia",
+      "tech.title": "Luz sem a penalização do calor.",
+      "tech.sub": "Um LED convencional dissipa em calor mais de metade da energia que recebe, e fá-lo na própria superfície emissora, o que limita ao mesmo tempo o fluxo e a vida útil. A nossa arquitectura afasta essa carga térmica do díodo para que trabalhe perto do seu óptimo termodinâmico.",
+      "tech.principle.label": "O princípio",
+      "tech.principle.title": "Mais luz, menos calor, a mesma luminária.",
+      "tech.principle.body": "O ganho vem do percurso óptico e térmico, não de materiais exóticos nem de uma luminária nova. É precisamente isso que permite substituir a fonte em instalações existentes: a caixa e a distribuição fotométrica ficam como estavam.",
+      "tech.specs.label": "Especificações",
+      "tech.specs.title": "Valores da plataforma padrão.",
+      "tech.specs.body": "Configurações à medida mediante pedido. Os valores assinalados a âmbar são aqueles cujo relatório de ensaio um projectista irá pedir; solicite-o e enviamos.",
+      "tech.spec.efficacy": "Eficácia luminosa",
+      "tech.spec.energy": "Redução de consumo face ao padrão",
+      "tech.spec.compat": "Compatibilidade",
+      "tech.spec.compat_v": "Universal · apta para remodelação",
+      "tech.spec.temp": "Temperatura de funcionamento",
+      "tech.spec.cct": "Temperatura de cor",
+      "tech.spec.cct_v": "2700 K – 6500 K, configurável",
+      "tech.spec.cri": "Índice de restituição cromática",
+      "tech.spec.life": "Vida útil",
+      "tech.spec.beam": "Ângulo de abertura",
+      "tech.spec.beam_v": "Configurável",
+      "tech.spec.cert": "Certificação",
+      "tech.specs.note": "Eficácia e restituição cromática estão ligadas: o valor máximo de eficácia e o máximo de restituição não se obtêm na mesma configuração. A ficha técnica precisa que valor corresponde a qual, juntamente com as condições de medição e o relatório do laboratório independente.",
+      "tech.patent.label": "Patente",
+      "tech.patent.title": "Protegida em todo o mundo.",
+      "tech.patent.body": "A carteira cobre a arquitectura óptica e térmica através de reivindicações de método, de dispositivo e de fabrico. Concedida na União Europeia, nos Estados Unidos e no México, com outras jurisdições em curso.",
+      "tech.cta.label": "Passo seguinte",
+      "tech.cta.title": "Leve-a para o seu catálogo.",
+      "tech.cta.body": "Para fabricantes e ateliês de iluminação que avaliam integrar a plataforma numa gama.",
+      "tech.cta.btn": "Pedir a ficha técnica",
+
+      "serv.meta.title": "Serviços — Almenara",
+      "serv.meta.desc": "Quatro formas de trabalhar com a Almenara: fornecimento de módulos, remodelação de instalações, desenvolvimento à medida e consultoria técnica.",
+      "serv.eyebrow": "Serviços",
+      "serv.title": "Quatro formas de trabalhar connosco.",
+      "serv.sub": "Desde fornecer um componente até desenvolver a luminária inteira. A tecnologia adapta-se à forma como compra, e não ao contrário.",
+      "serv.list.label": "O que fazemos",
+      "serv.1t": "Fornecimento de módulos",
+      "serv.1b": "Para fabricantes que integram a plataforma nas suas próprias luminárias. Formatos padrão e geometrias à medida, entregues como módulos prontos a montar, com ficha técnica e processo de certificação completos.",
+      "serv.2t": "Remodelação de instalações",
+      "serv.2b": "Melhoria de instalações já em serviço sem substituir a luminária. Pensada para patrimónios comerciais, industriais e públicos onde o parque se conta aos milhares de pontos de luz.",
+      "serv.3t": "Desenvolvimento à medida",
+      "serv.3b": "A luminária completa desenvolvida em torno da plataforma: da especificação ao protótipo e daí à unidade de produção certificada. Sujeito a quantidade mínima de encomenda.",
+      "serv.4t": "Consultoria técnica",
+      "serv.4b": "Para arquitectos, projectistas de iluminação e operadores de infraestruturas que dimensionam uma renovação de grande escala. Estudos fotométricos, custo do ciclo de vida e viabilidade da remodelação, sem obrigação de comprar seja o que for.",
+      "serv.cta.label": "Passo seguinte",
+      "serv.cta.title": "Dimensione o seu projecto numa hora.",
+      "serv.cta.body": "Toda a colaboração começa por uma chamada técnica. Sem compromisso e sem discurso comercial: engenheiros a responder a engenheiros.",
+      "serv.cta.btn": "Pedir uma chamada",
+
+      "apps.meta.title": "Aplicações — Almenara",
+      "apps.meta.desc": "Onde está instalada a plataforma Almenara: hotelaria, arquitectura, indústria, comércio, infraestruturas públicas e residencial de gama alta.",
+      "apps.eyebrow": "Aplicações",
+      "apps.title": "Onde está instalada.",
+      "apps.sub": "Qualquer espectro, qualquer formato, qualquer escala. A poupança é maior onde a potência instalada é elevada e as horas de funcionamento são muitas.",
+      "apps.list.label": "Seis sectores",
+      "apps.1t": "Hotelaria",
+      "apps.1b": "Hotéis, restaurantes, termas. Espectros quentes e restituição fiel em espaços onde a luz faz parte daquilo que o hóspede está a pagar.",
+      "apps.2t": "Arquitectura",
+      "apps.2b": "Museus, instituições culturais, edifícios classificados. Luz que respeita o material, com controlo do ultravioleta e do infravermelho que o degradam.",
+      "apps.3t": "Indústria",
+      "apps.3b": "Fábricas, centros logísticos, unidades de processo. Campânulas de grande altura em funcionamento contínuo, onde cada watt poupado se multiplica por milhares de horas.",
+      "apps.4t": "Comércio",
+      "apps.4b": "Lojas emblemáticas, salas de exposição, galerias. Restituição cromática que se mantém em toda a gama e é constante entre lotes de fabrico e ao longo do tempo.",
+      "apps.5t": "Infraestruturas públicas",
+      "apps.5b": "Estradas, túneis, edifícios públicos. Módulos de longa duração dimensionados para manutenção mínima num horizonte de vinte e cinco anos e para processos de contratação europeus.",
+      "apps.6t": "Residencial de gama alta",
+      "apps.6b": "Habitações privadas, embarcações, quintas. Geometrias à medida integradas na arquitectura, prescritas por designers que tratam a luz como mais um material.",
+      "apps.cta.label": "Passo seguinte",
+      "apps.cta.title": "O seu sector não está na lista.",
+      "apps.cta.body": "A plataforma chegou a contextos que nenhum destes seis descreve. Se a iluminação é crítica para a sua exploração, conte-nos.",
+      "apps.cta.btn": "Abrir uma conversa",
+
+      "cont.meta.title": "Contacto — Almenara",
+      "cont.meta.desc": "Contacte a Almenara para acordos de parceria, questões técnicas e propostas de projecto. Madrid.",
+      "cont.eyebrow": "Contacto",
+      "cont.title": "Diga-nos o que está a iluminar.",
+      "cont.sub": "Para acordos de parceria, questões técnicas e propostas de projecto. Respondemos no prazo de um dia útil.",
+      "cont.form.label": "Escreva-nos",
+      "cont.office": "Escritório",
+      "cont.office_v": "Madrid, Espanha",
+      "cont.email": "Correio electrónico",
+      "cont.hours": "Horário",
+      "cont.hours_v": "De segunda a sexta · 09:00 – 18:00 CET",
+      "cont.f.name": "Nome",
+      "cont.f.company": "Empresa",
+      "cont.f.role": "Cargo",
+      "cont.f.email": "Correio electrónico",
+      "cont.f.message": "Mensagem",
+      "cont.f.message_ph": "A luminária que fabrica ou opera, e quantas horas por ano funciona aproximadamente.",
+      "cont.f.submit": "Enviar mensagem",
+      "cont.f.note": "Isto abre o seu gestor de correio com a mensagem pronta a enviar. Haverá um formulário directo assim que a infraestrutura de contacto estiver configurada."
+    },
+
+    fr: {
+      "tech.meta.title": "Technologie — Almenara",
+      "tech.meta.desc": "L'architecture optique et thermique brevetée qui soutient la plateforme LED d'Almenara.",
+      "tech.eyebrow": "Technologie",
+      "tech.title": "De la lumière sans la pénalité thermique.",
+      "tech.sub": "Une LED classique dissipe en chaleur plus de la moitié de l'énergie reçue, et cela sur la surface émettrice elle-même, ce qui limite à la fois le flux et la durée de vie. Notre architecture éloigne cette charge thermique de la diode pour qu'elle travaille près de son optimum thermodynamique.",
+      "tech.principle.label": "Le principe",
+      "tech.principle.title": "Plus de lumière, moins de chaleur, le même luminaire.",
+      "tech.principle.body": "Le gain vient du chemin optique et thermique, non de matériaux exotiques ni d'un luminaire neuf. C'est précisément ce qui permet de remplacer la source dans les installations existantes : le carter et la distribution photométrique restent tels quels.",
+      "tech.specs.label": "Spécifications",
+      "tech.specs.title": "Valeurs de la plateforme standard.",
+      "tech.specs.body": "Configurations sur mesure sur demande. Les valeurs signalées en ambre sont celles dont un prescripteur réclamera le rapport d'essai ; demandez-le et nous l'envoyons.",
+      "tech.spec.efficacy": "Efficacité lumineuse",
+      "tech.spec.energy": "Réduction de consommation par rapport au standard",
+      "tech.spec.compat": "Compatibilité",
+      "tech.spec.compat_v": "Universelle · apte à la rénovation",
+      "tech.spec.temp": "Température de fonctionnement",
+      "tech.spec.cct": "Température de couleur",
+      "tech.spec.cct_v": "2700 K – 6500 K, configurable",
+      "tech.spec.cri": "Indice de rendu des couleurs",
+      "tech.spec.life": "Durée de vie",
+      "tech.spec.beam": "Angle d'ouverture",
+      "tech.spec.beam_v": "Configurable",
+      "tech.spec.cert": "Certification",
+      "tech.specs.note": "Efficacité et rendu des couleurs sont liés : la valeur maximale d'efficacité et celle de rendu ne s'obtiennent pas dans la même configuration. La fiche technique précise quelle valeur correspond à laquelle, avec les conditions de mesure et le rapport du laboratoire indépendant.",
+      "tech.patent.label": "Brevet",
+      "tech.patent.title": "Protégée dans le monde entier.",
+      "tech.patent.body": "Le portefeuille couvre l'architecture optique et thermique par des revendications de procédé, de dispositif et de fabrication. Délivré dans l'Union européenne, aux États-Unis et au Mexique, d'autres juridictions étant en cours.",
+      "tech.cta.label": "Étape suivante",
+      "tech.cta.title": "Intégrez-la à votre catalogue.",
+      "tech.cta.body": "Pour les fabricants et les agences de conception lumière qui étudient l'intégration de la plateforme dans une gamme.",
+      "tech.cta.btn": "Demander la fiche technique",
+
+      "serv.meta.title": "Services — Almenara",
+      "serv.meta.desc": "Quatre façons de travailler avec Almenara : fourniture de modules, rénovation d'installations, développement sur mesure et conseil technique.",
+      "serv.eyebrow": "Services",
+      "serv.title": "Quatre façons de travailler avec nous.",
+      "serv.sub": "De la fourniture d'un composant au développement du luminaire entier. La technologie s'adapte à votre façon d'acheter, et non l'inverse.",
+      "serv.list.label": "Ce que nous faisons",
+      "serv.1t": "Fourniture de modules",
+      "serv.1b": "Pour les fabricants qui intègrent la plateforme dans leurs propres luminaires. Formats standard et géométries sur mesure, livrés en modules prêts à monter, avec fiche technique et dossier de certification complets.",
+      "serv.2t": "Rénovation d'installations",
+      "serv.2b": "Amélioration d'installations déjà en service sans remplacer le luminaire. Conçue pour les patrimoines commerciaux, industriels et publics dont le parc se compte en milliers de points lumineux.",
+      "serv.3t": "Développement sur mesure",
+      "serv.3b": "Le luminaire complet développé autour de la plateforme : de la spécification au prototype, puis à l'unité de production certifiée. Quantité minimale de commande applicable.",
+      "serv.4t": "Conseil technique",
+      "serv.4b": "Pour les architectes, les concepteurs lumière et les exploitants d'infrastructures qui dimensionnent une rénovation de grande ampleur. Études photométriques, coût du cycle de vie et faisabilité de la rénovation, sans obligation d'achat ensuite.",
+      "serv.cta.label": "Étape suivante",
+      "serv.cta.title": "Cadrez votre projet en une heure.",
+      "serv.cta.body": "Toute collaboration commence par un appel technique. Sans engagement et sans discours commercial : des ingénieurs qui répondent à des ingénieurs.",
+      "serv.cta.btn": "Demander un appel",
+
+      "apps.meta.title": "Applications — Almenara",
+      "apps.meta.desc": "Où la plateforme Almenara est installée : hôtellerie, architecture, industrie, commerce, infrastructures publiques et résidentiel haut de gamme.",
+      "apps.eyebrow": "Applications",
+      "apps.title": "Où elle est installée.",
+      "apps.sub": "Tout spectre, tout format, toute échelle. L'économie est la plus forte là où la puissance installée est élevée et les heures d'usage nombreuses.",
+      "apps.list.label": "Six secteurs",
+      "apps.1t": "Hôtellerie",
+      "apps.1b": "Hôtels, restaurants, spas. Spectres chauds et rendu fidèle dans des espaces où la lumière fait partie de ce que le client paie.",
+      "apps.2t": "Architecture",
+      "apps.2b": "Musées, institutions culturelles, bâtiments classés. Une lumière qui respecte la matière, avec maîtrise de l'ultraviolet et de l'infrarouge qui la dégradent.",
+      "apps.3t": "Industrie",
+      "apps.3b": "Usines, centres logistiques, sites de production. Cloches de grande hauteur en marche continue, où chaque watt économisé se multiplie par des milliers d'heures.",
+      "apps.4t": "Commerce",
+      "apps.4b": "Boutiques phares, salles d'exposition, galeries. Un rendu qui tient sur toute la gamme et reste constant d'un lot de fabrication à l'autre et dans le temps.",
+      "apps.5t": "Infrastructures publiques",
+      "apps.5b": "Routes, tunnels, bâtiments publics. Modules de longue durée dimensionnés pour une maintenance minimale sur un horizon de vingt-cinq ans et pour les dossiers de marchés publics européens.",
+      "apps.6t": "Résidentiel haut de gamme",
+      "apps.6b": "Résidences privées, yachts, domaines. Géométries sur mesure intégrées à l'architecture, prescrites par des concepteurs qui traitent la lumière comme un matériau.",
+      "apps.cta.label": "Étape suivante",
+      "apps.cta.title": "Votre secteur n'est pas dans la liste.",
+      "apps.cta.body": "La plateforme est allée dans des contextes qu'aucun de ces six ne décrit. Si l'éclairage est critique pour votre exploitation, parlez-nous-en.",
+      "apps.cta.btn": "Ouvrir une conversation",
+
+      "cont.meta.title": "Contact — Almenara",
+      "cont.meta.desc": "Contactez Almenara pour des accords de partenariat, des questions techniques et des propositions de projet. Madrid.",
+      "cont.eyebrow": "Contact",
+      "cont.title": "Dites-nous ce que vous éclairez.",
+      "cont.sub": "Pour les accords de partenariat, les questions techniques et les propositions de projet. Nous répondons sous un jour ouvré.",
+      "cont.form.label": "Écrivez-nous",
+      "cont.office": "Bureau",
+      "cont.office_v": "Madrid, Espagne",
+      "cont.email": "Courriel",
+      "cont.hours": "Horaires",
+      "cont.hours_v": "Du lundi au vendredi · 09:00 – 18:00 CET",
+      "cont.f.name": "Nom",
+      "cont.f.company": "Société",
+      "cont.f.role": "Fonction",
+      "cont.f.email": "Courriel",
+      "cont.f.message": "Message",
+      "cont.f.message_ph": "Le luminaire que vous fabriquez ou exploitez, et son nombre d'heures de fonctionnement annuel approximatif.",
+      "cont.f.submit": "Envoyer le message",
+      "cont.f.note": "Ceci ouvre votre logiciel de messagerie avec le message prêt à partir. Un formulaire direct arrivera dès que l'infrastructure de contact sera en place."
+    },
+
+    de: {
+      "tech.meta.title": "Technologie — Almenara",
+      "tech.meta.desc": "Die patentierte optische und thermische Architektur hinter der LED-Plattform von Almenara.",
+      "tech.eyebrow": "Technologie",
+      "tech.title": "Licht ohne den Wärmeaufschlag.",
+      "tech.sub": "Eine herkömmliche LED gibt mehr als die Hälfte der aufgenommenen Energie als Wärme ab, und zwar an der leuchtenden Fläche selbst, was Lichtstrom und Lebensdauer zugleich begrenzt. Unsere Architektur führt diese Wärmelast von der Diode weg, damit sie nahe ihrem thermodynamischen Optimum arbeitet.",
+      "tech.principle.label": "Das Prinzip",
+      "tech.principle.title": "Mehr Licht, weniger Wärme, dieselbe Leuchte.",
+      "tech.principle.body": "Der Gewinn stammt aus dem optischen und thermischen Pfad, nicht aus exotischen Werkstoffen oder einer neuen Leuchte. Genau das macht den Austausch in bestehenden Anlagen möglich: Gehäuse und Lichtverteilung bleiben, wie sie sind.",
+      "tech.specs.label": "Technische Daten",
+      "tech.specs.title": "Werte der Standardplattform.",
+      "tech.specs.body": "Sonderkonfigurationen auf Anfrage. Die bernsteinfarben markierten Werte sind jene, zu denen ein Fachplaner den Prüfbericht verlangen wird; fordern Sie ihn an und wir senden ihn zu.",
+      "tech.spec.efficacy": "Lichtausbeute",
+      "tech.spec.energy": "Verbrauchsminderung gegenüber dem Standard",
+      "tech.spec.compat": "Kompatibilität",
+      "tech.spec.compat_v": "Universell · nachrüstbar",
+      "tech.spec.temp": "Betriebstemperatur",
+      "tech.spec.cct": "Farbtemperatur",
+      "tech.spec.cct_v": "2700 K – 6500 K, konfigurierbar",
+      "tech.spec.cri": "Farbwiedergabeindex",
+      "tech.spec.life": "Lebensdauer",
+      "tech.spec.beam": "Abstrahlwinkel",
+      "tech.spec.beam_v": "Konfigurierbar",
+      "tech.spec.cert": "Zertifizierung",
+      "tech.specs.note": "Lichtausbeute und Farbwiedergabe hängen zusammen: Der höchste Ausbeutewert und der höchste Wiedergabewert werden nicht in derselben Konfiguration erreicht. Das Datenblatt gibt an, welcher Wert zu welcher gehört, samt Messbedingungen und dem Bericht des unabhängigen Labors.",
+      "tech.patent.label": "Patent",
+      "tech.patent.title": "Weltweit geschützt.",
+      "tech.patent.body": "Das Portfolio deckt die optische und thermische Architektur über Verfahrens-, Vorrichtungs- und Herstellungsansprüche ab. Erteilt in der Europäischen Union, den Vereinigten Staaten und Mexiko, weitere Länder in Bearbeitung.",
+      "tech.cta.label": "Nächster Schritt",
+      "tech.cta.title": "Nehmen Sie sie in Ihr Sortiment auf.",
+      "tech.cta.body": "Für Hersteller und Lichtplanungsbüros, die die Plattform für eine Produktlinie prüfen.",
+      "tech.cta.btn": "Datenblatt anfordern",
+
+      "serv.meta.title": "Leistungen — Almenara",
+      "serv.meta.desc": "Vier Wege der Zusammenarbeit mit Almenara: Modullieferung, Sanierung bestehender Anlagen, Sonderentwicklung und technische Beratung.",
+      "serv.eyebrow": "Leistungen",
+      "serv.title": "Vier Wege der Zusammenarbeit.",
+      "serv.sub": "Von der Lieferung einer Komponente bis zur Entwicklung der ganzen Leuchte. Die Technologie richtet sich danach, wie Sie einkaufen, nicht umgekehrt.",
+      "serv.list.label": "Was wir tun",
+      "serv.1t": "Modullieferung",
+      "serv.1b": "Für Hersteller, die die Plattform in ihre eigenen Leuchten einbauen. Standardformate und Sondergeometrien, geliefert als einbaufertige Module mit vollständigem Datenblatt und Zertifizierungsunterlagen.",
+      "serv.2t": "Sanierung bestehender Anlagen",
+      "serv.2b": "Aufwertung von Anlagen im Betrieb, ohne die Leuchte zu tauschen. Gedacht für gewerbliche, industrielle und öffentliche Bestände, deren Lichtpunkte in die Tausende gehen.",
+      "serv.3t": "Sonderentwicklung",
+      "serv.3b": "Die komplette Leuchte rund um die Plattform entwickelt: von der Spezifikation über den Prototyp bis zur zertifizierten Serieneinheit. Mindestbestellmenge erforderlich.",
+      "serv.4t": "Technische Beratung",
+      "serv.4b": "Für Architekten, Lichtplaner und Infrastrukturbetreiber, die eine große Sanierung auslegen. Lichttechnische Studien, Lebenszykluskosten und Machbarkeit der Nachrüstung, ohne anschließende Kaufverpflichtung.",
+      "serv.cta.label": "Nächster Schritt",
+      "serv.cta.title": "Ihr Projekt in einer Stunde ausgelegt.",
+      "serv.cta.body": "Jede Zusammenarbeit beginnt mit einem technischen Gespräch. Ohne Verpflichtung und ohne Verkaufsrede: Ingenieure antworten Ingenieuren.",
+      "serv.cta.btn": "Gespräch anfragen",
+
+      "apps.meta.title": "Anwendungen — Almenara",
+      "apps.meta.desc": "Wo die Almenara-Plattform installiert ist: Hotellerie, Architektur, Industrie, Handel, öffentliche Infrastruktur und gehobenes Wohnen.",
+      "apps.eyebrow": "Anwendungen",
+      "apps.title": "Wo sie installiert ist.",
+      "apps.sub": "Jedes Spektrum, jedes Format, jeder Maßstab. Die Ersparnis fällt dort am größten aus, wo die installierte Leistung hoch und die Betriebsstunden zahlreich sind.",
+      "apps.list.label": "Sechs Bereiche",
+      "apps.1t": "Hotellerie",
+      "apps.1b": "Hotels, Restaurants, Thermen. Warme Spektren und getreue Wiedergabe in Räumen, in denen das Licht Teil dessen ist, wofür der Gast bezahlt.",
+      "apps.2t": "Architektur",
+      "apps.2b": "Museen, Kulturbauten, denkmalgeschützte Gebäude. Licht, das den Werkstoff schont, mit Kontrolle über die schädigende UV- und Infrarotstrahlung.",
+      "apps.3t": "Industrie",
+      "apps.3b": "Werke, Logistikzentren, Prozessanlagen. Hallenleuchten im Dauerbetrieb, wo sich jedes eingesparte Watt mit Tausenden von Stunden multipliziert.",
+      "apps.4t": "Handel",
+      "apps.4b": "Flagship-Stores, Ausstellungsräume, Galerien. Eine Wiedergabe, die über das ganze Sortiment trägt und zwischen Fertigungslosen wie über die Zeit konstant bleibt.",
+      "apps.5t": "Öffentliche Infrastruktur",
+      "apps.5b": "Straßen, Tunnel, Verwaltungsbauten. Langlebige Module, ausgelegt auf minimale Wartung über einen Horizont von fünfundzwanzig Jahren und auf europäische Vergabeakten.",
+      "apps.6t": "Gehobenes Wohnen",
+      "apps.6b": "Privathäuser, Yachten, Anwesen. Sondergeometrien, in die Architektur eingebettet, ausgeschrieben von Gestaltern, die Licht als Werkstoff behandeln.",
+      "apps.cta.label": "Nächster Schritt",
+      "apps.cta.title": "Ihre Branche steht nicht auf der Liste.",
+      "apps.cta.body": "Die Plattform ist in Zusammenhängen gelandet, die keiner dieser sechs beschreibt. Wenn Licht für Ihren Betrieb entscheidend ist, erzählen Sie es uns.",
+      "apps.cta.btn": "Gespräch eröffnen",
+
+      "cont.meta.title": "Kontakt — Almenara",
+      "cont.meta.desc": "Kontaktieren Sie Almenara für Partnerschaften, technische Fragen und Projektanfragen. Madrid.",
+      "cont.eyebrow": "Kontakt",
+      "cont.title": "Sagen Sie uns, was Sie beleuchten.",
+      "cont.sub": "Für Partnerschaften, technische Fragen und Projektanfragen. Wir antworten innerhalb eines Werktags.",
+      "cont.form.label": "Schreiben Sie uns",
+      "cont.office": "Büro",
+      "cont.office_v": "Madrid, Spanien",
+      "cont.email": "E-Mail",
+      "cont.hours": "Zeiten",
+      "cont.hours_v": "Montag bis Freitag · 09:00 – 18:00 MEZ",
+      "cont.f.name": "Name",
+      "cont.f.company": "Unternehmen",
+      "cont.f.role": "Funktion",
+      "cont.f.email": "E-Mail",
+      "cont.f.message": "Nachricht",
+      "cont.f.message_ph": "Die Leuchte, die Sie herstellen oder betreiben, und ungefähr wie viele Stunden im Jahr sie läuft.",
+      "cont.f.submit": "Nachricht senden",
+      "cont.f.note": "Dies öffnet Ihr E-Mail-Programm mit der fertigen Nachricht. Ein direktes Formular folgt, sobald die Kontaktinfrastruktur eingerichtet ist."
+    },
+
+    it: {
+      "tech.meta.title": "Tecnologia — Almenara",
+      "tech.meta.desc": "L'architettura ottica e termica brevettata alla base della piattaforma LED di Almenara.",
+      "tech.eyebrow": "Tecnologia",
+      "tech.title": "Luce senza il pedaggio del calore.",
+      "tech.sub": "Un LED convenzionale dissipa in calore più della metà dell'energia che riceve, e lo fa sulla superficie emittente stessa, il che limita insieme il flusso e la durata. La nostra architettura allontana quel carico termico dal diodo perché lavori vicino al proprio ottimo termodinamico.",
+      "tech.principle.label": "Il principio",
+      "tech.principle.title": "Più luce, meno calore, lo stesso apparecchio.",
+      "tech.principle.body": "Il guadagno nasce dal percorso ottico e termico, non da materiali esotici né da un apparecchio nuovo. È proprio questo che consente di sostituire la sorgente negli impianti esistenti: il corpo e la distribuzione fotometrica restano come sono.",
+      "tech.specs.label": "Specifiche",
+      "tech.specs.title": "Valori della piattaforma standard.",
+      "tech.specs.body": "Configurazioni su misura su richiesta. I valori segnati in ambra sono quelli di cui un progettista chiederà il rapporto di prova; richiedilo e te lo inviamo.",
+      "tech.spec.efficacy": "Efficienza luminosa",
+      "tech.spec.energy": "Riduzione dei consumi rispetto allo standard",
+      "tech.spec.compat": "Compatibilità",
+      "tech.spec.compat_v": "Universale · adatta alla riqualificazione",
+      "tech.spec.temp": "Temperatura di esercizio",
+      "tech.spec.cct": "Temperatura di colore",
+      "tech.spec.cct_v": "2700 K – 6500 K, configurabile",
+      "tech.spec.cri": "Indice di resa cromatica",
+      "tech.spec.life": "Durata",
+      "tech.spec.beam": "Angolo di apertura",
+      "tech.spec.beam_v": "Configurabile",
+      "tech.spec.cert": "Certificazione",
+      "tech.specs.note": "Efficienza e resa cromatica sono legate: il valore massimo di efficienza e quello massimo di resa non si ottengono nella stessa configurazione. La scheda tecnica precisa quale valore corrisponde a quale, insieme alle condizioni di misura e al rapporto del laboratorio indipendente.",
+      "tech.patent.label": "Brevetto",
+      "tech.patent.title": "Protetta in tutto il mondo.",
+      "tech.patent.body": "Il portafoglio copre l'architettura ottica e termica con rivendicazioni di metodo, di dispositivo e di fabbricazione. Concesso nell'Unione Europea, negli Stati Uniti e in Messico, con altre giurisdizioni in corso.",
+      "tech.cta.label": "Passo successivo",
+      "tech.cta.title": "Portala nel tuo catalogo.",
+      "tech.cta.body": "Per produttori e studi di illuminazione che valutano di integrare la piattaforma in una gamma.",
+      "tech.cta.btn": "Richiedi la scheda tecnica",
+
+      "serv.meta.title": "Servizi — Almenara",
+      "serv.meta.desc": "Quattro modi di lavorare con Almenara: fornitura di moduli, riqualificazione di impianti, sviluppo su misura e consulenza tecnica.",
+      "serv.eyebrow": "Servizi",
+      "serv.title": "Quattro modi di lavorare con noi.",
+      "serv.sub": "Dalla fornitura di un componente allo sviluppo dell'apparecchio intero. La tecnologia si adatta al modo in cui acquisti, non il contrario.",
+      "serv.list.label": "Cosa facciamo",
+      "serv.1t": "Fornitura di moduli",
+      "serv.1b": "Per produttori che integrano la piattaforma nei propri apparecchi. Formati standard e geometrie su misura, consegnati come moduli pronti al montaggio, con scheda tecnica e fascicolo di certificazione completi.",
+      "serv.2t": "Riqualificazione di impianti",
+      "serv.2b": "Miglioramento di impianti già in servizio senza sostituire l'apparecchio. Pensata per patrimoni commerciali, industriali e pubblici il cui parco si conta in migliaia di punti luce.",
+      "serv.3t": "Sviluppo su misura",
+      "serv.3b": "L'apparecchio completo sviluppato attorno alla piattaforma: dalla specifica al prototipo, fino all'unità di produzione certificata. Soggetto a quantitativo minimo d'ordine.",
+      "serv.4t": "Consulenza tecnica",
+      "serv.4b": "Per architetti, progettisti illuminotecnici e gestori di infrastrutture che dimensionano una riqualificazione estesa. Studi fotometrici, costo del ciclo di vita e fattibilità dell'intervento, senza obbligo di acquisto successivo.",
+      "serv.cta.label": "Passo successivo",
+      "serv.cta.title": "Dimensiona il progetto in un'ora.",
+      "serv.cta.body": "Ogni collaborazione inizia con una chiamata tecnica. Senza impegno e senza discorso commerciale: ingegneri che rispondono a ingegneri.",
+      "serv.cta.btn": "Richiedi una chiamata",
+
+      "apps.meta.title": "Applicazioni — Almenara",
+      "apps.meta.desc": "Dove è installata la piattaforma Almenara: ospitalità, architettura, industria, retail, infrastrutture pubbliche e residenziale di alta gamma.",
+      "apps.eyebrow": "Applicazioni",
+      "apps.title": "Dove è installata.",
+      "apps.sub": "Qualsiasi spettro, qualsiasi formato, qualsiasi scala. Il risparmio è maggiore dove la potenza installata è alta e le ore di funzionamento sono molte.",
+      "apps.list.label": "Sei settori",
+      "apps.1t": "Ospitalità",
+      "apps.1b": "Alberghi, ristoranti, centri termali. Spettri caldi e resa fedele in spazi dove la luce fa parte di ciò che l'ospite sta pagando.",
+      "apps.2t": "Architettura",
+      "apps.2b": "Musei, istituzioni culturali, edifici vincolati. Luce che rispetta il materiale, con controllo dell'ultravioletto e dell'infrarosso che lo degradano.",
+      "apps.3t": "Industria",
+      "apps.3b": "Stabilimenti, centri logistici, impianti di processo. Campane di grande altezza in funzionamento continuo, dove ogni watt risparmiato si moltiplica per migliaia di ore.",
+      "apps.4t": "Retail",
+      "apps.4b": "Negozi di punta, showroom, gallerie. Resa cromatica che tiene su tutta la gamma e resta costante tra lotti di produzione e nel tempo.",
+      "apps.5t": "Infrastrutture pubbliche",
+      "apps.5b": "Strade, gallerie, edifici civici. Moduli a lunga durata dimensionati per una manutenzione minima su un orizzonte di venticinque anni e per i fascicoli di gara europei.",
+      "apps.6t": "Residenziale di alta gamma",
+      "apps.6b": "Abitazioni private, imbarcazioni, tenute. Geometrie su misura integrate nell'architettura, prescritte da progettisti che trattano la luce come un materiale.",
+      "apps.cta.label": "Passo successivo",
+      "apps.cta.title": "Il tuo settore non è in elenco.",
+      "apps.cta.body": "La piattaforma è arrivata in contesti che nessuno di questi sei descrive. Se l'illuminazione è critica per la tua attività, raccontacelo.",
+      "apps.cta.btn": "Aprire una conversazione",
+
+      "cont.meta.title": "Contatti — Almenara",
+      "cont.meta.desc": "Contatta Almenara per accordi di partnership, domande tecniche e proposte di progetto. Madrid.",
+      "cont.eyebrow": "Contatti",
+      "cont.title": "Raccontaci che cosa stai illuminando.",
+      "cont.sub": "Per accordi di partnership, domande tecniche e proposte di progetto. Rispondiamo entro un giorno lavorativo.",
+      "cont.form.label": "Scrivici",
+      "cont.office": "Sede",
+      "cont.office_v": "Madrid, Spagna",
+      "cont.email": "Posta elettronica",
+      "cont.hours": "Orario",
+      "cont.hours_v": "Da lunedì a venerdì · 09:00 – 18:00 CET",
+      "cont.f.name": "Nome",
+      "cont.f.company": "Azienda",
+      "cont.f.role": "Ruolo",
+      "cont.f.email": "Posta elettronica",
+      "cont.f.message": "Messaggio",
+      "cont.f.message_ph": "L'apparecchio che produci o gestisci, e all'incirca quante ore all'anno funziona.",
+      "cont.f.submit": "Invia il messaggio",
+      "cont.f.note": "Si apre il tuo programma di posta con il messaggio pronto da inviare. Ci sarà un modulo diretto non appena l'infrastruttura di contatto sarà configurata."
+    },
+
+    ru: {
+      "tech.meta.title": "Технология — Almenara",
+      "tech.meta.desc": "Запатентованная оптическая и тепловая архитектура, лежащая в основе светодиодной платформы Almenara.",
+      "tech.eyebrow": "Технология",
+      "tech.title": "Свет без тепловой платы.",
+      "tech.sub": "Обычный светодиод рассеивает в виде тепла более половины полученной энергии, причём на самой излучающей поверхности, что ограничивает и световой поток, и срок службы. Наша архитектура отводит эту тепловую нагрузку от кристалла, чтобы он работал вблизи термодинамического оптимума.",
+      "tech.principle.label": "Принцип",
+      "tech.principle.title": "Больше света, меньше тепла, тот же светильник.",
+      "tech.principle.body": "Выигрыш даёт оптический и тепловой тракт, а не экзотические материалы или новый светильник. Именно это позволяет заменить источник света в действующих установках: корпус и кривая силы света остаются прежними.",
+      "tech.specs.label": "Технические данные",
+      "tech.specs.title": "Значения серийной платформы.",
+      "tech.specs.body": "Особые конфигурации по запросу. Значения, выделенные янтарным, — те, по которым проектировщик запросит протокол испытаний; попросите, и мы его пришлём.",
+      "tech.spec.efficacy": "Световая отдача",
+      "tech.spec.energy": "Снижение потребления против стандарта",
+      "tech.spec.compat": "Совместимость",
+      "tech.spec.compat_v": "Универсальная · пригодна для замены",
+      "tech.spec.temp": "Рабочая температура",
+      "tech.spec.cct": "Цветовая температура",
+      "tech.spec.cct_v": "2700 K – 6500 K, настраиваемая",
+      "tech.spec.cri": "Индекс цветопередачи",
+      "tech.spec.life": "Срок службы",
+      "tech.spec.beam": "Угол раскрытия",
+      "tech.spec.beam_v": "Настраиваемый",
+      "tech.spec.cert": "Сертификация",
+      "tech.specs.note": "Световая отдача и цветопередача связаны между собой: наибольшая отдача и наибольшая цветопередача не достигаются в одной и той же конфигурации. В техническом описании указано, какое значение к какой относится, вместе с условиями измерения и протоколом независимой лаборатории.",
+      "tech.patent.label": "Патент",
+      "tech.patent.title": "Защищена по всему миру.",
+      "tech.patent.body": "Портфель охватывает оптическую и тепловую архитектуру через притязания на способ, устройство и производство. Выдан в Европейском союзе, Соединённых Штатах и Мексике, прочие юрисдикции в работе.",
+      "tech.cta.label": "Следующий шаг",
+      "tech.cta.title": "Внесите её в свой каталог.",
+      "tech.cta.body": "Для производителей и светотехнических бюро, рассматривающих платформу для продуктовой линейки.",
+      "tech.cta.btn": "Запросить техническое описание",
+
+      "serv.meta.title": "Услуги — Almenara",
+      "serv.meta.desc": "Четыре формы работы с Almenara: поставка модулей, модернизация установок, разработка под заказ и техническое консультирование.",
+      "serv.eyebrow": "Услуги",
+      "serv.title": "Четыре формы работы с нами.",
+      "serv.sub": "От поставки компонента до разработки светильника целиком. Технология подстраивается под то, как вы закупаете, а не наоборот.",
+      "serv.list.label": "Чем мы занимаемся",
+      "serv.1t": "Поставка модулей",
+      "serv.1b": "Для производителей, встраивающих платформу в собственные светильники. Типовые форматы и геометрия под заказ, поставляются как готовые к установке модули с полным техническим описанием и сертификационным делом.",
+      "serv.2t": "Модернизация установок",
+      "serv.2b": "Улучшение действующих установок без замены светильника. Рассчитано на торговые, промышленные и государственные объекты, где парк исчисляется тысячами световых точек.",
+      "serv.3t": "Разработка под заказ",
+      "serv.3b": "Светильник целиком, разработанный вокруг платформы: от технического задания к прототипу и далее к сертифицированному серийному образцу. Действует минимальный объём заказа.",
+      "serv.4t": "Техническое консультирование",
+      "serv.4b": "Для архитекторов, светодизайнеров и операторов инфраструктуры, рассчитывающих масштабную модернизацию. Светотехнические расчёты, стоимость жизненного цикла и оценка выполнимости — без обязательства что-либо покупать потом.",
+      "serv.cta.label": "Следующий шаг",
+      "serv.cta.title": "Оценим проект за час.",
+      "serv.cta.body": "Любое сотрудничество начинается с технического разговора. Без обязательств и без продающих речей: инженеры отвечают инженерам.",
+      "serv.cta.btn": "Запросить разговор",
+
+      "apps.meta.title": "Применение — Almenara",
+      "apps.meta.desc": "Где установлена платформа Almenara: гостиницы, архитектура, промышленность, торговля, общественная инфраструктура и жильё высокого класса.",
+      "apps.eyebrow": "Применение",
+      "apps.title": "Где она установлена.",
+      "apps.sub": "Любой спектр, любой формат, любой масштаб. Экономия наибольшая там, где установленная мощность велика, а часы работы длинны.",
+      "apps.list.label": "Шесть отраслей",
+      "apps.1t": "Гостиницы",
+      "apps.1b": "Отели, рестораны, термы. Тёплые спектры и достоверная цветопередача там, где свет входит в то, за что платит гость.",
+      "apps.2t": "Архитектура",
+      "apps.2b": "Музеи, учреждения культуры, охраняемые здания. Свет, щадящий материал, с контролем ультрафиолета и инфракрасного излучения, которые его разрушают.",
+      "apps.3t": "Промышленность",
+      "apps.3b": "Заводы, логистические центры, технологические установки. Светильники большой высоты в непрерывной работе, где каждый сэкономленный ватт умножается на тысячи часов.",
+      "apps.4t": "Торговля",
+      "apps.4b": "Флагманские магазины, шоурумы, галереи. Цветопередача, выдерживающая весь ассортимент и остающаяся постоянной между партиями и во времени.",
+      "apps.5t": "Общественная инфраструктура",
+      "apps.5b": "Дороги, тоннели, административные здания. Долговечные модули, рассчитанные на минимальное обслуживание в горизонте двадцати пяти лет и на европейские конкурсные процедуры.",
+      "apps.6t": "Жильё высокого класса",
+      "apps.6b": "Частные дома, яхты, усадьбы. Геометрия под заказ, встроенная в архитектуру, назначаемая проектировщиками, для которых свет — такой же материал.",
+      "apps.cta.label": "Следующий шаг",
+      "apps.cta.title": "Вашей отрасли в списке нет.",
+      "apps.cta.body": "Платформа попадала в условия, которые не описывает ни одна из этих шести. Если освещение критично для вашей работы, расскажите нам.",
+      "apps.cta.btn": "Начать разговор",
+
+      "cont.meta.title": "Контакты — Almenara",
+      "cont.meta.desc": "Свяжитесь с Almenara по вопросам партнёрства, техническим вопросам и проектным предложениям. Мадрид.",
+      "cont.eyebrow": "Контакты",
+      "cont.title": "Расскажите, что вы освещаете.",
+      "cont.sub": "По вопросам партнёрства, техническим вопросам и проектным предложениям. Отвечаем в течение одного рабочего дня.",
+      "cont.form.label": "Напишите нам",
+      "cont.office": "Офис",
+      "cont.office_v": "Мадрид, Испания",
+      "cont.email": "Электронная почта",
+      "cont.hours": "Часы работы",
+      "cont.hours_v": "С понедельника по пятницу · 09:00 – 18:00 CET",
+      "cont.f.name": "Имя",
+      "cont.f.company": "Компания",
+      "cont.f.role": "Должность",
+      "cont.f.email": "Электронная почта",
+      "cont.f.message": "Сообщение",
+      "cont.f.message_ph": "Какой светильник вы производите или эксплуатируете и примерно сколько часов в год он работает.",
+      "cont.f.submit": "Отправить сообщение",
+      "cont.f.note": "Откроется ваша почтовая программа с готовым сообщением. Прямая форма появится, как только будет настроена контактная инфраструктура."
+    }
+  };
+
+  /* ==========================================================================
      MOTOR DE TRADUCCIÓN
      Traduce texto, atributos, el título de la pestaña, la descripción, el
      idioma del documento y el estado del selector. Guarda la elección y la
      refleja en la dirección (?lang=xx) para que el enlace sea compartible.
      ========================================================================== */
   const LANGS = ['en', 'es', 'pt', 'fr', 'de', 'it', 'ru'];
+
+  // Un solo diccionario por idioma: lo común —cabecera, pie, accesibilidad—
+  // vive en I18N; lo propio de cada página, en I18N_PAGES.
+  Object.keys(I18N).forEach(function (lang) {
+    if (I18N_PAGES[lang]) Object.assign(I18N[lang], I18N_PAGES[lang]);
+  });
 
   function t(lang, key) {
     const dict = I18N[lang] || I18N.en;
@@ -412,13 +1098,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Cabecera del documento
-    document.title = t(lang, 'meta.title');
-    setMeta('meta[name="description"]', t(lang, 'meta.desc'));
-    setMeta('meta[property="og:title"]', t(lang, 'meta.title'));
-    setMeta('meta[property="og:description"]', t(lang, 'meta.desc'));
+    // data-meta-prefix en <html> dice qué claves usar: "meta" en la portada,
+    // "tech.meta" en tecnología, "serv.meta" en servicios, y así.
+    const p = document.documentElement.getAttribute('data-meta-prefix') || 'meta';
+    const titulo = t(lang, p + '.title');
+    const desc = t(lang, p + '.desc');
+
+    document.title = titulo;
+    setMeta('meta[name="description"]', desc);
+    setMeta('meta[property="og:title"]', titulo);
+    setMeta('meta[property="og:description"]', desc);
     setMeta('meta[property="og:locale"]', t(lang, 'meta.locale'));
-    setMeta('meta[name="twitter:title"]', t(lang, 'meta.title'));
-    setMeta('meta[name="twitter:description"]', t(lang, 'meta.desc'));
+    setMeta('meta[name="twitter:title"]', titulo);
+    setMeta('meta[name="twitter:description"]', desc);
 
     // Selector
     document.querySelectorAll('.lang-btn').forEach(function (b) {
@@ -458,19 +1150,130 @@ document.addEventListener('DOMContentLoaded', function () {
     try { localStorage.setItem('site.theme', next); } catch (e) {}
   });
 
-  /* --- Apariciones al desplazar ------------------------------------------- */
+  /* ========================================================================
+     DESPLAZAMIENTO
+     Cinco comportamientos que comparten un mismo hilo: la luz avanza contigo.
+     Todo se apaga si el sistema pide movimiento reducido.
+     ======================================================================== */
   (function () {
-    const items = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window) ||
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      items.forEach(function (el) { el.classList.add('is-in'); });
-      return;
+    const mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+    const quieto = !!(mq && mq.matches);
+    const raiz = document.documentElement;
+
+    /* --- Halo y barra de progreso: se insertan desde aquí para no tener que
+       tocar el HTML de las cinco páginas. -------------------------------- */
+    const aura = document.createElement('div');
+    aura.className = 'aura';
+    aura.setAttribute('aria-hidden', 'true');
+    document.body.insertBefore(aura, document.body.firstChild);
+
+    const barra = document.createElement('div');
+    barra.className = 'scroll-progress';
+    barra.setAttribute('aria-hidden', 'true');
+    document.body.insertBefore(barra, document.body.firstChild);
+
+    /* --- 1. Entradas escalonadas ---------------------------------------- */
+    // Estas rejillas reciben la clase que escalona a sus hijos. Se marca
+    // desde JavaScript para no repetirla en cada página.
+    const rejillas = '.metrics, .adv-grid, .app-grid, .sectors, .services, .specs, .cert-list, .hero-actions';
+    document.querySelectorAll(rejillas).forEach(function (el) {
+      el.classList.add('stagger');
+    });
+
+    const bloques = document.querySelectorAll('.reveal');
+    if (quieto || !('IntersectionObserver' in window)) {
+      bloques.forEach(function (el) { el.classList.add('is-in'); });
+    } else {
+      const io = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -14% 0px', threshold: 0.05 });
+      bloques.forEach(function (el) { io.observe(el); });
     }
-    const io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+
+    // La cabecera de página no espera a nada: entra sola al cargar.
+    const primera = document.querySelector('.page-head, .hero');
+    if (primera) {
+      primera.querySelectorAll('.stagger').forEach(function (el) {
+        el.closest('.band, section').classList.add('is-in');
       });
-    }, { rootMargin: '0px 0px -12% 0px' });
-    items.forEach(function (el) { io.observe(el); });
+    }
+
+    /* --- 2. Contadores --------------------------------------------------- */
+    // Las cifras cuentan hacia arriba al entrar en pantalla. Solo las que
+    // son números: "Universal" o "Mundial" se dejan como están.
+    function contar(el) {
+      const texto = el.textContent;
+      const m = texto.match(/^(\D*)(\d+)(.*)$/s);
+      if (!m) return;
+      const antes = m[1], destino = parseInt(m[2], 10), despues = m[3];
+      if (!isFinite(destino) || destino === 0) return;
+      const t0 = performance.now(), dur = 1100;
+      (function paso(t) {
+        const p = Math.min(1, (t - t0) / dur);
+        // desaceleración: rápido al principio, se posa al final
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = antes + Math.round(destino * e) + despues;
+        if (p < 1) requestAnimationFrame(paso);
+      })(t0);
+    }
+
+    if (!quieto && 'IntersectionObserver' in window) {
+      const cifras = document.querySelectorAll('.metric-value');
+      const io2 = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io2.unobserve(e.target);
+          // el nodo de texto está mezclado con <span> de unidades: solo el primero
+          const nodo = e.target.firstChild;
+          if (nodo && nodo.nodeType === 3 && /\d/.test(nodo.textContent)) {
+            const envoltura = document.createElement('span');
+            envoltura.textContent = nodo.textContent;
+            e.target.replaceChild(envoltura, nodo);
+            contar(envoltura);
+          }
+        });
+      }, { threshold: 0.6 });
+      cifras.forEach(function (el) { io2.observe(el); });
+    }
+
+    /* --- 3. Progreso y halo ---------------------------------------------- */
+    // Si el navegador admite líneas de tiempo de desplazamiento, el CSS ya se
+    // encarga y esto no hace falta: va fuera del hilo principal y no da tirones.
+    const nativo = typeof CSS !== 'undefined' && CSS.supports &&
+                   CSS.supports('animation-timeline', 'scroll()');
+    const cabecera = document.querySelector('.site-header');
+    let pendiente = false;
+
+    function alDesplazar() {
+      const y = window.scrollY || 0;
+      const alto = raiz.scrollHeight - window.innerHeight;
+      const p = alto > 0 ? Math.min(1, y / alto) : 0;
+
+      if (!nativo && !quieto) {
+        barra.style.setProperty('--progress', p.toFixed(4));
+        raiz.style.setProperty('--aura', p.toFixed(4));
+      }
+      if (cabecera) cabecera.classList.toggle('is-scrolled', y > 40);
+      pendiente = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!pendiente) { pendiente = true; requestAnimationFrame(alDesplazar); }
+    }, { passive: true });
+    alDesplazar();
+
+    /* --- 4. Anclas suaves con la cabecera descontada --------------------- */
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (ev) {
+        const destino = document.querySelector(a.getAttribute('href'));
+        if (!destino) return;
+        ev.preventDefault();
+        destino.scrollIntoView({ behavior: quieto ? 'auto' : 'smooth', block: 'start' });
+        destino.setAttribute('tabindex', '-1');
+        destino.focus({ preventScroll: true });
+      });
+    });
   })();
 });
