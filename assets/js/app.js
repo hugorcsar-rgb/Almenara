@@ -8,9 +8,10 @@
 /* --- Arranque: se ejecuta antes de pintar, para evitar el parpadeo -------- */
 (function () {
   try {
-    var t = localStorage.getItem('site.theme');
-    if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', t);
+    // Un solo tema: papel blanco y tinta azul noche. El atributo se deja
+    // puesto por si alguna regla antigua lo mira, pero el CSS ya no depende
+    // de él, así que no hay parpadeo al cargar.
+    document.documentElement.setAttribute('data-theme', 'light');
     var p = new URLSearchParams(location.search).get('lang');
     var l = p || localStorage.getItem('site.lang') || (navigator.language || 'en').slice(0, 2).toLowerCase();
     if (['en','es','pt','fr','de','it','ru'].indexOf(l) === -1) l = 'en';
@@ -1241,11 +1242,14 @@ document.addEventListener('DOMContentLoaded', function () {
   applyLang(initialLang(), false);
 
   /* --- Tema --------------------------------------------------------------- */
-  document.querySelector('[data-theme-toggle]').addEventListener('click', function () {
-    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('site.theme', next); } catch (e) {}
-  });
+  // Se retiró el modo oscuro. El botón sigue en el HTML de las seis páginas,
+  // así que se elimina desde aquí: si solo se ocultara con CSS seguiría
+  // estando en el orden de tabulación y los lectores de pantalla lo leerían.
+  (function () {
+    const b = document.querySelector('[data-theme-toggle]');
+    if (b) b.remove();
+    try { localStorage.removeItem('site.theme'); } catch (e) {}
+  })();
 
   /* ========================================================================
      DESPLAZAMIENTO
