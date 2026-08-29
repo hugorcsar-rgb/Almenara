@@ -62,7 +62,14 @@
   /* --- Diccionario ------------------------------------------------------- */
   const D = {
     en: {
-      "calc.pdf.hint": "This opens the print dialogue. Choose “Save as PDF” as the destination and the document is saved to your computer.",
+      "calc.pdf.step": "One more step",
+      "calc.pdf.open": "Open the dialogue",
+      "calc.pdf.never": "Do not show this again",
+      "calc.pdf.safari": "In the window that opens, use the <strong>PDF</strong> menu at the bottom left and choose <strong>Save as PDF</strong>.",
+      "calc.pdf.chrome": "In the window that opens, at <strong>Destination</strong>, choose <strong>Save as PDF</strong> and then Save.",
+      "calc.pdf.firefox": "In the window that opens, at <strong>Printer</strong>, choose <strong>Save to PDF</strong>.",
+      "calc.pdf.mobile": "Your device will offer to share the document. Choose <strong>Save to Files</strong> or your usual folder.",
+      "calc.pdf.hint": "The report opens in the print dialogue, where you save it as a PDF.",
       "report.mexcl": "The estimate covers electricity only; avoided maintenance is not included.",
       "report.mincl": "The maintenance saving counts the difference in interventions, with our own replacements already deducted.",
       "calc.r.perpoint": "Annual cost per light point",
@@ -135,7 +142,14 @@
     },
 
     es: {
-      "calc.pdf.hint": "Se abre el diálogo de impresión. Elige «Guardar como PDF» como destino y el documento se guarda en tu ordenador.",
+      "calc.pdf.step": "Un paso más",
+      "calc.pdf.open": "Abrir el diálogo",
+      "calc.pdf.never": "No volver a mostrar esto",
+      "calc.pdf.safari": "En la ventana que se abre, usa el menú <strong>PDF</strong> de abajo a la izquierda y elige <strong>Guardar como PDF</strong>.",
+      "calc.pdf.chrome": "En la ventana que se abre, en <strong>Destino</strong>, elige <strong>Guardar como PDF</strong> y luego Guardar.",
+      "calc.pdf.firefox": "En la ventana que se abre, en <strong>Impresora</strong>, elige <strong>Guardar en PDF</strong>.",
+      "calc.pdf.mobile": "Tu dispositivo te ofrecerá compartir el documento. Elige <strong>Guardar en Archivos</strong> o la carpeta que uses.",
+      "calc.pdf.hint": "El informe se abre en el diálogo de impresión, donde lo guardas como PDF.",
       "report.mexcl": "La estimación contempla solo electricidad; no incluye el mantenimiento evitado.",
       "report.mincl": "El ahorro de mantenimiento cuenta la diferencia de intervenciones, ya descontadas nuestras propias reposiciones.",
       "calc.r.perpoint": "Coste anual por punto de luz",
@@ -208,7 +222,14 @@
     },
 
     pt: {
-      "calc.pdf.hint": "Abre-se a caixa de impressão. Escolha «Guardar como PDF» como destino e o documento fica guardado no seu computador.",
+      "calc.pdf.step": "Mais um passo",
+      "calc.pdf.open": "Abrir a caixa",
+      "calc.pdf.never": "Não mostrar novamente",
+      "calc.pdf.safari": "Na janela que abre, use o menu <strong>PDF</strong> em baixo à esquerda e escolha <strong>Guardar como PDF</strong>.",
+      "calc.pdf.chrome": "Na janela que abre, em <strong>Destino</strong>, escolha <strong>Guardar como PDF</strong> e depois Guardar.",
+      "calc.pdf.firefox": "Na janela que abre, em <strong>Impressora</strong>, escolha <strong>Guardar em PDF</strong>.",
+      "calc.pdf.mobile": "O seu aparelho oferecerá partilhar o documento. Escolha <strong>Guardar em Ficheiros</strong> ou a pasta que usa.",
+      "calc.pdf.hint": "O relatório abre na caixa de impressão, onde o guarda como PDF.",
       "report.mexcl": "A estimativa considera apenas electricidade; não inclui a manutenção evitada.",
       "report.mincl": "A poupança de manutenção conta a diferença de intervenções, já descontadas as nossas próprias substituições.",
       "calc.r.perpoint": "Custo anual por ponto de luz",
@@ -281,7 +302,14 @@
     },
 
     fr: {
-      "calc.pdf.hint": "La boîte d'impression s'ouvre. Choisissez « Enregistrer en PDF » comme destination et le document est enregistré sur votre ordinateur.",
+      "calc.pdf.step": "Une étape de plus",
+      "calc.pdf.open": "Ouvrir la fenêtre",
+      "calc.pdf.never": "Ne plus afficher ceci",
+      "calc.pdf.safari": "Dans la fenêtre qui s'ouvre, utilisez le menu <strong>PDF</strong> en bas à gauche et choisissez <strong>Enregistrer en PDF</strong>.",
+      "calc.pdf.chrome": "Dans la fenêtre qui s'ouvre, à <strong>Destination</strong>, choisissez <strong>Enregistrer au format PDF</strong>, puis Enregistrer.",
+      "calc.pdf.firefox": "Dans la fenêtre qui s'ouvre, à <strong>Imprimante</strong>, choisissez <strong>Enregistrer dans un fichier PDF</strong>.",
+      "calc.pdf.mobile": "Votre appareil proposera de partager le document. Choisissez <strong>Enregistrer dans Fichiers</strong> ou votre dossier habituel.",
+      "calc.pdf.hint": "Le rapport s'ouvre dans la fenêtre d'impression, où vous l'enregistrez en PDF.",
       "report.mexcl": "L'estimation ne porte que sur l'électricité ; la maintenance évitée n'est pas incluse.",
       "report.mincl": "L'économie de maintenance compte la différence d'interventions, nos propres remplacements étant déjà déduits.",
       "calc.r.perpoint": "Coût annuel par point lumineux",
@@ -354,7 +382,14 @@
     },
 
     de: {
-      "calc.pdf.hint": "Es öffnet sich der Druckdialog. Wählen Sie „Als PDF sichern“ als Ziel, dann wird das Dokument auf Ihrem Rechner gespeichert.",
+      "calc.pdf.step": "Noch ein Schritt",
+      "calc.pdf.open": "Dialog öffnen",
+      "calc.pdf.never": "Nicht mehr anzeigen",
+      "calc.pdf.safari": "Im Fenster, das sich öffnet, das Menü <strong>PDF</strong> unten links benutzen und <strong>Als PDF sichern</strong> wählen.",
+      "calc.pdf.chrome": "Im Fenster, das sich öffnet, unter <strong>Ziel</strong> die Option <strong>Als PDF speichern</strong> wählen und dann Speichern.",
+      "calc.pdf.firefox": "Im Fenster, das sich öffnet, unter <strong>Drucker</strong> die Option <strong>In PDF speichern</strong> wählen.",
+      "calc.pdf.mobile": "Ihr Gerät bietet an, das Dokument zu teilen. Wählen Sie <strong>In Dateien sichern</strong> oder Ihren üblichen Ordner.",
+      "calc.pdf.hint": "Der Bericht öffnet sich im Druckdialog, wo Sie ihn als PDF sichern.",
       "report.mexcl": "Die Schätzung betrifft nur Strom; vermiedene Wartung ist nicht enthalten.",
       "report.mincl": "Die Wartungsersparnis zählt die Differenz der Eingriffe, unsere eigenen Austausche sind bereits abgezogen.",
       "calc.r.perpoint": "Jahreskosten je Lichtpunkt",
@@ -427,7 +462,14 @@
     },
 
     it: {
-      "calc.pdf.hint": "Si apre la finestra di stampa. Scegli «Salva come PDF» come destinazione e il documento viene salvato sul tuo computer.",
+      "calc.pdf.step": "Ancora un passo",
+      "calc.pdf.open": "Aprire la finestra",
+      "calc.pdf.never": "Non mostrare più",
+      "calc.pdf.safari": "Nella finestra che si apre, usa il menu <strong>PDF</strong> in basso a sinistra e scegli <strong>Salva come PDF</strong>.",
+      "calc.pdf.chrome": "Nella finestra che si apre, in <strong>Destinazione</strong>, scegli <strong>Salva come PDF</strong> e poi Salva.",
+      "calc.pdf.firefox": "Nella finestra che si apre, in <strong>Stampante</strong>, scegli <strong>Salva in PDF</strong>.",
+      "calc.pdf.mobile": "Il dispositivo proporrà di condividere il documento. Scegli <strong>Salva su File</strong> o la cartella che usi.",
+      "calc.pdf.hint": "Il rapporto si apre nella finestra di stampa, dove lo salvi come PDF.",
       "report.mexcl": "La stima riguarda la sola elettricità; non include la manutenzione evitata.",
       "report.mincl": "Il risparmio di manutenzione conta la differenza di interventi, già scontate le nostre sostituzioni.",
       "calc.r.perpoint": "Costo annuo per punto luce",
@@ -500,7 +542,14 @@
     },
 
     ru: {
-      "calc.pdf.hint": "Откроется окно печати. Выберите «Сохранить в PDF» в качестве места назначения — документ сохранится на вашем компьютере.",
+      "calc.pdf.step": "Ещё один шаг",
+      "calc.pdf.open": "Открыть окно",
+      "calc.pdf.never": "Больше не показывать",
+      "calc.pdf.safari": "В открывшемся окне нажмите меню <strong>PDF</strong> слева внизу и выберите <strong>Сохранить в PDF</strong>.",
+      "calc.pdf.chrome": "В открывшемся окне в поле <strong>Принтер</strong> выберите <strong>Сохранить как PDF</strong>, затем Сохранить.",
+      "calc.pdf.firefox": "В открывшемся окне в поле <strong>Принтер</strong> выберите <strong>Сохранить в PDF</strong>.",
+      "calc.pdf.mobile": "Устройство предложит поделиться документом. Выберите <strong>Сохранить в «Файлы»</strong> или нужную папку.",
+      "calc.pdf.hint": "Отчёт открывается в окне печати, где вы сохраняете его в PDF.",
       "report.mexcl": "Оценка учитывает только электроэнергию; сэкономленное обслуживание не включено.",
       "report.mincl": "Экономия на обслуживании считает разницу в числе выездов, наши собственные замены уже вычтены.",
       "calc.r.perpoint": "Годовая стоимость световой точки",
@@ -874,6 +923,78 @@
     // momento de imprimir. La página deja de trabajar mientras escribes.
     let ultimoInforme = null;
 
+    /* --- Dónde está el «Guardar como PDF» --------------------------------
+       No está en el mismo sitio en cada navegador: en Safari es un menú abajo
+       a la izquierda, en Chrome está arriba en «Destino». Decir solo «elige
+       guardar como PDF» no ayuda a nadie. --------------------------------- */
+    function claveNavegador() {
+      const ua = navigator.userAgent;
+      if (/iPhone|iPad|Android/i.test(ua)) return 'calc.pdf.mobile';
+      if (/Firefox\//.test(ua)) return 'calc.pdf.firefox';
+      if (/Safari\//.test(ua) && !/Chrome|Chromium|Edg\//.test(ua)) return 'calc.pdf.safari';
+      return 'calc.pdf.chrome';
+    }
+
+    function imprimir() {
+      prepararInforme();
+
+      // El navegador toma el título de la pestaña como nombre del archivo. Sin
+      // esto, el cliente se lleva un PDF llamado "Calculadora de ahorro".
+      const titulo = document.title;
+      const f = new Date();
+      const iso = f.getFullYear() + '-' +
+                  String(f.getMonth() + 1).padStart(2, '0') + '-' +
+                  String(f.getDate()).padStart(2, '0');
+      document.title = 'Almenara — ' + txt('report.title') + ' — ' + iso;
+
+      function restaurar() {
+        document.title = titulo;
+        window.removeEventListener('afterprint', restaurar);
+      }
+      window.addEventListener('afterprint', restaurar);
+      // Safari en Mac no siempre dispara afterprint: red de seguridad.
+      setTimeout(restaurar, 4000);
+
+      window.print();
+    }
+
+    function mostrarPaso() {
+      const previo = document.querySelector('.pdf-step');
+      if (previo) previo.remove();
+
+      const caja = document.createElement('div');
+      caja.className = 'pdf-step';
+      caja.setAttribute('role', 'status');
+      caja.innerHTML =
+        '<p class="pdf-step-t mono">' + txt('calc.pdf.step') + '</p>' +
+        '<p class="pdf-step-b">' + txt(claveNavegador()) + '</p>';
+
+      const seguir = document.createElement('button');
+      seguir.type = 'button';
+      seguir.className = 'btn btn-primary';
+      seguir.textContent = txt('calc.pdf.open');
+      seguir.addEventListener('click', function () {
+        if (nunca.querySelector('input').checked) {
+          try { localStorage.setItem('site.pdfhint', 'ok'); } catch (e) {}
+        }
+        caja.remove();
+        imprimir();
+      });
+
+      const nunca = document.createElement('label');
+      nunca.className = 'pdf-step-never';
+      nunca.innerHTML = '<input type="checkbox" /> <span>' + txt('calc.pdf.never') + '</span>';
+
+      const pie = document.createElement('div');
+      pie.className = 'pdf-step-foot';
+      pie.appendChild(seguir);
+      pie.appendChild(nunca);
+      caja.appendChild(pie);
+
+      out.querySelector('.calc-cta').insertBefore(caja, out.querySelector('.calc-cta .hero-actions'));
+      seguir.focus();
+    }
+
     function prepararInforme() {
       const previo = document.querySelector('.print-doc');
       if (previo) previo.remove();
@@ -1129,8 +1250,11 @@
       pdf.setAttribute('data-i18n', 'calc.pdf.btn');
       pdf.textContent = txt('calc.pdf.btn');
       pdf.addEventListener('click', function () {
-        prepararInforme();
-        window.print();
+        // Quien ya sabe dónde está el destino no necesita que se lo repitan.
+        let visto = false;
+        try { visto = localStorage.getItem('site.pdfhint') === 'ok'; } catch (e) {}
+        if (visto) { imprimir(); return; }
+        mostrarPaso();
       });
 
       const acc = document.createElement('div');
