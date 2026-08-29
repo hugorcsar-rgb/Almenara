@@ -1225,7 +1225,7 @@
 
         '<footer class="pd-foot">' +
           '<p><strong>' + txt('report.by') + '</strong> Almenara · Madrid<br />' +
-          'hugorcsar@gmail.com · +53 55 3910 2832<br />' +
+          'hugorcsar@gmail.com · +52 55 3910 2832<br />' +
           'almenara.hamergolfconsulting.com</p>' +
           '<p class="pd-disc">' + txt('report.disc') + '</p>' +
         '</footer>';
