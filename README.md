@@ -1,118 +1,86 @@
 # Almenara
-<div align="center">
 
-# Almenara
+Sitio corporativo de Almenara. Tecnología de plataforma LED, Madrid.
 
-**The new standard in LED efficiency.**
-275+ lumens per watt. Patented. Universal compatibility.
-
-[![License](https://img.shields.io/badge/License-MIT-0E1A2A.svg?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-0E1A2A.svg?style=flat-square)]()
-[![Stack](https://img.shields.io/badge/Stack-HTML_·_CSS_·_JS-6B6B6B.svg?style=flat-square)]()
-
-</div>
+Producción: <https://almenara.hamergolfconsulting.com>
 
 ---
 
-## About
+## Cómo se publica
 
-Almenara develops patented LED technology delivering more than 275 lumens per watt and over 50% energy reduction versus the current industry standard. Engineered in Madrid for original equipment manufacturers, architectural lighting partners, and infrastructure operators across Europe.
+Este repositorio es la única fuente de verdad. Cada empujón a `main` dispara el
+flujo `deploy.yml`, que verifica los archivos y los sube a Hostinger por FTPS.
+Tarda menos de un minuto.
 
-This repository contains the source code of [almenara.com](https://www.almenara.com): a static, six-language, deployment-agnostic corporate site.
+No se editan archivos en el gestor de Hostinger. Si alguien lo hace, el
+siguiente despliegue sobrescribe sus cambios y se pierden sin aviso.
 
-## Documentation
+Credenciales en *Settings → Secrets and variables → Actions*: `FTP_SERVER`,
+`FTP_USERNAME` y `FTP_PASSWORD` como secretos, y `FTP_DIR` como variable.
 
-| Document | Purpose |
-|---|---|
-| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Technical decisions, project structure, rationale. |
-| [`DEPLOYMENT.md`](DEPLOYMENT.md) | Deployment recipes for Hostinger, Vercel, Netlify, Cloudflare Pages, VPS. |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Conventions, commit format, workflow. |
-| [`CHANGELOG.md`](CHANGELOG.md) | Versioned history of changes. |
-| [`SECURITY.md`](SECURITY.md) | Vulnerability reporting policy. |
-
-## Project structure
+## Estructura
 
 ```
-Almenara/
-├── index.html
-├── technology.html
-├── services.html
-├── applications.html
-├── contact.html
-├── 404.html
-├── legal/
-│   ├── notice.html
-│   ├── privacy.html
-│   └── cookies.html
+.
+├── .github/workflows/
+│   ├── deploy.yml          Publicación automática en Hostinger
+│   └── lighthouse.yml      Auditoría semanal de rendimiento
 ├── assets/
-│   ├── css/styles.css
+│   ├── css/
+│   │   ├── site.css        Diseño de las seis páginas nuevas
+│   │   └── styles.css      Antiguo: solo lo usan legal/ y 404
 │   ├── js/
-│   │   ├── main.js
-│   │   └── i18n.js
-│   ├── data/
-│   │   ├── en.json
-│   │   ├── es.json
-│   │   ├── fr.json
-│   │   ├── de.json
-│   │   ├── it.json
-│   │   └── ru.json
-│   ├── fonts/
+│   │   ├── app.js          Idiomas, desplazamiento, luz interactiva
+│   │   ├── calc.js         Calculadora de ahorro e informe imprimible
+│   │   ├── i18n.js         Antiguo: solo lo usan legal/ y 404
+│   │   └── main.js         Antiguo: solo lo usan legal/ y 404
 │   └── img/
-├── robots.txt
-├── sitemap.xml
-└── manifest.json
+├── legal/                  Aviso legal, privacidad, cookies (diseño antiguo)
+├── index.html · technology.html · services.html
+├── applications.html · calculator.html · contact.html
+├── 404.html · manifest.json · robots.txt · sitemap.xml
+└── .htaccess               Apache: HTTPS, cabeceras, caché, tipos MIME
 ```
 
-## Stack
+## Decisiones que conviene no deshacer
 
-No build step. No dependencies. No framework.
+**El JavaScript va siempre en archivos aparte, nunca dentro del HTML.** El
+`.htaccess` impone `script-src 'self'`, que prohíbe el código escrito dentro de
+la página. Si algún día los botones dejan de responder, mirar esto antes que
+ninguna otra cosa. Costó una tarde entera descubrirlo.
 
-- **HTML5** — semantic, accessible (WCAG 2.2 AA target).
-- **CSS3** — custom properties, fluid typography, dual theme.
-- **Vanilla JavaScript** — ES2022, no transpilation.
-- **Six languages** — English, Spanish, French, German, Italian, Russian.
-- **Two themes** — dark (default) and light, honouring `prefers-color-scheme`.
+**Ni una conexión externa.** La tipografía Jost viaja incrustada en `site.css`
+como dato codificado. Por eso `font-src` admite `data:`; sin ese permiso el
+navegador la bloquea en silencio y cae a la letra del sistema. Ninguna
+dirección IP de un visitante sale hacia un tercero, lo que importa cuando se
+vende a contratación pública europea.
 
-The site is fully static and runs on any web server.
+**Un solo tema: papel blanco y tinta azul noche.** No hay modo oscuro. El
+ámbar queda reservado para representar la luz —la escala de eficacia, el mando
+de temperatura de color, la barra de ahorro—, nunca para decorar.
 
-## Local preview
+**Siete idiomas, traducción completa.** El diccionario común está en `app.js`;
+el de la calculadora, en `calc.js`, que se registra a través de `window.SITE`.
+Al cambiar de idioma se traduce el texto, las etiquetas de accesibilidad, el
+título de la pestaña, la descripción, `og:locale` y el atributo `lang`. Para
+añadir una cadena: `data-i18n="mi.clave"` en el elemento y la misma clave en
+los siete idiomas. Si falta en alguno, cae al inglés en vez de dejar el hueco.
 
-No installation required.
+**Rutas relativas.** Permiten servir el sitio desde la raíz de un dominio o
+desde una subcarpeta sin tocar nada.
 
-**Direct**
-Open `index.html` in any browser. Translations require a local server.
+**La calculadora compara a iluminación equivalente**, no a igual potencia, y
+descuenta nuestras propias reposiciones del ahorro de mantenimiento. Frente a
+un LED moderno da un 45 %, no un 80 %. Esa honestidad es lo que la hace
+defendible ante un ingeniero.
 
-**Local server** *(recommended)*
+## Pendiente
 
-```bash
-python3 -m http.server 8000
-```
-
-or
-
-```bash
-npx serve .
-```
-
-Open [`http://localhost:8000`](http://localhost:8000).
-
-## Browser support
-
-Modern evergreen browsers: Chrome, Firefox, Safari, Edge — last two major versions.
-
-## Languages
-
-| Code | Language |
-|---|---|
-| `en` | English |
-| `es` | Español |
-| `fr` | Français |
-| `de` | Deutsch |
-| `it` | Italiano |
-| `ru` | Русский |
-
-## License
-
-Copyright © 2026 Almenara. All rights reserved.
-
-Source code released under the [MIT License](LICENSE). Brand, copy, and imagery are proprietary.
+- [ ] Sustituir el nombre y el dominio cuando se cierre el cambio de marca.
+- [ ] Rellenar las condiciones de ensayo: buscar `[RELLENAR: FOTOMETRÍA]`.
+- [ ] Rehacer `legal/` y `404.html` con el diseño nuevo. Hasta entonces piden
+      la tipografía a Google y, como el `.htaccess` ya no lo permite, se ven
+      con la letra del sistema.
+- [ ] Fotografías reales en el apartado de aplicaciones.
+- [ ] Descarga directa del informe en PDF, sin pasar por el diálogo de impresión.
+- [ ] Recepción de formularios en el servidor.
