@@ -1407,7 +1407,7 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
     letter-spacing: -0.01em;
     line-height: 1.15;
   }
-  .pd-sub { margin: 0 0 16pt; font-size: 9.5pt; color: #555; }
+  .pd-sub { margin: 0 0 13pt; font-size: 9.5pt; color: #555; }
 
   /* La cifra que justifica el documento */
   .pd-big-label {
@@ -1419,9 +1419,9 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
     color: #555;
   }
   .pd-big {
-    margin: 0 0 18pt;
+    margin: 0 0 14pt;
     font-family: var(--f-data);
-    font-size: 27pt;
+    font-size: 25pt;
     font-weight: 400;
     letter-spacing: -0.03em;
     line-height: 1;
@@ -1442,12 +1442,12 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   .pd-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 0 16pt;
+    margin: 0 0 13pt;
   }
   .pd-table th,
   .pd-table td {
     text-align: left;
-    padding: 3.6pt 0;
+    padding: 2.9pt 0;
     border-bottom: 0.5pt solid #DDD;
     vertical-align: baseline;
   }
@@ -1459,27 +1459,27 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 22pt;
-    margin: 0 0 16pt;
+    margin: 0 0 13pt;
   }
   .pd-facts > div {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 10pt;
-    padding: 3.6pt 0;
+    padding: 2.9pt 0;
     border-bottom: 0.5pt solid #DDD;
   }
   .pd-facts dt { margin: 0; color: #333; }
   .pd-facts dd { margin: 0; font-family: var(--f-data); font-size: 9pt; white-space: nowrap; }
 
   /* Comparación de potencia: el argumento entero, en dos barras. */
-  .pd-bars { margin: 4pt 0 18pt; }
+  .pd-bars { margin: 2pt 0 14pt; }
   .pd-bar {
     display: grid;
     grid-template-columns: 78pt 1fr 58pt;
     align-items: center;
     gap: 10pt;
-    margin-bottom: 7pt;
+    margin-bottom: 5.5pt;
   }
   .pd-bar-l { font-size: 8.5pt; color: #333; }
   .pd-bar-t { display: block; height: 9pt; border: 0.5pt solid #999; }
@@ -1496,7 +1496,7 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
     white-space: nowrap;
   }
 
-  .pd-note { margin: 0 0 14pt; font-size: 9pt; color: #333; max-width: 46em; }
+  .pd-note { margin: 0 0 11pt; font-size: 8.5pt; color: #333; max-width: 46em; }
 
   .pd-foot {
     border-top: 0.5pt solid #000;
