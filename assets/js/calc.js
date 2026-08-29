@@ -62,6 +62,29 @@
   /* --- Diccionario ------------------------------------------------------- */
   const D = {
     en: {
+      "report.mexcl": "The estimate covers electricity only; avoided maintenance is not included.",
+      "report.mincl": "The maintenance saving counts the difference in interventions, with our own replacements already deducted.",
+      "calc.r.perpoint": "Annual cost per light point",
+      "calc.adv.dep": "Flux depreciation of current fixtures (%)",
+      "calc.adv.loss": "Control gear losses (%)",
+      "calc.adv.life": "Current lamp life (h)",
+      "calc.adv.mcost": "Cost of one intervention per point (€)",
+      "calc.adv.mhelp": "Fill in the last two and the maintenance saving appears. Our own replacements are subtracted: we count the difference, not the whole of it.",
+      "calc.r.energysave": "Energy saving",
+      "calc.r.maintsave": "Maintenance saving",
+      "calc.r.total": "Total annual saving",
+      "calc.r.effreal": "Effective efficacy in service",
+      "report.assump": "The current installation is evaluated with market reference values, not with a measurement on site.",
+      "calc.pdf.btn": "Download the report",
+      "report.title": "Savings estimate",
+      "report.sub": "Estimate based on the figures supplied by the client",
+      "report.inputs": "Figures supplied",
+      "report.result": "Result",
+      "report.method": "Method",
+      "report.methodbody": "Comparison at equal light output: to deliver the same lumens, the required power is proportional to the ratio of efficacies. The current installation is evaluated with market reference values, not with a measurement on site.",
+      "report.date": "Date",
+      "report.by": "Prepared by",
+      "report.disc": "Non-binding estimate. Measurement conditions and the independent laboratory report are supplied with the technical brief.",
       "calc.meta.title": "Savings calculator — Almenara",
       "calc.meta.desc": "Work out what you would save by replacing your current lighting. Enter your own figures, no registration.",
       "calc.eyebrow": "Savings calculator",
@@ -111,6 +134,29 @@
     },
 
     es: {
+      "report.mexcl": "La estimación contempla solo electricidad; no incluye el mantenimiento evitado.",
+      "report.mincl": "El ahorro de mantenimiento cuenta la diferencia de intervenciones, ya descontadas nuestras propias reposiciones.",
+      "calc.r.perpoint": "Coste anual por punto de luz",
+      "calc.adv.dep": "Depreciación de flujo del equipo actual (%)",
+      "calc.adv.loss": "Pérdidas del equipo auxiliar (%)",
+      "calc.adv.life": "Vida de la lámpara actual (h)",
+      "calc.adv.mcost": "Coste de una intervención por punto (€)",
+      "calc.adv.mhelp": "Rellena las dos últimas y aparece el ahorro de mantenimiento. Se descuentan nuestras propias reposiciones: se cuenta la diferencia, no el total.",
+      "calc.r.energysave": "Ahorro energético",
+      "calc.r.maintsave": "Ahorro de mantenimiento",
+      "calc.r.total": "Ahorro anual total",
+      "calc.r.effreal": "Eficacia efectiva en servicio",
+      "report.assump": "La instalación actual se evalúa con valores de referencia de mercado, no con una medición en campo.",
+      "calc.pdf.btn": "Descargar el informe",
+      "report.title": "Estimación de ahorro",
+      "report.sub": "Estimación a partir de las cifras aportadas por el cliente",
+      "report.inputs": "Cifras aportadas",
+      "report.result": "Resultado",
+      "report.method": "Método",
+      "report.methodbody": "Comparación a iluminación equivalente: para dar los mismos lúmenes, la potencia necesaria es proporcional al cociente de eficacias. La instalación actual se evalúa con valores de referencia de mercado, no con una medición en campo.",
+      "report.date": "Fecha",
+      "report.by": "Elaborado por",
+      "report.disc": "Estimación sin valor contractual. Las condiciones de medida y el informe de laboratorio independiente se entregan con la ficha técnica.",
       "calc.meta.title": "Calculadora de ahorro — Almenara",
       "calc.meta.desc": "Calcula lo que ahorrarías sustituyendo tu iluminación actual. Con tus propias cifras y sin registro.",
       "calc.eyebrow": "Calculadora de ahorro",
@@ -160,6 +206,29 @@
     },
 
     pt: {
+      "report.mexcl": "A estimativa considera apenas electricidade; não inclui a manutenção evitada.",
+      "report.mincl": "A poupança de manutenção conta a diferença de intervenções, já descontadas as nossas próprias substituições.",
+      "calc.r.perpoint": "Custo anual por ponto de luz",
+      "calc.adv.dep": "Depreciação de fluxo do equipamento actual (%)",
+      "calc.adv.loss": "Perdas do equipamento auxiliar (%)",
+      "calc.adv.life": "Vida da lâmpada actual (h)",
+      "calc.adv.mcost": "Custo de uma intervenção por ponto (€)",
+      "calc.adv.mhelp": "Preencha as duas últimas e surge a poupança de manutenção. Descontam-se as nossas próprias substituições: conta-se a diferença, não o total.",
+      "calc.r.energysave": "Poupança energética",
+      "calc.r.maintsave": "Poupança de manutenção",
+      "calc.r.total": "Poupança anual total",
+      "calc.r.effreal": "Eficácia efectiva em serviço",
+      "report.assump": "A instalação actual é avaliada com valores de referência de mercado, não com uma medição no local.",
+      "calc.pdf.btn": "Descarregar o relatório",
+      "report.title": "Estimativa de poupança",
+      "report.sub": "Estimativa a partir dos valores fornecidos pelo cliente",
+      "report.inputs": "Valores fornecidos",
+      "report.result": "Resultado",
+      "report.method": "Método",
+      "report.methodbody": "Comparação a iluminação equivalente: para dar os mesmos lúmenes, a potência necessária é proporcional ao quociente das eficácias. A instalação actual é avaliada com valores de referência de mercado, não com uma medição no local.",
+      "report.date": "Data",
+      "report.by": "Elaborado por",
+      "report.disc": "Estimativa sem valor contratual. As condições de medição e o relatório de laboratório independente são entregues com a ficha técnica.",
       "calc.meta.title": "Calculadora de poupança — Almenara",
       "calc.meta.desc": "Calcule o que pouparia substituindo a sua iluminação actual. Com os seus próprios números e sem registo.",
       "calc.eyebrow": "Calculadora de poupança",
@@ -209,6 +278,29 @@
     },
 
     fr: {
+      "report.mexcl": "L'estimation ne porte que sur l'électricité ; la maintenance évitée n'est pas incluse.",
+      "report.mincl": "L'économie de maintenance compte la différence d'interventions, nos propres remplacements étant déjà déduits.",
+      "calc.r.perpoint": "Coût annuel par point lumineux",
+      "calc.adv.dep": "Dépréciation du flux des luminaires actuels (%)",
+      "calc.adv.loss": "Pertes de l'appareillage (%)",
+      "calc.adv.life": "Durée de vie de la lampe actuelle (h)",
+      "calc.adv.mcost": "Coût d'une intervention par point (€)",
+      "calc.adv.mhelp": "Renseignez les deux dernières et l'économie de maintenance apparaît. Nos propres remplacements sont déduits : on compte la différence, non la totalité.",
+      "calc.r.energysave": "Économie d'énergie",
+      "calc.r.maintsave": "Économie de maintenance",
+      "calc.r.total": "Économie annuelle totale",
+      "calc.r.effreal": "Efficacité effective en service",
+      "report.assump": "L'installation actuelle est évaluée avec des valeurs de référence du marché, non avec une mesure sur site.",
+      "calc.pdf.btn": "Télécharger le rapport",
+      "report.title": "Estimation d'économies",
+      "report.sub": "Estimation à partir des valeurs fournies par le client",
+      "report.inputs": "Valeurs fournies",
+      "report.result": "Résultat",
+      "report.method": "Méthode",
+      "report.methodbody": "Comparaison à éclairement équivalent : pour délivrer les mêmes lumens, la puissance nécessaire est proportionnelle au rapport des efficacités. L'installation actuelle est évaluée avec des valeurs de référence du marché, non avec une mesure sur site.",
+      "report.date": "Date",
+      "report.by": "Établi par",
+      "report.disc": "Estimation sans valeur contractuelle. Les conditions de mesure et le rapport de laboratoire indépendant sont fournis avec la fiche technique.",
       "calc.meta.title": "Calculateur d'économies — Almenara",
       "calc.meta.desc": "Calculez ce que vous économiseriez en remplaçant votre éclairage actuel. Avec vos propres chiffres et sans inscription.",
       "calc.eyebrow": "Calculateur d'économies",
@@ -258,6 +350,29 @@
     },
 
     de: {
+      "report.mexcl": "Die Schätzung betrifft nur Strom; vermiedene Wartung ist nicht enthalten.",
+      "report.mincl": "Die Wartungsersparnis zählt die Differenz der Eingriffe, unsere eigenen Austausche sind bereits abgezogen.",
+      "calc.r.perpoint": "Jahreskosten je Lichtpunkt",
+      "calc.adv.dep": "Lichtstromrückgang der heutigen Leuchten (%)",
+      "calc.adv.loss": "Verluste des Betriebsgeräts (%)",
+      "calc.adv.life": "Lebensdauer der heutigen Lampe (h)",
+      "calc.adv.mcost": "Kosten eines Eingriffs je Lichtpunkt (€)",
+      "calc.adv.mhelp": "Füllen Sie die letzten beiden aus, und die Wartungsersparnis erscheint. Unsere eigenen Austausche werden abgezogen: gezählt wird die Differenz, nicht das Ganze.",
+      "calc.r.energysave": "Energieersparnis",
+      "calc.r.maintsave": "Wartungsersparnis",
+      "calc.r.total": "Gesamte Jahresersparnis",
+      "calc.r.effreal": "Tatsächliche Ausbeute im Betrieb",
+      "report.assump": "Die heutige Anlage wird mit Marktreferenzwerten bewertet, nicht mit einer Messung vor Ort.",
+      "calc.pdf.btn": "Bericht herunterladen",
+      "report.title": "Einsparschätzung",
+      "report.sub": "Schätzung auf Grundlage der vom Kunden genannten Werte",
+      "report.inputs": "Genannte Werte",
+      "report.result": "Ergebnis",
+      "report.method": "Methode",
+      "report.methodbody": "Vergleich bei gleicher Lichtmenge: für dieselben Lumen verhält sich die nötige Leistung wie das Verhältnis der Lichtausbeuten. Die heutige Anlage wird mit Marktreferenzwerten bewertet, nicht mit einer Messung vor Ort.",
+      "report.date": "Datum",
+      "report.by": "Erstellt von",
+      "report.disc": "Unverbindliche Schätzung. Messbedingungen und der Bericht des unabhängigen Labors werden mit dem Datenblatt geliefert.",
       "calc.meta.title": "Einsparrechner — Almenara",
       "calc.meta.desc": "Rechnen Sie aus, was der Austausch Ihrer Beleuchtung sparen würde. Mit Ihren eigenen Zahlen und ohne Registrierung.",
       "calc.eyebrow": "Einsparrechner",
@@ -307,6 +422,29 @@
     },
 
     it: {
+      "report.mexcl": "La stima riguarda la sola elettricità; non include la manutenzione evitata.",
+      "report.mincl": "Il risparmio di manutenzione conta la differenza di interventi, già scontate le nostre sostituzioni.",
+      "calc.r.perpoint": "Costo annuo per punto luce",
+      "calc.adv.dep": "Decadimento di flusso degli apparecchi attuali (%)",
+      "calc.adv.loss": "Perdite dell'alimentatore (%)",
+      "calc.adv.life": "Durata della lampada attuale (h)",
+      "calc.adv.mcost": "Costo di un intervento per punto (€)",
+      "calc.adv.mhelp": "Compila le ultime due e appare il risparmio di manutenzione. Si scontano le nostre sostituzioni: si conta la differenza, non il totale.",
+      "calc.r.energysave": "Risparmio energetico",
+      "calc.r.maintsave": "Risparmio di manutenzione",
+      "calc.r.total": "Risparmio annuo totale",
+      "calc.r.effreal": "Efficienza effettiva in servizio",
+      "report.assump": "L'impianto attuale è valutato con valori di riferimento di mercato, non con una misura in campo.",
+      "calc.pdf.btn": "Scarica il rapporto",
+      "report.title": "Stima di risparmio",
+      "report.sub": "Stima a partire dai valori forniti dal cliente",
+      "report.inputs": "Valori forniti",
+      "report.result": "Risultato",
+      "report.method": "Metodo",
+      "report.methodbody": "Confronto a illuminamento equivalente: per dare gli stessi lumen, la potenza necessaria è proporzionale al rapporto delle efficienze. L'impianto attuale è valutato con valori di riferimento di mercato, non con una misura in campo.",
+      "report.date": "Data",
+      "report.by": "Redatto da",
+      "report.disc": "Stima priva di valore contrattuale. Le condizioni di misura e il rapporto del laboratorio indipendente sono forniti con la scheda tecnica.",
       "calc.meta.title": "Calcolatore di risparmio — Almenara",
       "calc.meta.desc": "Calcola quanto risparmieresti sostituendo la tua illuminazione attuale. Con i tuoi numeri e senza registrazione.",
       "calc.eyebrow": "Calcolatore di risparmio",
@@ -356,6 +494,29 @@
     },
 
     ru: {
+      "report.mexcl": "Оценка учитывает только электроэнергию; сэкономленное обслуживание не включено.",
+      "report.mincl": "Экономия на обслуживании считает разницу в числе выездов, наши собственные замены уже вычтены.",
+      "calc.r.perpoint": "Годовая стоимость световой точки",
+      "calc.adv.dep": "Спад светового потока нынешних светильников (%)",
+      "calc.adv.loss": "Потери пускорегулирующей аппаратуры (%)",
+      "calc.adv.life": "Срок службы нынешней лампы (ч)",
+      "calc.adv.mcost": "Стоимость одного выезда на точку (€)",
+      "calc.adv.mhelp": "Заполните два последних поля — появится экономия на обслуживании. Наши собственные замены вычитаются: считается разница, а не весь объём.",
+      "calc.r.energysave": "Экономия энергии",
+      "calc.r.maintsave": "Экономия на обслуживании",
+      "calc.r.total": "Общая годовая экономия",
+      "calc.r.effreal": "Фактическая отдача в работе",
+      "report.assump": "Нынешняя установка оценивается по рыночным справочным значениям, а не по замеру на объекте.",
+      "calc.pdf.btn": "Скачать отчёт",
+      "report.title": "Оценка экономии",
+      "report.sub": "Оценка по данным, предоставленным клиентом",
+      "report.inputs": "Исходные данные",
+      "report.result": "Результат",
+      "report.method": "Метод",
+      "report.methodbody": "Сравнение при равной освещённости: чтобы дать те же люмены, требуемая мощность пропорциональна отношению световых отдач. Нынешняя установка оценивается по рыночным справочным значениям, а не по замеру на объекте.",
+      "report.date": "Дата",
+      "report.by": "Подготовил",
+      "report.disc": "Оценка не имеет договорной силы. Условия измерения и протокол независимой лаборатории передаются вместе с техническим описанием.",
       "calc.meta.title": "Калькулятор экономии — Almenara",
       "calc.meta.desc": "Рассчитайте, сколько сэкономите при замене нынешнего освещения. По своим цифрам и без регистрации.",
       "calc.eyebrow": "Калькулятор экономии",
@@ -447,8 +608,15 @@
       price: 0.18,
       efNew: 275,
       co2: 0.20,
-      cost: null
+      cost: null,
+      dep: 0,        // depreciación de flujo del equipo actual, %
+      loss: 0,       // pérdidas del equipo auxiliar, %
+      life: null,    // vida de la lámpara actual, horas
+      mcost: null    // coste de una intervención por punto, €
     };
+    // Vida declarada de nuestro módulo. De aquí sale la resta que impide
+    // apuntarse un ahorro de mantenimiento que no corresponde.
+    const VIDA_NUESTRA = 100000;
 
     /* --- Construcción de la interfaz ------------------------------------- */
     function campo(claveEtiqueta, id, valor, paso, min) {
@@ -478,10 +646,14 @@
 
     const tabs = document.createElement('div');
     tabs.className = 'calc-tabs';
+    tabs.setAttribute('role', 'tablist');
     ['calc.tab.tech', 'calc.tab.fx', 'calc.tab.man'].forEach(function (k, i) {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'calc-tab' + (i === 0 ? ' is-on' : '');
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      b.setAttribute('aria-controls', 'p' + i);
       b.dataset.panel = 'p' + i;
       b.setAttribute('data-i18n', k);
       b.textContent = k;
@@ -493,6 +665,7 @@
     const p0 = document.createElement('div');
     p0.className = 'calc-panel is-on';
     p0.id = 'p0';
+    p0.setAttribute('role', 'tabpanel');
     const sel = document.createElement('select');
     sel.className = 'calc-select';
     TECNOLOGIAS.forEach(function (o, i) {
@@ -510,6 +683,7 @@
     const p1 = document.createElement('div');
     p1.className = 'calc-panel';
     p1.id = 'p1';
+    p1.setAttribute('role', 'tabpanel');
     const busca = document.createElement('input');
     busca.type = 'search';
     busca.className = 'calc-search';
@@ -523,6 +697,8 @@
     const p2 = document.createElement('div');
     p2.className = 'calc-panel';
     p2.id = 'p2';
+    p2.setAttribute('role', 'tabpanel');
+    let vatiosTocados = false;   // si el visitante escribe los suyos, mandan
     const manW = campo('calc.man.w', 'manw', 250, '1');
     const manL = campo('calc.man.lm', 'manlm', 22500, '100');
     p2.appendChild(manW); p2.appendChild(manL);
@@ -573,18 +749,27 @@
     rej3.appendChild(campo('calc.adv.eff', 'efnew', est.efNew, '1', '1'));
     rej3.appendChild(campo('calc.adv.co2', 'co2', est.co2, '0.01'));
     rej3.appendChild(campo('calc.adv.cost', 'cost', null, '1'));
+    rej3.appendChild(campo('calc.adv.dep', 'dep', 0, '1'));
+    rej3.appendChild(campo('calc.adv.loss', 'loss', 0, '1'));
+    rej3.appendChild(campo('calc.adv.life', 'life', null, '1000'));
+    rej3.appendChild(campo('calc.adv.mcost', 'mcost', null, '5'));
     s3.appendChild(rej3);
-    const ayuda = document.createElement('p');
-    ayuda.className = 'calc-help';
-    ayuda.setAttribute('data-i18n', 'calc.adv.cost_help');
-    ayuda.textContent = 'calc.adv.cost_help';
-    s3.appendChild(ayuda);
+    ['calc.adv.cost_help', 'calc.adv.mhelp'].forEach(function (k) {
+      const p = document.createElement('p');
+      p.className = 'calc-help';
+      p.setAttribute('data-i18n', k);
+      p.textContent = k;
+      s3.appendChild(p);
+    });
     raiz.appendChild(s3);
 
     /* Resultado */
     const out = document.createElement('section');
     out.className = 'calc-out';
     out.id = 'calc-out';
+    // Quien no ve la pantalla debe enterarse de que hay cifras nuevas.
+    out.setAttribute('aria-live', 'polite');
+    out.setAttribute('aria-atomic', 'false');
     raiz.appendChild(out);
 
     /* --- Comportamiento --------------------------------------------------- */
@@ -610,8 +795,7 @@
           [].forEach.call(lista.querySelectorAll('button'), function (x) { x.classList.remove('is-on'); });
           b.classList.add('is-on');
           est.efNow = o.ef;
-          document.getElementById('watts').value = o.w;
-          est.watts = o.w;
+          if (!vatiosTocados) { document.getElementById('watts').value = o.w; est.watts = o.w; }
           calcular();
         });
         li.appendChild(b);
@@ -622,8 +806,12 @@
     tabs.addEventListener('click', function (e) {
       const b = e.target.closest('.calc-tab');
       if (!b) return;
-      [].forEach.call(tabs.children, function (x) { x.classList.remove('is-on'); });
+      [].forEach.call(tabs.children, function (x) {
+        x.classList.remove('is-on');
+        x.setAttribute('aria-selected', 'false');
+      });
       b.classList.add('is-on');
+      b.setAttribute('aria-selected', 'true');
       [p0, p1, p2].forEach(function (p) { p.classList.toggle('is-on', p.id === b.dataset.panel); });
       leerEficacia();
       calcular();
@@ -634,13 +822,12 @@
       if (activo === 'p0') {
         const o = TECNOLOGIAS[parseInt(sel.value, 10)];
         est.efNow = o.ef;
-        document.getElementById('watts').value = o.w;
-        est.watts = o.w;
+        if (!vatiosTocados) { document.getElementById('watts').value = o.w; est.watts = o.w; }
       } else if (activo === 'p2') {
         const w = parseFloat(document.getElementById('manw').value) || 0;
         const lm = parseFloat(document.getElementById('manlm').value) || 0;
         est.efNow = w > 0 ? lm / w : 0;
-        if (w > 0) { document.getElementById('watts').value = w; est.watts = w; }
+        if (w > 0 && !vatiosTocados) { document.getElementById('watts').value = w; est.watts = w; }
       }
     }
 
@@ -649,9 +836,12 @@
     ['manw', 'manlm'].forEach(function (id) {
       document.getElementById(id).addEventListener('input', function () { leerEficacia(); calcular(); });
     });
-    ['points', 'watts', 'hours', 'price', 'efnew', 'co2', 'cost'].forEach(function (id) {
+    ['points', 'watts', 'hours', 'price', 'efnew', 'co2', 'cost',
+     'dep', 'loss', 'life', 'mcost'].forEach(function (id) {
       document.getElementById(id).addEventListener('input', calcular);
     });
+    document.getElementById('watts').addEventListener('input', function () { vatiosTocados = true; });
+
     chips.addEventListener('click', function (e) {
       const b = e.target.closest('.calc-chip');
       if (!b) return;
@@ -678,13 +868,23 @@
       est.price  = Math.max(0, parseFloat(document.getElementById('price').value) || 0);
       est.efNew  = Math.max(1, parseFloat(document.getElementById('efnew').value) || 0);
       est.co2    = Math.max(0, parseFloat(document.getElementById('co2').value) || 0);
-      const costTxt = document.getElementById('cost').value;
-      est.cost = costTxt === '' ? null : Math.max(0, parseFloat(costTxt) || 0);
+      const opcional = function (id) {
+        const v = document.getElementById(id).value;
+        return v === '' ? null : Math.max(0, parseFloat(v) || 0);
+      };
+      est.cost  = opcional('cost');
+      est.life  = opcional('life');
+      est.mcost = opcional('mcost');
+      est.dep   = Math.min(60, Math.max(0, parseFloat(document.getElementById('dep').value)  || 0));
+      est.loss  = Math.min(40, Math.max(0, parseFloat(document.getElementById('loss').value) || 0));
 
-      efNow.querySelector('strong').textContent = est.efNow ? num(est.efNow, 0) + ' lm/W' : '—';
+      efNow.querySelector('strong').textContent = est.efNow
+        ? (num(est.efNow, 1) + ' lm/W' +
+           (est.dep > 0 ? '  →  ' + num(est.efNow * (1 - est.dep / 100), 1) + ' lm/W' : ''))
+        : '—';
 
       out.innerHTML = '';
-      if (!est.efNow || est.efNow >= est.efNew) {
+      if (!est.efNow || est.efNow * (1 - est.dep / 100) >= est.efNew) {
         const p = document.createElement('p');
         p.className = 'calc-warn';
         p.textContent = txt('calc.warn');
@@ -693,19 +893,40 @@
         return;
       }
 
-      // A iluminación equivalente: misma luz, potencia proporcional al
-      // cociente de eficacias.
-      const ratio = est.efNow / est.efNew;
-      const kwAntes = est.points * est.watts / 1000;
-      const kwDesp  = kwAntes * ratio;
+      // Eficacia efectiva: una lámpara vieja da menos luz de la que dice su
+      // etiqueta, así que la depreciación de flujo se descuenta aquí.
+      const efReal = est.efNow * (1 - est.dep / 100);
+
+      // Potencia real absorbida: el equipo auxiliar consume por encima de la
+      // potencia nominal de la lámpara. Un balasto magnético hace que una
+      // campana de 250 W tire de 280.
+      const wReal = est.watts * (1 + est.loss / 100);
+
+      // A iluminación equivalente: los mismos lúmenes que se están dando hoy
+      // de verdad, con una potencia proporcional al cociente de eficacias.
+      const lm       = est.points * est.watts * efReal;
+      const kwAntes  = est.points * wReal / 1000;
+      const kwDesp   = lm / est.efNew / 1000;
+      const ratio    = kwAntes > 0 ? kwDesp / kwAntes : 1;
       const kwhAntes = kwAntes * est.hours;
       const kwhDesp  = kwDesp * est.hours;
       const eurAntes = kwhAntes * est.price;
       const eurDesp  = kwhDesp * est.price;
-      const ahorro   = eurAntes - eurDesp;
+      const ahorroE  = eurAntes - eurDesp;
       const co2      = (kwhAntes - kwhDesp) * est.co2 / 1000;
       const recorte  = (1 - ratio) * 100;
-      const lm       = est.points * est.watts * est.efNow;
+
+      // Mantenimiento. No se cuenta el total de intervenciones evitadas, sino
+      // la diferencia: nuestro módulo también se sustituye algún día, solo que
+      // mucho más tarde. Restar nuestras propias reposiciones es lo que hace
+      // que esta cifra se sostenga delante de un ingeniero.
+      let ahorroM = 0;
+      if (est.life && est.mcost) {
+        const propias  = est.hours / VIDA_NUESTRA;
+        const actuales = est.hours / est.life;
+        ahorroM = Math.max(0, est.points * (actuales - propias) * est.mcost);
+      }
+      const ahorro = ahorroE + ahorroM;
 
       const grande = document.createElement('div');
       grande.className = 'calc-hero-out';
@@ -732,19 +953,32 @@
       fila('calc.r.power',  num(kwAntes, 1) + ' kW', num(kwDesp, 1) + ' kW');
       fila('calc.r.energy', num(kwhAntes) + ' kWh', num(kwhDesp) + ' kWh');
       fila('calc.r.cost',   eur(eurAntes), eur(eurDesp));
+      if (ahorroM > 0) {
+        simple('calc.r.energysave', eur(ahorroE));
+        simple('calc.r.maintsave', eur(ahorroM));
+        simple('calc.r.total', eur(ahorro));
+      }
       simple('calc.r.ten', eur(ahorro * 10));
       simple('calc.r.co2', num(co2, 1) + ' ' + txt('calc.tonnes'));
       if (est.cost !== null && est.cost > 0 && ahorro > 0) {
         simple('calc.r.payback', num((est.points * est.cost) / ahorro, 1) + ' ' + txt('calc.years'));
       }
-      simple('calc.r.lmeur', eurDesp > 0 ? num(lm / eurDesp) + ' lm/€' : '—');
-      simple('calc.r.wcost', num(eurDesp / (kwDesp * 1000), 3) + ' €/W');
+      // Antes y después, no solo el después: por sí solas estas dos cifras
+      // no dependían de la instalación del visitante y no decían nada.
+      if (eurAntes > 0 && eurDesp > 0) {
+        fila('calc.r.lmeur', num(lm / eurAntes) + ' lm/€', num(lm / eurDesp) + ' lm/€');
+      }
+      // El coste por vatio instalado es horas × precio: sale idéntico antes y
+      // después, así que no se compara. Se deja como dato de planificación.
+      simple('calc.r.wcost', num(eurAntes / (kwAntes * 1000), 3) + ' €/W');
+      // Esta sí depende de todo y es la que mira quien gestiona el edificio.
+      fila('calc.r.perpoint', eur(eurAntes / est.points), eur(eurDesp / est.points));
       out.appendChild(tabla);
 
       const nota = document.createElement('p');
       nota.className = 'specs-note';
-      nota.setAttribute('data-i18n', 'calc.note');
-      nota.textContent = txt('calc.note');
+      nota.textContent = txt('report.methodbody') + ' ' +
+        (ahorroM > 0 ? txt('report.mincl') : txt('report.mexcl'));
       out.appendChild(nota);
 
       // Botón que abre el correo con el cálculo ya escrito dentro.
@@ -759,6 +993,92 @@
         txt('calc.r.ten') + ': ' + eur(ahorro * 10) + '\n' +
         txt('calc.r.co2') + ': ' + num(co2, 1) + ' t\n';
 
+      /* --- El documento imprimible ---------------------------------------
+         No se ve en pantalla. Al imprimir, la hoja de estilos oculta la web
+         entera y deja solo esto: una hoja en negro sobre blanco con membrete.
+         El visitante elige «Guardar como PDF» en el propio diálogo del
+         navegador, así que no hace falta ninguna librería externa, que
+         además el .htaccess no permitiría cargar. -------------------------- */
+      const fecha = new Intl.DateTimeFormat(loc, { day: 'numeric', month: 'long', year: 'numeric' })
+        .format(new Date());
+
+      function filasHTML(pares) {
+        return pares.map(function (p) {
+          return '<tr><th>' + p[0] + '</th><td>' + p[1] + '</td></tr>';
+        }).join('');
+      }
+
+      const doc = document.createElement('article');
+      doc.className = 'print-doc';
+      doc.innerHTML =
+        '<header class="pd-head">' +
+          '<p class="pd-brand">Almenara</p>' +
+          '<p class="pd-meta">' + txt('report.date') + ': ' + fecha + '</p>' +
+        '</header>' +
+
+        '<h1 class="pd-title">' + txt('report.title') + '</h1>' +
+        '<p class="pd-sub">' + txt('report.sub') + '</p>' +
+
+        '<p class="pd-big-label">' + txt('calc.r.saving') + '</p>' +
+        '<p class="pd-big">' + eur(ahorro) + '</p>' +
+
+        '<h2 class="pd-h2">' + txt('report.inputs') + '</h2>' +
+        '<div class="pd-facts">' + [
+          [txt('calc.eff.now'), num(est.efNow, 1) + ' lm/W'],
+          [txt('calc.points'), num(est.points)],
+          [txt('calc.watts'), num(est.watts) + ' W'],
+          [txt('calc.hours'), num(est.hours) + ' h'],
+          [txt('calc.price'), est.price + ' €/kWh'],
+          [txt('calc.adv.eff'), num(est.efNew) + ' lm/W']
+        ].concat(
+          est.dep > 0 ? [[txt('calc.r.effreal'), num(efReal, 1) + ' lm/W']] : []
+        ).concat(
+          est.loss > 0 ? [[txt('calc.adv.loss'), num(est.loss) + ' %']] : []
+        ).map(function (p) {
+          return '<div><dt>' + p[0] + '</dt><dd>' + p[1] + '</dd></div>';
+        }).join('') + '</div>' +
+
+        '<h2 class="pd-h2">' + txt('report.result') + '</h2>' +
+        '<table class="pd-table">' + filasHTML([
+          [txt('calc.r.power'), num(kwAntes, 1) + ' kW → ' + num(kwDesp, 1) + ' kW'],
+          [txt('calc.r.energy'), num(kwhAntes) + ' kWh → ' + num(kwhDesp) + ' kWh'],
+          [txt('calc.r.cost'), eur(eurAntes) + ' → ' + eur(eurDesp)],
+          [txt('calc.r.cut'), '−' + num(recorte, 0) + ' %'],
+          [txt('calc.r.ten'), eur(ahorro * 10)],
+          [txt('calc.r.co2'), num(co2, 1) + ' ' + txt('calc.tonnes')]
+        ].concat(
+          ahorroM > 0
+            ? [[txt('calc.r.energysave'), eur(ahorroE)],
+               [txt('calc.r.maintsave'), eur(ahorroM)],
+               [txt('calc.r.total'), eur(ahorro)]]
+            : []
+        ).concat(
+          (est.cost !== null && est.cost > 0 && ahorro > 0)
+            ? [[txt('calc.r.payback'), num((est.points * est.cost) / ahorro, 1) + ' ' + txt('calc.years')]]
+            : []
+        )) + '</table>' +
+
+        '<div class="pd-bars">' +
+          '<div class="pd-bar"><span class="pd-bar-l">' + txt('calc.before') + '</span>' +
+            '<span class="pd-bar-t"><i style="width:100%"></i></span>' +
+            '<span class="pd-bar-v">' + num(kwAntes, 1) + ' kW</span></div>' +
+          '<div class="pd-bar is-new"><span class="pd-bar-l">' + txt('calc.after') + '</span>' +
+            '<span class="pd-bar-t"><i style="width:' + (ratio * 100).toFixed(1) + '%"></i></span>' +
+            '<span class="pd-bar-v">' + num(kwDesp, 1) + ' kW</span></div>' +
+        '</div>' +
+
+        '<h2 class="pd-h2">' + txt('report.method') + '</h2>' +
+        '<p class="pd-note">' + txt('report.methodbody') + ' ' +
+          (ahorroM > 0 ? txt('report.mincl') : txt('report.mexcl')) + '</p>' +
+
+        '<footer class="pd-foot">' +
+          '<p><strong>' + txt('report.by') + '</strong> Almenara · Madrid<br />' +
+          'hugorcsar@gmail.com · +53 55 3910 2832<br />' +
+          'almenara.hamergolfconsulting.com</p>' +
+          '<p class="pd-disc">' + txt('report.disc') + '</p>' +
+        '</footer>';
+      out.appendChild(doc);
+
       const cta = document.createElement('div');
       cta.className = 'calc-cta';
       cta.innerHTML =
@@ -771,8 +1091,16 @@
       a.href = 'mailto:hugorcsar@gmail.com?subject=' +
         encodeURIComponent(txt('calc.mail.subject')) +
         '&body=' + encodeURIComponent(cuerpo);
+      const pdf = document.createElement('button');
+      pdf.type = 'button';
+      pdf.className = 'btn btn-outline';
+      pdf.setAttribute('data-i18n', 'calc.pdf.btn');
+      pdf.textContent = txt('calc.pdf.btn');
+      pdf.addEventListener('click', function () { window.print(); });
+
       const acc = document.createElement('div');
       acc.className = 'hero-actions';
+      acc.appendChild(pdf);
       acc.appendChild(a);
       cta.appendChild(acc);
       out.appendChild(cta);
