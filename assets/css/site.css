@@ -1,4 +1,40 @@
-https://pagespeed.web.dev/analysis/https-gober-ai/9f2qdnzauc?form_factor=mobile  --text:       #0F1D30;   /* azul noche */
+/* ==========================================================================
+   TIPOGRAFÍA — Jost, geométrica, servida desde tu propio dominio
+   Vive en  assets/jost-var.woff2  y no dentro de este archivo. Estuvo
+   incrustada en base64 y eso sumaba 57 KB a una hoja de estilos que bloquea
+   el pintado de la página. Como archivo aparte se descarga en paralelo.
+   Es una geométrica de la escuela de la Futura, con la misma anatomía que
+   sostiene los rótulos de la moda italiana: círculo perfecto en la O, asta
+   fina, mayúsculas anchas. En trazo ligero y con el espaciado muy abierto da
+   exactamente ese aire. Licencia SIL Open Font, uso comercial permitido.
+   Un solo archivo variable de 100 a 900: no hay que cargar seis pesos.
+   Servida desde tu servidor, así que sigue sin haber ni una conexión externa
+   y no se transmite la IP del visitante a ningún tercero (RGPD).
+   La monoespaciada queda reservada para las cifras, que es donde sirve.
+   ========================================================================== */
+@font-face {
+  font-family: "Jost";
+  src: url("../jost-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --f-display: "Jost", Futura, "Futura PT", "Avenir Next", Avenir, "Century Gothic",
+               "URW Gothic", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  --f-data: ui-monospace, SFMono-Regular, "SF Mono", "Cascadia Mono", "Roboto Mono",
+            Menlo, Consolas, monospace;
+
+  /* Paleta única: papel blanco y tinta azul noche.
+     El ámbar queda reservado para representar la luz —la escala, el mando de
+     temperatura de color, la barra de ahorro—, nunca para decorar. Esa
+     disciplina es lo que hace que un acento signifique algo. */
+  --ink:        #FCFCFB;   /* el papel */
+  --ink-raised: #F2F3F1;   /* superficie levantada */
+  --line:       rgba(15, 29, 48, 0.17);
+  --line-soft:  rgba(15, 29, 48, 0.09);
+  --text:       #0F1D30;   /* azul noche */
   --text-dim:   #5B6C80;
   --warm:       #8F5200;   /* ámbar oscuro: el único que contrasta sobre papel */
   --warm-hi:    #6B3D00;
@@ -1651,4 +1687,112 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
 .sectors > article {
   border-right: 1px solid var(--line-soft);
   border-bottom: 1px solid var(--line-soft);
+}
+
+/* ==========================================================================
+   CABECERA: NOMBRE MÁS GRANDE Y MENÚ DE MÓVIL
+   ========================================================================== */
+
+/* El nombre crece con la pantalla. Las versales muy espaciadas piden tamaño:
+   pequeñas se leen como un código, grandes se leen como un rótulo. */
+.brand {
+  font-size: clamp(0.875rem, 0.7rem + 0.75vw, 1.3rem);
+  letter-spacing: 0.42em;
+}
+.site-header.is-scrolled .brand {
+  font-size: clamp(0.8125rem, 0.68rem + 0.5vw, 1.05rem);
+  letter-spacing: 0.38em;
+}
+.footer-top .brand { font-size: clamp(1rem, 0.8rem + 0.9vw, 1.5rem); }
+
+/* El panel se ancla a la cabecera. */
+.site-header { position: sticky; }
+
+/* --- El botón de tres rayas ------------------------------------------------ */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  margin-left: 0.25rem;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--line-soft);
+  cursor: pointer;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  margin: 0 auto;
+  background: var(--text);
+  transition: transform 0.28s var(--ease), opacity 0.2s var(--ease);
+}
+/* Abierto, las tres rayas se convierten en un aspa. */
+.site-header.is-open .nav-toggle-bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.site-header.is-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.site-header.is-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .nav-toggle { display: flex; }
+
+  /* La navegación deja de estar oculta y pasa a ser un panel desplegable. */
+  .site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 clamp(1.125rem, 4vw, 2rem);
+    background: var(--ink);
+    border-bottom: 1px solid var(--line);
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.32s var(--ease), visibility 0.32s;
+  }
+  .site-header.is-open .site-nav {
+    max-height: 80vh;
+    visibility: visible;
+    overflow-y: auto;
+    padding-block: 0.5rem 1.5rem;
+  }
+  .site-nav a {
+    width: 100%;
+    padding: 1.05rem 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 0.9375rem;
+    letter-spacing: 0.16em;
+  }
+  .site-nav a:last-of-type { border-bottom: 0; }
+
+  /* Los idiomas, dentro del panel y con sitio para dedos. */
+  .site-nav .lang-switcher {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+  .site-nav .lang-btn {
+    min-width: 44px;
+    min-height: 40px;
+    border: 1px solid var(--line-soft);
+    font-size: 0.8125rem;
+  }
+  .site-nav .lang-btn[aria-pressed="true"] { border-color: var(--warm); }
+}
+
+/* Con movimiento reducido, el panel aparece sin animarse. */
+@media (prefers-reduced-motion: reduce) {
+  .site-nav { transition: none; }
+  .nav-toggle-bar { transition: none; }
 }
