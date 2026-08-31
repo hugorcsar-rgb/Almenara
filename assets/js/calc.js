@@ -1232,7 +1232,7 @@
 
         '<footer class="pd-foot">' +
           '<p><strong>' + txt('report.by') + '</strong> Almenara · Madrid<br />' +
-          'hugorcsar@gmail.com · +52 55 3910 2832<br />' +
+          'info@almenaraled.com · +52 55 3910 2832<br />' +
           'almenaraled.com</p>' +
           '<p class="pd-disc">' + txt('report.disc') + '</p>' +
         '</footer>';
@@ -1248,7 +1248,7 @@
       a.className = 'btn btn-primary';
       a.setAttribute('data-i18n', 'calc.cta.btn');
       a.textContent = txt('calc.cta.btn');
-      a.href = 'mailto:hugorcsar@gmail.com?subject=' +
+      a.href = 'mailto:info@almenaraled.com?subject=' +
         encodeURIComponent(txt('calc.mail.subject')) +
         '&body=' + encodeURIComponent(cuerpo);
       const pdf = document.createElement('button');
