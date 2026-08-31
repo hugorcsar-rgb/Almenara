@@ -1,192 +1,184 @@
-<?php
-/* ============================================================================
-   ALMENARA · Receptor del formulario de contacto
-   ----------------------------------------------------------------------------
-   Recibe el formulario, avisa por correo y GUARDA UNA COPIA EN EL SERVIDOR.
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-meta-prefix="cont.meta">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="dark light" />
+<meta name="theme-color" content="#0B1520" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#EDEFF0" media="(prefers-color-scheme: light)" />
 
-   La copia es lo importante. El correo enviado desde un alojamiento compartido
-   acaba en la carpeta de spam con bastante frecuencia, y sin copia uno no se
-   entera de que ha perdido un cliente. Con copia, aunque el correo falle, el
-   mensaje sigue ahí.
+<title>Contact — Almenara</title>
+<meta name="description" content="Contact Almenara for partnership enquiries, technical questions and project proposals. Madrid." />
+<meta name="author" content="Almenara" />
 
-   La carpeta de mensajes se crea sola en la primera visita y se protege sola,
-   escribiendo dentro un .htaccess que impide que nadie la lea desde fuera.
+<link rel="canonical" href="https://almenara.hamergolfconsulting.com/contact.html" />
 
-   AJUSTES: solo hay que tocar las cuatro constantes de aquí abajo.
-   ============================================================================ */
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Almenara" />
+<meta property="og:title" content="Contact — Almenara" />
+<meta property="og:description" content="Contact Almenara for partnership enquiries, technical questions and project proposals. Madrid." />
+<meta property="og:url" content="https://almenara.hamergolfconsulting.com/contact.html" />
+<meta property="og:image" content="https://almenara.hamergolfconsulting.com/assets/img/og-image.jpg" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="pt_PT" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:locale:alternate" content="de_DE" />
+<meta property="og:locale:alternate" content="it_IT" />
+<meta property="og:locale:alternate" content="ru_RU" />
 
-const DESTINO   = 'hugorcsar@gmail.com';          // a dónde llegan los avisos
-const REMITENTE = 'no-reply@hamergolfconsulting.com';  // debe ser del dominio propio
-const CARPETA   = __DIR__ . '/mensajes';          // dónde se guardan las copias
-const GUARDAR   = true;                            // false para no guardar copia
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact — Almenara" />
+<meta name="twitter:description" content="Contact Almenara for partnership enquiries, technical questions and project proposals. Madrid." />
+<meta name="twitter:image" content="https://almenara.hamergolfconsulting.com/assets/img/og-image.jpg" />
 
-/* --------------------------------------------------------------------------
-   Utilidades
-   -------------------------------------------------------------------------- */
+<link rel="alternate" hreflang="en" href="https://almenara.hamergolfconsulting.com/contact.html?lang=en" />
+<link rel="alternate" hreflang="es" href="https://almenara.hamergolfconsulting.com/contact.html?lang=es" />
+<link rel="alternate" hreflang="pt" href="https://almenara.hamergolfconsulting.com/contact.html?lang=pt" />
+<link rel="alternate" hreflang="fr" href="https://almenara.hamergolfconsulting.com/contact.html?lang=fr" />
+<link rel="alternate" hreflang="de" href="https://almenara.hamergolfconsulting.com/contact.html?lang=de" />
+<link rel="alternate" hreflang="it" href="https://almenara.hamergolfconsulting.com/contact.html?lang=it" />
+<link rel="alternate" hreflang="ru" href="https://almenara.hamergolfconsulting.com/contact.html?lang=ru" />
+<link rel="alternate" hreflang="x-default" href="https://almenara.hamergolfconsulting.com/contact.html" />
 
-// Un salto de línea dentro de una cabecera de correo permite inyectar
-// destinatarios ocultos. Se eliminan siempre, sin excepción.
-function limpiarCabecera(string $v): string {
-    return trim(str_replace(["\r", "\n", "%0a", "%0d"], '', $v));
-}
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
 
-// Recorta respetando los caracteres multibyte cuando se puede. No todos los
-// alojamientos llevan activada la extensión mbstring, y un formulario que se
-// cae en silencio por eso es peor que uno que no existe.
-function recortar(string $v, int $max): string {
-    if (function_exists('mb_substr')) {
-        return mb_substr($v, 0, $max, 'UTF-8');
-    }
-    $v = substr($v, 0, $max);
-    // Evita dejar cortado a medias un carácter de varios bytes
-    return preg_replace('/[\x80-\xBF]+$/', '', $v) ?? $v;
-}
+<link rel="stylesheet" href="assets/css/site.css?v=1" />
+<noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
-function campo(string $nombre, int $max = 400): string {
-    $v = $_POST[$nombre] ?? '';
-    if (!is_string($v)) return '';
-    return recortar(trim($v), $max);
-}
+<script src="assets/js/app.js"></script>
+</head>
 
-function responder(bool $ok, string $clave, int $codigo = 200): void {
-    $esJson = (isset($_SERVER['HTTP_X_REQUESTED_WITH'])
-        && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'fetch');
+<body>
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to content</a>
 
-    if ($esJson) {
-        http_response_code($codigo);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['ok' => $ok, 'clave' => $clave]);
-    } else {
-        // Sin JavaScript se vuelve a la página con el resultado en la dirección.
-        header('Location: contact.html?' . ($ok ? 'enviado=1' : 'error=' . $clave));
-    }
-    exit;
-}
+<header class="site-header">
+  <div class="shell" style="display:flex;align-items:center;gap:1.5rem;width:var(--shell)">
+    <a href="./" class="brand" data-i18n-attr="aria-label:a11y.home">Almenara</a>
+    <nav class="site-nav" data-i18n-attr="aria-label:a11y.primary">
+      <a href="technology.html"   data-i18n="nav.tech">Technology</a>
+      <a href="services.html"     data-i18n="nav.services">Services</a>
+      <a href="applications.html" data-i18n="nav.apps">Applications</a>
+      <a href="contact.html"      data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <nav class="lang-switcher" data-i18n-attr="aria-label:a11y.lang">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true"  lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false" lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false" lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false" lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false" lang="ru">RU</button>
+      </nav>
+      <button type="button" class="theme-toggle" data-theme-toggle data-i18n-attr="aria-label:a11y.theme">
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-/* --------------------------------------------------------------------------
-   Solo se atiende el envío del formulario
-   -------------------------------------------------------------------------- */
-if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
-    header('Location: contact.html');
-    exit;
-}
+<main id="main">
 
-/* --------------------------------------------------------------------------
-   Defensas contra el correo basura
-   Este archivo empezará a recibir envíos automáticos en cuanto exista. Son
-   tres filtros baratos que detienen a la inmensa mayoría.
-   -------------------------------------------------------------------------- */
+  <section class="band page-head">
+    <div class="shell">
+      <p class="eyebrow mono" data-i18n="cont.eyebrow">Contact</p>
+      <h1 data-i18n="cont.title">Tell us what you are lighting.</h1>
+      <p class="lede" data-i18n="cont.sub">For partnership enquiries, technical questions and project proposals. We answer within one working day.</p>
+    </div>
+  </section>
 
-// 1. Cebo. Un campo invisible para las personas y evidente para un robot,
-//    que rellena todo lo que encuentra. Si viene relleno, se descarta en
-//    silencio: al robot se le responde que todo ha ido bien para que no
-//    reintente con otra táctica.
-if (campo('website') !== '') {
-    responder(true, 'ok');
-}
+  <section class="band reveal">
+    <div class="shell">
+      <p class="band-label" data-i18n="cont.form.label">Write to us</p>
+      <div class="contact">
+        <aside>
+          <dl class="contact-info">
+            <dt data-i18n="cont.office">Office</dt>
+            <dd data-i18n="cont.office_v">Madrid, Spain</dd>
+            <dt data-i18n="cont.email">Email</dt>
+            <dd><a href="mailto:hugorcsar@gmail.com">hugorcsar@gmail.com</a></dd>
+            <dt data-i18n="cont.whatsapp">WhatsApp</dt>
+            <dd><a href="https://wa.me/525539102832" rel="noopener">+52 55 3910 2832</a></dd>
+            <dt data-i18n="cont.hours">Hours</dt>
+            <dd data-i18n="cont.hours_v">Monday to Friday · 09:00 – 18:00 CET</dd>
+          </dl>
+        </aside>
 
-// 2. Prisa. Nadie rellena cinco campos en menos de tres segundos.
-$marca = (int) campo('t', 20);
-if ($marca > 0 && (time() - $marca) < 3) {
-    responder(true, 'ok');
-}
+        <form class="contact-form" action="contact.php" method="post" novalidate>
+          <!-- Cebo para robots: invisible para las personas, irresistible para
+               un programa que rellena todo lo que encuentra. Si viene relleno,
+               el mensaje se descarta en silencio. -->
+          <div class="cebo" aria-hidden="true">
+            <label for="website">No rellenar</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <input type="hidden" name="t" value="" />
+          <input type="hidden" name="lang" value="" />
 
-// 3. Cadencia. Como mucho cinco envíos por hora desde la misma dirección.
-$ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
-$registro = sys_get_temp_dir() . '/almenara-envios-' . md5($ip) . '.txt';
-$envios = file_exists($registro)
-    ? array_filter(explode("\n", (string) file_get_contents($registro)))
-    : [];
-$envios = array_filter($envios, fn($t) => (time() - (int) $t) < 3600);
-if (count($envios) >= 5) {
-    responder(false, 'demasiados', 429);
-}
+          <div class="field">
+            <label for="name" data-i18n="cont.f.name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="company" data-i18n="cont.f.company">Company</label>
+            <input type="text" id="company" name="company" required autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="role" data-i18n="cont.f.role">Role</label>
+            <input type="text" id="role" name="role" autocomplete="organization-title" />
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="cont.f.email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="cont.f.message">Message</label>
+            <textarea id="message" name="message" required data-i18n-attr="placeholder:cont.f.message_ph"></textarea>
+          </div>
+          <div class="hero-actions" style="margin-top:2rem">
+            <button type="submit" class="btn btn-primary" data-i18n="cont.f.submit">Send message</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
+          <p class="form-note" data-i18n="cont.f.note">Your message reaches us directly. We answer within one working day.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 
-/* --------------------------------------------------------------------------
-   Validación
-   -------------------------------------------------------------------------- */
-$nombre  = campo('name', 120);
-$empresa = campo('company', 160);
-$cargo   = campo('role', 120);
-$correo  = campo('email', 180);
-$mensaje = campo('message', 6000);
-
-if ($nombre === '' || $empresa === '' || $correo === '' || $mensaje === '') {
-    responder(false, 'incompleto', 400);
-}
-if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
-    responder(false, 'correo', 400);
-}
-
-/* --------------------------------------------------------------------------
-   Copia en el servidor, antes de intentar el envío
-   Primero se guarda y luego se manda. Si el correo falla, el mensaje ya está
-   a salvo; al revés no habría segunda oportunidad.
-   -------------------------------------------------------------------------- */
-$fecha = date('Y-m-d H:i:s');
-$texto = "Fecha:    $fecha\n"
-       . "Nombre:   $nombre\n"
-       . "Empresa:  $empresa\n"
-       . "Cargo:    " . ($cargo !== '' ? $cargo : '—') . "\n"
-       . "Correo:   $correo\n"
-       . "Idioma:   " . campo('lang', 5) . "\n"
-       . "IP:       $ip\n"
-       . str_repeat('-', 60) . "\n\n"
-       . $mensaje . "\n";
-
-if (GUARDAR) {
-    if (!is_dir(CARPETA)) {
-        @mkdir(CARPETA, 0750, true);
-    }
-    // La carpeta se protege sola: sin esto, cualquiera podría leer los
-    // mensajes escribiendo la dirección en el navegador.
-    $guardia = CARPETA . '/.htaccess';
-    if (!file_exists($guardia)) {
-        @file_put_contents($guardia,
-            "# Mensajes del formulario. No accesibles desde el navegador.\n"
-          . "Require all denied\n"
-          . "<IfModule !mod_authz_core.c>\n  Deny from all\n</IfModule>\n");
-    }
-    $indice = CARPETA . '/index.html';
-    if (!file_exists($indice)) {
-        @file_put_contents($indice, '');
-    }
-    @file_put_contents(
-        CARPETA . '/' . date('Y-m-d_His') . '-' . substr(md5($correo . microtime()), 0, 6) . '.txt',
-        $texto
-    );
-}
-
-/* --------------------------------------------------------------------------
-   Aviso por correo
-   El remitente es una dirección del propio dominio, porque poner la del
-   visitante hace que el servidor de destino rechace el mensaje o lo mande a
-   spam. La suya va en Responder-a, así que basta con pulsar responder.
-   -------------------------------------------------------------------------- */
-$asunto = '=?UTF-8?B?' . base64_encode('Web · ' . $nombre . ' (' . $empresa . ')') . '?=';
-
-$cabeceras = [
-    'From: Almenara <' . REMITENTE . '>',
-    // Solo la dirección, sin nombre. El nombre ya va en el cuerpo, y meterlo
-    // aquí abre una puerta a manipular las cabeceras sin ganar nada.
-    'Reply-To: ' . limpiarCabecera($correo),
-    'Content-Type: text/plain; charset=UTF-8',
-    'Content-Transfer-Encoding: 8bit',
-    'X-Mailer: PHP/' . phpversion(),
-];
-
-$enviado = @mail(DESTINO, $asunto, $texto, implode("\r\n", $cabeceras), '-f' . REMITENTE);
-
-// Se anota el envío para la cadencia
-$envios[] = (string) time();
-@file_put_contents($registro, implode("\n", $envios));
-
-/* --------------------------------------------------------------------------
-   Respuesta
-   Si la copia se guardó, para el visitante el envío ha sido correcto aunque
-   el correo haya fallado: el mensaje ha llegado, solo que por otra vía.
-   -------------------------------------------------------------------------- */
-if ($enviado || GUARDAR) {
-    responder(true, 'ok');
-}
-responder(false, 'envio', 500);
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div>
+        <a href="./" class="brand">Almenara</a>
+        <p class="footer-tagline" data-i18n="foot.tagline">Patented LED platform technology. Madrid.</p>
+      </div>
+      <nav class="footer-links" data-i18n-attr="aria-label:a11y.footer">
+        <a href="technology.html"   data-i18n="nav.tech">Technology</a>
+        <a href="services.html"     data-i18n="nav.services">Services</a>
+        <a href="applications.html" data-i18n="nav.apps">Applications</a>
+        <a href="contact.html"      data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="legal/notice.html"  data-i18n="foot.legal1">Legal notice</a>
+        <a href="legal/privacy.html" data-i18n="foot.legal2">Privacy</a>
+        <a href="legal/cookies.html" data-i18n="foot.legal3">Cookies</a>
+      </div>
+      <p class="mono" style="margin:0" data-i18n="foot.rights">© 2026 Almenara · Madrid</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
