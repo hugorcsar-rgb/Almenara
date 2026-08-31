@@ -69,7 +69,7 @@
       "calc.pdf.chrome": "In the window that opens, at <strong>Destination</strong>, choose <strong>Save as PDF</strong> and then Save.",
       "calc.pdf.firefox": "In the window that opens, at <strong>Printer</strong>, choose <strong>Save to PDF</strong>.",
       "calc.pdf.mobile": "Your device will offer to share the document. Choose <strong>Save to Files</strong> or your usual folder.",
-      "calc.pdf.hint": "The report opens in the print dialogue, where you save it as a PDF.",
+      "calc.pdf.hint": "A two-page PDF with your figures, the method and our contact details.",
       "report.mexcl": "The estimate covers electricity only; avoided maintenance is not included.",
       "report.mincl": "The maintenance saving counts the difference in interventions, with our own replacements already deducted.",
       "calc.r.perpoint": "Annual cost per light point",
@@ -149,7 +149,7 @@
       "calc.pdf.chrome": "En la ventana que se abre, en <strong>Destino</strong>, elige <strong>Guardar como PDF</strong> y luego Guardar.",
       "calc.pdf.firefox": "En la ventana que se abre, en <strong>Impresora</strong>, elige <strong>Guardar en PDF</strong>.",
       "calc.pdf.mobile": "Tu dispositivo te ofrecerá compartir el documento. Elige <strong>Guardar en Archivos</strong> o la carpeta que uses.",
-      "calc.pdf.hint": "El informe se abre en el diálogo de impresión, donde lo guardas como PDF.",
+      "calc.pdf.hint": "Un PDF con tus cifras, el método de cálculo y nuestros datos de contacto.",
       "report.mexcl": "La estimación contempla solo electricidad; no incluye el mantenimiento evitado.",
       "report.mincl": "El ahorro de mantenimiento cuenta la diferencia de intervenciones, ya descontadas nuestras propias reposiciones.",
       "calc.r.perpoint": "Coste anual por punto de luz",
@@ -229,7 +229,7 @@
       "calc.pdf.chrome": "Na janela que abre, em <strong>Destino</strong>, escolha <strong>Guardar como PDF</strong> e depois Guardar.",
       "calc.pdf.firefox": "Na janela que abre, em <strong>Impressora</strong>, escolha <strong>Guardar em PDF</strong>.",
       "calc.pdf.mobile": "O seu aparelho oferecerá partilhar o documento. Escolha <strong>Guardar em Ficheiros</strong> ou a pasta que usa.",
-      "calc.pdf.hint": "O relatório abre na caixa de impressão, onde o guarda como PDF.",
+      "calc.pdf.hint": "Um PDF com os seus números, o método de cálculo e os nossos contactos.",
       "report.mexcl": "A estimativa considera apenas electricidade; não inclui a manutenção evitada.",
       "report.mincl": "A poupança de manutenção conta a diferença de intervenções, já descontadas as nossas próprias substituições.",
       "calc.r.perpoint": "Custo anual por ponto de luz",
@@ -309,7 +309,7 @@
       "calc.pdf.chrome": "Dans la fenêtre qui s'ouvre, à <strong>Destination</strong>, choisissez <strong>Enregistrer au format PDF</strong>, puis Enregistrer.",
       "calc.pdf.firefox": "Dans la fenêtre qui s'ouvre, à <strong>Imprimante</strong>, choisissez <strong>Enregistrer dans un fichier PDF</strong>.",
       "calc.pdf.mobile": "Votre appareil proposera de partager le document. Choisissez <strong>Enregistrer dans Fichiers</strong> ou votre dossier habituel.",
-      "calc.pdf.hint": "Le rapport s'ouvre dans la fenêtre d'impression, où vous l'enregistrez en PDF.",
+      "calc.pdf.hint": "Un PDF avec vos chiffres, la méthode de calcul et nos coordonnées.",
       "report.mexcl": "L'estimation ne porte que sur l'électricité ; la maintenance évitée n'est pas incluse.",
       "report.mincl": "L'économie de maintenance compte la différence d'interventions, nos propres remplacements étant déjà déduits.",
       "calc.r.perpoint": "Coût annuel par point lumineux",
@@ -389,7 +389,7 @@
       "calc.pdf.chrome": "Im Fenster, das sich öffnet, unter <strong>Ziel</strong> die Option <strong>Als PDF speichern</strong> wählen und dann Speichern.",
       "calc.pdf.firefox": "Im Fenster, das sich öffnet, unter <strong>Drucker</strong> die Option <strong>In PDF speichern</strong> wählen.",
       "calc.pdf.mobile": "Ihr Gerät bietet an, das Dokument zu teilen. Wählen Sie <strong>In Dateien sichern</strong> oder Ihren üblichen Ordner.",
-      "calc.pdf.hint": "Der Bericht öffnet sich im Druckdialog, wo Sie ihn als PDF sichern.",
+      "calc.pdf.hint": "Ein PDF mit Ihren Zahlen, dem Rechenweg und unseren Kontaktdaten.",
       "report.mexcl": "Die Schätzung betrifft nur Strom; vermiedene Wartung ist nicht enthalten.",
       "report.mincl": "Die Wartungsersparnis zählt die Differenz der Eingriffe, unsere eigenen Austausche sind bereits abgezogen.",
       "calc.r.perpoint": "Jahreskosten je Lichtpunkt",
@@ -469,7 +469,7 @@
       "calc.pdf.chrome": "Nella finestra che si apre, in <strong>Destinazione</strong>, scegli <strong>Salva come PDF</strong> e poi Salva.",
       "calc.pdf.firefox": "Nella finestra che si apre, in <strong>Stampante</strong>, scegli <strong>Salva in PDF</strong>.",
       "calc.pdf.mobile": "Il dispositivo proporrà di condividere il documento. Scegli <strong>Salva su File</strong> o la cartella che usi.",
-      "calc.pdf.hint": "Il rapporto si apre nella finestra di stampa, dove lo salvi come PDF.",
+      "calc.pdf.hint": "Un PDF con i tuoi numeri, il metodo di calcolo e i nostri contatti.",
       "report.mexcl": "La stima riguarda la sola elettricità; non include la manutenzione evitata.",
       "report.mincl": "Il risparmio di manutenzione conta la differenza di interventi, già scontate le nostre sostituzioni.",
       "calc.r.perpoint": "Costo annuo per punto luce",
@@ -549,7 +549,7 @@
       "calc.pdf.chrome": "В открывшемся окне в поле <strong>Принтер</strong> выберите <strong>Сохранить как PDF</strong>, затем Сохранить.",
       "calc.pdf.firefox": "В открывшемся окне в поле <strong>Принтер</strong> выберите <strong>Сохранить в PDF</strong>.",
       "calc.pdf.mobile": "Устройство предложит поделиться документом. Выберите <strong>Сохранить в «Файлы»</strong> или нужную папку.",
-      "calc.pdf.hint": "Отчёт открывается в окне печати, где вы сохраняете его в PDF.",
+      "calc.pdf.hint": "PDF с вашими цифрами, методикой расчёта и нашими контактами.",
       "report.mexcl": "Оценка учитывает только электроэнергию; сэкономленное обслуживание не включено.",
       "report.mincl": "Экономия на обслуживании считает разницу в числе выездов, наши собственные замены уже вычтены.",
       "calc.r.perpoint": "Годовая стоимость световой точки",
@@ -930,16 +930,19 @@
     // momento de imprimir. La página deja de trabajar mientras escribes.
     let ultimoInforme = null;
 
-    /* --- Dónde está el «Guardar como PDF» --------------------------------
-       No está en el mismo sitio en cada navegador: en Safari es un menú abajo
-       a la izquierda, en Chrome está arriba en «Destino». Decir solo «elige
-       guardar como PDF» no ayuda a nadie. --------------------------------- */
-    function claveNavegador() {
-      const ua = navigator.userAgent;
-      if (/iPhone|iPad|Android/i.test(ua)) return 'calc.pdf.mobile';
-      if (/Firefox\//.test(ua)) return 'calc.pdf.firefox';
-      if (/Safari\//.test(ua) && !/Chrome|Chromium|Edg\//.test(ua)) return 'calc.pdf.safari';
-      return 'calc.pdf.chrome';
+    /* --- La receta del PDF ------------------------------------------------
+       El informe ya no se saca por el diálogo de impresión. Aquí se guarda
+       solo el contenido —etiquetas y cifras ya formateadas— y de la
+       maquetación se encarga pdf-informe.js, que compone el archivo y lo
+       descarga. El visitante pulsa una vez y tiene el PDF. -------------- */
+    let ultimoPDF = null;
+
+    function descargarPDF() {
+      if (!ultimoPDF) return;
+      const hecho = typeof window.ALMENARA_PDF === 'function' && window.ALMENARA_PDF(ultimoPDF);
+      // Si la librería no llegó a cargar, se cae con elegancia al diálogo de
+      // impresión de siempre: es preferible a no dar nada.
+      if (!hecho) imprimir();
     }
 
     function imprimir() {
@@ -965,43 +968,6 @@
       window.print();
     }
 
-    function mostrarPaso() {
-      const previo = document.querySelector('.pdf-step');
-      if (previo) previo.remove();
-
-      const caja = document.createElement('div');
-      caja.className = 'pdf-step';
-      caja.setAttribute('role', 'status');
-      caja.innerHTML =
-        '<p class="pdf-step-t mono">' + txt('calc.pdf.step') + '</p>' +
-        '<p class="pdf-step-b">' + txt(claveNavegador()) + '</p>';
-
-      const seguir = document.createElement('button');
-      seguir.type = 'button';
-      seguir.className = 'btn btn-primary';
-      seguir.textContent = txt('calc.pdf.open');
-      seguir.addEventListener('click', function () {
-        if (nunca.querySelector('input').checked) {
-          try { localStorage.setItem('site.pdfhint', 'ok'); } catch (e) {}
-        }
-        caja.remove();
-        imprimir();
-      });
-
-      const nunca = document.createElement('label');
-      nunca.className = 'pdf-step-never';
-      nunca.innerHTML = '<input type="checkbox" /> <span>' + txt('calc.pdf.never') + '</span>';
-
-      const pie = document.createElement('div');
-      pie.className = 'pdf-step-foot';
-      pie.appendChild(seguir);
-      pie.appendChild(nunca);
-      caja.appendChild(pie);
-
-      out.querySelector('.calc-cta').insertBefore(caja, out.querySelector('.calc-cta .hero-actions'));
-      seguir.focus();
-    }
-
     function prepararInforme() {
       const previo = document.querySelector('.print-doc');
       if (previo) previo.remove();
@@ -1017,6 +983,11 @@
       };
       const eur = function (v) {
         return new Intl.NumberFormat(loc, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(v);
+      };
+      // El precio del kWh se escribía tal como se teclea, así que en español
+      // salía «0.21» con punto anglosajón dentro de un documento en castellano.
+      const precio = function (v) {
+        return new Intl.NumberFormat(loc, { minimumFractionDigits: 2, maximumFractionDigits: 3 }).format(v);
       };
 
       est.points = Math.max(1, parseFloat(document.getElementById('points').value) || 0);
@@ -1047,6 +1018,7 @@
         p.textContent = txt('calc.warn');
         out.appendChild(p);
         ultimoInforme = null;
+        ultimoPDF = null;
         traducir(out);
         return;
       }
@@ -1187,7 +1159,7 @@
           [txt('calc.points'), num(est.points)],
           [txt('calc.watts'), num(est.watts) + ' W'],
           [txt('calc.hours'), num(est.hours) + ' h'],
-          [txt('calc.price'), est.price + ' €/kWh'],
+          [txt('calc.price'), precio(est.price) + ' €/kWh'],
           [txt('calc.adv.eff'), num(est.efNew) + ' lm/W']
         ].concat(
           est.dep > 0 ? [[txt('calc.r.effreal'), num(efReal, 1) + ' lm/W']] : []
@@ -1239,35 +1211,93 @@
         return doc;
       };
 
+      /* --- Lo que se lleva el PDF ----------------------------------------
+         La tabla va a tres columnas —concepto, situación actual, con
+         Almenara— en vez de meter la flecha dentro de la celda. En papel se
+         lee mejor y, de paso, evita el único carácter que la tipografía
+         recortada no lleva. Las filas de un solo valor dejan vacía la
+         columna del medio. ------------------------------------------------ */
+      ultimoPDF = {
+        titulo: txt('report.title'),
+        sub: txt('report.sub'),
+        fecha: fecha,
+        fechaEtiqueta: txt('report.date'),
+        grandeEtiqueta: txt('calc.r.saving'),
+        grande: eur(ahorro),
+        recorte: recorte,
+        recorteTexto: '\u2212' + num(recorte, 0) + ' % ' + txt('calc.r.cut'),
+        tituloEntradas: txt('report.inputs'),
+        entradas: [
+          [txt('calc.eff.now'), num(est.efNow, 1) + ' lm/W'],
+          [txt('calc.points'), num(est.points)],
+          [txt('calc.watts'), num(est.watts) + ' W'],
+          [txt('calc.hours'), num(est.hours) + ' h'],
+          [txt('calc.price'), precio(est.price) + ' \u20ac/kWh'],
+          [txt('calc.adv.eff'), num(est.efNew) + ' lm/W']
+        ].concat(
+          est.dep > 0 ? [[txt('calc.r.effreal'), num(efReal, 1) + ' lm/W']] : []
+        ).concat(
+          est.loss > 0 ? [[txt('calc.adv.loss'), num(est.loss) + ' %']] : []
+        ),
+        tituloResultado: txt('report.result'),
+        colConcepto: txt('report.result'),
+        colAntes: txt('calc.before'),
+        colDespues: txt('calc.after'),
+        filas: [
+          [txt('calc.r.power'), num(kwAntes, 1) + ' kW', num(kwDesp, 1) + ' kW'],
+          [txt('calc.r.energy'), num(kwhAntes) + ' kWh', num(kwhDesp) + ' kWh'],
+          [txt('calc.r.cost'), eur(eurAntes), eur(eurDesp)],
+          [txt('calc.r.cut'), '', '\u2212' + num(recorte, 0) + ' %'],
+          [txt('calc.r.co2'), '', num(co2, 1) + ' ' + txt('calc.tonnes')]
+        ].concat(
+          ahorroM > 0
+            ? [[txt('calc.r.energysave'), '', eur(ahorroE)],
+               [txt('calc.r.maintsave'), '', eur(ahorroM)]]
+            : []
+        ).concat(
+          [[txt('calc.r.total'), '', eur(ahorro), true],
+           [txt('calc.r.ten'), '', eur(ahorro * 10), true]]
+        ).concat(
+          (est.cost !== null && est.cost > 0 && ahorro > 0)
+            ? [[txt('calc.r.payback'), '', num((est.points * est.cost) / ahorro, 1) + ' ' + txt('calc.years')]]
+            : []
+        ),
+        barras: {
+          antesEtiqueta: txt('calc.before'),
+          antesValor: num(kwAntes, 1) + ' kW',
+          despuesEtiqueta: txt('calc.after'),
+          despuesValor: num(kwDesp, 1) + ' kW',
+          proporcion: ratio
+        },
+        tituloMetodo: txt('report.method'),
+        metodo: txt('report.methodbody') + ' ' +
+                (ahorroM > 0 ? txt('report.mincl') : txt('report.mexcl')),
+        pieEtiqueta: txt('report.by'),
+        contacto: 'info@almenaraled.com  ·  +52 55 3910 2832  ·  almenaraled.com',
+        aviso: txt('report.disc')
+      };
+
       const cta = document.createElement('div');
       cta.className = 'calc-cta';
       cta.innerHTML =
         '<h2 data-i18n="calc.cta.title">calc.cta.title</h2>' +
         '<p class="lede" data-i18n="calc.cta.body">calc.cta.body</p>';
-      const a = document.createElement('a');
-      a.className = 'btn btn-primary';
-      a.setAttribute('data-i18n', 'calc.cta.btn');
-      a.textContent = txt('calc.cta.btn');
-      a.href = 'mailto:info@almenaraled.com?subject=' +
-        encodeURIComponent(txt('calc.mail.subject')) +
-        '&body=' + encodeURIComponent(cuerpo);
+      // Descargar el informe pasa a ser la única acción, y por tanto la
+      // principal. El botón de correo abría el gestor de correo del sistema
+      // con las cifras en el cuerpo del mensaje: en un ordenador sin cliente
+      // configurado no ocurría nada, y el texto plano no se parecía en nada
+      // al informe. Con el PDF en la mano, el visitante lo adjunta al correo
+      // que quiera y a quien quiera.
       const pdf = document.createElement('button');
       pdf.type = 'button';
-      pdf.className = 'btn btn-outline';
+      pdf.className = 'btn btn-primary';
       pdf.setAttribute('data-i18n', 'calc.pdf.btn');
       pdf.textContent = txt('calc.pdf.btn');
-      pdf.addEventListener('click', function () {
-        // Quien ya sabe dónde está el destino no necesita que se lo repitan.
-        let visto = false;
-        try { visto = localStorage.getItem('site.pdfhint') === 'ok'; } catch (e) {}
-        if (visto) { imprimir(); return; }
-        mostrarPaso();
-      });
+      pdf.addEventListener('click', descargarPDF);
 
       const acc = document.createElement('div');
       acc.className = 'hero-actions';
       acc.appendChild(pdf);
-      acc.appendChild(a);
       cta.appendChild(acc);
       const pista = document.createElement('p');
       pista.className = 'calc-hint';
