@@ -1168,7 +1168,15 @@ body { background: var(--ink); }
 .page-head .lede { margin-top: 2.25rem; }
 
 /* --- Capas: el contenido siempre por encima de los adornos ---------------- */
-main, .site-header, .site-footer { position: relative; z-index: 2; }
+/* CAPAS. Aquí estaba el fallo del menú del teléfono.
+   Esta línea ponía la cabecera y el contenido en el mismo nivel, el 2. A
+   igualdad de nivel manda el orden del documento, y <main> va después de la
+   cabecera: el contenido se pintaba por encima. En el ordenador no se notaba,
+   pero el desplegable del teléfono cuelga de la cabecera, así que se abría
+   por detrás de la página y no se veía nada.
+   La cabecera sube al nivel 50 y el contenido baja al 1. */
+main, .site-footer { position: relative; z-index: 1; }
+.site-header { position: sticky; z-index: 50; }
 .aura { z-index: 0; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1752,18 +1760,19 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   margin-left: 0.25rem;
   padding: 0;
   background: none;
-  border: 1px solid var(--line-soft);
+  /* Un filete al 7,5 % sobre papel no se ve. El botón tiene que anunciarse. */
+  border: 1px solid var(--line);
   cursor: pointer;
 }
 .nav-toggle-bar {
   display: block;
-  width: 18px;
-  height: 1.5px;
+  width: 19px;
+  height: 2px;
   margin: 0 auto;
   background: var(--text);
   transition: transform 0.28s var(--ease), opacity 0.2s var(--ease);
@@ -1833,4 +1842,18 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
 @media (prefers-reduced-motion: reduce) {
   .site-nav { transition: none; }
   .nav-toggle-bar { transition: none; }
+}
+
+
+/* --- El desplegable del teléfono, por delante ------------------------------
+   Con la cabecera ya en el nivel 50, el panel sólo necesita ir por delante de
+   sus hermanos dentro de ella y arrastrar una sombra que lo despegue de la
+   página. Sin sombra, papel blanco sobre papel blanco no se distingue.
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .site-nav { z-index: 2; box-shadow: 0 18px 32px -24px rgba(16, 30, 49, 0.45); }
+  .site-header.is-open { border-bottom-color: var(--line); }
+  /* La caja de herramientas queda vacía en el teléfono, porque los idiomas se
+     mudan al panel. Vacía seguía reservando su hueco y su separación. */
+  .header-tools:empty { display: none; }
 }
