@@ -33,6 +33,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumens per watt, on any luminaire",
       "meta.desc": "A patented LED platform delivering over 275 lumens per watt and more than 50% energy reduction. Retrofit-ready, engineered and certified in Europe.",
       "meta.locale": "en_GB",
+    "form.sending": "Sending…",
+    "form.ok": "Message sent. We answer within one working day.",
+    "form.incompleto": "Please fill in name, company, email and message.",
+    "form.correo": "That email address does not look valid.",
+    "form.demasiados": "Too many messages from this connection. Try again in a while.",
+    "form.envio": "The message could not be sent. Write to hugorcsar@gmail.com and we will see it.",
+    "form.red": "No connection. Check yours and try again.",
     "nf.title": "This page does not exist.",
     "nf.body": "The link may be out of date, or the address mistyped. Everything else is reachable from the home page.",
     "nf.home": "Go to the home page",
@@ -103,6 +110,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lúmenes por vatio, en cualquier luminaria",
       "meta.desc": "Plataforma LED patentada que supera los 275 lúmenes por vatio y reduce el consumo más de un 50 %. Apta para instalaciones existentes, diseñada y certificada en Europa.",
       "meta.locale": "es_ES",
+    "form.sending": "Enviando…",
+    "form.ok": "Mensaje enviado. Respondemos en un día laborable.",
+    "form.incompleto": "Faltan por rellenar el nombre, la empresa, el correo o el mensaje.",
+    "form.correo": "Esa dirección de correo no parece válida.",
+    "form.demasiados": "Demasiados mensajes desde esta conexión. Inténtalo dentro de un rato.",
+    "form.envio": "No se ha podido enviar. Escribe a hugorcsar@gmail.com y lo veremos igual.",
+    "form.red": "Sin conexión. Comprueba la tuya y vuelve a intentarlo.",
     "nf.title": "Esta página no existe.",
     "nf.body": "Puede que el enlace esté anticuado o que la dirección se haya escrito mal. Desde la página principal se llega a todo lo demás.",
     "nf.home": "Ir a la página principal",
@@ -173,6 +187,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lúmenes por watt, em qualquer luminária",
       "meta.desc": "Plataforma LED patenteada que ultrapassa os 275 lúmenes por watt e reduz o consumo em mais de 50 %. Compatível com instalações existentes, concebida e certificada na Europa.",
       "meta.locale": "pt_PT",
+    "form.sending": "A enviar…",
+    "form.ok": "Mensagem enviada. Respondemos no prazo de um dia útil.",
+    "form.incompleto": "Faltam preencher o nome, a empresa, o correio ou a mensagem.",
+    "form.correo": "Esse endereço de correio não parece válido.",
+    "form.demasiados": "Demasiadas mensagens desta ligação. Tente daqui a pouco.",
+    "form.envio": "Não foi possível enviar. Escreva para hugorcsar@gmail.com e veremos na mesma.",
+    "form.red": "Sem ligação. Verifique a sua e tente novamente.",
     "nf.title": "Esta página não existe.",
     "nf.body": "O link pode estar desactualizado ou o endereço mal escrito. A partir da página inicial chega-se a tudo o resto.",
     "nf.home": "Ir para a página inicial",
@@ -242,6 +263,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumens par watt, sur tout luminaire",
       "meta.desc": "Plateforme LED brevetée dépassant 275 lumens par watt et réduisant la consommation de plus de 50 %. Compatible avec les installations existantes, conçue et certifiée en Europe.",
       "meta.locale": "fr_FR",
+    "form.sending": "Envoi…",
+    "form.ok": "Message envoyé. Nous répondons sous un jour ouvré.",
+    "form.incompleto": "Il manque le nom, la société, le courriel ou le message.",
+    "form.correo": "Cette adresse de courriel ne semble pas valide.",
+    "form.demasiados": "Trop de messages depuis cette connexion. Réessayez plus tard.",
+    "form.envio": "L'envoi a échoué. Écrivez à hugorcsar@gmail.com et nous le verrons quand même.",
+    "form.red": "Pas de connexion. Vérifiez la vôtre et réessayez.",
     "nf.title": "Cette page n'existe pas.",
     "nf.body": "Le lien est peut-être périmé, ou l'adresse mal saisie. Tout le reste est accessible depuis la page d'accueil.",
     "nf.home": "Aller à la page d'accueil",
@@ -312,6 +340,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 Lumen pro Watt, in jeder Leuchte",
       "meta.desc": "Patentierte LED-Plattform mit über 275 Lumen pro Watt und mehr als 50 % weniger Verbrauch. Nachrüstbar, in Europa entwickelt und zertifiziert.",
       "meta.locale": "de_DE",
+    "form.sending": "Wird gesendet…",
+    "form.ok": "Nachricht gesendet. Wir antworten innerhalb eines Werktags.",
+    "form.incompleto": "Es fehlen Name, Unternehmen, E-Mail oder Nachricht.",
+    "form.correo": "Diese E-Mail-Adresse sieht nicht gültig aus.",
+    "form.demasiados": "Zu viele Nachrichten von dieser Verbindung. Versuchen Sie es später.",
+    "form.envio": "Das Senden ist fehlgeschlagen. Schreiben Sie an hugorcsar@gmail.com, wir sehen es trotzdem.",
+    "form.red": "Keine Verbindung. Prüfen Sie Ihre und versuchen Sie es erneut.",
     "nf.title": "Diese Seite gibt es nicht.",
     "nf.body": "Der Link ist womöglich veraltet oder die Adresse falsch geschrieben. Von der Startseite aus ist alles Übrige erreichbar.",
     "nf.home": "Zur Startseite",
@@ -382,6 +417,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumen per watt, su qualsiasi apparecchio",
       "meta.desc": "Piattaforma LED brevettata che supera i 275 lumen per watt e riduce i consumi di oltre il 50 %. Adatta agli impianti esistenti, progettata e certificata in Europa.",
       "meta.locale": "it_IT",
+    "form.sending": "Invio…",
+    "form.ok": "Messaggio inviato. Rispondiamo entro un giorno lavorativo.",
+    "form.incompleto": "Mancano il nome, l'azienda, la posta o il messaggio.",
+    "form.correo": "Quell'indirizzo di posta non sembra valido.",
+    "form.demasiados": "Troppi messaggi da questa connessione. Riprova tra un po'.",
+    "form.envio": "Non è stato possibile inviare. Scrivi a hugorcsar@gmail.com e lo vedremo lo stesso.",
+    "form.red": "Nessuna connessione. Controlla la tua e riprova.",
     "nf.title": "Questa pagina non esiste.",
     "nf.body": "Il collegamento potrebbe essere obsoleto o l'indirizzo scritto male. Dalla pagina iniziale si raggiunge tutto il resto.",
     "nf.home": "Vai alla pagina iniziale",
@@ -452,6 +494,13 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 люмен на ватт в любом светильнике",
       "meta.desc": "Запатентованная светодиодная платформа: свыше 275 люмен на ватт и снижение потребления более чем на 50 %. Подходит для действующих установок, разработана и сертифицирована в Европе.",
       "meta.locale": "ru_RU",
+    "form.sending": "Отправка…",
+    "form.ok": "Сообщение отправлено. Отвечаем в течение одного рабочего дня.",
+    "form.incompleto": "Не заполнены имя, компания, почта или сообщение.",
+    "form.correo": "Этот адрес почты выглядит неверным.",
+    "form.demasiados": "Слишком много сообщений с этого подключения. Попробуйте позже.",
+    "form.envio": "Отправить не удалось. Напишите на hugorcsar@gmail.com — мы всё равно увидим.",
+    "form.red": "Нет соединения. Проверьте его и повторите попытку.",
     "nf.title": "Такой страницы нет.",
     "nf.body": "Возможно, ссылка устарела или адрес набран с ошибкой. С главной страницы доступно всё остальное.",
     "nf.home": "На главную страницу",
@@ -619,7 +668,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cont.f.message": "Message",
       "cont.f.message_ph": "The luminaire you make or operate, and roughly how many hours a year it runs.",
       "cont.f.submit": "Send message",
-      "cont.f.note": "This opens your email client with the message ready to send. A direct form is coming once the contact infrastructure is in place."
+      "cont.f.note": "Ваше сообщение приходит к нам напрямую. Отвечаем в течение одного рабочего дня."
     },
 
     es: {
@@ -1611,5 +1660,69 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }, { passive: true });
     }
+  })();
+
+  /* ========================================================================
+     FORMULARIO DE CONTACTO
+     Envía sin recargar la página y avisa del resultado en el sitio. Si el
+     JavaScript falla, el formulario sigue funcionando como uno de toda la
+     vida: se envía al servidor y este devuelve a la página con el resultado
+     en la dirección. Nunca se queda mudo.
+     ======================================================================== */
+  (function () {
+    const form = document.querySelector('.contact-form');
+    if (!form) return;
+
+    const aviso = form.querySelector('.form-status');
+    const boton = form.querySelector('button[type="submit"]');
+    const marca = form.querySelector('input[name="t"]');
+    const idioma = form.querySelector('input[name="lang"]');
+
+    // La marca de tiempo permite al servidor descartar lo que se rellena en
+    // menos de tres segundos, que ninguna persona hace.
+    if (marca) marca.value = String(Math.floor(Date.now() / 1000));
+    if (idioma) idioma.value = window.SITE ? window.SITE.lang() : 'en';
+    if (window.SITE) window.SITE.onLang(function (l) { if (idioma) idioma.value = l; });
+
+    function decir(clave, ok) {
+      if (!aviso) return;
+      aviso.hidden = false;
+      aviso.textContent = t(document.documentElement.getAttribute('lang') || 'en', clave);
+      aviso.classList.toggle('is-ok', !!ok);
+      aviso.classList.toggle('is-bad', !ok);
+    }
+
+    // Si se llegó aquí sin JavaScript, el servidor devuelve el resultado en la
+    // dirección. Se muestra igual y se limpia la barra del navegador.
+    (function () {
+      const p = new URLSearchParams(location.search);
+      if (p.has('enviado')) { decir('form.ok', true); form.reset(); }
+      else if (p.has('error')) { decir('form.' + p.get('error'), false); }
+      if (p.has('enviado') || p.has('error')) {
+        p.delete('enviado'); p.delete('error');
+        history.replaceState(null, '', location.pathname + (p.toString() ? '?' + p : ''));
+      }
+    })();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (boton.disabled) return;
+
+      boton.disabled = true;
+      decir('form.sending', true);
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'X-Requested-With': 'fetch' },
+        body: new FormData(form)
+      })
+      .then(function (r) { return r.json().catch(function () { return { ok: r.ok, clave: 'envio' }; }); })
+      .then(function (d) {
+        if (d.ok) { decir('form.ok', true); form.reset(); if (marca) marca.value = String(Math.floor(Date.now()/1000)); }
+        else { decir('form.' + (d.clave || 'envio'), false); }
+      })
+      .catch(function () { decir('form.red', false); })
+      .finally(function () { boton.disabled = false; });
+    });
   })();
 });
