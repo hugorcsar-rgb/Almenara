@@ -1,111 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="light" data-meta-prefix="none">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow" />
-  <title>404 — Page not found · Almenara</title>
-  <style>
-    :root {
-      --bg: #0E1A2A;
-      --ink: #F4F0E8;
-      --ink-soft: #8A8F99;
-      --rule: rgba(244, 240, 232, 0.14);
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #F4F0E8;
-        --ink: #0E1A2A;
-        --ink-soft: #6B7280;
-        --rule: rgba(14, 26, 40, 0.14);
-      }
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    main {
-      max-width: 480px;
-      text-align: center;
-    }
-    .error-code {
-      font-size: clamp(4.5rem, 14vw, 8rem);
-      font-weight: 200;
-      letter-spacing: -0.04em;
-      line-height: 1;
-      color: var(--ink);
-    }
-    .divider {
-      width: 40px;
-      height: 1px;
-      background: var(--rule);
-      margin: 2rem auto;
-    }
-    h1 {
-      font-size: 1.25rem;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      margin-bottom: 1rem;
-    }
-    .message {
-      color: var(--ink-soft);
-      line-height: 1.6;
-      margin-bottom: 2.5rem;
-      font-size: 0.95rem;
-    }
-    a.btn {
-      display: inline-block;
-      padding: 0.85rem 2rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--ink);
-      border: 1px solid var(--ink);
-      transition: background 0.28s cubic-bezier(0.22, 1, 0.36, 1),
-                  color 0.28s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    a.btn:hover, a.btn:focus-visible {
-      background: var(--ink);
-      color: var(--bg);
-      outline: none;
-    }
-    a.btn:focus-visible {
-      outline: 2px solid var(--ink);
-      outline-offset: 4px;
-    }
-    .brand {
-      position: fixed;
-      top: 2rem;
-      left: 2rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ink);
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#FCFCFB" />
+
+<title>Página no encontrada — Almenara</title>
+<meta name="description" content="La página solicitada no existe." />
+<meta name="robots" content="noindex, follow" />
+
+<link rel="canonical" href="https://almenara.hamergolfconsulting.com/404.html" />
+
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" href="assets/css/site.css?v=1" />
+<noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
+
+<script src="assets/js/app.js"></script>
 </head>
+
 <body>
-  <a href="/" class="brand">Almenara</a>
-  <main>
-    <p class="error-code">404</p>
-    <div class="divider" aria-hidden="true"></div>
-    <h1>Page not found</h1>
-    <p class="message">The page you requested does not exist or has been moved.<br />Please verify the URL or return home.</p>
-    <a href="/" class="btn">Return home</a>
-  </main>
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="shell" style="display:flex;align-items:center;gap:1.5rem;width:var(--shell)">
+    <a href="" class="brand" data-i18n-attr="aria-label:a11y.home">Almenara</a>
+    <nav class="site-nav" data-i18n-attr="aria-label:a11y.primary">
+      <a href="technology.html"   data-i18n="nav.tech">Technology</a>
+      <a href="services.html"     data-i18n="nav.services">Services</a>
+      <a href="applications.html" data-i18n="nav.apps">Applications</a>
+      <a href="contact.html"      data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <nav class="lang-switcher" data-i18n-attr="aria-label:a11y.lang">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="true"  lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false" lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false" lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false" lang="ru">RU</button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="band notfound">
+    <div class="shell">
+      <div>
+        <p class="code">404</p>
+        <h1 data-i18n="nf.title">Esta página no existe.</h1>
+        <p class="lede" data-i18n="nf.body">Puede que el enlace esté anticuado o que la dirección se haya escrito mal. Desde la página principal se llega a todo lo demás.</p>
+        <div class="hero-actions">
+          <a href="/" class="btn btn-primary" data-i18n="nf.home">Ir a la página principal</a>
+          <a href="/contact.html" class="btn btn-outline" data-i18n="nav.contact">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div>
+        <a href="" class="brand">Almenara</a>
+        <p class="footer-tagline" data-i18n="foot.tagline">Tecnología de plataforma LED patentada. Madrid.</p>
+      </div>
+      <nav class="footer-links" data-i18n-attr="aria-label:a11y.footer">
+        <a href="technology.html"   data-i18n="nav.tech">Technology</a>
+        <a href="services.html"     data-i18n="nav.services">Services</a>
+        <a href="applications.html" data-i18n="nav.apps">Applications</a>
+        <a href="contact.html"      data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="legal/notice.html"  data-i18n="foot.legal1">Aviso legal</a>
+        <a href="legal/privacy.html" data-i18n="foot.legal2">Privacidad</a>
+        <a href="legal/cookies.html" data-i18n="foot.legal3">Cookies</a>
+      </div>
+      <p class="mono" style="margin:0" data-i18n="foot.rights">© 2026 Almenara · Madrid</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
