@@ -1602,3 +1602,25 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   margin: 0 0 1.5rem;
   font-variant-numeric: tabular-nums;
 }
+
+/* --- Formulario: cebo y avisos -------------------------------------------- */
+/* El cebo se saca de la pantalla en lugar de ocultarlo con display:none,
+   porque algunos robots detectan lo segundo y lo esquivan. */
+.cebo {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.form-status {
+  margin: 1.5rem 0 0;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  border-left: 2px solid var(--line);
+  background: var(--ink-raised);
+}
+.form-status.is-ok  { border-left-color: var(--warm-lit); }
+.form-status.is-bad { border-left-color: #B3261E; }
+.contact-form button[disabled] { opacity: 0.55; cursor: progress; }
