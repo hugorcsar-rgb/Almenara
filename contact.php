@@ -12,11 +12,15 @@
    La carpeta de mensajes se crea sola en la primera visita y se protege sola,
    escribiendo dentro un .htaccess que impide que nadie la lea desde fuera.
 
+   El remitente es un buzón real del propio dominio. Eso importa: enviar desde
+   una dirección inventada es la causa habitual de que estos avisos acaben en
+   la carpeta de correo no deseado.
+
    AJUSTES: solo hay que tocar las cuatro constantes de aquí abajo.
    ============================================================================ */
 
-const DESTINO   = 'hugorcsar@gmail.com';          // a dónde llegan los avisos
-const REMITENTE = 'no-reply@hamergolfconsulting.com';  // debe ser del dominio propio
+const DESTINO   = 'info@almenaraled.com';          // a dónde llegan los avisos
+const REMITENTE = 'info@almenaraled.com';   // buzón real del propio dominio
 const CARPETA   = __DIR__ . '/mensajes';          // dónde se guardan las copias
 const GUARDAR   = true;                            // false para no guardar copia
 
