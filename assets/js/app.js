@@ -555,6 +555,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const I18N_PAGES = {
 
     en: {
+      "apps.7b": "Server halls and technical aisles. They run above the ambient temperature a standard luminaire is designed for, and heat shortens the life of the gear. Here every watt is saved twice: on the lighting and on the cooling that no longer has to remove it.",
+      "apps.7t": "Data centres",
+      "apps.fig2alt": "Grid of reflector lamps switched on, seen from below",
+      "apps.fig2cap": "Points of light",
       "tech.principle.body": "The gain comes from a technology of our own that delivers what the industry took for impossible. And it does so without changing the luminaire: same housing, same optics, same installation.",
       "tech.meta.title": "Technology — Almenara",
       "tech.meta.desc": "High-efficacy LED modules. Four formats, with colour temperature and beam angle configurable.",
@@ -602,7 +606,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "apps.eyebrow": "Applications",
       "apps.title": "Where light costs money.",
       "apps.sub": "The saving grows with the installed load and the hours it runs. Industry and street lighting are the extreme cases; everything else follows.",
-      "apps.list.label": "Six sectors",
+      "apps.list.label": "Seven sectors",
       "apps.1t": "Hospitality",
       "apps.1b": "Hotels, restaurants, spas. Warm spectra and faithful rendering in spaces where light is part of what the guest is paying for.",
       "apps.2t": "Architecture",
@@ -642,6 +646,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     es: {
+      "apps.7b": "Salas de servidores y pasillos técnicos. Trabajan por encima de la temperatura ambiente para la que se diseña una luminaria corriente, y el calor acorta la vida del equipo. Aquí cada vatio se ahorra dos veces: en la iluminación y en la refrigeración que ya no tiene que retirarlo.",
+      "apps.7t": "Centros de datos",
+      "apps.fig2alt": "Retícula de lámparas con reflector encendidas, vista desde abajo",
+      "apps.fig2cap": "Puntos de luz",
       "tech.principle.body": "La ganancia viene de una tecnología propia que consigue lo que el sector daba por imposible. Y lo consigue sin cambiar la luminaria: misma carcasa, misma óptica, misma instalación.",
       "tech.meta.title": "Tecnología — Almenara",
       "tech.meta.desc": "Módulos LED de alta eficacia. Cuatro formatos, con temperatura de color y ángulo de apertura configurables.",
@@ -689,7 +697,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "apps.eyebrow": "Aplicaciones",
       "apps.title": "Donde la luz cuesta dinero.",
       "apps.sub": "El ahorro es mayor cuanta más potencia hay instalada y más horas funciona. La industria y el alumbrado público son los casos extremos; el resto va detrás.",
-      "apps.list.label": "Seis sectores",
+      "apps.list.label": "Siete sectores",
       "apps.1t": "Hostelería",
       "apps.1b": "Hoteles, restaurantes, balnearios. Espectros cálidos y reproducción fiel en espacios donde la luz forma parte de lo que el huésped está pagando.",
       "apps.2t": "Arquitectura",
@@ -729,6 +737,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     pt: {
+      "apps.7b": "Salas de servidores e corredores técnicos. Funcionam acima da temperatura ambiente para a qual se projecta uma luminária corrente, e o calor encurta a vida do equipamento. Aqui cada watt poupa-se duas vezes: na iluminação e no arrefecimento que já não tem de o retirar.",
+      "apps.7t": "Centros de dados",
+      "apps.fig2alt": "Retícula de lâmpadas com reflector acesas, vista de baixo",
+      "apps.fig2cap": "Pontos de luz",
       "tech.principle.body": "O ganho vem de uma tecnologia própria que consegue aquilo que o sector dava por impossível. E consegue-o sem mudar a luminária: mesma caixa, mesma óptica, mesma instalação.",
       "tech.meta.title": "Tecnologia — Almenara",
       "tech.meta.desc": "Módulos LED de alta eficácia. Quatro formatos, com temperatura de cor e ângulo de abertura configuráveis.",
@@ -776,7 +788,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "apps.eyebrow": "Aplicações",
       "apps.title": "Onde a luz custa dinheiro.",
       "apps.sub": "A poupança é maior quanto mais potência há instalada e mais horas funciona. A indústria e a iluminação pública são os casos extremos; o resto vem atrás.",
-      "apps.list.label": "Seis sectores",
+      "apps.list.label": "Sete sectores",
       "apps.1t": "Hotelaria",
       "apps.1b": "Hotéis, restaurantes, termas. Espectros quentes e restituição fiel em espaços onde a luz faz parte daquilo que o hóspede está a pagar.",
       "apps.2t": "Arquitectura",
@@ -816,6 +828,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     fr: {
+      "apps.7b": "Salles de serveurs et allées techniques. Elles fonctionnent au-dessus de la température ambiante pour laquelle un luminaire courant est conçu, et la chaleur abrège la vie du matériel. Ici, chaque watt est économisé deux fois : sur l'éclairage et sur le refroidissement qui n'a plus à l'évacuer.",
+      "apps.7t": "Centres de données",
+      "apps.fig2alt": "Grille de lampes à réflecteur allumées, vue d'en bas",
+      "apps.fig2cap": "Points lumineux",
       "tech.principle.body": "Le gain vient d'une technologie qui nous est propre et qui obtient ce que le secteur tenait pour impossible. Et cela sans changer le luminaire : même carter, même optique, même installation.",
       "tech.meta.title": "Technologie — Almenara",
       "tech.meta.desc": "Modules LED à haute efficacité. Quatre formats, température de couleur et angle d'ouverture configurables.",
@@ -863,7 +879,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "apps.eyebrow": "Applications",
       "apps.title": "Là où la lumière coûte de l'argent.",
       "apps.sub": "L'économie augmente avec la puissance installée et les heures de fonctionnement. L'industrie et la voirie sont les cas extrêmes ; le reste suit.",
-      "apps.list.label": "Six secteurs",
+      "apps.list.label": "Sept secteurs",
       "apps.1t": "Hôtellerie",
       "apps.1b": "Hôtels, restaurants, spas. Spectres chauds et rendu fidèle dans des espaces où la lumière fait partie de ce que le client paie.",
       "apps.2t": "Architecture",
@@ -903,6 +919,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     de: {
+      "apps.7b": "Serverräume und technische Gänge. Sie laufen oberhalb der Umgebungstemperatur, für die eine übliche Leuchte ausgelegt ist, und Wärme verkürzt die Lebensdauer der Geräte. Hier wird jedes Watt zweimal gespart: bei der Beleuchtung und bei der Kühlung, die es nicht mehr abführen muss.",
+      "apps.7t": "Rechenzentren",
+      "apps.fig2alt": "Raster eingeschalteter Reflektorlampen, von unten gesehen",
+      "apps.fig2cap": "Lichtpunkte",
       "tech.principle.body": "Der Gewinn stammt aus einer eigenen Technologie, die leistet, was die Branche für unmöglich hielt. Und zwar ohne die Leuchte zu wechseln: gleiches Gehäuse, gleiche Optik, gleiche Montage.",
       "tech.meta.title": "Technologie — Almenara",
       "tech.meta.desc": "LED-Module mit hoher Lichtausbeute. Vier Formate, Farbtemperatur und Abstrahlwinkel konfigurierbar.",
@@ -950,7 +970,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "apps.eyebrow": "Anwendungen",
       "apps.title": "Wo Licht Geld kostet.",
       "apps.sub": "Die Ersparnis wächst mit der installierten Leistung und den Betriebsstunden. Industrie und Straßenbeleuchtung sind die Extremfälle; alles andere folgt.",
-      "apps.list.label": "Sechs Bereiche",
+      "apps.list.label": "Sieben Bereiche",
       "apps.1t": "Hotellerie",
       "apps.1b": "Hotels, Restaurants, Thermen. Warme Spektren und getreue Wiedergabe in Räumen, in denen das Licht Teil dessen ist, wofür der Gast bezahlt.",
       "apps.2t": "Architektur",
@@ -990,6 +1010,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     it: {
+      "apps.7b": "Sale server e corsie tecniche. Lavorano al di sopra della temperatura ambiente per cui è progettato un apparecchio comune, e il calore accorcia la vita dei componenti. Qui ogni watt si risparmia due volte: sull'illuminazione e sul raffreddamento che non deve più smaltirlo.",
+      "apps.7t": "Centri dati",
+      "apps.fig2alt": "Griglia di lampade con riflettore accese, vista dal basso",
+      "apps.fig2cap": "Punti luce",
       "tech.principle.body": "Il guadagno nasce da una tecnologia nostra che ottiene ciò che il settore dava per impossibile. E lo fa senza cambiare l'apparecchio: stesso corpo, stessa ottica, stessa installazione.",
       "tech.meta.title": "Tecnologia — Almenara",
       "tech.meta.desc": "Moduli LED ad alta efficienza. Quattro formati, con temperatura di colore e angolo di apertura configurabili.",
@@ -1037,7 +1061,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "apps.eyebrow": "Applicazioni",
       "apps.title": "Dove la luce costa denaro.",
       "apps.sub": "Il risparmio è tanto maggiore quanta più potenza è installata e più ore funziona. Industria e illuminazione stradale sono i casi estremi; il resto viene dopo.",
-      "apps.list.label": "Sei settori",
+      "apps.list.label": "Sette settori",
       "apps.1t": "Ospitalità",
       "apps.1b": "Alberghi, ristoranti, centri termali. Spettri caldi e resa fedele in spazi dove la luce fa parte di ciò che l'ospite sta pagando.",
       "apps.2t": "Architettura",
@@ -1077,6 +1101,10 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
     ru: {
+      "apps.7b": "Серверные залы и технические проходы. Они работают выше температуры среды, на которую рассчитан обычный светильник, и тепло сокращает срок службы оборудования. Здесь каждый ватт экономится дважды: на освещении и на охлаждении, которому его больше не нужно отводить.",
+      "apps.7t": "Центры обработки данных",
+      "apps.fig2alt": "Сетка включённых ламп с отражателями, вид снизу",
+      "apps.fig2cap": "Световые точки",
       "tech.principle.body": "Выигрыш даёт наша собственная технология, добивающаяся того, что отрасль считала невозможным. И добивается, не меняя светильник: тот же корпус, та же оптика, тот же монтаж.",
       "tech.meta.title": "Технология — Almenara",
       "tech.meta.desc": "Светодиодные модули с высокой отдачей. Четыре формата, настраиваемые цветовая температура и угол раскрытия.",
@@ -1124,7 +1152,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "apps.eyebrow": "Применение",
       "apps.title": "Там, где свет стоит денег.",
       "apps.sub": "Экономия тем больше, чем выше установленная мощность и дольше часы работы. Промышленность и уличное освещение — крайние случаи; остальное следом.",
-      "apps.list.label": "Шесть отраслей",
+      "apps.list.label": "Семь отраслей",
       "apps.1t": "Гостиницы",
       "apps.1b": "Отели, рестораны, термы. Тёплые спектры и достоверная цветопередача там, где свет входит в то, за что платит гость.",
       "apps.2t": "Архитектура",
