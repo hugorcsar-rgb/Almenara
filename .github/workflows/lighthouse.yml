@@ -33,12 +33,12 @@ jobs:
         uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
-            https://almenara.hamergolfconsulting.com/
-            https://almenara.hamergolfconsulting.com/technology.html
-            https://almenara.hamergolfconsulting.com/services.html
-            https://almenara.hamergolfconsulting.com/applications.html
-            https://almenara.hamergolfconsulting.com/calculator.html
-            https://almenara.hamergolfconsulting.com/contact.html
+            https://almenaraled.com/
+            https://almenaraled.com/technology.html
+            https://almenaraled.com/services.html
+            https://almenaraled.com/applications.html
+            https://almenaraled.com/calculator.html
+            https://almenaraled.com/contact.html
           # Tres pasadas por página: una sola medición tiene demasiado ruido
           # para sacar conclusiones.
           runs: 3
