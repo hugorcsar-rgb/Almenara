@@ -43,7 +43,7 @@ jobs:
           test -f assets/js/app.js   || { echo "::error::Falta assets/js/app.js"; exit 1; }
           test -f assets/js/calc.js  || { echo "::error::Falta assets/js/calc.js"; exit 1; }
           test -f assets/css/site.css || { echo "::error::Falta assets/css/site.css"; exit 1; }
-          for f in index.html technology.html services.html applications.html contact.html calculator.html; do
+          for f in index.html technology.html services.html applications.html contact.html calculator.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
             grep -q 'assets/js/app.js' "$f"    || { echo "::error file=$f::no enlaza app.js"; exit 1; }
             grep -q 'assets/css/site.css' "$f" || { echo "::error file=$f::no enlaza site.css"; exit 1; }
           done
