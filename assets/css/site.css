@@ -1512,3 +1512,38 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
 }
 .pdf-step-never input { accent-color: var(--text); width: 15px; height: 15px; cursor: pointer; }
 @media print { .pdf-step { display: none !important; } }
+
+/* --- Banda ancha de imagen ------------------------------------------------
+   Una sola fotografía a todo el ancho del bloque, sin marco ni sombra. En un
+   sitio de este tipo la imagen no ilustra el texto: lo interrumpe a propósito,
+   para que la página respire entre dos secciones densas.
+   -------------------------------------------------------------------------- */
+.band-figure { margin: 0; }
+.band-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border: 1px solid var(--line-soft);
+}
+.band-figure figcaption {
+  margin-top: 0.9rem;
+  font-family: var(--f-display);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* Figura vertical dentro de una columna, como en Tecnología. */
+.split-figure { margin: 0; }
+.split-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid var(--line-soft);
+}
