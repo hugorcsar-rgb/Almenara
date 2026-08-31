@@ -1,183 +1,168 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="es" data-theme="light" data-meta-prefix="none">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0E1A2A" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#F4F0E8" media="(prefers-color-scheme: light)" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="robots" content="index, follow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#FCFCFB" />
 
-  <title>Privacy policy — Almenara</title>
-  <meta name="description" content="Privacy policy for almenara.com, in compliance with the EU General Data Protection Regulation (GDPR) and Spanish LOPDGDD." />
+<title>Política de privacidad — Almenara</title>
+<meta name="description" content="Tratamiento de datos personales conforme al RGPD." />
+<meta name="robots" content="noindex, follow" />
 
-  <link rel="canonical" href="https://www.almenara.com/legal/privacy.html" />
+<link rel="canonical" href="https://almenara.hamergolfconsulting.com/legal/privacy.html" />
 
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="icon" type="image/svg+xml" href="/assets/img/icons/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png" />
+<link rel="manifest" href="../manifest.json" />
+<link rel="icon" type="image/svg+xml" href="../assets/img/icons/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/apple-touch-icon.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/site.css?v=1" />
+<noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
-  <script>
-    (function() {
-      const stored = localStorage.getItem('almenara.theme');
-      const system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', stored || system);
-    })();
-  </script>
+<script src="../assets/js/app.js"></script>
 </head>
 
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
 
-  <nav class="lang-switcher" aria-label="Language">
-    <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
-    <button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
-    <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
-    <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
-    <button type="button" class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
-    <button type="button" class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
-  </nav>
-
-  <header class="site-header">
-    <a href="/" class="brand" aria-label="Almenara — Home"><span class="brand-mark">Almenara</span></a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="/technology.html"   data-i18n="nav.technology">Technology</a>
-      <a href="/services.html"     data-i18n="nav.services">Services</a>
-      <a href="/applications.html" data-i18n="nav.applications">Applications</a>
-      <a href="/contact.html"      data-i18n="nav.contact">Contact</a>
+<header class="site-header">
+  <div class="shell" style="display:flex;align-items:center;gap:1.5rem;width:var(--shell)">
+    <a href="../" class="brand" data-i18n-attr="aria-label:a11y.home">Almenara</a>
+    <nav class="site-nav" data-i18n-attr="aria-label:a11y.primary">
+      <a href="../technology.html"   data-i18n="nav.tech">Technology</a>
+      <a href="../services.html"     data-i18n="nav.services">Services</a>
+      <a href="../applications.html" data-i18n="nav.apps">Applications</a>
+      <a href="../contact.html"      data-i18n="nav.contact">Contact</a>
     </nav>
-    <button type="button" class="theme-toggle" aria-label="Toggle theme" data-theme-toggle>
-      <svg class="icon-sun"  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-      </svg>
-      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
-      </svg>
-    </button>
-  </header>
-
-  <main id="main">
-
-    <section class="hero">
-      <p class="eyebrow">Legal · Privacy policy</p>
-      <h1>Privacy policy.</h1>
-      <p class="hero-subtitle">How personal data is processed by Almenara, in accordance with the EU General Data Protection Regulation and Spanish LOPDGDD.</p>
-    </section>
-
-    <section>
-      <div class="legal-warning" role="note">
-        <strong>Template</strong>
-        <p>This document is a structured template. The fields marked <code class="legal-placeholder">{{...}}</code> must be replaced with the registered legal details of the company before publication. If a Data Protection Officer is appointed, contact details must be added. Final wording should be reviewed by qualified counsel.</p>
-      </div>
-
-      <article class="legal-content">
-
-        <h2>1. Data controller</h2>
-        <p>The controller responsible for the processing of personal data collected through this website is:</p>
-        <ul>
-          <li><strong>Company name:</strong> <span class="legal-placeholder">{{COMPANY_LEGAL_NAME}}</span></li>
-          <li><strong>Registered office:</strong> <span class="legal-placeholder">{{REGISTERED_ADDRESS}}</span>, Madrid, Spain</li>
-          <li><strong>Tax identification (NIF / CIF):</strong> <span class="legal-placeholder">{{TAX_ID}}</span></li>
-          <li><strong>Contact email:</strong> <a href="mailto:privacy@almenara.com">privacy@almenara.com</a></li>
-          <li><strong>Data Protection Officer (if applicable):</strong> <span class="legal-placeholder">{{DPO_CONTACT — or "Not appointed"}}</span></li>
-        </ul>
-
-        <h2>2. Personal data collected</h2>
-        <p>This website processes personal data only when voluntarily provided by the user through the contact form or by sending an email. The categories of data processed are:</p>
-        <ul>
-          <li>Identification data: name, professional role, company.</li>
-          <li>Contact data: email address.</li>
-          <li>Content of the message: information voluntarily included by the user.</li>
-        </ul>
-        <p>This website does <strong>not</strong> use cookies for analytics, profiling, or advertising. See the <a href="/legal/cookies.html">Cookie policy</a> for details on the technical storage used.</p>
-
-        <h2>3. Purposes of processing</h2>
-        <p>Personal data are processed for the following purposes:</p>
-        <ul>
-          <li>To respond to inquiries submitted through the contact form or email.</li>
-          <li>To evaluate and develop commercial relationships with potential partners, OEMs, and clients.</li>
-          <li>To comply with legal obligations applicable to the controller.</li>
-        </ul>
-
-        <h2>4. Legal basis</h2>
-        <p>The legal basis for processing personal data is:</p>
-        <ul>
-          <li><strong>Consent</strong> of the data subject (Article 6(1)(a) GDPR), provided when contacting the controller voluntarily.</li>
-          <li><strong>Pre-contractual measures</strong> requested by the data subject (Article 6(1)(b) GDPR), where applicable.</li>
-          <li><strong>Legitimate interest</strong> of the controller (Article 6(1)(f) GDPR) in maintaining commercial relationships and protecting the security of the website.</li>
-        </ul>
-
-        <h2>5. Retention period</h2>
-        <p>Personal data will be retained for the time strictly necessary to fulfil the purposes for which they were collected, and thereafter for the periods required by applicable law for the determination, exercise, or defence of legal claims.</p>
-        <p>As a general rule:</p>
-        <ul>
-          <li>Inquiry data: up to 24 months from the last interaction with the data subject.</li>
-          <li>Commercial relationship data: for the duration of the relationship and, thereafter, for the periods required by tax and commercial law.</li>
-        </ul>
-
-        <h2>6. Recipients</h2>
-        <p>Personal data are not transferred to third parties, except when:</p>
-        <ul>
-          <li>Required by law, court order, or competent administrative authority.</li>
-          <li>Necessary for the execution of services contracted with the data subject.</li>
-          <li>Processed by data processors acting on behalf of the controller, under appropriate contractual safeguards (hosting provider, email provider).</li>
-        </ul>
-        <p>No international transfers of personal data outside the European Economic Area are made, unless explicitly disclosed and based on adequate safeguards under Articles 44–49 GDPR.</p>
-
-        <h2>7. Rights of the data subject</h2>
-        <p>The data subject may exercise the following rights at any time:</p>
-        <ul>
-          <li><strong>Access</strong>: to obtain confirmation of whether personal data are being processed and, if so, to access them.</li>
-          <li><strong>Rectification</strong>: to obtain the correction of inaccurate or incomplete data.</li>
-          <li><strong>Erasure</strong>: to request the deletion of personal data when no longer necessary.</li>
-          <li><strong>Restriction of processing</strong>: in specific circumstances provided by law.</li>
-          <li><strong>Portability</strong>: to receive personal data in a structured, commonly used, machine-readable format.</li>
-          <li><strong>Objection</strong>: to processing based on the legitimate interest of the controller.</li>
-          <li><strong>Withdrawal of consent</strong>: at any time, without affecting the lawfulness of processing based on consent prior to its withdrawal.</li>
-        </ul>
-        <p>Rights may be exercised by writing to <a href="mailto:privacy@almenara.com">privacy@almenara.com</a>, attaching a copy of an identification document.</p>
-        <p>The data subject also has the right to lodge a complaint with the Spanish Data Protection Agency (<a href="https://www.aepd.es" rel="noopener" target="_blank">www.aepd.es</a>) if it is considered that the processing infringes applicable law.</p>
-
-        <h2>8. Security measures</h2>
-        <p>The controller has implemented the technical and organisational measures necessary to guarantee the security of personal data and to prevent their alteration, loss, unauthorised access, or unlawful processing, in accordance with the state of the art and the nature of the data processed.</p>
-
-        <h2>9. Modifications</h2>
-        <p>This privacy policy may be updated to reflect changes in legislation or in the processing activities of the controller. The current version is always the one published on this page.</p>
-
-        <p class="legal-meta">Last updated: 26 May 2026</p>
-      </article>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <span class="brand-mark">Almenara</span>
-      <p class="footer-tagline" data-i18n="footer.tagline">Patented LED technology.</p>
+    <div class="header-tools">
+      <nav class="lang-switcher" data-i18n-attr="aria-label:a11y.lang">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="true"  lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false" lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false" lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false" lang="ru">RU</button>
+      </nav>
     </div>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="/technology.html"   data-i18n="nav.technology">Technology</a>
-      <a href="/services.html"     data-i18n="nav.services">Services</a>
-      <a href="/applications.html" data-i18n="nav.applications">Applications</a>
-      <a href="/contact.html"      data-i18n="nav.contact">Contact</a>
-    </nav>
-    <nav class="footer-legal" aria-label="Legal">
-      <a href="/legal/notice.html"   data-i18n="footer.legal">Legal notice</a>
-      <a href="/legal/privacy.html"  data-i18n="footer.privacy">Privacy</a>
-      <a href="/legal/cookies.html"  data-i18n="footer.cookies">Cookies</a>
-    </nav>
-    <p class="footer-copy">
-      <span>© 2026 Almenara</span>
-      <span class="footer-location">Madrid</span>
-    </p>
-  </footer>
+  </div>
+</header>
 
-  <script src="/assets/js/i18n.js" defer></script>
-  <script src="/assets/js/main.js" defer></script>
+<main id="main">
+
+  <section class="band page-head">
+    <div class="shell">
+      <p class="eyebrow mono">Privacidad</p>
+      <h1>Política de privacidad.</h1>
+      <p class="lede">Información sobre el tratamiento de datos personales conforme al Reglamento (UE) 2016/679 y a la Ley Orgánica 3/2018.</p>
+    </div>
+  </section>
+
+  <section class="band reveal">
+    <div class="shell">
+      <div class="legal">
+
+        <h2>Responsable del tratamiento</h2>
+        <dl>
+          <div><dt>Responsable</dt><dd><span class="pendiente">[RAZÓN SOCIAL COMPLETA]</span></dd></div>
+          <div><dt>NIF</dt><dd><span class="pendiente">[NIF]</span></dd></div>
+          <div><dt>Domicilio</dt><dd><span class="pendiente">[CALLE, NÚMERO, CÓDIGO POSTAL, MADRID]</span></dd></div>
+          <div><dt>Contacto</dt><dd><a href="mailto:hugorcsar@gmail.com">hugorcsar@gmail.com</a></dd></div>
+        </dl>
+
+        <h2>Qué datos se recogen</h2>
+        <p>Únicamente los que el usuario facilita de forma voluntaria a través del
+        formulario de contacto: nombre, empresa, cargo, dirección de correo electrónico y
+        el contenido del mensaje. Si el usuario decide enviarnos el resultado de la
+        calculadora de ahorro, se incluirán además los datos técnicos que él mismo haya
+        introducido: número de puntos de luz, potencia, horas de uso y precio de la
+        energía.</p>
+        <p>Este sitio no elabora perfiles, no realiza decisiones automatizadas y no
+        recoge categorías especiales de datos.</p>
+
+        <h2>Con qué finalidad</h2>
+        <ul>
+          <li>Atender las consultas, solicitudes de información y propuestas recibidas.</li>
+          <li>Elaborar y remitir los estudios técnicos y presupuestos solicitados.</li>
+          <li>Mantener la relación comercial que, en su caso, se establezca.</li>
+        </ul>
+        <p>Los datos no se emplean para el envío de comunicaciones comerciales no
+        solicitadas.</p>
+
+        <h2>Base jurídica</h2>
+        <p>El tratamiento se ampara en el consentimiento del interesado, que este otorga
+        al remitir voluntariamente el formulario, y en la aplicación de medidas
+        precontractuales adoptadas a su petición, conforme al artículo 6.1, letras a) y
+        b), del Reglamento.</p>
+
+        <h2>Durante cuánto tiempo</h2>
+        <p>Los datos se conservan mientras se mantenga el interés mutuo o la relación
+        comercial y, una vez finalizada, durante los plazos de prescripción de las
+        acciones legales que pudieran derivarse. Transcurridos esos plazos, se suprimen.</p>
+
+        <h2>Quién más accede a los datos</h2>
+        <p>No se ceden datos a terceros salvo obligación legal. Intervienen como
+        encargados del tratamiento los proveedores necesarios para prestar el servicio,
+        que actúan conforme a nuestras instrucciones y con las garantías del artículo 28
+        del Reglamento:</p>
+        <ul>
+          <li><strong>Alojamiento del sitio web:</strong> <span class="pendiente">[PROVEEDOR DE ALOJAMIENTO Y PAÍS]</span>.</li>
+          <li><strong>Correo electrónico:</strong> <span class="pendiente">[PROVEEDOR DE CORREO Y PAÍS]</span>.</li>
+        </ul>
+        <p><span class="pendiente">[INDICAR SI ALGÚN PROVEEDOR TRATA DATOS FUERA DEL ESPACIO ECONÓMICO EUROPEO Y CON QUÉ GARANTÍAS]</span></p>
+
+        <h2>Qué derechos asisten al interesado</h2>
+        <p>Cualquier persona puede solicitar el acceso a sus datos personales, su
+        rectificación o supresión, la limitación de su tratamiento, su portabilidad, y
+        oponerse al tratamiento. Asimismo puede retirar en cualquier momento el
+        consentimiento prestado, sin que ello afecte a la licitud del tratamiento previo.</p>
+        <p>Estas solicitudes se dirigen a <a href="mailto:hugorcsar@gmail.com">hugorcsar@gmail.com</a>,
+        acreditando la identidad del solicitante. Se responderá en el plazo de un mes.</p>
+        <p>Si considera que sus derechos no han sido debidamente atendidos, puede
+        presentar una reclamación ante la Agencia Española de Protección de Datos
+        (<a href="https://www.aepd.es" rel="noopener">www.aepd.es</a>), sin perjuicio de
+        cualquier otra vía administrativa o judicial.</p>
+
+        <h2>Seguridad</h2>
+        <p>El sitio se sirve íntegramente mediante conexión cifrada y aplica cabeceras de
+        seguridad que restringen la carga de recursos ajenos al propio dominio. Se han
+        adoptado las medidas técnicas y organizativas apropiadas para proteger los datos
+        frente a su destrucción, pérdida, alteración o acceso no autorizado.</p>
+
+        <h2>Menores de edad</h2>
+        <p>Este sitio se dirige a profesionales y empresas. No está destinado a menores de
+        catorce años ni recoge conscientemente datos referidos a ellos.</p>
+<p class="legal-date">Última actualización: <span class="pendiente">[FECHA]</span>. Almenara se reserva el derecho de modificar este texto para adaptarlo a novedades legislativas o a cambios en la actividad del sitio.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div>
+        <a href="../" class="brand">Almenara</a>
+        <p class="footer-tagline" data-i18n="foot.tagline">Tecnología de plataforma LED patentada. Madrid.</p>
+      </div>
+      <nav class="footer-links" data-i18n-attr="aria-label:a11y.footer">
+        <a href="../technology.html"   data-i18n="nav.tech">Technology</a>
+        <a href="../services.html"     data-i18n="nav.services">Services</a>
+        <a href="../applications.html" data-i18n="nav.apps">Applications</a>
+        <a href="../contact.html"      data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="../legal/notice.html"  data-i18n="foot.legal1">Aviso legal</a>
+        <a href="../legal/privacy.html" data-i18n="foot.legal2">Privacidad</a>
+        <a href="../legal/cookies.html" data-i18n="foot.legal3">Cookies</a>
+      </div>
+      <p class="mono" style="margin:0" data-i18n="foot.rights">© 2026 Almenara · Madrid</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
