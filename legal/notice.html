@@ -1,148 +1,152 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="es" data-theme="light" data-meta-prefix="none">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0E1A2A" media="(prefers-color-scheme: dark)" />
-  <meta name="theme-color" content="#F4F0E8" media="(prefers-color-scheme: light)" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="robots" content="index, follow" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light" />
+<meta name="theme-color" content="#FCFCFB" />
 
-  <title>Legal notice — Almenara</title>
-  <meta name="description" content="Legal notice and ownership information for almenara.com, in compliance with Spanish LSSI-CE (Law 34/2002)." />
+<title>Aviso legal — Almenara</title>
+<meta name="description" content="Información legal del titular del sitio web." />
+<meta name="robots" content="noindex, follow" />
 
-  <link rel="canonical" href="https://www.almenara.com/legal/notice.html" />
+<link rel="canonical" href="https://almenara.hamergolfconsulting.com/legal/notice.html" />
 
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="icon" type="image/svg+xml" href="/assets/img/icons/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png" />
+<link rel="manifest" href="../manifest.json" />
+<link rel="icon" type="image/svg+xml" href="../assets/img/icons/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/apple-touch-icon.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" />
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+<link rel="stylesheet" href="../assets/css/site.css?v=1" />
+<noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
-  <script>
-    (function() {
-      const stored = localStorage.getItem('almenara.theme');
-      const system = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', stored || system);
-    })();
-  </script>
+<script src="../assets/js/app.js"></script>
 </head>
 
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
+<a href="#main" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
 
-  <nav class="lang-switcher" aria-label="Language">
-    <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
-    <button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
-    <button type="button" class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
-    <button type="button" class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
-    <button type="button" class="lang-btn" data-lang="it" aria-label="Italiano">IT</button>
-    <button type="button" class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
-  </nav>
-
-  <header class="site-header">
-    <a href="/" class="brand" aria-label="Almenara — Home"><span class="brand-mark">Almenara</span></a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="/technology.html"   data-i18n="nav.technology">Technology</a>
-      <a href="/services.html"     data-i18n="nav.services">Services</a>
-      <a href="/applications.html" data-i18n="nav.applications">Applications</a>
-      <a href="/contact.html"      data-i18n="nav.contact">Contact</a>
+<header class="site-header">
+  <div class="shell" style="display:flex;align-items:center;gap:1.5rem;width:var(--shell)">
+    <a href="../" class="brand" data-i18n-attr="aria-label:a11y.home">Almenara</a>
+    <nav class="site-nav" data-i18n-attr="aria-label:a11y.primary">
+      <a href="../technology.html"   data-i18n="nav.tech">Technology</a>
+      <a href="../services.html"     data-i18n="nav.services">Services</a>
+      <a href="../applications.html" data-i18n="nav.apps">Applications</a>
+      <a href="../contact.html"      data-i18n="nav.contact">Contact</a>
     </nav>
-    <button type="button" class="theme-toggle" aria-label="Toggle theme" data-theme-toggle>
-      <svg class="icon-sun"  width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-      </svg>
-      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
-      </svg>
-    </button>
-  </header>
-
-  <main id="main">
-
-    <section class="hero">
-      <p class="eyebrow">Legal · Aviso legal</p>
-      <h1>Legal notice.</h1>
-      <p class="hero-subtitle">Information required under Article 10 of the Spanish LSSI-CE Law 34/2002.</p>
-    </section>
-
-    <section>
-      <div class="legal-warning" role="note">
-        <strong>Template</strong>
-        <p>This document is a structured template. The fields marked <code class="legal-placeholder">{{...}}</code> must be replaced with the registered legal details of the company before publication. Final wording should be reviewed by qualified counsel.</p>
-      </div>
-
-      <article class="legal-content">
-
-        <h2>1. Owner of the website</h2>
-        <p>In compliance with the duty of information set out in Article 10 of Law 34/2002 of 11 July, on Information Society Services and Electronic Commerce (LSSI-CE), the following information is hereby provided:</p>
-        <ul>
-          <li><strong>Company name:</strong> <span class="legal-placeholder">{{COMPANY_LEGAL_NAME}}</span></li>
-          <li><strong>Trade name:</strong> Almenara</li>
-          <li><strong>Registered office:</strong> <span class="legal-placeholder">{{REGISTERED_ADDRESS}}</span>, Madrid, Spain</li>
-          <li><strong>Tax identification (NIF / CIF):</strong> <span class="legal-placeholder">{{TAX_ID}}</span></li>
-          <li><strong>Commercial registry:</strong> <span class="legal-placeholder">{{REGISTRY_DATA — e.g. Registro Mercantil de Madrid, Tomo, Folio, Hoja, Sección}}</span></li>
-          <li><strong>Contact email:</strong> <a href="mailto:contact@almenara.com">contact@almenara.com</a></li>
-          <li><strong>Website:</strong> <a href="https://www.almenara.com">www.almenara.com</a></li>
-        </ul>
-
-        <h2>2. Object</h2>
-        <p>This website provides corporate, technical, and commercial information about Almenara's patented LED technology. Its purpose is informational and addressed to business partners, original equipment manufacturers, lighting designers, and infrastructure operators.</p>
-
-        <h2>3. Intellectual property</h2>
-        <p>All content of this website — including but not limited to text, graphics, logotypes, icons, images, photographs, audio and video files, software, and source code — is the property of <span class="legal-placeholder">{{COMPANY_LEGAL_NAME}}</span> or of its licensors, and is protected by Spanish and international intellectual property law.</p>
-        <p>The reproduction, distribution, public communication, transformation, or any other form of exploitation of this content, whether total or partial, without the express written authorisation of the owner, is expressly prohibited.</p>
-        <p>The Almenara name and any associated logotypes are trade marks of the owner. Their unauthorised use constitutes a violation of trademark law.</p>
-
-        <h2>4. Industrial property — Patents</h2>
-        <p>The LED technology described on this website is protected by international patents owned by <span class="legal-placeholder">{{COMPANY_LEGAL_NAME}}</span>. The patent portfolio covers the underlying optical and thermal architecture, including method, device, and manufacturing claims, and has been granted in the European Union, the United States, Mexico, and additional jurisdictions.</p>
-
-        <h2>5. Conditions of use</h2>
-        <p>By accessing this website, the user agrees to use it in accordance with the law, good faith, public order, and these terms. The user undertakes not to use the website or its content for purposes contrary to the law, public order, or public morality.</p>
-        <p>The owner reserves the right to modify, suspend, or terminate access to the website at any time, without prior notice, and shall not be liable for any consequence of such action.</p>
-
-        <h2>6. Liability disclaimer</h2>
-        <p>The owner makes every reasonable effort to ensure that the information on this website is accurate, complete, and up to date. However, the owner accepts no liability for damages of any nature that may arise from the use of the information contained herein.</p>
-        <p>External links provided on this website are offered for the user's convenience. The owner does not control the content of third-party sites and accepts no liability for them.</p>
-
-        <h2>7. Applicable law and jurisdiction</h2>
-        <p>This legal notice is governed by Spanish law. Any dispute arising from the use of this website shall be submitted to the exclusive jurisdiction of the Courts and Tribunals of Madrid, Spain, except where mandatory law provides otherwise.</p>
-
-        <h2>8. Modifications</h2>
-        <p>The owner reserves the right to modify this legal notice without prior notice. Users are advised to review this document periodically.</p>
-
-        <p class="legal-meta">Last updated: 26 May 2026</p>
-      </article>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <span class="brand-mark">Almenara</span>
-      <p class="footer-tagline" data-i18n="footer.tagline">Patented LED technology.</p>
+    <div class="header-tools">
+      <nav class="lang-switcher" data-i18n-attr="aria-label:a11y.lang">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="true"  lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" lang="pt">PT</button>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false" lang="de">DE</button>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false" lang="it">IT</button>
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false" lang="ru">RU</button>
+      </nav>
     </div>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="/technology.html"   data-i18n="nav.technology">Technology</a>
-      <a href="/services.html"     data-i18n="nav.services">Services</a>
-      <a href="/applications.html" data-i18n="nav.applications">Applications</a>
-      <a href="/contact.html"      data-i18n="nav.contact">Contact</a>
-    </nav>
-    <nav class="footer-legal" aria-label="Legal">
-      <a href="/legal/notice.html"   data-i18n="footer.legal">Legal notice</a>
-      <a href="/legal/privacy.html"  data-i18n="footer.privacy">Privacy</a>
-      <a href="/legal/cookies.html"  data-i18n="footer.cookies">Cookies</a>
-    </nav>
-    <p class="footer-copy">
-      <span>© 2026 Almenara</span>
-      <span class="footer-location">Madrid</span>
-    </p>
-  </footer>
+  </div>
+</header>
 
-  <script src="/assets/js/i18n.js" defer></script>
-  <script src="/assets/js/main.js" defer></script>
+<main id="main">
+
+  <section class="band page-head">
+    <div class="shell">
+      <p class="eyebrow mono">Aviso legal</p>
+      <h1>Aviso legal.</h1>
+      <p class="lede">Información exigida por el artículo 10 de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico.</p>
+    </div>
+  </section>
+
+  <section class="band reveal">
+    <div class="shell">
+      <div class="legal">
+
+        <h2>Titular del sitio</h2>
+        <dl>
+          <div><dt>Denominación social</dt><dd><span class="pendiente">[RAZÓN SOCIAL COMPLETA]</span></dd></div>
+          <div><dt>Nombre comercial</dt><dd>Almenara</dd></div>
+          <div><dt>NIF</dt><dd><span class="pendiente">[NIF]</span></dd></div>
+          <div><dt>Domicilio social</dt><dd><span class="pendiente">[CALLE, NÚMERO, CÓDIGO POSTAL, MADRID]</span></dd></div>
+          <div><dt>Correo electrónico</dt><dd><a href="mailto:hugorcsar@gmail.com">hugorcsar@gmail.com</a></dd></div>
+          <div><dt>Teléfono</dt><dd>+52 55 3910 2832</dd></div>
+          <div><dt>Datos registrales</dt><dd><span class="pendiente">[REGISTRO MERCANTIL, TOMO, FOLIO, HOJA]</span></dd></div>
+        </dl>
+
+        <h2>Objeto</h2>
+        <p>Este sitio web tiene por finalidad dar a conocer la actividad de Almenara,
+        describir su tecnología y sus servicios, y facilitar el contacto con quienes
+        estén interesados en ellos. La navegación por el sitio atribuye la condición de
+        usuario e implica la aceptación de las condiciones recogidas en este aviso.</p>
+
+        <h2>Condiciones de uso</h2>
+        <p>El usuario se compromete a hacer un uso diligente del sitio y a no emplearlo
+        para actividades contrarias a la ley, a la buena fe o al orden público. En
+        particular, se abstendrá de introducir o difundir contenidos que puedan dañar los
+        sistemas informáticos del titular o de terceros, así como de intentar acceder a
+        áreas restringidas.</p>
+        <p>El titular no garantiza la disponibilidad continua del sitio y podrá
+        interrumpirlo temporalmente por razones técnicas o de mantenimiento sin previo
+        aviso.</p>
+
+        <h2>Propiedad intelectual e industrial</h2>
+        <p>Los contenidos de este sitio —textos, fotografías, diseño gráfico, código
+        fuente, marcas y signos distintivos— son titularidad de Almenara o de terceros que
+        han autorizado su uso, y están protegidos por la normativa de propiedad
+        intelectual e industrial. Queda prohibida su reproducción, distribución,
+        comunicación pública o transformación sin autorización expresa.</p>
+        <p>Las fotografías empleadas en el sitio proceden de bancos de imágenes con
+        licencia de uso comercial y muestran entornos representativos de cada sector. No
+        constituyen documentación de instalaciones realizadas por Almenara ni implican
+        relación comercial alguna con las personas o los establecimientos que en ellas
+        aparecen.</p>
+
+        <h2>Exención de responsabilidad</h2>
+        <p>La información técnica publicada en este sitio, incluidos los valores de
+        eficacia luminosa y los resultados de la calculadora de ahorro, tiene carácter
+        orientativo. Las estimaciones se elaboran a partir de valores de referencia de
+        mercado y de los datos que introduce el propio usuario, no de una medición
+        realizada en su instalación. No constituyen oferta contractual ni garantía de
+        resultado.</p>
+        <p>El sitio puede contener enlaces a páginas de terceros. El titular no responde
+        de sus contenidos ni de sus políticas de privacidad.</p>
+
+        <h2>Legislación aplicable y jurisdicción</h2>
+        <p>Este aviso legal se rige por la legislación española. Para la resolución de
+        cualquier controversia, las partes se someten a los juzgados y tribunales de
+        Madrid, salvo que la normativa aplicable establezca un fuero distinto de carácter
+        imperativo.</p>
+<p class="legal-date">Última actualización: <span class="pendiente">[FECHA]</span>. Almenara se reserva el derecho de modificar este texto para adaptarlo a novedades legislativas o a cambios en la actividad del sitio.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div>
+        <a href="../" class="brand">Almenara</a>
+        <p class="footer-tagline" data-i18n="foot.tagline">Tecnología de plataforma LED patentada. Madrid.</p>
+      </div>
+      <nav class="footer-links" data-i18n-attr="aria-label:a11y.footer">
+        <a href="../technology.html"   data-i18n="nav.tech">Technology</a>
+        <a href="../services.html"     data-i18n="nav.services">Services</a>
+        <a href="../applications.html" data-i18n="nav.apps">Applications</a>
+        <a href="../contact.html"      data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="../legal/notice.html"  data-i18n="foot.legal1">Aviso legal</a>
+        <a href="../legal/privacy.html" data-i18n="foot.legal2">Privacidad</a>
+        <a href="../legal/cookies.html" data-i18n="foot.legal3">Cookies</a>
+      </div>
+      <p class="mono" style="margin:0" data-i18n="foot.rights">© 2026 Almenara · Madrid</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
