@@ -624,9 +624,16 @@
 
   /* ======================================================================== */
 
+  let intentos = 0;
   function arranca() {
     const raiz = document.getElementById('calc');
-    if (!raiz || !window.SITE) return;
+    if (!raiz) return;
+    // Si app.js todavía no ha publicado su interfaz, se reintenta un momento
+    // después en vez de rendirse sin decir nada.
+    if (!window.SITE) {
+      if (intentos++ < 20) setTimeout(arranca, 50);
+      return;
+    }
 
     window.SITE.addDict(D);
 
@@ -1226,7 +1233,7 @@
         '<footer class="pd-foot">' +
           '<p><strong>' + txt('report.by') + '</strong> Almenara · Madrid<br />' +
           'hugorcsar@gmail.com · +52 55 3910 2832<br />' +
-          'almenara.hamergolfconsulting.com</p>' +
+          'almenaraled.com</p>' +
           '<p class="pd-disc">' + txt('report.disc') + '</p>' +
         '</footer>';
         return doc;
@@ -1282,9 +1289,14 @@
     window.SITE.apply();
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', arranca);
-  } else {
+  // Con los scripts aplazados, cuando este archivo se ejecuta el documento ya
+  // no está en estado "loading", sino en "interactive". Comprobar solo eso hacía
+  // que la calculadora arrancase antes de que app.js hubiera preparado
+  // window.SITE, no encontrara el traductor y se detuviera en silencio.
+  // Ahora se espera al final de la lectura salvo que ya haya terminado del todo.
+  if (document.readyState === 'complete') {
     arranca();
+  } else {
+    document.addEventListener('DOMContentLoaded', arranca);
   }
 })();
