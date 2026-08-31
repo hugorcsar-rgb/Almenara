@@ -1547,3 +1547,58 @@ main, .site-header, .site-footer { position: relative; z-index: 2; }
   object-fit: cover;
   border: 1px solid var(--line-soft);
 }
+
+/* --- Texto legal ----------------------------------------------------------
+   Prosa larga que nadie lee por gusto: medida corta, interlínea generosa y
+   epígrafes que permitan encontrar el apartado sin leer todo lo anterior.
+   -------------------------------------------------------------------------- */
+.legal { max-width: 68ch; }
+.legal h2 {
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 3rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-soft);
+}
+.legal h2:first-of-type { margin-top: 0; border-top: 0; padding-top: 0; }
+.legal h3 { font-size: 1rem; font-weight: 500; margin: 1.75rem 0 0.6rem; }
+.legal p { margin: 0 0 1.1rem; }
+.legal ul, .legal ol { margin: 0 0 1.25rem; padding-left: 1.25rem; }
+.legal li { margin-bottom: 0.55rem; }
+.legal a { color: var(--warm); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--warm) 35%, transparent); }
+.legal a:hover { border-bottom-color: var(--warm); }
+.legal dl { margin: 0 0 1.5rem; border-top: 1px solid var(--line-soft); }
+.legal dl > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+@media (min-width: 640px) { .legal dl > div { grid-template-columns: 13rem 1fr; gap: 1.5rem; } }
+.legal dt { color: var(--text-dim); font-size: 0.9375rem; }
+.legal dd { margin: 0; }
+
+/* Los datos que faltan por rellenar se ven a la legua, para que nadie
+   publique un aviso legal con un hueco dentro. */
+.pendiente {
+  background: color-mix(in srgb, var(--warm-lit) 22%, transparent);
+  border-bottom: 1px dashed var(--warm);
+  padding: 0 0.25em;
+  font-family: var(--f-data);
+  font-size: 0.9em;
+}
+
+.legal-date { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--text-dim); font-size: 0.875rem; }
+
+/* --- Página 404 ----------------------------------------------------------- */
+.notfound { min-height: 58vh; display: flex; align-items: center; }
+.notfound .code {
+  font-family: var(--f-data);
+  font-size: clamp(3.5rem, 12vw, 7rem);
+  color: var(--warm);
+  line-height: 1;
+  margin: 0 0 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
