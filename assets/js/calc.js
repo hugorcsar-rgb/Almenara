@@ -176,7 +176,7 @@
       "calc.meta.title": "Calculadora de ahorro — Almenara",
       "calc.meta.desc": "Calcula lo que ahorrarías sustituyendo tu iluminación actual. Con tus propias cifras y sin registro.",
       "calc.eyebrow": "Calculadora de ahorro",
-      "calc.title": "Echa tus propias cuentas.",
+      "calc.title": "Calcula tus propias cuentas.",
       "calc.sub": "La comparación se hace a iluminación equivalente, no a igual potencia: para dar los mismos lúmenes hace falta una potencia proporcional al cociente de eficacias. No se registra nada ni se pide correo.",
       "calc.s1": "Lo que tienes ahora",
       "calc.tab.tech": "Por tecnología", "calc.tab.fx": "Buscar luminaria", "calc.tab.man": "Meter cifras",
