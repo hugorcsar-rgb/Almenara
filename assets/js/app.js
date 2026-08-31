@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumens per watt, on any luminaire",
       "meta.desc": "A patented LED platform delivering over 275 lumens per watt and more than 50% energy reduction. Retrofit-ready, engineered and certified in Europe.",
       "meta.locale": "en_GB",
+    "nf.title": "This page does not exist.",
+    "nf.body": "The link may be out of date, or the address mistyped. Everything else is reachable from the home page.",
+    "nf.home": "Go to the home page",
     "app.1alt": "Curved corridor lit by concealed cove lighting",
     "app.3alt": "Corner of a classical building lit at night by floodlights",
     "app.4alt": "Terminal concourse with continuous linear luminaires overhead",
@@ -100,6 +103,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lúmenes por vatio, en cualquier luminaria",
       "meta.desc": "Plataforma LED patentada que supera los 275 lúmenes por vatio y reduce el consumo más de un 50 %. Apta para instalaciones existentes, diseñada y certificada en Europa.",
       "meta.locale": "es_ES",
+    "nf.title": "Esta página no existe.",
+    "nf.body": "Puede que el enlace esté anticuado o que la dirección se haya escrito mal. Desde la página principal se llega a todo lo demás.",
+    "nf.home": "Ir a la página principal",
     "app.1alt": "Pasillo curvo iluminado con luz de cornisa oculta",
     "app.3alt": "Esquina de un edificio clásico iluminada de noche con proyectores",
     "app.4alt": "Vestíbulo de una terminal con luminarias lineales continuas en el techo",
@@ -167,6 +173,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lúmenes por watt, em qualquer luminária",
       "meta.desc": "Plataforma LED patenteada que ultrapassa os 275 lúmenes por watt e reduz o consumo em mais de 50 %. Compatível com instalações existentes, concebida e certificada na Europa.",
       "meta.locale": "pt_PT",
+    "nf.title": "Esta página não existe.",
+    "nf.body": "O link pode estar desactualizado ou o endereço mal escrito. A partir da página inicial chega-se a tudo o resto.",
+    "nf.home": "Ir para a página inicial",
     "app.1alt": "Corredor curvo iluminado com luz de sanca oculta",
     "app.3alt": "Esquina de um edifício clássico iluminada à noite com projectores",
     "app.4alt": "Átrio de um terminal com luminárias lineares contínuas no tecto",
@@ -233,6 +242,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumens par watt, sur tout luminaire",
       "meta.desc": "Plateforme LED brevetée dépassant 275 lumens par watt et réduisant la consommation de plus de 50 %. Compatible avec les installations existantes, conçue et certifiée en Europe.",
       "meta.locale": "fr_FR",
+    "nf.title": "Cette page n'existe pas.",
+    "nf.body": "Le lien est peut-être périmé, ou l'adresse mal saisie. Tout le reste est accessible depuis la page d'accueil.",
+    "nf.home": "Aller à la page d'accueil",
     "app.1alt": "Couloir courbe éclairé par une corniche lumineuse dissimulée",
     "app.3alt": "Angle d'un bâtiment classique éclairé la nuit par des projecteurs",
     "app.4alt": "Hall de terminal avec des luminaires linéaires continus au plafond",
@@ -300,6 +312,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 Lumen pro Watt, in jeder Leuchte",
       "meta.desc": "Patentierte LED-Plattform mit über 275 Lumen pro Watt und mehr als 50 % weniger Verbrauch. Nachrüstbar, in Europa entwickelt und zertifiziert.",
       "meta.locale": "de_DE",
+    "nf.title": "Diese Seite gibt es nicht.",
+    "nf.body": "Der Link ist womöglich veraltet oder die Adresse falsch geschrieben. Von der Startseite aus ist alles Übrige erreichbar.",
+    "nf.home": "Zur Startseite",
     "app.1alt": "Geschwungener Gang mit verdeckter Voutenbeleuchtung",
     "app.3alt": "Ecke eines klassischen Gebäudes, nachts mit Strahlern beleuchtet",
     "app.4alt": "Terminalhalle mit durchlaufenden Lichtbändern an der Decke",
@@ -367,6 +382,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 lumen per watt, su qualsiasi apparecchio",
       "meta.desc": "Piattaforma LED brevettata che supera i 275 lumen per watt e riduce i consumi di oltre il 50 %. Adatta agli impianti esistenti, progettata e certificata in Europa.",
       "meta.locale": "it_IT",
+    "nf.title": "Questa pagina non esiste.",
+    "nf.body": "Il collegamento potrebbe essere obsoleto o l'indirizzo scritto male. Dalla pagina iniziale si raggiunge tutto il resto.",
+    "nf.home": "Vai alla pagina iniziale",
     "app.1alt": "Corridoio curvo illuminato con luce a gola nascosta",
     "app.3alt": "Angolo di un edificio classico illuminato di notte con proiettori",
     "app.4alt": "Atrio di un terminal con apparecchi lineari continui a soffitto",
@@ -434,6 +452,9 @@ document.addEventListener('DOMContentLoaded', function () {
       "meta.title": "Almenara — 275 люмен на ватт в любом светильнике",
       "meta.desc": "Запатентованная светодиодная платформа: свыше 275 люмен на ватт и снижение потребления более чем на 50 %. Подходит для действующих установок, разработана и сертифицирована в Европе.",
       "meta.locale": "ru_RU",
+    "nf.title": "Такой страницы нет.",
+    "nf.body": "Возможно, ссылка устарела или адрес набран с ошибкой. С главной страницы доступно всё остальное.",
+    "nf.home": "На главную страницу",
     "app.1alt": "Изогнутый коридор со скрытой карнизной подсветкой",
     "app.3alt": "Угол классического здания, освещённый ночью прожекторами",
     "app.4alt": "Зал терминала со сплошными линейными светильниками на потолке",
@@ -1228,16 +1249,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // data-meta-prefix en <html> dice qué claves usar: "meta" en la portada,
     // "tech.meta" en tecnología, "serv.meta" en servicios, y así.
     const p = document.documentElement.getAttribute('data-meta-prefix') || 'meta';
-    const titulo = t(lang, p + '.title');
-    const desc = t(lang, p + '.desc');
+    // "none" en las páginas legales: llevan título propio en español y no
+    // deben heredar el de la portada al cambiar de idioma.
+    const titulo = p === 'none' ? null : t(lang, p + '.title');
+    const desc = p === 'none' ? null : t(lang, p + '.desc');
 
     if (titulo) document.title = titulo;
-    setMeta('meta[name="description"]', desc);
-    setMeta('meta[property="og:title"]', titulo);
-    setMeta('meta[property="og:description"]', desc);
+    if (desc) setMeta('meta[name="description"]', desc);
+    if (titulo) setMeta('meta[property="og:title"]', titulo);
+    if (desc) setMeta('meta[property="og:description"]', desc);
     setMeta('meta[property="og:locale"]', t(lang, 'meta.locale'));
-    setMeta('meta[name="twitter:title"]', titulo);
-    setMeta('meta[name="twitter:description"]', desc);
+    if (titulo) setMeta('meta[name="twitter:title"]', titulo);
+    if (desc) setMeta('meta[name="twitter:description"]', desc);
 
     // Selector
     document.querySelectorAll('.lang-btn').forEach(function (b) {
