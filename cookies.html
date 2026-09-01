@@ -19,10 +19,12 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/apple-touch-icon.png?v=2" />
 
 <link rel="preload" as="font" type="font/woff2" href="../assets/jost-var.woff2" crossorigin />
-<link rel="stylesheet" href="../assets/css/site.css?v=6" />
+<link rel="stylesheet" href="../assets/css/site.css?v=7" />
 <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
 <script src="../assets/js/app.js?v=5" defer></script>
+
+<script src="../assets/js/analytics.js?v=1" defer></script>
 </head>
 
 <body>
@@ -57,7 +59,7 @@
     <div class="shell">
       <p class="eyebrow mono">Cookies</p>
       <h1>Política de cookies.</h1>
-      <p class="lede">Este sitio no utiliza cookies. Sí guarda tres preferencias en tu navegador, y aquí se explica cuáles, para qué y cómo borrarlas.</p>
+      <p class="lede">Este sitio solo instala cookies si usted lo acepta, y no carga nada de terceros hasta entonces. Aquí se explica qué se guarda, con qué finalidad y cómo cambiar de opinión.</p>
     </div>
   </section>
 
@@ -65,39 +67,64 @@
     <div class="shell">
       <div class="legal">
 
-        <h2>Este sitio no utiliza cookies</h2>
-        <p>No se instala ninguna cookie, ni propia ni de terceros. No hay herramientas de
-        analítica, ni píxeles de seguimiento, ni botones de redes sociales, ni publicidad.
-        Tampoco se carga ningún recurso desde servidores ajenos: la tipografía, las hojas
-        de estilo, el código y las imágenes se sirven desde este mismo dominio, de modo
-        que su dirección IP no se transmite a ningún tercero durante la navegación.</p>
-        <p>Por ese motivo no encontrará en esta web el aviso de aceptación de cookies que
-        suele aparecer en otras.</p>
+        <h2>Nada se carga sin su permiso</h2>
+        <p>Al entrar por primera vez, este sitio no instala ninguna cookie ni realiza
+        ninguna petición a servidores ajenos. Un aviso en la parte inferior le pregunta si
+        acepta que midamos las visitas. Hasta que usted responda, y si responde que no, no
+        se carga absolutamente nada de terceros: su dirección IP no llega a ninguna
+        empresa distinta de la que aloja esta web.</p>
+        <p>Esto es lo que la normativa denomina bloqueo previo, y va más allá de ocultar
+        un aviso: el código de medición no se descarga siquiera.</p>
 
-        <h2>Qué se guarda entonces</h2>
-        <p>El sitio emplea el almacenamiento local del navegador para recordar tres
-        preferencias que usted mismo elige. Son datos que permanecen en su equipo, no se
-        envían a ningún servidor y no permiten identificarle.</p>
+        <h2>Si acepta: Google Analytics</h2>
+        <p>Si pulsa «Aceptar», se carga Google Analytics 4, un servicio de Google Ireland
+        Limited que nos indica cuántas personas visitan el sitio, qué páginas leen, desde
+        qué país llegan y a través de qué enlace. No se emplea para publicidad ni para
+        elaborar perfiles: al activarlo se declaran expresamente denegados los usos
+        publicitarios y se solicita la anonimización de la dirección IP.</p>
+        <dl>
+          <div><dt>_ga</dt><dd>Distingue una visita de otra. Caduca a los dos años.</dd></div>
+          <div><dt>_ga_C7X7449KQ5</dt><dd>Mantiene el estado de la sesión. Caduca a los dos años.</dd></div>
+        </dl>
+        <p>Google puede tratar estos datos fuera del Espacio Económico Europeo. La
+        transferencia se ampara en las cláusulas contractuales tipo aprobadas por la
+        Comisión Europea. Puede consultar cómo trata Google la información de los sitios
+        que usan sus servicios en las condiciones que dicha empresa publica.</p>
+
+        <h2>Cambiar de opinión</h2>
+        <p>Su decisión, sea cual sea, no se guarda en una cookie: se guarda en el
+        almacenamiento local con el nombre <strong>site.consent</strong>. Habría sido
+        contradictorio dejar una cookie para recordar que usted no quiere cookies.</p>
+        <p>Puede retirar o dar el consentimiento cuando quiera con este botón. El aviso
+        volverá a mostrarse y, si había aceptado, la medición dejará de cargarse de
+        inmediato.</p>
+        <p><button type="button" id="consent-reset" class="btn btn-outline">Revisar mi decisión</button></p>
+
+        <h2>Qué se guarda en cualquier caso</h2>
+        <p>Con independencia de lo anterior, el sitio emplea el almacenamiento local del
+        navegador para recordar dos preferencias que usted mismo elige. Son datos que
+        permanecen en su equipo, no se envían a ningún servidor y no permiten
+        identificarle.</p>
         <dl>
           <div><dt>site.lang</dt><dd>El idioma que ha seleccionado, para no tener que elegirlo en cada visita.</dd></div>
           <div><dt>site.cct</dt><dd>La temperatura de color escogida en el mando de la página principal.</dd></div>
-          <div><dt>site.pdfhint</dt><dd>Si ya ha visto las instrucciones para guardar el informe en PDF, para no repetírselas.</dd></div>
         </dl>
 
-        <h2>Por qué no se pide consentimiento</h2>
+        <h2>Por qué estas dos no piden consentimiento</h2>
         <p>El artículo 22.2 de la Ley 34/2002 exige el consentimiento para almacenar
         información en el equipo del usuario, salvo cuando dicho almacenamiento resulte
         estrictamente necesario para prestar un servicio expresamente solicitado por él.
         La Guía sobre el uso de las cookies de la Agencia Española de Protección de Datos
         incluye entre esas excepciones las preferencias de personalización de la interfaz,
         como el idioma seleccionado.</p>
-        <p>Los tres valores anteriores responden únicamente a decisiones tomadas por el
+        <p>Los dos valores anteriores responden únicamente a decisiones tomadas por el
         propio usuario y no se emplean con ninguna otra finalidad.</p>
 
         <h2>Cómo borrarlos</h2>
-        <p>Puede eliminarlos en cualquier momento desde la configuración de su navegador,
-        en el apartado de datos de sitios web o de privacidad. Al hacerlo, el sitio volverá
-        a mostrarse en el idioma predeterminado y con los valores iniciales.</p>
+        <p>Puede eliminar todo lo anterior —preferencias, decisión de consentimiento y, si
+        las hubiera, las cookies de medición— desde la configuración de su navegador, en el
+        apartado de datos de sitios web o de privacidad. Al hacerlo, el sitio volverá a
+        mostrarse en el idioma predeterminado y le preguntará de nuevo por la medición.</p>
         <ul>
           <li><strong>Safari:</strong> Ajustes, Privacidad, Gestionar datos de sitios web.</li>
           <li><strong>Chrome y Edge:</strong> Configuración, Privacidad y seguridad, Datos de sitios.</li>
