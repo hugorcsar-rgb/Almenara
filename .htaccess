@@ -1,25 +1,6 @@
 # ============================================================
 # Almenara · Configuración de Apache
 # Pensada para Hostinger (Apache 2.4+).
-#
-# CAMBIOS RESPECTO A LA VERSIÓN ANTERIOR
-#   1. font-src pasa a admitir  data:  — la tipografía Jost viaja incrustada
-#      dentro de site.css, y sin este permiso el navegador la bloqueaba y caía
-#      a la letra de reserva del sistema.
-#   2. Fuera fonts.googleapis.com y fonts.gstatic.com. Ya no se usan: la
-#      tipografía se sirve desde el propio dominio. Cero conexiones externas
-#      significa que ninguna dirección IP de un visitante sale hacia un
-#      tercero, que es coherente con vender a contratación pública europea.
-#   3. AddType ya no marca TODOS los .json como manifiesto de aplicación web.
-#      Antes, cualquier archivo .json del sitio se servía con un tipo que no
-#      le corresponde. Ahora solo manifest.json y los .webmanifest.
-#   4. Se añade text/javascript a la caché: las versiones recientes de Apache
-#      sirven los .js con ese tipo y no con application/javascript.
-#
-# AVISO: las páginas de legal/ y el 404 siguen cargando la tipografía desde
-# Google. Al retirar el permiso dejarán de recibirla y se verán con la letra
-# del sistema. Siguen funcionando y siguen siendo legibles; solo pierden el
-# tipo de letra. Se arregla cuando rehagamos esas cuatro páginas.
 # ============================================================
 
 # ------------------------------------------------------------
@@ -55,16 +36,11 @@ ErrorDocument 404 /404.html
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
 
-    # Política de contenidos.
-    #   script-src 'self'  → el JavaScript SIEMPRE en archivos aparte, nunca
-    #                        escrito dentro del HTML. Si algún día los botones
-    #                        dejan de responder, mirar esto lo primero.
-    #   font-src  'self' data:  → autoriza la tipografía incrustada.
-    #   img-src   'self' data:  → autoriza el grano y los iconos incrustados.
-    #   form-action 'self' mailto:  → el formulario de contacto abre el gestor
-    #                        de correo del visitante. Sin el "mailto:" el botón
-    #                        de enviar no hace nada en absoluto.
-    Header always set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests"
+    # Los tres dominios de Google Analytics, y ni uno más. script-src permite
+    # cargar gtag.js; connect-src, enviar las mediciones; img-src, el píxel de
+    # respaldo. 'unsafe-inline' permite el bloque de configuración que Google
+    # entrega escrito dentro de la propia página.
+    Header always set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests"
 
     Header always set Cross-Origin-Opener-Policy "same-origin"
     Header always set Cross-Origin-Resource-Policy "same-origin"
@@ -86,8 +62,6 @@ ErrorDocument 404 /404.html
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE text/javascript
     AddOutputFilterByType DEFLATE image/svg+xml
-    # Los .woff2 NO se comprimen: ya vienen comprimidos y volver a hacerlo
-    # solo gasta procesador para dejarlos igual o un poco más grandes.
 </IfModule>
 
 # ------------------------------------------------------------
@@ -122,7 +96,12 @@ ErrorDocument 404 /404.html
     <FilesMatch "\.(html|htm)$">
         Header set Cache-Control "public, max-age=0, must-revalidate"
     </FilesMatch>
-    <FilesMatch "\.(css|js|woff2|woff|ttf|otf|jpg|jpeg|png|webp|avif|svg|ico)$">
+
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+
+    <FilesMatch "\.(woff2|woff|ttf|otf|jpg|jpeg|png|webp|avif|svg|ico)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 </IfModule>
