@@ -1857,3 +1857,65 @@ main, .site-footer { position: relative; z-index: 1; }
      mudan al panel. Vacía seguía reservando su hueco y su separación. */
   .header-tools:empty { display: none; }
 }
+
+/* ==========================================================================
+   EL AVISO DE MEDICIÓN
+   --------------------------------------------------------------------------
+   Abajo, ocupando lo justo, sin oscurecer la página por detrás. Un aviso que
+   secuestra la pantalla entera empuja a aceptar por quitárselo de encima, y
+   un consentimiento arrancado así no vale gran cosa. Los dos botones tienen
+   el mismo tamaño y la misma prominencia, que es lo que exige la guía de la
+   Agencia Española de Protección de Datos: rechazar no puede costar más
+   trabajo que aceptar.
+   ========================================================================== */
+.consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem 2.5rem;
+  padding: 1.75rem clamp(1.375rem, 4vw, 2.5rem) 1.9rem;
+  background: var(--ink);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -18px 36px -30px rgba(16, 30, 49, 0.5);
+  transform: translateY(101%);
+  transition: transform 0.45s var(--ease);
+}
+.consent.is-on { transform: none; }
+
+.consent-text { max-width: 62ch; }
+.consent-t {
+  margin: 0 0 0.7rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.consent-b {
+  margin: 0 0 0.9rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.consent-more {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 1px;
+}
+.consent-more:hover { color: var(--warm); }
+
+.consent-acts { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.consent-acts .btn { padding: 0.95rem 1.9rem; }
+
+@media (max-width: 620px) {
+  .consent { flex-direction: column; align-items: stretch; }
+  .consent-acts .btn { flex: 1 1 auto; }
+}
+@media print { .consent { display: none !important; } }
