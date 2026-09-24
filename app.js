@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cta.title": "Send us the fixture. We will send back the numbers.",
       "cta.body": "Tell us the luminaire you make or operate and the hours it runs. We return the efficacy comparison and the projected saving, for your own engineers to check.",
       "cta.btn": "Start the conversation", "cta.alt": "Download the technical brief",
-      "foot.tagline": "LED platform technology.",
+      "foot.tagline": "More light per watt. Fewer watts for Europe.",
       "foot.legal1": "Legal notice", "foot.legal2": "Privacy", "foot.legal3": "Cookies",
       "foot.rights": "© 2026 Almenara"
     },
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cta.title": "Mándanos la luminaria. Te devolvemos los números.",
       "cta.body": "Dinos qué luminaria fabricas u operas y cuántas horas funciona. Te devolvemos la comparación de eficacia y el ahorro previsto, para que tus propios ingenieros lo comprueben.",
       "cta.btn": "Empezar la conversación", "cta.alt": "Descargar la ficha técnica",
-      "foot.tagline": "Tecnología de plataforma LED.",
+      "foot.tagline": "Más luz por vatio. Menos vatios por Europa.",
       "foot.legal1": "Aviso legal", "foot.legal2": "Privacidad", "foot.legal3": "Cookies",
       "foot.rights": "© 2026 Almenara"
     },
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cta.title": "Envie-nos a luminária. Devolvemos-lhe os números.",
       "cta.body": "Diga-nos que luminária fabrica ou opera e quantas horas funciona. Devolvemos a comparação de eficácia e a poupança prevista, para que os seus engenheiros verifiquem.",
       "cta.btn": "Iniciar a conversa", "cta.alt": "Descarregar a ficha técnica",
-      "foot.tagline": "Tecnologia de plataforma LED.",
+      "foot.tagline": "Mais luz por watt. Menos watts para a Europa.",
       "foot.legal1": "Aviso legal", "foot.legal2": "Privacidade", "foot.legal3": "Cookies",
       "foot.rights": "© 2026 Almenara"
     },
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cta.title": "Envoyez-nous le luminaire. Nous vous renvoyons les chiffres.",
       "cta.body": "Indiquez-nous le luminaire que vous fabriquez ou exploitez et ses heures de fonctionnement. Nous renvoyons la comparaison d'efficacité et l'économie prévue, pour que vos ingénieurs la vérifient.",
       "cta.btn": "Engager la conversation", "cta.alt": "Télécharger la fiche technique",
-      "foot.tagline": "Technologie de plateforme LED.",
+      "foot.tagline": "Plus de lumière par watt. Moins de watts pour l’Europe.",
       "foot.legal1": "Mentions légales", "foot.legal2": "Confidentialité", "foot.legal3": "Cookies",
       "foot.rights": "© 2026 Almenara"
     },
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cta.title": "Schicken Sie uns die Leuchte. Wir schicken die Zahlen zurück.",
       "cta.body": "Nennen Sie uns die Leuchte, die Sie herstellen oder betreiben, und ihre Betriebsstunden. Wir liefern den Ausbeutevergleich und die erwartete Einsparung, damit Ihre Ingenieure nachrechnen.",
       "cta.btn": "Gespräch beginnen", "cta.alt": "Datenblatt herunterladen",
-      "foot.tagline": "LED-Plattformtechnologie.",
+      "foot.tagline": "Mehr Licht pro Watt. Weniger Watt für Europa.",
       "foot.legal1": "Impressum", "foot.legal2": "Datenschutz", "foot.legal3": "Cookies",
       "foot.rights": "© 2026 Almenara"
     },
@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cta.title": "Mandaci l'apparecchio. Ti rimandiamo i numeri.",
       "cta.body": "Dicci quale apparecchio produci o gestisci e quante ore funziona. Ti restituiamo il confronto di efficienza e il risparmio previsto, perché i tuoi ingegneri lo verifichino.",
       "cta.btn": "Avvia la conversazione", "cta.alt": "Scarica la scheda tecnica",
-      "foot.tagline": "Tecnologia di piattaforma LED.",
+      "foot.tagline": "Più luce per watt. Meno watt per l’Europa.",
       "foot.legal1": "Note legali", "foot.legal2": "Privacy", "foot.legal3": "Cookie",
       "foot.rights": "© 2026 Almenara"
     },
@@ -570,7 +570,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "cta.title": "Пришлите светильник — вернём расчёт.",
       "cta.body": "Сообщите, какой светильник вы производите или эксплуатируете и сколько часов он работает. Вернём сравнение отдачи и ожидаемую экономию, чтобы ваши инженеры это проверили.",
       "cta.btn": "Начать разговор", "cta.alt": "Скачать техническое описание",
-      "foot.tagline": "Светодиодная платформа.",
+      "foot.tagline": "Больше света на ватт. Меньше ватт для Европы.",
       "foot.legal1": "Правовая информация", "foot.legal2": "Конфиденциальность", "foot.legal3": "Файлы cookie",
       "foot.rights": "© 2026 Almenara"
     }

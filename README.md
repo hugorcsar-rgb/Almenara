@@ -50,15 +50,18 @@ Credenciales en *Settings → Secrets and variables → Actions*: `FTP_SERVER`,
 la página. Si algún día los botones dejan de responder, mirar esto antes que
 ninguna otra cosa. Costó una tarde entera descubrirlo.
 
-**Ni una conexión externa.** La tipografía Jost viaja incrustada en `site.css`
-como dato codificado. Por eso `font-src` admite `data:`; sin ese permiso el
-navegador la bloquea en silencio y cae a la letra del sistema. Ninguna
-dirección IP de un visitante sale hacia un tercero, lo que importa cuando se
-vende a contratación pública europea.
+**Ni una conexión externa.** Las dos tipografías del sistema de marca, Ibarra
+Real Nova (titulares, cifras, lema) e IBM Plex Sans (texto), se sirven desde
+`assets/fonts/` como archivos variables, con su licencia SIL OFL al lado.
+Ninguna dirección IP de un visitante sale hacia un tercero, lo que importa
+cuando se vende a contratación pública europea.
 
-**Un solo tema: papel blanco y tinta azul noche.** No hay modo oscuro. El
-ámbar queda reservado para representar la luz —la escala de eficacia, el mando
-de temperatura de color, la barra de ahorro—, nunca para decorar.
+**Sistema de marca 2026: marino, marfil y oro.** Los colores son variables en
+la cabecera de `site.css`; la última capa del archivo («SISTEMA DE MARCA 2026 ·
+FIAT LUX») resume el manual: nunca negro, sin degradados ni brillos, esquinas
+rectas, un solo bloque en marino por página (el cierre, con el rosetón en oro).
+El único degradado que queda es el del mando de temperatura de color, porque
+ahí el color es el dato. El lema *Fiat lux* va en el pie y no se traduce.
 
 **Siete idiomas, traducción completa.** El diccionario común está en `app.js`;
 el de la calculadora, en `calc.js`, que se registra a través de `window.SITE`.
@@ -96,13 +99,18 @@ tabla no se publica, tampoco en `llms.txt`.
 
 - [ ] Sustituir el nombre y el dominio cuando se cierre el cambio de marca.
 - [ ] Rellenar las condiciones de ensayo: buscar `[RELLENAR: FOTOMETRÍA]`.
-- [ ] Aplicar la identidad visual del sistema de marca (marino, marfil, oro;
-      Ibarra Real Nova + IBM Plex Sans; rosetón y azulejo).
+- [x] Aplicar la identidad visual del sistema de marca (marino, marfil, oro;
+      Ibarra Real Nova + IBM Plex Sans; rosetón).
+- [ ] Azulejo de Talavera como separador o franja (el manual pide un motivo
+      por página; hoy el único es el rosetón del cierre).
+- [ ] Logotipo: el rosetón como símbolo y el wordmark en Ibarra Real Nova,
+      vectorizados por un diseñador. Hoy el nombre va en texto con una estrella
+      de ocho puntas.
 - [ ] Revisar la sección «Certificación y reconocimientos» de la portada contra
-      el sistema de marca: el marcado CE para Europa figura aún como pendiente.
-- [ ] Rehacer `legal/` y `404.html` con el diseño nuevo. Hasta entonces piden
-      la tipografía a Google y, como el `.htaccess` ya no lo permite, se ven
-      con la letra del sistema.
+      el sistema de marca: el marcado CE para Europa figura aún como pendiente,
+      y «Verificado por terceros» pide el informe LM-79 que aún no existe.
+- [x] `legal/` y `404.html` usan la misma hoja de estilos y las mismas letras.
 - [ ] Fotografías reales en el apartado de aplicaciones.
 - [ ] Descarga directa del informe en PDF, sin pasar por el diálogo de impresión.
-- [ ] Recepción de formularios en el servidor.
+- [x] Recepción de formularios en el servidor (`contact.php`; copias en
+      `mensajes/`, protegida).
