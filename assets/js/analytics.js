@@ -157,7 +157,7 @@
     p.textContent = t.b;
     const mas = document.createElement('a');
     mas.className = 'consent-more';
-    mas.href = (location.pathname.indexOf('/legal/') > -1 ? '' : 'legal/') + 'cookies.html';
+    mas.href = (location.pathname.indexOf('/legal/') > -1 ? '' : (document.documentElement.getAttribute('data-base') || '') + 'legal/') + 'cookies.html';
     mas.textContent = t.mas;
     texto.appendChild(h);
     texto.appendChild(p);

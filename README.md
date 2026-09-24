@@ -66,6 +66,15 @@ título de la pestaña, la descripción, `og:locale` y el atributo `lang`. Para
 añadir una cadena: `data-i18n="mi.clave"` en el elemento y la misma clave en
 los siete idiomas. Si falta en alguno, cae al inglés en vez de dejar el hueco.
 
+**Cada idioma tiene su propia dirección.** `/` es inglés; `/es/`, `/pt/`,
+`/fr/`, `/de/`, `/it/` y `/ru/` son copias ya traducidas que genera
+`tools/build-i18n.mjs` a partir de las páginas de la raíz y del diccionario.
+Se hizo porque Google y, sobre todo, los asistentes de IA no ejecutan el
+JavaScript que traducía: solo veían el inglés. **Se editan solo las páginas de
+la raíz y los textos de `app.js`/`calc.js`**; el flujo `idiomas.yml` regenera
+las carpetas en cada empujón. Las antiguas `?lang=xx` redirigen (301) a la
+carpeta correspondiente. `llms.txt` resume la empresa para los asistentes de IA.
+
 **Rutas relativas.** Permiten servir el sitio desde la raíz de un dominio o
 desde una subcarpeta sin tocar nada.
 

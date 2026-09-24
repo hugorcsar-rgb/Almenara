@@ -90,6 +90,16 @@ jobs:
         run: |
           test -f assets/img/og-image.jpg || { echo "::error::Falta assets/img/og-image.jpg: los enlaces se compartirían sin imagen"; exit 1; }
           echo "Imagen para compartir en su sitio."
+
+      - name: Comprobar que existen las páginas traducidas
+        run: |
+          for l in es pt fr de it ru; do
+            for f in index technology services applications calculator contact; do
+              test -f "$l/$f.html" || { echo "::error::Falta $l/$f.html: ejecuta tools/build-i18n.mjs"; exit 1; }
+            done
+          done
+          test -f llms.txt || { echo "::error::Falta llms.txt"; exit 1; }
+          echo "Siete idiomas completos y llms.txt en su sitio."
       - name: Comprobar que ningún HTML está cortado
         run: |
           for f in *.html legal/*.html; do

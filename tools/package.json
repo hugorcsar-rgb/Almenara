@@ -1,0 +1,7 @@
+{
+  "name": "almenara-tools",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build-i18n.mjs" },
+  "dependencies": { "cheerio": "^1.0.0" }
+}

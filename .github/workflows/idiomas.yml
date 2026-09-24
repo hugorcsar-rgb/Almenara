@@ -1,0 +1,49 @@
+name: Idiomas
+
+# Regenera las carpetas /es/ /pt/ /fr/ /de/ /it/ /ru/ y el sitemap cada vez
+# que cambia una página de la raíz o el diccionario. Así solo se editan las
+# páginas en inglés de la raíz y los textos de app.js / calc.js; las copias
+# traducidas se escriben solas y Hostinger publica el resultado.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - 'assets/js/app.js'
+      - 'assets/js/calc.js'
+      - 'tools/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: idiomas
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generar las páginas traducidas
+        run: |
+          cd tools
+          npm install --no-audit --no-fund
+          npm run build
+      - name: Guardar el resultado si ha cambiado
+        run: |
+          git add -A es pt fr de it ru sitemap.xml index.html technology.html services.html applications.html calculator.html contact.html
+          if git diff --cached --quiet; then
+            echo "Nada que actualizar."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898741+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Regenerar páginas traducidas"
+            git push
+          fi

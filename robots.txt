@@ -1,11 +1,32 @@
 # Almenara — reglas para los rastreadores
-# El mapa del sitio debe apuntar al dominio real; si cambia, cámbialo aquí.
+# Queremos que nos lean los buscadores Y los asistentes de IA. Nada bloqueado
+# salvo lo que no aporta. Si Hostinger o Cloudflare tienen activado un
+# "bloqueo de bots de IA", ese ajuste manda sobre este archivo: desactívalo.
 
 User-agent: *
 Allow: /
-
-# Nada que rastrear en la documentación del repositorio
-Disallow: /legal/
 Disallow: /*.md$
+Disallow: /contact.php
+Disallow: /tools/
+
+# Asistentes de IA y sus buscadores: permitidos expresamente
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+User-agent: DuckAssistBot
+User-agent: meta-externalagent
+User-agent: MistralAI-User
+User-agent: CCBot
+Allow: /
+Disallow: /contact.php
+Disallow: /tools/
 
 Sitemap: https://almenaraled.com/sitemap.xml

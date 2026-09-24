@@ -19,6 +19,20 @@ AddDefaultCharset UTF-8
 
     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
     RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # Las antiguas direcciones ?lang=xx llevan a la versión ya traducida,
+    # para no perder los enlaces que ya circulan. ?lang=en va a la raíz.
+    RewriteCond %{QUERY_STRING} (?:^|&)lang=(es|pt|fr|de|it|ru)(?:&|$)
+    RewriteRule ^((?:index|technology|services|applications|calculator|contact)\.html)?$ /%1/$1? [R=301,L]
+    RewriteCond %{QUERY_STRING} (?:^|&)lang=en(?:&|$)
+    RewriteRule ^((?:index|technology|services|applications|calculator|contact)\.html)?$ /$1? [R=301,L]
+
+    # /es/index.html y /index.html son la misma página que /es/ y /
+    RewriteCond %{THE_REQUEST} \s/+((?:[a-z]{2}/)?)index\.html[\s?]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # La carpeta de herramientas del repositorio no se sirve
+    RewriteRule ^tools(/|$) - [F,L]
 </IfModule>
 
 # ------------------------------------------------------------
@@ -130,6 +144,8 @@ Options -Indexes
 # 9. Tipos MIME
 # ------------------------------------------------------------
 <IfModule mod_mime.c>
+    AddType text/plain .txt
+    AddCharset UTF-8 .txt
     AddType application/manifest+json .webmanifest
     AddType application/json .json
     AddType image/svg+xml .svg
