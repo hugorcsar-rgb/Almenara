@@ -29,6 +29,10 @@ jobs:
     timeout-minutes: 15
 
     steps:
+      # LHCI pregunta a git por el commit al subir los informes; sin el
+      # repositorio descargado fallaba al final, con todo ya medido.
+      - uses: actions/checkout@v4
+
       - name: Ejecutar Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
@@ -38,6 +42,7 @@ jobs:
             https://almenaraled.com/services.html
             https://almenaraled.com/applications.html
             https://almenaraled.com/calculator.html
+            https://almenaraled.com/partners.html
             https://almenaraled.com/contact.html
           # Tres pasadas por página: una sola medición tiene demasiado ruido
           # para sacar conclusiones.

@@ -51,7 +51,7 @@
       "url": "https://almenaraled.com/",
       "logo": "https://almenaraled.com/assets/img/logo.svg",
       "image": "https://almenaraled.com/assets/img/og-image.jpg",
-      "description": "An LED platform delivering over 275 lumens per watt and cutting consumption by more than 50%. Suitable for existing installations.",
+      "description": "LED modules with patented Dicrotec technology: 300 lm/W indoors (LED 3030) and 58% less energy than a standard LED module at equal flux (2,000 lm). For new and existing luminaires.",
       "email": "info@almenaraled.com",
       "address": {
         "@type": "PostalAddress",
@@ -126,13 +126,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png?v=2">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png?v=2">
 
-<link rel="preload" as="font" type="font/woff2" href="assets/jost-var.woff2" crossorigin="">
-<link rel="stylesheet" href="assets/css/site.css?v=8">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/ibm-plex-sans.woff2" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/ibarra-real-nova.woff2" crossorigin="">
+<link rel="stylesheet" href="assets/css/site.css?v=13">
 <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
-<script src="assets/js/app.js?v=6" defer=""></script>
+<script src="assets/js/app.js?v=14" defer=""></script>
 
-<script src="assets/js/analytics.js?v=2" defer=""></script>
+<script src="assets/js/analytics.js?v=3" defer=""></script>
 </head>
 
 <body>
@@ -140,12 +141,13 @@
 
 <header class="site-header">
   <div class="shell" style="display:flex;align-items:center;gap:1.5rem;width:var(--shell)">
-    <a href="./" class="brand" data-i18n-attr="aria-label:a11y.home" aria-label="Almenara — home">Almenara</a>
+    <a href="./" class="brand" data-i18n-attr="aria-label:a11y.home" aria-label="Almenara — home">Almenara <span class="brand-led">LED</span></a>
     <nav class="site-nav" data-i18n-attr="aria-label:a11y.primary" aria-label="Main">
       <a href="technology.html" data-i18n="nav.tech">Technology</a>
       <a href="services.html" data-i18n="nav.services">Services</a>
       <a href="applications.html" data-i18n="nav.apps">Applications</a>
       <a href="calculator.html" data-i18n="nav.calc">Calculator</a>
+      <a href="partners.html" data-i18n="nav.partners">Partners</a>
       <a href="contact.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-tools">
@@ -202,14 +204,15 @@
         </div>
         <div>
           <dl class="specs">
-            <div><dt data-i18n="tech.spec.efficacy">Luminous efficacy</dt><dd><em>&gt; 275 lm/W</em></dd></div>
-            <div><dt data-i18n="tech.spec.energy">Energy reduction against standard</dt><dd><em>&gt; 50 %</em></dd></div>
+            <div><dt data-i18n="tech.spec.efficacy">Luminous efficacy</dt><dd data-i18n="tech.spec.efficacy_v">300 lm/W indoor (LED 3030) · 230–235 lm/W outdoor (LED 5050)</dd></div>
+            <div><dt data-i18n="tech.spec.energy">Energy reduction against standard</dt><dd data-i18n="tech.spec.energy_v">−58% indoor (2,000 lm) · −46% outdoor (8,400 lm)</dd></div>
+            <div><dt data-i18n="tech.spec.life">Nominal life</dt><dd data-i18n="tech.spec.life_v">&gt; 100,000 h (standard: &lt; 50,000 h)</dd></div>
             <div><dt data-i18n="tech.spec.compat">Compatibility</dt><dd data-i18n="tech.spec.compat_v">Universal · retrofit-ready</dd></div>
-            <div><dt data-i18n="tech.spec.temp">Operating temperature</dt><dd>−40 °C … +85 °C</dd></div>
             <div><dt data-i18n="tech.spec.cct">Colour temperature</dt><dd data-i18n="tech.spec.cct_v">Fully configurable</dd></div>
-            <div><dt data-i18n="tech.spec.cert">Certification</dt><dd>CE · RoHS · ENEC</dd></div>
+            <div><dt data-i18n="tech.spec.patent">Patent</dt><dd data-i18n="tech.spec.patent_v">MX 383389 · filed in 33 further countries</dd></div>
+            <div><dt data-i18n="tech.spec.warranty">Warranty</dt><dd data-i18n="tech.spec.warranty_v">10 years, at maximum rated current and temperature</dd></div>
           </dl>
-          <p class="specs-note" data-i18n="tech.specs.note">The measurement conditions and the independent laboratory report are set out in the technical brief.</p>
+          <p class="specs-note" data-i18n="tech.specs.note">Indoor efficacy: LM-79 test at an accredited laboratory (NVLAP). Other figures: technical datasheet. Each with its measurement condition.</p>
         </div>
       </div>
     </div>
@@ -231,14 +234,16 @@
   <div class="shell">
     <div class="footer-top">
       <div>
-        <a href="./" class="brand">Almenara</a>
-        <p class="footer-tagline" data-i18n="foot.tagline">LED platform technology.</p>
+        <a href="./" class="brand">Almenara <span class="brand-led">LED</span></a>
+        <p class="footer-tagline" data-i18n="foot.tagline">More light per watt. Fewer watts for Europe.</p>
+        <p class="footer-motto" lang="la">Fiat lux</p>
       </div>
       <nav class="footer-links" data-i18n-attr="aria-label:a11y.footer" aria-label="Footer">
         <a href="technology.html" data-i18n="nav.tech">Technology</a>
         <a href="services.html" data-i18n="nav.services">Services</a>
         <a href="applications.html" data-i18n="nav.apps">Applications</a>
         <a href="calculator.html" data-i18n="nav.calc">Calculator</a>
+        <a href="partners.html" data-i18n="nav.partners">Partners</a>
         <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </nav>
     </div>

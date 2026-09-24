@@ -38,6 +38,7 @@ Credenciales en *Settings → Secrets and variables → Actions*: `FTP_SERVER`,
 ├── legal/                  Aviso legal, privacidad, cookies (diseño antiguo)
 ├── index.html · technology.html · services.html
 ├── applications.html · calculator.html · contact.html
+├── partners.html       Socios: cuatro modelos de colaboración, sin cifras
 ├── 404.html · manifest.json · robots.txt · sitemap.xml
 └── .htaccess               Apache: HTTPS, cabeceras, caché, tipos MIME
 ```
@@ -49,15 +50,18 @@ Credenciales en *Settings → Secrets and variables → Actions*: `FTP_SERVER`,
 la página. Si algún día los botones dejan de responder, mirar esto antes que
 ninguna otra cosa. Costó una tarde entera descubrirlo.
 
-**Ni una conexión externa.** La tipografía Jost viaja incrustada en `site.css`
-como dato codificado. Por eso `font-src` admite `data:`; sin ese permiso el
-navegador la bloquea en silencio y cae a la letra del sistema. Ninguna
-dirección IP de un visitante sale hacia un tercero, lo que importa cuando se
-vende a contratación pública europea.
+**Ni una conexión externa.** Las dos tipografías del sistema de marca, Ibarra
+Real Nova (titulares, cifras, lema) e IBM Plex Sans (texto), se sirven desde
+`assets/fonts/` como archivos variables, con su licencia SIL OFL al lado.
+Ninguna dirección IP de un visitante sale hacia un tercero, lo que importa
+cuando se vende a contratación pública europea.
 
-**Un solo tema: papel blanco y tinta azul noche.** No hay modo oscuro. El
-ámbar queda reservado para representar la luz —la escala de eficacia, el mando
-de temperatura de color, la barra de ahorro—, nunca para decorar.
+**Sistema de marca 2026: marino, marfil y oro.** Los colores son variables en
+la cabecera de `site.css`; la última capa del archivo («SISTEMA DE MARCA 2026 ·
+FIAT LUX») resume el manual: nunca negro, sin degradados ni brillos, esquinas
+rectas, un solo bloque en marino por página (el cierre, con el rosetón en oro).
+El único degradado que queda es el del mando de temperatura de color, porque
+ahí el color es el dato. El lema *Fiat lux* va en el pie y no se traduce.
 
 **Siete idiomas, traducción completa.** El diccionario común está en `app.js`;
 el de la calculadora, en `calc.js`, que se registra a través de `window.SITE`.
@@ -83,13 +87,42 @@ descuenta nuestras propias reposiciones del ahorro de mantenimiento. Frente a
 un LED moderno da un 45 %, no un 80 %. Esa honestidad es lo que la hace
 defendible ante un ingeniero.
 
+**Solo cifras aprobadas, cada una con su condición.** Manda el sistema de marca
+(«Almenara LED · Sistema de marca 2026», sección VII), con un cambio decidido
+por Almenara el 24-09-2026: el módulo interior Dicrotec LED 3030 da 300 lm/W
+(ensayo LM-79, LightLab International Allentown, NVLAP 201079-0; el número del
+informe está pendiente). De ahí: 6,7 W frente a 16 W a 2.000 lm, −58 % frente a
+LED estándar y −39 % frente a LED de alto rendimiento. Exterior LED 5050: 230–235
+lm/W, −46 % / −29 % a 8.400 lm. >100.000 h de vida nominal; patente MX 383389;
+garantía de 10 años. Retiradas: «275 lm/W», «más de 275», «más del 50 %»,
+«275–300» y cualquier «líder». Lo que no está aquí no se publica, tampoco en
+`llms.txt`. Decisiones y cuentas: documento «Decisiones: Luz como servicio, TCO
+y ficha técnica».
+
 ## Pendiente
 
 - [ ] Sustituir el nombre y el dominio cuando se cierre el cambio de marca.
 - [ ] Rellenar las condiciones de ensayo: buscar `[RELLENAR: FOTOMETRÍA]`.
-- [ ] Rehacer `legal/` y `404.html` con el diseño nuevo. Hasta entonces piden
-      la tipografía a Google y, como el `.htaccess` ya no lo permite, se ven
-      con la letra del sistema.
+- [x] Aplicar la identidad visual del sistema de marca (marino, marfil, oro;
+      Ibarra Real Nova + IBM Plex Sans; rosetón).
+- [ ] Azulejo de Talavera como separador o franja (el manual pide un motivo
+      por página; hoy el único es el rosetón del cierre).
+- [ ] Logotipo: el rosetón como símbolo y el wordmark en Ibarra Real Nova,
+      vectorizados por un diseñador. Hoy el nombre va en texto con una estrella
+      de ocho puntas.
+- [ ] Revisar la sección «Certificación y reconocimientos» de la portada contra
+      el sistema de marca: el marcado CE para Europa figura aún como pendiente,
+      y «Verificado por terceros» pide el informe LM-79 que aún no existe.
+- [x] `legal/` y `404.html` usan la misma hoja de estilos y las mismas letras.
+- [ ] **Bloqueado por el manual — no publicar hasta que se cierre:**
+      una cuota de «Luz como servicio» en la calculadora (falta el contrato
+      tipo: cuota, plazo, quién financia, garantía de ahorro; «Lo que falta»
+      n.º 7) y cualquier cifra de coste total (TCO), que el manual retiró.
+- [ ] Informe LM-79 de LightLab Allentown (número LLIA… y fecha): añadirlo a
+      la ficha técnica y a la nota de la escala. Si da otra cifra que 300 lm/W,
+      corregir la web el mismo día (`MODULO` y `LED_REF` en `calc.js`, y el
+      diccionario de `app.js`).
 - [ ] Fotografías reales en el apartado de aplicaciones.
 - [ ] Descarga directa del informe en PDF, sin pasar por el diálogo de impresión.
-- [ ] Recepción de formularios en el servidor.
+- [x] Recepción de formularios en el servidor (`contact.php`; copias en
+      `mensajes/`, protegida).

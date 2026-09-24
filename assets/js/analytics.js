@@ -141,7 +141,7 @@
   function pintar() {
     const t = T[idioma()];
 
-    caja = document.createElement('aside');
+    caja = document.createElement('div');
     caja.className = 'consent';
     caja.setAttribute('role', 'dialog');
     caja.setAttribute('aria-live', 'polite');

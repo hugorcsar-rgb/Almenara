@@ -52,7 +52,7 @@
       "url": "https://almenaraled.com/",
       "logo": "https://almenaraled.com/assets/img/logo.svg",
       "image": "https://almenaraled.com/assets/img/og-image.jpg",
-      "description": "Светодиодная платформа: свыше 275 люмен на ватт и снижение потребления более чем на 50 %. Подходит для действующих установок.",
+      "description": "Светодиодные модули с запатентованной технологией Dicrotec: 300 лм/Вт для помещений (LED 3030) и на 58% меньше энергии, чем стандартный светодиодный модуль при равном световом потоке (2 000 лм). Для новых и установленных светильников.",
       "email": "info@almenaraled.com",
       "address": {
         "@type": "PostalAddress",
@@ -127,13 +127,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/icons/favicon-32.png?v=2">
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/icons/apple-touch-icon.png?v=2">
 
-<link rel="preload" as="font" type="font/woff2" href="../assets/jost-var.woff2" crossorigin="">
-<link rel="stylesheet" href="../assets/css/site.css?v=8">
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/ibm-plex-sans.woff2" crossorigin="">
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/ibarra-real-nova.woff2" crossorigin="">
+<link rel="stylesheet" href="../assets/css/site.css?v=13">
 <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
 
-<script src="../assets/js/app.js?v=6" defer=""></script>
+<script src="../assets/js/app.js?v=14" defer=""></script>
 
-<script src="../assets/js/analytics.js?v=2" defer=""></script>
+<script src="../assets/js/analytics.js?v=3" defer=""></script>
 </head>
 
 <body>
@@ -141,12 +142,13 @@
 
 <header class="site-header">
   <div class="shell" style="display:flex;align-items:center;gap:1.5rem;width:var(--shell)">
-    <a href="./" class="brand" data-i18n-attr="aria-label:a11y.home" aria-label="Almenara — главная">Almenara</a>
+    <a href="./" class="brand" data-i18n-attr="aria-label:a11y.home" aria-label="Almenara — главная">Almenara <span class="brand-led">LED</span></a>
     <nav class="site-nav" data-i18n-attr="aria-label:a11y.primary" aria-label="Основное">
       <a href="technology.html" data-i18n="nav.tech">Технология</a>
       <a href="services.html" data-i18n="nav.services">Услуги</a>
       <a href="applications.html" data-i18n="nav.apps">Применение</a>
       <a href="calculator.html" data-i18n="nav.calc">Калькулятор</a>
+      <a href="partners.html" data-i18n="nav.partners">Партнёрам</a>
       <a href="contact.html" data-i18n="nav.contact">Контакты</a>
     </nav>
     <div class="header-tools">
@@ -184,7 +186,7 @@
 
   <section class="band reveal">
     <div class="shell">
-      <p class="band-label" data-i18n="serv.list.label">Чем мы занимаемся</p>
+      <h2 class="band-label" data-i18n="serv.list.label">Чем мы занимаемся</h2>
       <div class="services">
         <article class="service">
           <span class="service-ref">01 / 04</span>
@@ -235,14 +237,16 @@
   <div class="shell">
     <div class="footer-top">
       <div>
-        <a href="./" class="brand">Almenara</a>
-        <p class="footer-tagline" data-i18n="foot.tagline">Светодиодная платформа.</p>
+        <a href="./" class="brand">Almenara <span class="brand-led">LED</span></a>
+        <p class="footer-tagline" data-i18n="foot.tagline">Больше света на ватт. Меньше ватт для Европы.</p>
+        <p class="footer-motto" lang="la">Fiat lux</p>
       </div>
       <nav class="footer-links" data-i18n-attr="aria-label:a11y.footer" aria-label="Нижний колонтитул">
         <a href="technology.html" data-i18n="nav.tech">Технология</a>
         <a href="services.html" data-i18n="nav.services">Услуги</a>
         <a href="applications.html" data-i18n="nav.apps">Применение</a>
         <a href="calculator.html" data-i18n="nav.calc">Калькулятор</a>
+        <a href="partners.html" data-i18n="nav.partners">Партнёрам</a>
         <a href="contact.html" data-i18n="nav.contact">Контакты</a>
       </nav>
     </div>

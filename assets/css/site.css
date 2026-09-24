@@ -1,50 +1,78 @@
 /* ==========================================================================
-   TIPOGRAFÍA — Jost, geométrica, servida desde tu propio dominio
-   Vive en  assets/jost-var.woff2  y no dentro de este archivo. Estuvo
-   incrustada en base64 y eso sumaba 57 KB a una hoja de estilos que bloquea
-   el pintado de la página. Como archivo aparte se descarga en paralelo.
-   Es una geométrica de la escuela de la Futura, con la misma anatomía que
-   sostiene los rótulos de la moda italiana: círculo perfecto en la O, asta
-   fina, mayúsculas anchas. En trazo ligero y con el espaciado muy abierto da
-   exactamente ese aire. Licencia SIL Open Font, uso comercial permitido.
-   Un solo archivo variable de 100 a 900: no hay que cargar seis pesos.
-   Servida desde tu servidor, así que sigue sin haber ni una conexión externa
-   y no se transmite la IP del visitante a ningún tercero (RGPD).
-   La monoespaciada queda reservada para las cifras, que es donde sirve.
+   TIPOGRAFÍA — Sistema de marca 2026
+   Ibarra Real Nova para titulares, cifras, citas y el lema: la letra de
+   Joaquín Ibarra, que imprimió en Madrid el Quijote de la Real Academia
+   (1780). IBM Plex Sans para el texto; su trazo ligero (300) para las
+   entradillas. Archivos variables servidos desde el propio dominio: ni una
+   conexión externa ni la IP del visitante a terceros (RGPD). Licencia SIL
+   Open Font, uso comercial permitido (assets/fonts/OFL-*.txt).
+   Ibarra no tiene cirílico: en ruso los titulares caen a una serif del
+   sistema, y Plex sí trae su juego cirílico, que solo se descarga en /ru/.
    ========================================================================== */
 @font-face {
-  font-family: "Jost";
-  src: url("../jost-var.woff2") format("woff2");
-  font-weight: 100 900;
+  font-family: "Ibarra Real Nova";
+  src: url("../fonts/ibarra-real-nova.woff2") format("woff2");
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Ibarra Real Nova";
+  src: url("../fonts/ibarra-real-nova-italic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/ibm-plex-sans.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                 U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+                 U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/ibm-plex-sans-cyrillic.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
 
 :root {
-  --f-display: "Jost", Futura, "Futura PT", "Avenir Next", Avenir, "Century Gothic",
-               "URW Gothic", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
-  --f-data: ui-monospace, SFMono-Regular, "SF Mono", "Cascadia Mono", "Roboto Mono",
-            Menlo, Consolas, monospace;
+  /* --f-display es la letra de trabajo de toda la web (texto, menús,
+     etiquetas); --f-serif, la de los titulares, las cifras y el lema. */
+  --f-display: "IBM Plex Sans", ui-sans-serif, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --f-serif: "Ibarra Real Nova", "Iowan Old Style", "Palatino Linotype", Palatino,
+             "Book Antiqua", Georgia, serif;
+  --f-data: var(--f-serif);
 
-  /* UN SOLO PAPEL.
-     Antes había tres blancos distintos conviviendo: el fondo del cuerpo iba
-     teñido de ámbar, las tarjetas y la cabecera iban de blanco frío, y las
-     etiquetas adherentes llevaban un degradado de un cuarto blanco. Sobre
-     pantalla eso se ve como manchas: el ojo detecta diferencias de dos o tres
-     puntos de luminosidad aunque no sepa nombrarlas. Ahora hay un único valor
-     de papel y todo lo que quiera parecer papel usa esa misma variable.
-     El ámbar queda reservado para representar la luz —la escala, el mando de
-     temperatura de color, la barra de ahorro—, nunca para decorar. */
-  --ink:        #FBFAF8;   /* el papel: uno solo, en toda la web */
-  --ink-raised: #F3F1EC;   /* superficie levantada, del mismo tronco cálido */
-  --line:       rgba(16, 30, 49, 0.15);
-  --line-soft:  rgba(16, 30, 49, 0.075);
-  --text:       #101E31;   /* azul noche */
-  --text-dim:   #5A6B7E;
-  --warm:       #8A4E00;   /* ámbar oscuro: el único que contrasta sobre papel */
-  --warm-hi:    #663A00;
-  --warm-lit:   #E39A2E;   /* ámbar vivo, solo para rellenos y trazos */
-  --cool:       #1A5E8C;
+  /* COLOR — Marino como poder, marfil como piedra, oro como luz.
+     Proporción por pieza: 55 % marfil/blanco · 35 % marino · 10 % oro,
+     cobalto y grana. Texto siempre en marino. Nunca negro. Sin degradados,
+     brillos ni dorados metalizados. La grana, muy escasa: nunca de fondo
+     ni sobre marino. */
+  --navy:       #14213D;   /* azul marino: el poder, texto y bloques */
+  --ivory:      #F7F2E7;   /* marfil: la piedra */
+  --white:      #FFFFFF;   /* blanco: fichas técnicas */
+  --gold:       #D9A441;   /* oro de retablo: la luz (rellenos y geometría) */
+  --cobalt:     #1F4E9C;   /* cobalto Talavera: azulejo y acento */
+  --grana:      #8E1B2C;   /* grana: el carmesí, muy escaso */
+
+  --ink:        var(--ivory);   /* el papel de toda la web */
+  --ink-raised: var(--white);   /* superficie levantada: la ficha técnica */
+  --line:       rgba(20, 33, 61, 0.16);
+  --line-soft:  rgba(20, 33, 61, 0.08);
+  --text:       var(--navy);
+  --text-dim:   #4A5470;        /* secundario */
+  --warm:       #8A5F12;        /* oro como texto sobre marfil (contraste AA) */
+  --warm-hi:    #6B490E;
+  --warm-lit:   var(--gold);
+  --cool:       var(--cobalt);
 
   /* Caja de texto más estrecha y aire mucho mayor entre bloques. El aplomo de
      una página cara no viene de añadir cosas: viene de quitarlas y dejar que
@@ -376,8 +404,8 @@ h3 {
   position: absolute;
   top: -5px;
   bottom: -5px;
-  left: calc(130 / 300 * 100%);
-  width: calc(70 / 300 * 100%);
+  left: calc(130 / 350 * 100%);
+  width: calc(70 / 350 * 100%);
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
   background: repeating-linear-gradient(115deg,
@@ -997,7 +1025,7 @@ body::before { display: none; }
    ========================================================================== */
 
 /* --- 1. Temperatura de color --------------------------------------------- */
-:root { --cct: #FFC46B; }
+:root { --cct: #D9A441; }   /* arranca en oro de retablo */
 
 /* El ámbar de texto se oscurece a partir del color elegido para que siga
    siendo legible sobre papel; el vivo se queda tal cual para los rellenos. */
@@ -1394,7 +1422,7 @@ main, .site-footer { position: relative; z-index: 1; }
 
   html, body {
     background: #FFFFFF !important;
-    color: #000000 !important;
+    color: #14213D !important;
     font-size: 10.5pt;
     line-height: 1.5;
   }
@@ -1405,7 +1433,7 @@ main, .site-footer { position: relative; z-index: 1; }
   .print-doc {
     display: block !important;
     font-family: var(--f-display);
-    color: #000;
+    color: #14213D;
   }
 
   /* Membrete */
@@ -1413,7 +1441,7 @@ main, .site-footer { position: relative; z-index: 1; }
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 1.5pt solid #000;
+    border-bottom: 1.5pt solid #14213D;
     padding-bottom: 6pt;
     margin-bottom: 16pt;
   }
@@ -1515,7 +1543,7 @@ main, .site-footer { position: relative; z-index: 1; }
     height: 100%;
     background: #DDD;
   }
-  .pd-bar.is-new .pd-bar-t i { background: #000; }
+  .pd-bar.is-new .pd-bar-t i { background: #14213D; }
   .pd-bar-v {
     font-family: var(--f-data);
     font-size: 9pt;
@@ -1526,7 +1554,7 @@ main, .site-footer { position: relative; z-index: 1; }
   .pd-note { margin: 0 0 11pt; font-size: 8.5pt; color: #333; max-width: 46em; }
 
   .pd-foot {
-    border-top: 0.5pt solid #000;
+    border-top: 0.5pt solid #14213D;
     padding-top: 7pt;
     font-size: 8pt;
     color: #333;
@@ -1703,6 +1731,11 @@ main, .site-footer { position: relative; z-index: 1; }
   justify-content: center;
 }
 .metric:last-child { border-right: 0; }
+/* Tres cifras, siempre en una fila en escritorio: la etiqueta lleva su
+   condición y es larga, así que es ella la que se parte, no la fila. */
+@media (min-width: 701px) {
+  .metric { flex: 1 1 0; min-width: 0; }
+}
 @media (max-width: 700px) {
   .metric {
     flex: 1 1 100%;
@@ -1783,7 +1816,10 @@ main, .site-footer { position: relative; z-index: 1; }
 .site-header.is-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
 .site-header.is-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-@media (max-width: 860px) {
+@media (max-width: 1180px) {
+  /* Con la página de Socios el menú tiene siete entradas y, en alemán o
+     francés, ya no caben junto a los idiomas por debajo de unos 1150 px. */
+  .header-tools { margin-left: auto; }
   .nav-toggle { display: flex; }
 
   /* La navegación deja de estar oculta y pasa a ser un panel desplegable. */
@@ -1851,8 +1887,8 @@ main, .site-footer { position: relative; z-index: 1; }
    sus hermanos dentro de ella y arrastrar una sombra que lo despegue de la
    página. Sin sombra, papel blanco sobre papel blanco no se distingue.
    -------------------------------------------------------------------------- */
-@media (max-width: 860px) {
-  .site-nav { z-index: 2; box-shadow: 0 18px 32px -24px rgba(16, 30, 49, 0.45); }
+@media (max-width: 1180px) {
+  .site-nav { z-index: 2; box-shadow: 0 18px 32px -24px rgba(20, 33, 61, 0.45); }
   .site-header.is-open { border-bottom-color: var(--line); }
   /* La caja de herramientas queda vacía en el teléfono, porque los idiomas se
      mudan al panel. Vacía seguía reservando su hueco y su separación. */
@@ -1883,7 +1919,7 @@ main, .site-footer { position: relative; z-index: 1; }
   padding: 1.75rem clamp(1.375rem, 4vw, 2.5rem) 1.9rem;
   background: var(--ink);
   border-top: 1px solid var(--line);
-  box-shadow: 0 -18px 36px -30px rgba(16, 30, 49, 0.5);
+  box-shadow: 0 -18px 36px -30px rgba(20, 33, 61, 0.5);
   transform: translateY(101%);
   transition: transform 0.45s var(--ease);
 }
@@ -1920,3 +1956,150 @@ main, .site-footer { position: relative; z-index: 1; }
   .consent-acts .btn { flex: 1 1 auto; }
 }
 @media print { .consent { display: none !important; } }
+
+/* ==========================================================================
+   SISTEMA DE MARCA 2026 · FIAT LUX
+   Última capa: manda sobre todo lo anterior. Resume el manual en CSS.
+   · Ibarra Real Nova en titulares, cifras y lema; Plex Sans en el resto.
+   · Marino, marfil y oro. Nunca negro. Sin degradados ni brillos.
+   · Esquinas rectas: los círculos quedan para el rosetón y el azulejo.
+   · Sobre marino: texto marfil, geometría en oro.
+   ========================================================================== */
+
+/* --- Letra ---------------------------------------------------------------- */
+h1, h2 {
+  font-family: var(--f-serif);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+}
+h1 { line-height: 1.02; }
+h2 { line-height: 1.08; }
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+.lede, .hero-sub { font-weight: 300; letter-spacing: 0; }
+
+/* Las cifras, en Ibarra y con numerales de caja alta alineados. */
+.metric-value, .tick-value, .calc-big, .notfound .code, .cct-value {
+  font-family: var(--f-serif);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+.cert-list li::before { font-family: var(--f-display); }
+
+/* --- El nombre: «Almenara LED», con el rosetón por sello ------------------- */
+.brand {
+  font-family: var(--f-serif);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+}
+.brand-led { font-weight: 400; color: var(--warm); }
+/* Estrella de ocho puntas: dos cuadrados girados 45°. Regla y compás. */
+.brand::before {
+  width: 12px;
+  height: 12px;
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--gold);
+  clip-path: polygon(50% 0, 64.6% 14.6%, 85.4% 14.6%, 85.4% 35.4%, 100% 50%,
+                     85.4% 64.6%, 85.4% 85.4%, 64.6% 85.4%, 50% 100%, 35.4% 85.4%,
+                     14.6% 85.4%, 14.6% 64.6%, 0 50%, 14.6% 35.4%, 14.6% 14.6%,
+                     35.4% 14.6%);
+}
+
+/* --- El lema: como una inscripción. No se traduce ni se explica. ---------- */
+.footer-motto {
+  margin: 1.4rem 0 0;
+  font-family: var(--f-serif);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.46em;
+  text-transform: uppercase;
+  color: var(--warm);
+}
+
+/* --- Esquinas rectas, sin brillos ------------------------------------------ */
+:focus-visible { border-radius: 0; outline-color: var(--cobalt); }
+.theme-toggle { border-radius: 0; }
+.cct input[type="range"]::-webkit-slider-thumb { box-shadow: none; }
+.tick-self::after { box-shadow: none; border: 2px solid var(--navy); }
+.site-nav { box-shadow: none; }
+
+/* --- Sin degradados --------------------------------------------------------
+   Lo que quedaba de adorno se vuelve tinta plana. Solo conserva su escala de
+   color el mando de temperatura, porque ahí el color ES el dato: la luz de
+   2700 K a 6500 K. */
+.scroll-progress { background: var(--gold); }
+.calc-bar span { background: var(--gold); }
+.axis-track { background: color-mix(in srgb, var(--navy) 22%, var(--ivory)); }
+.beam-a::after, .beam-b::after, .beam-c::after, .beam-d::after { background: none; }
+
+/* --- El cierre, sobre marino ----------------------------------------------
+   Una sola pieza en marino por página: la llamada final. Texto marfil y la
+   geometría en oro, como pide el manual. */
+.closing {
+  background: var(--navy);
+  color: var(--ivory);
+  position: relative;
+  overflow: hidden;
+}
+.closing .shell { position: relative; z-index: 1; }
+.closing h2 { color: var(--ivory); }
+.closing .lede { color: color-mix(in srgb, var(--ivory) 78%, var(--navy)); }
+.closing .band-label { color: var(--gold); }
+.closing .band-label::after { background: var(--gold); }
+.closing .btn-primary { background: var(--gold); color: var(--navy); }
+.closing .btn-primary:hover { background: var(--ivory); }
+.closing .btn-outline { border-color: color-mix(in srgb, var(--ivory) 40%, transparent); color: var(--ivory); }
+.closing .btn-outline:hover { border-color: var(--ivory); background: transparent; }
+.closing :focus-visible { outline-color: var(--gold); }
+/* El rosetón: círculos y estrella de ocho puntas, oro sobre marino. Un solo
+   motivo, a la derecha y nunca detrás del texto. */
+.closing::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: max(-9rem, calc((100% - 1180px) / 2 - 9rem));
+  width: min(30rem, 62vw);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%23D9A441' stroke-width='1'%3E%3Ccircle cx='100' cy='100' r='98'/%3E%3Ccircle cx='100' cy='100' r='80.9'/%3E%3Ccircle cx='100' cy='100' r='50'/%3E%3Ccircle cx='100' cy='100' r='30.9'/%3E%3Crect x='43.4' y='43.4' width='113.2' height='113.2'/%3E%3Crect x='43.4' y='43.4' width='113.2' height='113.2' transform='rotate(45 100 100)'/%3E%3Cpath d='M100 2v196M2 100h196M30.7 30.7l138.6 138.6M169.3 30.7L30.7 169.3'/%3E%3C/svg%3E") center / contain no-repeat;
+  opacity: 0.55;
+}
+@media (max-width: 860px) {
+  /* En móvil no cabe al lado del texto: se retira antes que ponerse detrás. */
+  .closing::after { display: none; }
+}
+
+/* --- Impresión: marino en vez de negro ------------------------------------ */
+@media print {
+  body, .pd-h2, h1, h2, h3 { color: var(--navy) !important; }
+  .closing { background: none; color: var(--navy); }
+  .closing h2, .closing .lede { color: var(--navy); }
+  .closing::after { display: none; }
+}
+
+/* El rótulo de sección que abre una lista de h3 es un h2 (orden de títulos
+   para lectores de pantalla); se ve igual que los demás rótulos. */
+h2.band-label { line-height: inherit; text-wrap: wrap; }
+
+/* En móvil los idiomas viven en el panel del menú; el script los mueve allí
+   al cargar. Si se ven un instante en la cabecera, la cabecera encoge al
+   moverlos y toda la página salta (Lighthouse: CLS 0,92 en la calculadora).
+   Ocultos desde el principio, no hay salto. */
+@media (max-width: 1180px) {
+  .header-tools .lang-switcher { display: none; }
+}
+
+/* Sitio reservado para lo que el script añade, para que nada salte al cargar:
+   la altura del botón del menú en la cabecera y la calculadora entera, que se
+   construye en el navegador (antes empujaba el pie fuera de la pantalla). */
+@media (max-width: 1180px) {
+  .site-header > .shell { min-height: 44px; }
+}
+.calc:empty { min-height: 150vh; }
