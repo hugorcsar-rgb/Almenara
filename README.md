@@ -88,12 +88,16 @@ un LED moderno da un 45 %, no un 80 %. Esa honestidad es lo que la hace
 defendible ante un ingeniero.
 
 **Solo cifras aprobadas, cada una con su condición.** Manda el sistema de marca
-(«Almenara LED · Sistema de marca 2026», sección VII): 275 lm/W es del módulo
-interior Dicrotec LED 3030; 230–235 lm/W, del exterior LED 5050; −56 % / −46 % de
-kWh, frente a un módulo LED estándar a igual flujo; >100.000 h de vida nominal;
-patente MX 383389; garantía de 10 años. Están retiradas «más de 275 lm/W» en
-general, «más del 50 %», «275–300» y cualquier «líder». Lo que no está en esa
-tabla no se publica, tampoco en `llms.txt`.
+(«Almenara LED · Sistema de marca 2026», sección VII), con un cambio decidido
+por Almenara el 24-09-2026: el módulo interior Dicrotec LED 3030 da 300 lm/W
+(ensayo LM-79, LightLab International Allentown, NVLAP 201079-0; el número del
+informe está pendiente). De ahí: 6,7 W frente a 16 W a 2.000 lm, −58 % frente a
+LED estándar y −39 % frente a LED de alto rendimiento. Exterior LED 5050: 230–235
+lm/W, −46 % / −29 % a 8.400 lm. >100.000 h de vida nominal; patente MX 383389;
+garantía de 10 años. Retiradas: «275 lm/W», «más de 275», «más del 50 %»,
+«275–300» y cualquier «líder». Lo que no está aquí no se publica, tampoco en
+`llms.txt`. Decisiones y cuentas: documento «Decisiones: Luz como servicio, TCO
+y ficha técnica».
 
 ## Pendiente
 
@@ -114,10 +118,10 @@ tabla no se publica, tampoco en `llms.txt`.
       una cuota de «Luz como servicio» en la calculadora (falta el contrato
       tipo: cuota, plazo, quién financia, garantía de ahorro; «Lo que falta»
       n.º 7) y cualquier cifra de coste total (TCO), que el manual retiró.
-- [ ] Ficha técnica, una sola fuente de verdad («Lo que falta» n.º 4): «7 W
-      frente a 16 W a 2.000 lm» son 286 lm/W, y el módulo de 7,4 W da 270;
-      la web publica 275. La calculadora usa 275 y despeja el LED de
-      referencia de los porcentajes publicados (ver `LED_REF` en `calc.js`).
+- [ ] Informe LM-79 de LightLab Allentown (número LLIA… y fecha): añadirlo a
+      la ficha técnica y a la nota de la escala. Si da otra cifra que 300 lm/W,
+      corregir la web el mismo día (`MODULO` y `LED_REF` en `calc.js`, y el
+      diccionario de `app.js`).
 - [ ] Fotografías reales en el apartado de aplicaciones.
 - [ ] Descarga directa del informe en PDF, sin pasar por el diálogo de impresión.
 - [x] Recepción de formularios en el servidor (`contact.php`; copias en

@@ -6,8 +6,8 @@
    EL CÁLCULO, EN UNA LÍNEA
    Se compara a iluminación equivalente, no a igual potencia: para dar los
    mismos lúmenes se necesita una potencia proporcional al cociente de
-   eficacias. Si el equipo actual rinde 90 lm/W y el nuestro 275, hace falta
-   90/275 = 33 % de la potencia, y el ahorro es del 67 %.
+   eficacias. Si el equipo actual rinde 90 lm/W y el nuestro 300, hace falta
+   90/300 = 30 % de la potencia, y el ahorro es del 70 %.
 
    Esto tiene una consecuencia que conviene no maquillar: frente a una
    fluorescente el ahorro sale enorme, y frente a un LED moderno sale mucho
@@ -23,22 +23,22 @@
      catálogo de modelos envejecería en un año y obligaría a publicar
      cifras ajenas. -------------------------------------------------------- */
   /* --- Nuestro módulo, según dónde va --------------------------------------
-     Cifras aprobadas del sistema de marca (sección VII, ficha técnica):
-     interior, LED 3030: 275 lm/W; exterior y vial, LED 5050: 230–235 lm/W.
+     Interior, LED 3030: 300 lm/W (ensayo LM-79, LightLab International
+     Allentown, NVLAP 201079-0). Exterior y vial, LED 5050: 230–235 lm/W
+     (ficha técnica).
      En exterior se calcula con 230, el extremo bajo: mejor quedarse corto. */
-  const MODULO = { int: 275, ext: 230 };
+  const MODULO = { int: 300, ext: 230 };
 
-  /* --- El LED de referencia, despejado de las cifras publicadas -----------
-     La web publica el ahorro frente a LED, no la eficacia de ese LED. Como a
-     igual flujo ahorro = 1 − ef_actual / ef_nuestra, la eficacia de
-     referencia sale de despejar: ef_actual = ef_nuestra × (1 − ahorro).
-       Interior (275):  estándar −56 % → 275 × 0,44 = 121
-                        alto rendimiento −36 % → 275 × 0,64 = 176
-       Exterior (230):  estándar −46 % → 230 × 0,54 = 124
-                        alto rendimiento −29 % → 230 × 0,71 = 163
-     Así la calculadora da exactamente las mismas cifras que el resto de la
-     web. Si cambia la ficha, se cambian aquí y en ningún otro sitio. */
-  const LED_REF = { int: { std: 121, hp: 176 }, ext: { std: 124, hp: 163 } };
+  /* --- El LED de referencia --------------------------------------------------
+     A igual flujo, ahorro = 1 − ef_actual / ef_nuestra.
+       Interior, a 2.000 lm: el LED estándar consume 16 W → 2.000 / 16 = 125
+         lm/W; el de alto rendimiento, 10,9 W (7 W eran un 36 % menos:
+         7 / 0,64) → 183 lm/W. Con nuestros 300: −58 % y −39 %.
+       Exterior (230), despejado de las cifras publicadas:
+         estándar −46 % → 230 × 0,54 = 124; alto rendimiento −29 % → 230 × 0,71 = 163.
+     Así la calculadora da las mismas cifras que el resto de la web. Si cambia
+     la ficha, se cambian aquí y en ningún otro sitio. */
+  const LED_REF = { int: { std: 125, hp: 183 }, ext: { std: 124, hp: 163 } };
 
   // uso: dónde va la luminaria. 'int' o 'ext' la fija al elegirla; null
   // (halogenuros: igual en una nave que en un proyector) no la toca.
@@ -153,7 +153,7 @@
       "tec.inc":"Incandescent", "tec.hal":"Halogen", "tec.cfl":"Compact fluorescent",
       "tec.t8":"T8 fluorescent tube", "tec.t5":"T5 fluorescent tube", "tec.mh":"Metal halide",
       "tec.hps":"High-pressure sodium", "tec.led1":"Standard LED", "tec.led2":"High-performance LED",
-      "calc.use":"Almenara module", "calc.use.int":"Indoor · LED 3030 · 275 lm/W", "calc.use.ext":"Outdoor · LED 5050 · 230 lm/W",
+      "calc.use":"Almenara module", "calc.use.int":"Indoor · LED 3030 · 300 lm/W", "calc.use.ext":"Outdoor · LED 5050 · 230 lm/W",
       "calc.use.help":"Outdoor and street lighting use the LED 5050 module (230–235 lm/W). We calculate with 230, the low end.",
       "fx.1":"Incandescent bulb 60 W", "fx.2":"Halogen spot 50 W", "fx.3":"T8 tube 36 W",
       "fx.4":"T5 tube 28 W", "fx.5":"LED panel 600×600, 40 W", "fx.6":"LED downlight 15 W",
@@ -235,7 +235,7 @@
       "tec.inc":"Incandescente", "tec.hal":"Halógena", "tec.cfl":"Fluorescente compacta",
       "tec.t8":"Tubo fluorescente T8", "tec.t5":"Tubo fluorescente T5", "tec.mh":"Halogenuros metálicos",
       "tec.hps":"Vapor de sodio de alta presión", "tec.led1":"LED estándar", "tec.led2":"LED de alto rendimiento",
-      "calc.use":"Módulo Almenara", "calc.use.int":"Interior · LED 3030 · 275 lm/W", "calc.use.ext":"Exterior · LED 5050 · 230 lm/W",
+      "calc.use":"Módulo Almenara", "calc.use.int":"Interior · LED 3030 · 300 lm/W", "calc.use.ext":"Exterior · LED 5050 · 230 lm/W",
       "calc.use.help":"El alumbrado exterior y vial usa el módulo LED 5050 (230–235 lm/W). Calculamos con 230, el extremo bajo.",
       "fx.1":"Bombilla incandescente 60 W", "fx.2":"Dicroica halógena 50 W", "fx.3":"Tubo T8 de 36 W",
       "fx.4":"Tubo T5 de 28 W", "fx.5":"Panel LED 600×600, 40 W", "fx.6":"Empotrable LED 15 W",
@@ -317,7 +317,7 @@
       "tec.inc":"Incandescente", "tec.hal":"Halogéneo", "tec.cfl":"Fluorescente compacta",
       "tec.t8":"Tubo fluorescente T8", "tec.t5":"Tubo fluorescente T5", "tec.mh":"Iodetos metálicos",
       "tec.hps":"Vapor de sódio de alta pressão", "tec.led1":"LED padrão", "tec.led2":"LED de alto rendimento",
-      "calc.use":"Módulo Almenara", "calc.use.int":"Interior · LED 3030 · 275 lm/W", "calc.use.ext":"Exterior · LED 5050 · 230 lm/W",
+      "calc.use":"Módulo Almenara", "calc.use.int":"Interior · LED 3030 · 300 lm/W", "calc.use.ext":"Exterior · LED 5050 · 230 lm/W",
       "calc.use.help":"A iluminação exterior e pública usa o módulo LED 5050 (230–235 lm/W). Calculamos com 230, o valor mais baixo.",
       "fx.1":"Lâmpada incandescente 60 W", "fx.2":"Dicróica de halogéneo 50 W", "fx.3":"Tubo T8 de 36 W",
       "fx.4":"Tubo T5 de 28 W", "fx.5":"Painel LED 600×600, 40 W", "fx.6":"Encastrável LED 15 W",
@@ -399,7 +399,7 @@
       "tec.inc":"Incandescence", "tec.hal":"Halogène", "tec.cfl":"Fluocompacte",
       "tec.t8":"Tube fluorescent T8", "tec.t5":"Tube fluorescent T5", "tec.mh":"Iodures métalliques",
       "tec.hps":"Sodium haute pression", "tec.led1":"LED standard", "tec.led2":"LED haute performance",
-      "calc.use":"Module Almenara", "calc.use.int":"Intérieur · LED 3030 · 275 lm/W", "calc.use.ext":"Extérieur · LED 5050 · 230 lm/W",
+      "calc.use":"Module Almenara", "calc.use.int":"Intérieur · LED 3030 · 300 lm/W", "calc.use.ext":"Extérieur · LED 5050 · 230 lm/W",
       "calc.use.help":"L’éclairage extérieur et routier utilise le module LED 5050 (230–235 lm/W). Nous calculons avec 230, la valeur basse.",
       "fx.1":"Ampoule à incandescence 60 W", "fx.2":"Dichroïque halogène 50 W", "fx.3":"Tube T8 de 36 W",
       "fx.4":"Tube T5 de 28 W", "fx.5":"Dalle LED 600×600, 40 W", "fx.6":"Encastré LED 15 W",
@@ -481,7 +481,7 @@
       "tec.inc":"Glühlampe", "tec.hal":"Halogen", "tec.cfl":"Kompaktleuchtstofflampe",
       "tec.t8":"Leuchtstoffröhre T8", "tec.t5":"Leuchtstoffröhre T5", "tec.mh":"Halogen-Metalldampf",
       "tec.hps":"Natriumhochdruck", "tec.led1":"Standard-LED", "tec.led2":"Hochleistungs-LED",
-      "calc.use":"Almenara-Modul", "calc.use.int":"Innen · LED 3030 · 275 lm/W", "calc.use.ext":"Außen · LED 5050 · 230 lm/W",
+      "calc.use":"Almenara-Modul", "calc.use.int":"Innen · LED 3030 · 300 lm/W", "calc.use.ext":"Außen · LED 5050 · 230 lm/W",
       "calc.use.help":"Außen- und Straßenbeleuchtung nutzt das Modul LED 5050 (230–235 lm/W). Wir rechnen mit 230, dem unteren Wert.",
       "fx.1":"Glühlampe 60 W", "fx.2":"Halogen-Spot 50 W", "fx.3":"T8-Röhre 36 W",
       "fx.4":"T5-Röhre 28 W", "fx.5":"LED-Panel 600×600, 40 W", "fx.6":"LED-Einbauleuchte 15 W",
@@ -563,7 +563,7 @@
       "tec.inc":"Incandescenza", "tec.hal":"Alogena", "tec.cfl":"Fluorescente compatta",
       "tec.t8":"Tubo fluorescente T8", "tec.t5":"Tubo fluorescente T5", "tec.mh":"Ioduri metallici",
       "tec.hps":"Sodio ad alta pressione", "tec.led1":"LED standard", "tec.led2":"LED ad alte prestazioni",
-      "calc.use":"Modulo Almenara", "calc.use.int":"Interno · LED 3030 · 275 lm/W", "calc.use.ext":"Esterno · LED 5050 · 230 lm/W",
+      "calc.use":"Modulo Almenara", "calc.use.int":"Interno · LED 3030 · 300 lm/W", "calc.use.ext":"Esterno · LED 5050 · 230 lm/W",
       "calc.use.help":"L’illuminazione esterna e stradale usa il modulo LED 5050 (230–235 lm/W). Calcoliamo con 230, il valore più basso.",
       "fx.1":"Lampadina a incandescenza 60 W", "fx.2":"Dicroica alogena 50 W", "fx.3":"Tubo T8 da 36 W",
       "fx.4":"Tubo T5 da 28 W", "fx.5":"Pannello LED 600×600, 40 W", "fx.6":"Incasso LED 15 W",
@@ -645,7 +645,7 @@
       "tec.inc":"Лампа накаливания", "tec.hal":"Галогенная", "tec.cfl":"Компактная люминесцентная",
       "tec.t8":"Люминесцентная трубка T8", "tec.t5":"Люминесцентная трубка T5", "tec.mh":"Металлогалогенная",
       "tec.hps":"Натриевая высокого давления", "tec.led1":"Стандартный LED", "tec.led2":"Высокоэффективный LED",
-      "calc.use":"Модуль Almenara", "calc.use.int":"Внутреннее · LED 3030 · 275 лм/Вт", "calc.use.ext":"Наружное · LED 5050 · 230 лм/Вт",
+      "calc.use":"Модуль Almenara", "calc.use.int":"Внутреннее · LED 3030 · 300 лм/Вт", "calc.use.ext":"Наружное · LED 5050 · 230 лм/Вт",
       "calc.use.help":"Для наружного и уличного освещения — модуль LED 5050 (230–235 лм/Вт). Считаем по нижней границе, 230.",
       "fx.1":"Лампа накаливания 60 Вт", "fx.2":"Галогенная дихроичная 50 Вт", "fx.3":"Трубка T8 36 Вт",
       "fx.4":"Трубка T5 28 Вт", "fx.5":"Светодиодная панель 600×600, 40 Вт", "fx.6":"Встраиваемый светодиод 15 Вт",

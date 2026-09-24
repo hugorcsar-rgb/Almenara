@@ -404,8 +404,8 @@ h3 {
   position: absolute;
   top: -5px;
   bottom: -5px;
-  left: calc(130 / 300 * 100%);
-  width: calc(70 / 300 * 100%);
+  left: calc(130 / 350 * 100%);
+  width: calc(70 / 350 * 100%);
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
   background: repeating-linear-gradient(115deg,

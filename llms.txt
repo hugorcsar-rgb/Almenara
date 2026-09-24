@@ -5,8 +5,8 @@
 It works in three ways: module supply to integrators, installers and maintainers; alliances with manufacturers and distributors who integrate or resell the modules under the seal "With Dicrotec technology · Almenara LED"; and light as a service (installation, maintenance and operation paid for by a monthly fee from the saving, with no upfront investment).
 
 Key facts (each figure with its condition):
-- Luminous efficacy: 275 lm/W in Dicrotec indoor modules (LED 3030); 230–235 lm/W in outdoor and street-lighting modules (LED 5050)
-- Energy: −56% indoors at 2,000 lm and −46% outdoors at 8,400 lm, against a standard LED module at equal flux (7 W against 16 W at 2,000 lm)
+- Luminous efficacy: 300 lm/W in Dicrotec indoor modules (LED 3030), LM-79 test at an accredited laboratory (NVLAP); 230–235 lm/W in outdoor and street-lighting modules (LED 5050)
+- Energy: −58% indoors at 2,000 lm and −46% outdoors at 8,400 lm, against a standard LED module at equal flux (6.7 W against 16 W at 2,000 lm)
 - Nominal life: over 100,000 hours (standard LED: under 50,000 hours)
 - Patent: MX 383389, filed in 33 further countries and granted in the United States and China, among others
 - Warranty: 10 years at maximum rated current and temperature
