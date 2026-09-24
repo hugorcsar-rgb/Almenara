@@ -2083,3 +2083,23 @@ h2 { line-height: 1.08; }
   .closing h2, .closing .lede { color: var(--navy); }
   .closing::after { display: none; }
 }
+
+/* El rótulo de sección que abre una lista de h3 es un h2 (orden de títulos
+   para lectores de pantalla); se ve igual que los demás rótulos. */
+h2.band-label { line-height: inherit; text-wrap: wrap; }
+
+/* En móvil los idiomas viven en el panel del menú; el script los mueve allí
+   al cargar. Si se ven un instante en la cabecera, la cabecera encoge al
+   moverlos y toda la página salta (Lighthouse: CLS 0,92 en la calculadora).
+   Ocultos desde el principio, no hay salto. */
+@media (max-width: 1180px) {
+  .header-tools .lang-switcher { display: none; }
+}
+
+/* Sitio reservado para lo que el script añade, para que nada salte al cargar:
+   la altura del botón del menú en la cabecera y la calculadora entera, que se
+   construye en el navegador (antes empujaba el pie fuera de la pantalla). */
+@media (max-width: 1180px) {
+  .site-header > .shell { min-height: 44px; }
+}
+.calc:empty { min-height: 150vh; }

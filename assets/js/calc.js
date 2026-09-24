@@ -718,6 +718,7 @@
       b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       b.setAttribute('aria-controls', 'p' + i);
       b.dataset.panel = 'p' + i;
+      b.id = 'tab-p' + i;
       b.setAttribute('data-i18n', k);
       b.textContent = k;
       tabs.appendChild(b);
@@ -731,6 +732,7 @@
     p0.setAttribute('role', 'tabpanel');
     const sel = document.createElement('select');
     sel.className = 'calc-select';
+    sel.setAttribute('aria-labelledby', 'tab-p0');
     TECNOLOGIAS.forEach(function (o, i) {
       const op = document.createElement('option');
       op.value = i;

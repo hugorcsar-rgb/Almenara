@@ -2062,6 +2062,8 @@ document.addEventListener('DOMContentLoaded', function () {
     boton.setAttribute('aria-expanded', 'false');
     boton.setAttribute('aria-controls', 'menu-principal');
     boton.setAttribute('data-i18n-attr', 'aria-label:a11y.menu');
+    // El botón nace después de traducir la página: se le pone el nombre ya.
+    boton.setAttribute('aria-label', t(document.documentElement.lang || 'en', 'a11y.menu') || 'Menu');
     boton.innerHTML = '<span class="nav-toggle-bar"></span>' +
                       '<span class="nav-toggle-bar"></span>' +
                       '<span class="nav-toggle-bar"></span>';
