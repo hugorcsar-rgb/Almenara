@@ -22,37 +22,57 @@
      portada. No son máximos de laboratorio ni modelos concretos: un
      catálogo de modelos envejecería en un año y obligaría a publicar
      cifras ajenas. -------------------------------------------------------- */
+  /* --- Nuestro módulo, según dónde va --------------------------------------
+     Cifras aprobadas del sistema de marca (sección VII, ficha técnica):
+     interior, LED 3030: 275 lm/W; exterior y vial, LED 5050: 230–235 lm/W.
+     En exterior se calcula con 230, el extremo bajo: mejor quedarse corto. */
+  const MODULO = { int: 275, ext: 230 };
+
+  /* --- El LED de referencia, despejado de las cifras publicadas -----------
+     La web publica el ahorro frente a LED, no la eficacia de ese LED. Como a
+     igual flujo ahorro = 1 − ef_actual / ef_nuestra, la eficacia de
+     referencia sale de despejar: ef_actual = ef_nuestra × (1 − ahorro).
+       Interior (275):  estándar −56 % → 275 × 0,44 = 121
+                        alto rendimiento −36 % → 275 × 0,64 = 176
+       Exterior (230):  estándar −46 % → 230 × 0,54 = 124
+                        alto rendimiento −29 % → 230 × 0,71 = 163
+     Así la calculadora da exactamente las mismas cifras que el resto de la
+     web. Si cambia la ficha, se cambian aquí y en ningún otro sitio. */
+  const LED_REF = { int: { std: 121, hp: 176 }, ext: { std: 124, hp: 163 } };
+
+  // uso: dónde va la luminaria. 'int' o 'ext' la fija al elegirla; null
+  // (halogenuros: igual en una nave que en un proyector) no la toca.
   const TECNOLOGIAS = [
-    { k: 'tec.inc',  ef: 15,  w: 60  },
-    { k: 'tec.hal',  ef: 20,  w: 50  },
-    { k: 'tec.cfl',  ef: 60,  w: 20  },
-    { k: 'tec.t8',   ef: 75,  w: 36  },
-    { k: 'tec.t5',   ef: 90,  w: 28  },
-    { k: 'tec.mh',   ef: 90,  w: 250 },
-    { k: 'tec.hps',  ef: 110, w: 150 },
-    { k: 'tec.led1', ef: 100, w: 40  },
-    { k: 'tec.led2', ef: 150, w: 40  }
+    { k: 'tec.inc',  ef: 15,  w: 60,  uso: 'int' },
+    { k: 'tec.hal',  ef: 20,  w: 50,  uso: 'int' },
+    { k: 'tec.cfl',  ef: 60,  w: 20,  uso: 'int' },
+    { k: 'tec.t8',   ef: 75,  w: 36,  uso: 'int' },
+    { k: 'tec.t5',   ef: 90,  w: 28,  uso: 'int' },
+    { k: 'tec.mh',   ef: 90,  w: 250, uso: null  },
+    { k: 'tec.hps',  ef: 110, w: 150, uso: 'ext' },
+    { k: 'tec.led1', led: 'std', w: 40, uso: null },
+    { k: 'tec.led2', led: 'hp',  w: 40, uso: null }
   ];
 
   const LUMINARIAS = [
-    { k: 'fx.1',  ef: 14,  w: 60  },
-    { k: 'fx.2',  ef: 18,  w: 50  },
-    { k: 'fx.3',  ef: 70,  w: 36  },
-    { k: 'fx.4',  ef: 90,  w: 28  },
-    { k: 'fx.5',  ef: 110, w: 40  },
-    { k: 'fx.6',  ef: 100, w: 15  },
-    { k: 'fx.7',  ef: 85,  w: 400 },
-    { k: 'fx.8',  ef: 130, w: 150 },
-    { k: 'fx.9',  ef: 80,  w: 250 },
-    { k: 'fx.10', ef: 120, w: 100 },
-    { k: 'fx.11', ef: 105, w: 150 },
-    { k: 'fx.12', ef: 130, w: 60  }
+    { k: 'fx.1',  ef: 14,  w: 60,  uso: 'int' },
+    { k: 'fx.2',  ef: 18,  w: 50,  uso: 'int' },
+    { k: 'fx.3',  ef: 70,  w: 36,  uso: 'int' },
+    { k: 'fx.4',  ef: 90,  w: 28,  uso: 'int' },
+    { k: 'fx.5',  ef: 110, w: 40,  uso: 'int' },
+    { k: 'fx.6',  ef: 100, w: 15,  uso: 'int' },
+    { k: 'fx.7',  ef: 85,  w: 400, uso: 'int' },
+    { k: 'fx.8',  ef: 130, w: 150, uso: 'int' },
+    { k: 'fx.9',  ef: 80,  w: 250, uso: 'ext' },
+    { k: 'fx.10', ef: 120, w: 100, uso: 'ext' },
+    { k: 'fx.11', ef: 105, w: 150, uso: 'ext' },
+    { k: 'fx.12', ef: 130, w: 60,  uso: 'ext' }
   ];
 
   const HORAS = [
     { k: 'hrs.office', h: 2500 },
     { k: 'hrs.retail', h: 3600 },
-    { k: 'hrs.street', h: 4100 },
+    { k: 'hrs.street', h: 4100, uso: 'ext' },
     { k: 'hrs.shift',  h: 6000 },
     { k: 'hrs.always', h: 8760 }
   ];
@@ -132,7 +152,9 @@
       "calc.mail.subject": "Savings calculation",
       "tec.inc":"Incandescent", "tec.hal":"Halogen", "tec.cfl":"Compact fluorescent",
       "tec.t8":"T8 fluorescent tube", "tec.t5":"T5 fluorescent tube", "tec.mh":"Metal halide",
-      "tec.hps":"High-pressure sodium", "tec.led1":"First-generation LED", "tec.led2":"Current LED",
+      "tec.hps":"High-pressure sodium", "tec.led1":"Standard LED", "tec.led2":"High-performance LED",
+      "calc.use":"Almenara module", "calc.use.int":"Indoor · LED 3030 · 275 lm/W", "calc.use.ext":"Outdoor · LED 5050 · 230 lm/W",
+      "calc.use.help":"Outdoor and street lighting use the LED 5050 module (230–235 lm/W). We calculate with 230, the low end.",
       "fx.1":"Incandescent bulb 60 W", "fx.2":"Halogen spot 50 W", "fx.3":"T8 tube 36 W",
       "fx.4":"T5 tube 28 W", "fx.5":"LED panel 600×600, 40 W", "fx.6":"LED downlight 15 W",
       "fx.7":"Metal halide high bay 400 W", "fx.8":"LED high bay 150 W", "fx.9":"Metal halide floodlight 250 W",
@@ -212,7 +234,9 @@
       "calc.mail.subject": "Cálculo de ahorro",
       "tec.inc":"Incandescente", "tec.hal":"Halógena", "tec.cfl":"Fluorescente compacta",
       "tec.t8":"Tubo fluorescente T8", "tec.t5":"Tubo fluorescente T5", "tec.mh":"Halogenuros metálicos",
-      "tec.hps":"Vapor de sodio de alta presión", "tec.led1":"LED de primera generación", "tec.led2":"LED actual",
+      "tec.hps":"Vapor de sodio de alta presión", "tec.led1":"LED estándar", "tec.led2":"LED de alto rendimiento",
+      "calc.use":"Módulo Almenara", "calc.use.int":"Interior · LED 3030 · 275 lm/W", "calc.use.ext":"Exterior · LED 5050 · 230 lm/W",
+      "calc.use.help":"El alumbrado exterior y vial usa el módulo LED 5050 (230–235 lm/W). Calculamos con 230, el extremo bajo.",
       "fx.1":"Bombilla incandescente 60 W", "fx.2":"Dicroica halógena 50 W", "fx.3":"Tubo T8 de 36 W",
       "fx.4":"Tubo T5 de 28 W", "fx.5":"Panel LED 600×600, 40 W", "fx.6":"Empotrable LED 15 W",
       "fx.7":"Campana de halogenuros 400 W", "fx.8":"Campana LED 150 W", "fx.9":"Proyector de halogenuros 250 W",
@@ -292,7 +316,9 @@
       "calc.mail.subject": "Cálculo de poupança",
       "tec.inc":"Incandescente", "tec.hal":"Halogéneo", "tec.cfl":"Fluorescente compacta",
       "tec.t8":"Tubo fluorescente T8", "tec.t5":"Tubo fluorescente T5", "tec.mh":"Iodetos metálicos",
-      "tec.hps":"Vapor de sódio de alta pressão", "tec.led1":"LED de primeira geração", "tec.led2":"LED actual",
+      "tec.hps":"Vapor de sódio de alta pressão", "tec.led1":"LED padrão", "tec.led2":"LED de alto rendimento",
+      "calc.use":"Módulo Almenara", "calc.use.int":"Interior · LED 3030 · 275 lm/W", "calc.use.ext":"Exterior · LED 5050 · 230 lm/W",
+      "calc.use.help":"A iluminação exterior e pública usa o módulo LED 5050 (230–235 lm/W). Calculamos com 230, o valor mais baixo.",
       "fx.1":"Lâmpada incandescente 60 W", "fx.2":"Dicróica de halogéneo 50 W", "fx.3":"Tubo T8 de 36 W",
       "fx.4":"Tubo T5 de 28 W", "fx.5":"Painel LED 600×600, 40 W", "fx.6":"Encastrável LED 15 W",
       "fx.7":"Campânula de iodetos 400 W", "fx.8":"Campânula LED 150 W", "fx.9":"Projector de iodetos 250 W",
@@ -372,7 +398,9 @@
       "calc.mail.subject": "Calcul d'économies",
       "tec.inc":"Incandescence", "tec.hal":"Halogène", "tec.cfl":"Fluocompacte",
       "tec.t8":"Tube fluorescent T8", "tec.t5":"Tube fluorescent T5", "tec.mh":"Iodures métalliques",
-      "tec.hps":"Sodium haute pression", "tec.led1":"LED de première génération", "tec.led2":"LED actuelle",
+      "tec.hps":"Sodium haute pression", "tec.led1":"LED standard", "tec.led2":"LED haute performance",
+      "calc.use":"Module Almenara", "calc.use.int":"Intérieur · LED 3030 · 275 lm/W", "calc.use.ext":"Extérieur · LED 5050 · 230 lm/W",
+      "calc.use.help":"L’éclairage extérieur et routier utilise le module LED 5050 (230–235 lm/W). Nous calculons avec 230, la valeur basse.",
       "fx.1":"Ampoule à incandescence 60 W", "fx.2":"Dichroïque halogène 50 W", "fx.3":"Tube T8 de 36 W",
       "fx.4":"Tube T5 de 28 W", "fx.5":"Dalle LED 600×600, 40 W", "fx.6":"Encastré LED 15 W",
       "fx.7":"Cloche à iodures 400 W", "fx.8":"Cloche LED 150 W", "fx.9":"Projecteur à iodures 250 W",
@@ -452,7 +480,9 @@
       "calc.mail.subject": "Einsparrechnung",
       "tec.inc":"Glühlampe", "tec.hal":"Halogen", "tec.cfl":"Kompaktleuchtstofflampe",
       "tec.t8":"Leuchtstoffröhre T8", "tec.t5":"Leuchtstoffröhre T5", "tec.mh":"Halogen-Metalldampf",
-      "tec.hps":"Natriumhochdruck", "tec.led1":"LED der ersten Generation", "tec.led2":"Heutige LED",
+      "tec.hps":"Natriumhochdruck", "tec.led1":"Standard-LED", "tec.led2":"Hochleistungs-LED",
+      "calc.use":"Almenara-Modul", "calc.use.int":"Innen · LED 3030 · 275 lm/W", "calc.use.ext":"Außen · LED 5050 · 230 lm/W",
+      "calc.use.help":"Außen- und Straßenbeleuchtung nutzt das Modul LED 5050 (230–235 lm/W). Wir rechnen mit 230, dem unteren Wert.",
       "fx.1":"Glühlampe 60 W", "fx.2":"Halogen-Spot 50 W", "fx.3":"T8-Röhre 36 W",
       "fx.4":"T5-Röhre 28 W", "fx.5":"LED-Panel 600×600, 40 W", "fx.6":"LED-Einbauleuchte 15 W",
       "fx.7":"Metalldampf-Hallenleuchte 400 W", "fx.8":"LED-Hallenleuchte 150 W", "fx.9":"Metalldampf-Strahler 250 W",
@@ -532,7 +562,9 @@
       "calc.mail.subject": "Calcolo di risparmio",
       "tec.inc":"Incandescenza", "tec.hal":"Alogena", "tec.cfl":"Fluorescente compatta",
       "tec.t8":"Tubo fluorescente T8", "tec.t5":"Tubo fluorescente T5", "tec.mh":"Ioduri metallici",
-      "tec.hps":"Sodio ad alta pressione", "tec.led1":"LED di prima generazione", "tec.led2":"LED attuale",
+      "tec.hps":"Sodio ad alta pressione", "tec.led1":"LED standard", "tec.led2":"LED ad alte prestazioni",
+      "calc.use":"Modulo Almenara", "calc.use.int":"Interno · LED 3030 · 275 lm/W", "calc.use.ext":"Esterno · LED 5050 · 230 lm/W",
+      "calc.use.help":"L’illuminazione esterna e stradale usa il modulo LED 5050 (230–235 lm/W). Calcoliamo con 230, il valore più basso.",
       "fx.1":"Lampadina a incandescenza 60 W", "fx.2":"Dicroica alogena 50 W", "fx.3":"Tubo T8 da 36 W",
       "fx.4":"Tubo T5 da 28 W", "fx.5":"Pannello LED 600×600, 40 W", "fx.6":"Incasso LED 15 W",
       "fx.7":"Campana a ioduri 400 W", "fx.8":"Campana LED 150 W", "fx.9":"Proiettore a ioduri 250 W",
@@ -612,7 +644,9 @@
       "calc.mail.subject": "Расчёт экономии",
       "tec.inc":"Лампа накаливания", "tec.hal":"Галогенная", "tec.cfl":"Компактная люминесцентная",
       "tec.t8":"Люминесцентная трубка T8", "tec.t5":"Люминесцентная трубка T5", "tec.mh":"Металлогалогенная",
-      "tec.hps":"Натриевая высокого давления", "tec.led1":"Светодиод первого поколения", "tec.led2":"Современный светодиод",
+      "tec.hps":"Натриевая высокого давления", "tec.led1":"Стандартный LED", "tec.led2":"Высокоэффективный LED",
+      "calc.use":"Модуль Almenara", "calc.use.int":"Внутреннее · LED 3030 · 275 лм/Вт", "calc.use.ext":"Наружное · LED 5050 · 230 лм/Вт",
+      "calc.use.help":"Для наружного и уличного освещения — модуль LED 5050 (230–235 лм/Вт). Считаем по нижней границе, 230.",
       "fx.1":"Лампа накаливания 60 Вт", "fx.2":"Галогенная дихроичная 50 Вт", "fx.3":"Трубка T8 36 Вт",
       "fx.4":"Трубка T5 28 Вт", "fx.5":"Светодиодная панель 600×600, 40 Вт", "fx.6":"Встраиваемый светодиод 15 Вт",
       "fx.7":"Металлогалогенный колокол 400 Вт", "fx.8":"Светодиодный колокол 150 Вт", "fx.9":"Металлогалогенный прожектор 250 Вт",
@@ -669,7 +703,8 @@
       watts: 250,
       hours: 4000,
       price: 0.18,
-      efNew: 275,
+      uso: 'int',     // dónde va nuestro módulo: 'int' o 'ext'
+      efNew: MODULO.int,
       co2: 0.20,
       cost: null,
       dep: 0,        // depreciación de flujo del equipo actual, %
@@ -773,6 +808,31 @@
     efNow.className = 'calc-eff';
     efNow.innerHTML = '<span data-i18n="calc.eff.now">calc.eff.now</span> <strong>—</strong>';
     s1.appendChild(efNow);
+
+    // Dónde va nuestro módulo: interior (LED 3030) o exterior (LED 5050).
+    const usoCaja = document.createElement('div');
+    usoCaja.className = 'calc-use';
+    usoCaja.innerHTML = '<p class="calc-eff" id="calc-use-l"><span data-i18n="calc.use">calc.use</span></p>';
+    const usos = document.createElement('div');
+    usos.className = 'calc-chips';
+    usos.setAttribute('role', 'group');
+    usos.setAttribute('aria-labelledby', 'calc-use-l');
+    ['int', 'ext'].forEach(function (u) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'calc-chip';
+      b.dataset.uso = u;
+      b.setAttribute('data-i18n', 'calc.use.' + u);
+      b.textContent = 'calc.use.' + u;
+      usos.appendChild(b);
+    });
+    usoCaja.appendChild(usos);
+    const usoAyuda = document.createElement('p');
+    usoAyuda.className = 'calc-help';
+    usoAyuda.setAttribute('data-i18n', 'calc.use.help');
+    usoAyuda.textContent = 'calc.use.help';
+    usoCaja.appendChild(usoAyuda);
+    s1.appendChild(usoCaja);
     raiz.appendChild(s1);
 
     /* Paso 2: la instalación */
@@ -859,6 +919,7 @@
         b.addEventListener('click', function () {
           [].forEach.call(lista.querySelectorAll('button'), function (x) { x.classList.remove('is-on'); });
           b.classList.add('is-on');
+          if (o.uso) ponerUso(o.uso);
           est.efNow = o.ef;
           if (!vatiosTocados) { document.getElementById('watts').value = o.w; est.watts = o.w; }
           calcular();
@@ -882,11 +943,34 @@
       calcular();
     });
 
-    function leerEficacia() {
+    // La eficacia de una tecnología de la lista; la del LED depende de si la
+    // comparación es de interior o de exterior.
+    function efDe(o) { return o.led ? LED_REF[est.uso][o.led] : o.ef; }
+
+    // Nuestro módulo sigue a la aplicación, salvo que el visitante haya
+    // escrito su propia eficacia en el apartado avanzado: entonces manda él.
+    let efNuevaTocada = false;
+    function ponerUso(u) {
+      est.uso = u;
+      [].forEach.call(usos.children, function (x) {
+        const si = x.dataset.uso === u;
+        x.classList.toggle('is-on', si);
+        x.setAttribute('aria-pressed', si ? 'true' : 'false');
+      });
+      if (!efNuevaTocada) {
+        est.efNew = MODULO[u];
+        document.getElementById('efnew').value = MODULO[u];
+      }
+    }
+
+    // conUso: al elegir una tecnología, esta fija interior o exterior. Al
+    // pulsar el selector a mano, no se le lleva la contraria.
+    function leerEficacia(conUso) {
       const activo = tabs.querySelector('.is-on').dataset.panel;
       if (activo === 'p0') {
         const o = TECNOLOGIAS[parseInt(sel.value, 10)];
-        est.efNow = o.ef;
+        if (conUso && o.uso) ponerUso(o.uso);
+        est.efNow = efDe(o);
         if (!vatiosTocados) { document.getElementById('watts').value = o.w; est.watts = o.w; }
       } else if (activo === 'p2') {
         const w = parseFloat(document.getElementById('manw').value) || 0;
@@ -896,7 +980,14 @@
       }
     }
 
-    sel.addEventListener('change', function () { leerEficacia(); calcular(); });
+    sel.addEventListener('change', function () { leerEficacia(true); calcular(); });
+    usos.addEventListener('click', function (e) {
+      const b = e.target.closest('.calc-chip');
+      if (!b) return;
+      ponerUso(b.dataset.uso);
+      leerEficacia(false);
+      calcular();
+    });
     busca.addEventListener('input', pintarLista);
     ['manw', 'manlm'].forEach(function (id) {
       document.getElementById(id).addEventListener('input', function () {
@@ -916,6 +1007,7 @@
       document.getElementById(id).addEventListener('input', calcularPronto);
     });
     document.getElementById('watts').addEventListener('input', function () { vatiosTocados = true; });
+    document.getElementById('efnew').addEventListener('input', function () { efNuevaTocada = true; });
 
     chips.addEventListener('click', function (e) {
       const b = e.target.closest('.calc-chip');
@@ -923,6 +1015,8 @@
       [].forEach.call(chips.children, function (x) { x.classList.remove('is-on'); });
       b.classList.add('is-on');
       document.getElementById('hours').value = b.dataset.h;
+      const hora = HORAS.filter(function (o) { return String(o.h) === b.dataset.h; })[0];
+      if (hora && hora.uso) { ponerUso(hora.uso); leerEficacia(false); }
       calcular();
     });
 
@@ -1162,6 +1256,7 @@
           [txt('calc.watts'), num(est.watts) + ' W'],
           [txt('calc.hours'), num(est.hours) + ' h'],
           [txt('calc.price'), precio(est.price) + ' €/kWh'],
+          [txt('calc.use'), txt('calc.use.' + est.uso)],
           [txt('calc.adv.eff'), num(est.efNew) + ' lm/W']
         ].concat(
           est.dep > 0 ? [[txt('calc.r.effreal'), num(efReal, 1) + ' lm/W']] : []
@@ -1235,6 +1330,7 @@
           [txt('calc.watts'), num(est.watts) + ' W'],
           [txt('calc.hours'), num(est.hours) + ' h'],
           [txt('calc.price'), precio(est.price) + ' \u20ac/kWh'],
+          [txt('calc.use'), txt('calc.use.' + est.uso)],
           [txt('calc.adv.eff'), num(est.efNew) + ' lm/W']
         ].concat(
           est.dep > 0 ? [[txt('calc.r.effreal'), num(efReal, 1) + ' lm/W']] : []
@@ -1316,7 +1412,8 @@
     window.SITE.onLang(function () { pintarLista(); calcular(); });
 
     pintarLista();
-    leerEficacia();
+    ponerUso(est.uso);
+    leerEficacia(true);
     calcular();
     window.SITE.apply();
   }

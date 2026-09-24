@@ -110,6 +110,14 @@ tabla no se publica, tampoco en `llms.txt`.
       el sistema de marca: el marcado CE para Europa figura aún como pendiente,
       y «Verificado por terceros» pide el informe LM-79 que aún no existe.
 - [x] `legal/` y `404.html` usan la misma hoja de estilos y las mismas letras.
+- [ ] **Bloqueado por el manual — no publicar hasta que se cierre:**
+      una cuota de «Luz como servicio» en la calculadora (falta el contrato
+      tipo: cuota, plazo, quién financia, garantía de ahorro; «Lo que falta»
+      n.º 7) y cualquier cifra de coste total (TCO), que el manual retiró.
+- [ ] Ficha técnica, una sola fuente de verdad («Lo que falta» n.º 4): «7 W
+      frente a 16 W a 2.000 lm» son 286 lm/W, y el módulo de 7,4 W da 270;
+      la web publica 275. La calculadora usa 275 y despeja el LED de
+      referencia de los porcentajes publicados (ver `LED_REF` en `calc.js`).
 - [ ] Fotografías reales en el apartado de aplicaciones.
 - [ ] Descarga directa del informe en PDF, sin pasar por el diálogo de impresión.
 - [x] Recepción de formularios en el servidor (`contact.php`; copias en
