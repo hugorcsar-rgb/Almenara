@@ -12,9 +12,31 @@
     // puesto por si alguna regla antigua lo mira, pero el CSS ya no depende
     // de él, así que no hay parpadeo al cargar.
     document.documentElement.setAttribute('data-theme', 'light');
+    var LS = ['en','es','pt','fr','de','it','ru'];
+    var fijo = document.documentElement.getAttribute('data-lang-static');
+    if (fijo) {
+      // Página ya traducida en el servidor (/es/, /fr/…, o la raíz en inglés).
+      // El idioma lo dice la dirección, no el navegador. Solo en la raíz, y
+      // solo si el visitante no ha elegido antes el inglés, se le lleva a su
+      // idioma: /technology.html → es/technology.html. Los rastreadores no
+      // guardan nada y navegan en inglés, así que siempre ven la raíz.
+      if (fijo === 'en' && !new URLSearchParams(location.search).get('lang')) {
+        var g = null;
+        try { g = localStorage.getItem('site.lang'); } catch (e) {}
+        var q = g || (navigator.language || 'en').slice(0, 2).toLowerCase();
+        if (q !== 'en' && LS.indexOf(q) > -1) {
+          var pagina = location.pathname.split('/').pop();
+          if (pagina === 'index.html') pagina = '';
+          location.replace(q + '/' + pagina + location.hash);
+          return;
+        }
+      }
+      document.documentElement.setAttribute('lang', fijo);
+      return;
+    }
     var p = new URLSearchParams(location.search).get('lang');
     var l = p || localStorage.getItem('site.lang') || (navigator.language || 'en').slice(0, 2).toLowerCase();
-    if (['en','es','pt','fr','de','it','ru'].indexOf(l) === -1) l = 'en';
+    if (LS.indexOf(l) === -1) l = 'en';
     document.documentElement.setAttribute('lang', l);
   } catch (e) {}
 })();
@@ -1299,6 +1321,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   function initialLang() {
+    const fijo = document.documentElement.getAttribute('data-lang-static');
+    if (fijo && LANGS.indexOf(fijo) > -1) return fijo;
     const p = new URLSearchParams(location.search).get('lang');
     if (p && LANGS.indexOf(p) > -1) return p;
     try {
@@ -1310,7 +1334,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('.lang-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () { applyLang(btn.dataset.lang, true); });
+    btn.addEventListener('click', function () {
+      // En las páginas ya traducidas el botón es un enlace a la otra versión:
+      // se recuerda la elección y se deja que el navegador vaya.
+      if (btn.tagName === 'A') {
+        try { localStorage.setItem('site.lang', btn.dataset.lang); } catch (e) {}
+        return;
+      }
+      applyLang(btn.dataset.lang, true);
+    });
   });
 
   (function () {

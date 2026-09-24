@@ -186,6 +186,7 @@ a { color: inherit; }
   cursor: pointer;
   transition: color 0.2s var(--ease);
 }
+a.lang-btn { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
 .lang-btn:hover { color: var(--text); }
 .lang-btn[aria-pressed="true"] { color: var(--warm); }
 
