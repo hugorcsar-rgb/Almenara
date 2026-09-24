@@ -11,7 +11,7 @@ Key facts:
 - Operating temperature: −40 °C to +85 °C; colour temperature and beam angle configurable
 - Certification: CE, RoHS, ENEC; European Union approval certificate; Portuguese national recognition for energy saving; National Energy Saving Prize (IBM offices retrofit, Mexico City)
 - Sectors: hospitality, architecture and museums, industry and logistics, retail, public infrastructure and street lighting, premium residential, data centres
-- Partners sought: luminaire manufacturers, specifiers and lighting studios, and infrastructure operators who want to integrate or license the light engine
+- Partners sought: manufacturers who license the technology, industrial groups who manufacture it under licence in their region, distributors, and engineering firms and installers who carry out retrofit projects. Territory, exclusivity and economic terms are negotiated with each partner and are not published
 - Headquarters: Madrid, Spain. Languages: English, Spanish, Portuguese, French, German, Italian, Russian
 - Contact: info@almenaraled.com
 
@@ -22,6 +22,7 @@ Key facts:
 - [Services](https://almenaraled.com/services.html): module supply, retrofit engineering, light as a service, technical advisory
 - [Applications](https://almenaraled.com/applications.html): the seven sectors where the saving is largest
 - [Savings calculator](https://almenaraled.com/calculator.html): compare current lighting against Almenara at equal light output
+- [Partners](https://almenaraled.com/partners.html): four partnership models — technology licence, licensed manufacturing, distribution, integration and installation; territory, exclusivity and economic terms negotiated with each partner
 - [Contact](https://almenaraled.com/contact.html): partnership enquiries, technical questions and project proposals
 
 ## Other languages

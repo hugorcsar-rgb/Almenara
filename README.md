@@ -38,6 +38,7 @@ Credenciales en *Settings → Secrets and variables → Actions*: `FTP_SERVER`,
 ├── legal/                  Aviso legal, privacidad, cookies (diseño antiguo)
 ├── index.html · technology.html · services.html
 ├── applications.html · calculator.html · contact.html
+├── partners.html       Socios: cuatro modelos de colaboración, sin cifras
 ├── 404.html · manifest.json · robots.txt · sitemap.xml
 └── .htaccess               Apache: HTTPS, cabeceras, caché, tipos MIME
 ```
