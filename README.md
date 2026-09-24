@@ -84,10 +84,22 @@ descuenta nuestras propias reposiciones del ahorro de mantenimiento. Frente a
 un LED moderno da un 45 %, no un 80 %. Esa honestidad es lo que la hace
 defendible ante un ingeniero.
 
+**Solo cifras aprobadas, cada una con su condición.** Manda el sistema de marca
+(«Almenara LED · Sistema de marca 2026», sección VII): 275 lm/W es del módulo
+interior Dicrotec LED 3030; 230–235 lm/W, del exterior LED 5050; −56 % / −46 % de
+kWh, frente a un módulo LED estándar a igual flujo; >100.000 h de vida nominal;
+patente MX 383389; garantía de 10 años. Están retiradas «más de 275 lm/W» en
+general, «más del 50 %», «275–300» y cualquier «líder». Lo que no está en esa
+tabla no se publica, tampoco en `llms.txt`.
+
 ## Pendiente
 
 - [ ] Sustituir el nombre y el dominio cuando se cierre el cambio de marca.
 - [ ] Rellenar las condiciones de ensayo: buscar `[RELLENAR: FOTOMETRÍA]`.
+- [ ] Aplicar la identidad visual del sistema de marca (marino, marfil, oro;
+      Ibarra Real Nova + IBM Plex Sans; rosetón y azulejo).
+- [ ] Revisar la sección «Certificación y reconocimientos» de la portada contra
+      el sistema de marca: el marcado CE para Europa figura aún como pendiente.
 - [ ] Rehacer `legal/` y `404.html` con el diseño nuevo. Hasta entonces piden
       la tipografía a Google y, como el `.htaccess` ya no lo permite, se ven
       con la letra del sistema.
