@@ -549,4 +549,95 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/contact.html"/>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://almenaraled.com/partners.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://almenaraled.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://almenaraled.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://almenaraled.com/pt/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://almenaraled.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://almenaraled.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://almenaraled.com/it/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://almenaraled.com/ru/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/partners.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almenaraled.com/es/partners.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://almenaraled.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://almenaraled.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://almenaraled.com/pt/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://almenaraled.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://almenaraled.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://almenaraled.com/it/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://almenaraled.com/ru/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/partners.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almenaraled.com/pt/partners.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://almenaraled.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://almenaraled.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://almenaraled.com/pt/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://almenaraled.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://almenaraled.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://almenaraled.com/it/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://almenaraled.com/ru/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/partners.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almenaraled.com/fr/partners.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://almenaraled.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://almenaraled.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://almenaraled.com/pt/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://almenaraled.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://almenaraled.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://almenaraled.com/it/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://almenaraled.com/ru/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/partners.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almenaraled.com/de/partners.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://almenaraled.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://almenaraled.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://almenaraled.com/pt/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://almenaraled.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://almenaraled.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://almenaraled.com/it/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://almenaraled.com/ru/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/partners.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almenaraled.com/it/partners.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://almenaraled.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://almenaraled.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://almenaraled.com/pt/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://almenaraled.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://almenaraled.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://almenaraled.com/it/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://almenaraled.com/ru/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/partners.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://almenaraled.com/ru/partners.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://almenaraled.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://almenaraled.com/es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://almenaraled.com/pt/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://almenaraled.com/fr/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://almenaraled.com/de/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://almenaraled.com/it/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://almenaraled.com/ru/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://almenaraled.com/partners.html"/>
+    <priority>0.8</priority>
+  </url>
 </urlset>

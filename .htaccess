@@ -23,9 +23,9 @@ AddDefaultCharset UTF-8
     # Las antiguas direcciones ?lang=xx llevan a la versión ya traducida,
     # para no perder los enlaces que ya circulan. ?lang=en va a la raíz.
     RewriteCond %{QUERY_STRING} (?:^|&)lang=(es|pt|fr|de|it|ru)(?:&|$)
-    RewriteRule ^((?:index|technology|services|applications|calculator|contact)\.html)?$ /%1/$1? [R=301,L]
+    RewriteRule ^((?:index|technology|services|applications|calculator|contact|partners)\.html)?$ /%1/$1? [R=301,L]
     RewriteCond %{QUERY_STRING} (?:^|&)lang=en(?:&|$)
-    RewriteRule ^((?:index|technology|services|applications|calculator|contact)\.html)?$ /$1? [R=301,L]
+    RewriteRule ^((?:index|technology|services|applications|calculator|contact|partners)\.html)?$ /$1? [R=301,L]
 
     # /es/index.html y /index.html son la misma página que /es/ y /
     RewriteCond %{THE_REQUEST} \s/+((?:[a-z]{2}/)?)index\.html[\s?]

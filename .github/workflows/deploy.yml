@@ -50,7 +50,7 @@ jobs:
           test -f assets/css/site.css    || { echo "::error::Falta assets/css/site.css"; exit 1; }
           test -f assets/jost-var.woff2  || { echo "::error::Falta la tipografía assets/jost-var.woff2"; exit 1; }
           test -f contact.php            || { echo "::error::Falta contact.php: el formulario no recibiría"; exit 1; }
-          for f in index.html technology.html services.html applications.html contact.html calculator.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
+          for f in index.html technology.html services.html applications.html contact.html calculator.html partners.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
             grep -q 'assets/js/app.js' "$f"    || { echo "::error file=$f::no enlaza app.js"; exit 1; }
             grep -q 'assets/css/site.css' "$f" || { echo "::error file=$f::no enlaza site.css"; exit 1; }
           done
@@ -68,7 +68,7 @@ jobs:
           # El .htaccess guarda css y js durante un año con la marca "immutable".
           # Sin un ?v=N en la dirección, quien ya visitó la web seguiría viendo
           # la versión antigua durante meses aunque se publique una nueva.
-          for f in index.html technology.html services.html applications.html contact.html calculator.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
+          for f in index.html technology.html services.html applications.html contact.html calculator.html partners.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
             grep -q 'site\.css?v=' "$f"  || { echo "::error file=$f::site.css sin número de versión"; exit 1; }
             grep -q 'app\.js?v='    "$f" || { echo "::error file=$f::app.js sin número de versión"; exit 1; }
           done
@@ -94,7 +94,7 @@ jobs:
       - name: Comprobar que existen las páginas traducidas
         run: |
           for l in es pt fr de it ru; do
-            for f in index technology services applications calculator contact; do
+            for f in index technology services applications calculator contact partners; do
               test -f "$l/$f.html" || { echo "::error::Falta $l/$f.html: ejecuta tools/build-i18n.mjs"; exit 1; }
             done
           done
@@ -115,7 +115,7 @@ jobs:
           test -f assets/css/site.css    || { echo "::error::Falta assets/css/site.css"; exit 1; }
           test -f assets/jost-var.woff2  || { echo "::error::Falta la tipografía assets/jost-var.woff2"; exit 1; }
           test -f contact.php            || { echo "::error::Falta contact.php: el formulario no recibiría"; exit 1; }
-          for f in index.html technology.html services.html applications.html contact.html calculator.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
+          for f in index.html technology.html services.html applications.html contact.html calculator.html partners.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
             grep -q 'assets/js/app.js' "$f"    || { echo "::error file=$f::no enlaza app.js"; exit 1; }
             grep -q 'assets/css/site.css' "$f" || { echo "::error file=$f::no enlaza site.css"; exit 1; }
           done
@@ -133,7 +133,7 @@ jobs:
           # El .htaccess guarda css y js durante un año con la marca "immutable".
           # Sin un ?v=N en la dirección, quien ya visitó la web seguiría viendo
           # la versión antigua durante meses aunque se publique una nueva.
-          for f in index.html technology.html services.html applications.html contact.html calculator.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
+          for f in index.html technology.html services.html applications.html contact.html calculator.html partners.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
             grep -q 'site\.css?v=' "$f"  || { echo "::error file=$f::site.css sin número de versión"; exit 1; }
             grep -q 'app\.js?v='    "$f" || { echo "::error file=$f::app.js sin número de versión"; exit 1; }
           done
@@ -159,7 +159,7 @@ jobs:
           test -f assets/css/site.css    || { echo "::error::Falta assets/css/site.css"; exit 1; }
           test -f assets/jost-var.woff2  || { echo "::error::Falta la tipografía assets/jost-var.woff2"; exit 1; }
           test -f contact.php            || { echo "::error::Falta contact.php: el formulario no recibiría"; exit 1; }
-          for f in index.html technology.html services.html applications.html contact.html calculator.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
+          for f in index.html technology.html services.html applications.html contact.html calculator.html partners.html 404.html legal/notice.html legal/privacy.html legal/cookies.html; do
             grep -q 'assets/js/app.js' "$f"    || { echo "::error file=$f::no enlaza app.js"; exit 1; }
             grep -q 'assets/css/site.css' "$f" || { echo "::error file=$f::no enlaza site.css"; exit 1; }
           done

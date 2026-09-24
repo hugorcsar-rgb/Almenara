@@ -38,7 +38,7 @@ jobs:
           npm run build
       - name: Guardar el resultado si ha cambiado
         run: |
-          git add -A es pt fr de it ru sitemap.xml index.html technology.html services.html applications.html calculator.html contact.html
+          git add -A es pt fr de it ru sitemap.xml index.html technology.html services.html applications.html calculator.html contact.html partners.html
           if git diff --cached --quiet; then
             echo "Nada que actualizar."
           else

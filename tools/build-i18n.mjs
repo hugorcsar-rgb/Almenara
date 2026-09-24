@@ -8,7 +8,7 @@
    ?lang=es servían exactamente el mismo HTML que la portada, así que para un
    buscador eran copias duplicadas.
 
-   QUÉ HACE. Lee las seis páginas de la raíz (que siguen siendo la fuente que
+   QUÉ HACE. Lee las siete páginas de la raíz (que siguen siendo la fuente que
    se edita) y el diccionario de assets/js/app.js y calc.js, y escribe:
      /            inglés (la raíz, ajustada en su sitio)
      /es/ /pt/ /fr/ /de/ /it/ /ru/   una copia ya traducida de cada página
@@ -31,7 +31,7 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
 const DOMAIN = 'https://almenaraled.com';
 const LANGS = ['en', 'es', 'pt', 'fr', 'de', 'it', 'ru'];
 const DEFAULT = 'en';
-const PAGES = ['index.html', 'technology.html', 'services.html', 'applications.html', 'calculator.html', 'contact.html'];
+const PAGES = ['index.html', 'technology.html', 'services.html', 'applications.html', 'calculator.html', 'contact.html', 'partners.html'];
 
 /* --- 1. Diccionarios --------------------------------------------------------
    Se extraen del propio código para que no haya dos copias de los textos. */
@@ -279,7 +279,7 @@ for (const page of PAGES) {
 
 /* --- 6. Mapa del sitio ---------------------------------------------------- */
 
-const prio = { 'index.html': '1.0', 'technology.html': '0.9', 'calculator.html': '0.9', 'services.html': '0.8', 'applications.html': '0.8', 'contact.html': '0.7' };
+const prio = { 'index.html': '1.0', 'technology.html': '0.9', 'calculator.html': '0.9', 'services.html': '0.8', 'applications.html': '0.8', 'partners.html': '0.8', 'contact.html': '0.7' };
 const hoy = new Date().toISOString().slice(0, 10);
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <!-- GENERADO por tools/build-i18n.mjs. Cada página en sus siete idiomas, cada una
